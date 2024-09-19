@@ -44,6 +44,9 @@ My data science and analytics projects
 4. Looker GA4 Dashboard
 5. Linear Regregression Model using caret
 
+## 🛠 Skills
+Spreadsheets, SQL , R Programming , Python , Dashboard 
+
 ## Contact Me
 reach out to me at chanakarn.data789@gmail.com
 
