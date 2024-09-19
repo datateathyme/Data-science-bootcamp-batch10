@@ -22,7 +22,7 @@ My data science and analytics projects
 ## Optional course:  What I Learned
 - Prompt Engineering
 - Data Analytics Sharing Session
-- Pomodoro 101
+- Pomodoro 101 / BUJO 
 - Intro to Power Query(Excel)
 - Google Analytics
 - Intro to API with JavaScript
