@@ -1,7 +1,7 @@
 # Data Science Bootcamp batch10
 My data science and analytics projects
 
-## My Sprint: What I Learned
+## Core course: What I Learned
 
 1. Intro to Data Science
 2. Building A Second Brain
@@ -18,6 +18,23 @@ My data science and analytics projects
 13. Intro to Marketing & Business for Data Analyst
 14. Python Foundation
 15. Essential Python For Data Analyst
+
+## Optional course:  What I Learned
+- Prompt Engineering
+- Data Analytics Sharing Session
+- Pomodoro 101
+- Intro to Power Query(Excel)
+- Google Analytics
+- Intro to API with JavaScript
+- Intro to Data Modeling in Microsoft Excel
+- Intro to Data Modeling in Power BI
+- UX UI 101
+- The Laws of Ux
+- Intro to Web Development
+- Power BI Crash Course
+- Data Engineering 101
+- Intro to ML Engineering 101
+
 
 ## My personal projects
 
