@@ -1,6 +1,23 @@
 # Data Science Bootcamp batch10
 My data science and analytics projects
 
+## My Sprint: What I Learned
+1.Intro to Data Science
+2.Building A Second Brain
+3.Google sheets
+4.SQL Database
+5.Programming Foundation
+6.Data Transformation
+7.Data Visualization
+8.Essential Statistics
+9.Deep Dive into Signficance Testing
+10.Looker studio Dashboard
+11.Essential ML for Data Analyst
+12.Essential Economics for Data Analyst
+13.Intro to Marketing & Business for Data Analyst
+14.Python Foundation
+15.Essential Python For Data Analyst
+
 ## My personal projects
 
 1. SQL supermarket analytics
