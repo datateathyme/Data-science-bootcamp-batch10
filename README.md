@@ -47,6 +47,9 @@ My data science and analytics projects
 ## 🛠 Skills
 Spreadsheets, SQL , R Programming , Python , Dashboard 
 
+## Certificates
+- [Click to view more certificates](https://github.com/BowlaSunsun/Certificate)
+
 ## Contact Me
 reach out to me at chanakarn.data789@gmail.com
 
