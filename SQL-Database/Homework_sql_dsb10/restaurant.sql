@@ -10,6 +10,8 @@
   -aggregate function & group by
 */
 
+## Create 3 tables > staff,customer,transaction
+  
 CREATE TABLE staff (
   staffId      int PRIMARY KEY,
   name         nvarchar ,
