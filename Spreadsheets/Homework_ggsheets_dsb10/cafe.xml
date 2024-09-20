@@ -1,0 +1,33 @@
+<cafe>
+  <drink>
+    <name>Americano</name>
+    <description>Espresso diluted with hot water</description>
+    <calories>40</calories>
+    <price>80</price>
+  </drink>
+  <drink>
+    <name>Latte</name>  
+    <description>Espresso with steamed milk</description>
+    <calories>180</calories>
+    <price>95</price>
+  </drink>
+  <dessert>
+    <name>Brownie</name>  
+    <description>Rich chocolate cake bar</description>
+    <calories>200</calories>
+    <price>65</price>
+  </dessert>  
+  <dessert>
+    <name>Fruit Tart</name>  
+    <description>Pastry crust filled with fresh fruit</description>
+    <calories>250</calories>
+    <price>85</price>  
+  </dessert>
+  <food>
+    <name>Avocado Toast with Poached Eggs </name>
+    <description>Smashed avocado on toasted sourdough bread with   
+     poached eggs</description>
+    <calories>450</calories>
+    <price>90</price>  
+  </food>  
+</cafe>
