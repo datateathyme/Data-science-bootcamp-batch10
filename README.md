@@ -54,7 +54,7 @@ Spreadsheets, SQL , R Programming , Python , Dashboard
 
 Let's create something amazing together! Reach out to me at:
 
-- Email: [ada@yourdomain.com](chanakarn.data789@gmail.com)
+- Email: [chanakarn.data789@gmail.com]
 - LinkedIn: [linkedin.com/](https://www.linkedin.com)
 - Portfolio: [adaleedesigns.com]()
 
