@@ -56,7 +56,7 @@ Let's create something amazing together! Reach out to me at:
 
 - Email: chanakarn.data789@gmail.com
 - LinkedIn: [linkedin.com/](https://www.linkedin.com)
-- Portfolio: [adaleedesigns.com]()
+- Portfolio: [commimg soon.com]()
 
 Thanks for stopping by my corner of the internet! 💫
 
