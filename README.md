@@ -50,7 +50,15 @@ Spreadsheets, SQL , R Programming , Python , Dashboard
 ## Certificates
 - [Click to view more certificates](https://github.com/BowlaSunsun/Certificate)
 
-## Contact Me
+## 📬 Contact ME
+
+Let's create something amazing together! Reach out to me at:
+
+- Email: [ada@yourdomain.com](mailto:ada@yourdomain.com)
+- LinkedIn: [linkedin.com/in/adalee](https://www.linkedin.com/in/adalee)
+- Portfolio: [adaleedesigns.com](http://adaleedesigns.com/)
+
+Thanks for stopping by my corner of the internet! 💫
 reach out to me at chanakarn.data789@gmail.com
 
 ## Test Insert Image
