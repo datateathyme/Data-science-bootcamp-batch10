@@ -54,12 +54,12 @@ Spreadsheets, SQL , R Programming , Python , Dashboard
 
 Let's create something amazing together! Reach out to me at:
 
-- Email: [ada@yourdomain.com](mailto:ada@yourdomain.com)
-- LinkedIn: [linkedin.com/in/adalee](https://www.linkedin.com/in/adalee)
-- Portfolio: [adaleedesigns.com](http://adaleedesigns.com/)
+- Email: [ada@yourdomain.com](chanakarn.data789@gmail.com)
+- LinkedIn: [linkedin.com/](https://www.linkedin.com)
+- Portfolio: [adaleedesigns.com]()
 
 Thanks for stopping by my corner of the internet! 💫
-reach out to me at chanakarn.data789@gmail.com
+
 
 ## Test Insert Image
 ![data dashboard](https://www.entechlog.com/images/blog/data/cricket-analysis-using-mage-ai/03_hu795565b011bef6cdd13255c84c390541_232280_1849x930_resize_q100_h2_box_3.webp)
