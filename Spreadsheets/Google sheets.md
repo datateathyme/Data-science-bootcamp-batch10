@@ -36,7 +36,7 @@ What did I learn from sprint google sheets
     2. Find the second author of the third book: Assuming the authors are listed in a child element named "author", you might use **//book[3]/author[2]** (This     would select the second author element within the third book element.)
 - Table Function
 - Filter and Sort Data 
-- Creating Conditions
+- Create Conditions
 - Conditional Formatting
 - Query and Summarize Data
 - Project Dynamic Query
