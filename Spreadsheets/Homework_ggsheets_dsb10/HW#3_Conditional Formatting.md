@@ -16,6 +16,6 @@
 7. Done:
    - Click Done to apply the conditional formatting.
      
-**📣 Important Note:**
+**🎈📣 Important Note:**
 - **Dollar Sign Locking:** To ensure the formula applies to the correct column across all rows, use a dollar sign to lock the column reference. For example, ```=$G4="Excellent"```will always refer to column G, regardless of the row.
 - **Adjust the Range:** Make sure to adjust the selected range to match your actual data range.
