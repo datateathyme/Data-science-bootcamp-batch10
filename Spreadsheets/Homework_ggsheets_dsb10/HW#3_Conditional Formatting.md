@@ -15,6 +15,9 @@
    - Click the Format button and choose the desired formatting style (e.g., background color, font color, bold, italics).
 7. Done:
    - Click Done to apply the conditional formatting.
+  
+**🖼 Highlight สีเหลืองทั้งแถว ถ้า Performance = "Excellent"**
+![Excellent Performance](https://github.com/user-attachments/assets/e69b84f9-a055-4cf5-9afc-b6220cd2b695)
      
 **📣 Important Note:**
 - **Dollar Sign Locking:** To ensure the formula applies to the correct column across all rows, use a dollar sign to lock the column reference. For example, ```=$G4="Excellent"```will always refer to column G, regardless of the row.
