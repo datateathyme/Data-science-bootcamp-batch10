@@ -11,3 +11,7 @@
    - Select Custom formula is.
 5. Enter the Formula:
    - In the formula bar, paste the formula:```=$G4="Excellent"```
+6. Apply Formatting:
+   - Click the Format button and choose the desired formatting style (e.g., background color, font color, bold, italics).
+7. Done:
+   - Click Done to apply the conditional formatting.
