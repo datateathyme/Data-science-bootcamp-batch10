@@ -37,10 +37,11 @@
 - Table Function
 - Filter and Sort Data 
 - Create Conditions
-  - multiple conditions using : ``` * (AND) / + (OR)``` 
+  - multiple conditions using : **``` * (AND) / + (OR)```** 
 - Conditional Formatting
 - Query and Summarize Data
-  - **``` Example:  =QUERY(EMPLOYEES,"select A, B, C, E where E>= 50000 order by E desc limit 5")```**
+  - **```Example:  =QUERY(EMPLOYEES,"select A, B, C, E where E>= 50000 order by E desc limit 5") :
+          ดึงข้อมูลพนักงานที่มีเงินเดือนมากกว่าหรือเท่ากับ 50000 เรียงข้อมูลจากมากไปน้อย เลือกดึงมาแค่ 5 แถวบนสุด```**
 - Project Dynamic Query
 - Vlookup
 - Working with Date / Text
