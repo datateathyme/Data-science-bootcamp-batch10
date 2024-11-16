@@ -20,5 +20,5 @@
 ![Highlight Excellent](https://github.com/user-attachments/assets/7b94d917-a2b1-486f-8925-16640bf38d51)
      
 **📣 Important Note:**
-- **Dollar Sign Locking:** To ensure the formula applies to the correct column across all rows, use a dollar sign to lock the column reference. For example, **```=$G4="Excellent"```**will always refer to column G, regardless of the row.
+- **Dollar Sign Locking:** To ensure the formula applies to the correct column across all rows, use a dollar sign to lock the column reference. For example,  **```=$G4="Excellent"```** will always refer to column G, regardless of the row.
 - **Adjust the Range:** Make sure to adjust the selected range to match your actual data range.
