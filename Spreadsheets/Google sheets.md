@@ -43,6 +43,8 @@
 - Query and Summarize Data
   - **```Example:  =QUERY(EMPLOYEES,"select A, B, C, E where E>= 50000 order by E desc limit 5") :
           ดึงข้อมูลพนักงานที่มีเงินเดือนมากกว่าหรือเท่ากับ 50000 เรียงข้อมูลจากมากไปน้อย เลือกดึงมาแค่ 5 แถวบนสุด```**
+  - **```Example: =QUERY(EMPLOYEES,"select sum(E), avg(E), min(E), max(E), count(E)") :
+          Aggregate function```**
 - Project Dynamic Query
 - Vlookup
 - Working with Date / Text
