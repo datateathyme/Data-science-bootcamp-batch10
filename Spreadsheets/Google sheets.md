@@ -45,6 +45,7 @@
           ดึงข้อมูลพนักงานที่มีเงินเดือนมากกว่าหรือเท่ากับ 50000 เรียงข้อมูลจากมากไปน้อย เลือกดึงมาแค่ 5 แถวบนสุด```**
   - **```Example: =QUERY(EMPLOYEES,"select sum(E), avg(E), min(E), max(E), count(E)") :
           Aggregate functions [E = Column Salary]```**
+  - **```=QUERY(EMPLOYEES,"select F, sum(E), avg(E) group by F") : ดูผลรวมเงินเดือน และเงินเดือนเฉลี่ย จับกลุ่มตาม Gender```** 
 - Project Dynamic Query
 - Vlookup
 - Working with Date / Text
