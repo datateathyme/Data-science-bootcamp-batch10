@@ -1,7 +1,7 @@
-# 🎄 Data Science Bootcamp batch10 
+# 🎄🔮 Data Science Bootcamp batch10 
 My data science and analytics projects and what I learned from **:Datarockie**
 
-## 🏆🥇🔮 Core course: What I Learned
+## 🏆 Core course: What I Learned
 
 1. Intro to Data Science
 2. Building A Second Brain
