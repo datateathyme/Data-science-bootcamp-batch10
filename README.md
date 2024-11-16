@@ -1,4 +1,4 @@
-# Data Science Bootcamp batch10
+# ![pine-tree](https://github.com/user-attachments/assets/63fb17aa-ea95-44b1-aa26-cf94d01ecb85) Data Science Bootcamp batch10
 My data science and analytics projects and what I learned from **:Datarockie**
 
 ## Core course: What I Learned
