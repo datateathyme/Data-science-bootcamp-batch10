@@ -39,6 +39,7 @@
 - Create Conditions
   - multiple conditions using : **``` * (AND) / + (OR)```** 
 - Conditional Formatting
+  - - [Click view more conditional formatting](https://github.com/BowlaSunsun/Certificate)
 - Query and Summarize Data
   - **```Example:  =QUERY(EMPLOYEES,"select A, B, C, E where E>= 50000 order by E desc limit 5") :
           ดึงข้อมูลพนักงานที่มีเงินเดือนมากกว่าหรือเท่ากับ 50000 เรียงข้อมูลจากมากไปน้อย เลือกดึงมาแค่ 5 แถวบนสุด```**
