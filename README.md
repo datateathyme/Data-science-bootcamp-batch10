@@ -55,7 +55,7 @@ Spreadsheets, SQL , R Programming , Python , Dashboard
 Let's create something amazing together! Reach out to me at:
 
 - Email: chanakarn.data789@gmail.com
-- LinkedIn: [linkedin.com/coming soon](https://www.linkedin.com)
+- LinkedIn: [linkedin.com/coming soon]
 - Portfolio: [coming soon.com]()
 
 Thanks for stopping by my corner of the internet! 💫✨
