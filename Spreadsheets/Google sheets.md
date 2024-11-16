@@ -25,7 +25,7 @@
      ```javascript
     You can use the XPath concept to find the answer and select the index you want to know.
 
-    Ex.=IMPORTXML(URL.xml,"/bookstore/book[3]/author[2]")
+    Ex. =IMPORTXML(URL.xml,"/bookstore/book[3]/author[2]")
 
     Answer: Per Bothner
 
