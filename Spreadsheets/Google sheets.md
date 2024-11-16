@@ -32,8 +32,8 @@ What did I learn from sprint google sheets
     ```
     - **Example in a bookstore scenario:** If you have a digital database of a bookstore, structured in XML or HTML, you could use XPath to:
 
-    1. Locate the third book:  **//book[3]**  (This would select the third book element in the document.)
-    2. Find the second author of the third book: Assuming the authors are listed in a child element named "author", you might use **//book[3]/author[2]** (This     would select the second author element within the third book element.)
+    1. Locate the third book:  **```//book[3]```**  (This would select the third book element in the document.)
+    2. Find the second author of the third book: Assuming the authors are listed in a child element named "author", you might use **```//book[3]/author[2]```** (This     would select the second author element within the third book element.)
 - Table Function
 - Filter and Sort Data 
 - Create Conditions
