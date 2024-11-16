@@ -1,5 +1,5 @@
 # 🌻 Welcome to Google sheets world !!
-##  📁  Google Sheets Part 1 : Lessons Learned
+##  📁  Google Sheets : Lessons Learned
 **🍔 What did I learn from sprint google sheets**
 
 - Data Entry 
