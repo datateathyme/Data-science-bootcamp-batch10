@@ -45,4 +45,18 @@ What did I learn from sprint google sheets
 - Working with Date / Text
 - Project - Convert TH to EN Date
 - Project - Sparkline Basics
+- Replace missing value
+  - Deletion:
+    - Remove rows or columns with missing values.
+    - Suitable when the number of missing values is small and doesn't significantly impact the analysis.
+  - Imputation:
+    - Replace missing values with estimated values.
+    - Common methods include:
+      1. Mean imputation: Replace with the mean of the column.
+      2. Median imputation: Replace with the median of the column.
+      3. Mode imputation: Replace with the mode of the column.
+      4. Regression imputation: Predict missing values using regression models.
+      5. K-nearest neighbors imputation: Impute missing values based on similar data points.   
+
+
 
