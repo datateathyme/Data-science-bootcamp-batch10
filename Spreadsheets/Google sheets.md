@@ -42,10 +42,10 @@
   - [Click view more: Conditional Formatting](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%233_Conditional%20Formatting.md) 
 - Query and Summarize Data
   - *```Example:  =QUERY(EMPLOYEES,"select A, B, C, E where E>= 50000 order by E desc limit 5") :
-          ดึงข้อมูลพนักงานที่มีเงินเดือนมากกว่าหรือเท่ากับ 50000 เรียงข้อมูลจากมากไปน้อย เลือกดึงมาแค่ 5 แถวบนสุด```*
+         👉🏻 ดึงข้อมูลพนักงานที่มีเงินเดือนมากกว่าหรือเท่ากับ 50000 เรียงข้อมูลจากมากไปน้อย เลือกดึงมาแค่ 5 แถวบนสุด```*
   - *```Example: =QUERY(EMPLOYEES,"select sum(E), avg(E), min(E), max(E), count(E)") :
           Aggregate functions [E = Column Salary]```*
-  - *```=QUERY(EMPLOYEES,"select F, sum(E), avg(E) group by F") : ดูผลรวมเงินเดือน และเงินเดือนเฉลี่ย จับกลุ่มตาม Gender```*
+  - *```Example: =QUERY(EMPLOYEES,"select F, sum(E), avg(E) group by F") : ดูผลรวมเงินเดือน และเงินเดือนเฉลี่ย จับกลุ่มตาม Gender```*
 - Project Dynamic Query
 - Vlookup
 - Working with Date / Text
