@@ -40,7 +40,7 @@
   - multiple conditions using : ``` * (AND) / + (OR)``` 
 - Conditional Formatting
 - Query and Summarize Data
-  - **```sql Example:  =QUERY(EMPLOYEES,"select A, B, C, E where E>= 50000 order by E desc limit 5")```**
+  - **``` Example:  =QUERY(EMPLOYEES,"select A, B, C, E where E>= 50000 order by E desc limit 5")```**
 - Project Dynamic Query
 - Vlookup
 - Working with Date / Text
