@@ -40,7 +40,7 @@
 - Create Conditions
   - multiple conditions using : **``` * (AND) / + (OR)```** 
 - Conditional Formatting
-  - [Click view more: Conditional Formatting](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%233_Conditional%20Formatting.md) 
+  - [Click view more: HW#3 Conditional Formatting](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%233_Conditional%20Formatting.md) 
 - Query and Summarize Data
   - *```Example:  =QUERY(EMPLOYEES,"select A, B, C, E where E>= 50000 order by E desc limit 5") :
          👉🏻 ดึงข้อมูลพนักงานที่มีเงินเดือนมากกว่าหรือเท่ากับ 50000 เรียงข้อมูลจากมากไปน้อย เลือกดึงมาแค่ 5 แถวบนสุด```*
@@ -48,7 +48,7 @@
           👉🏻 Aggregate functions [E = Column Salary]```*
   - *```Example: =QUERY(EMPLOYEES,"select F, sum(E), avg(E) group by F") : 👉🏻 ดูผลรวมเงินเดือน และเงินเดือนเฉลี่ย จับกลุ่มตาม Gender```*
 - Project Dynamic Query
-  - [Click view more: Dynamic Query ](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%234_Dynamic%20Query.md)
+  - [Click view more: HW#4 Dynamic Query ](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%234_Dynamic%20Query.md)
 - Vlookup
 - Working with Date / Text
 - Project - Convert TH to EN Date
