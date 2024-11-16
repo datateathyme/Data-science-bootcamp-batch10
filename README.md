@@ -1,7 +1,7 @@
-# 🎄 Data Science Bootcamp batch10
+# 🎄 Data Science Bootcamp batch10 🧸
 My data science and analytics projects and what I learned from **:Datarockie**
 
-## 🛠 Core course: What I Learned
+## 🏆🥇🥊🕹🔮🧸 Core course: What I Learned
 
 1. Intro to Data Science
 2. Building A Second Brain
@@ -61,5 +61,5 @@ Let's create something amazing together! Reach out to me at:
 Thanks for stopping by my corner of the internet! 💫✨
 
 
-## Test Insert Image
+## 🎨 Test Insert Image
 ![data dashboard](https://www.entechlog.com/images/blog/data/cricket-analysis-using-mage-ai/03_hu795565b011bef6cdd13255c84c390541_232280_1849x930_resize_q100_h2_box_3.webp)
