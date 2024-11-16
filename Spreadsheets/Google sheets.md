@@ -5,6 +5,7 @@
 - Data Entry 
 - Array Formular 
 - Import Data from URL [ CSV / XML / HTML Table / FEED ]
+    - [HW#1_Create an <cafe.xml> file]
   
    **Example Import Data from URL.xml**
     - [example data /bookstore.xml](https://raw.githubusercontent.com/toyeiei/jetbrains-python/master/bookshop.xml)
