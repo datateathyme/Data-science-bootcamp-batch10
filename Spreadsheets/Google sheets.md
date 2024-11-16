@@ -37,7 +37,7 @@
 - Table Function
 - Filter and Sort Data 
 - Create Conditions
-  - multiple conditions using * (AND) / + (OR) 
+  - multiple conditions using : ``` * (AND) / + (OR)``` 
 - Conditional Formatting
 - Query and Summarize Data
 - Project Dynamic Query
