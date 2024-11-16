@@ -1,7 +1,7 @@
 # 🎄 Data Science Bootcamp batch10
 My data science and analytics projects and what I learned from **:Datarockie**
 
-## Core course: What I Learned
+## 🛠 Core course: What I Learned
 
 1. Intro to Data Science
 2. Building A Second Brain
@@ -19,7 +19,7 @@ My data science and analytics projects and what I learned from **:Datarockie**
 14. Python Foundation
 15. Essential Python For Data Analyst
 
-## Optional course:  What I Learned
+## 🥪 Optional course:  What I Learned
 - Prompt Engineering
 - Data Analytics Sharing Session
 - Pomodoro 101 / BUJO 
@@ -36,7 +36,7 @@ My data science and analytics projects and what I learned from **:Datarockie**
 - Intro to ML Engineering 101
 
 
-## My personal projects
+## 🍔 My personal projects
 
 1. SQL supermarket analytics
 2. SQL churn analytics
@@ -47,7 +47,7 @@ My data science and analytics projects and what I learned from **:Datarockie**
 ## 🛠 Skills
 Spreadsheets, SQL , R Programming , Python , Dashboard 
 
-## Certificates
+## 📜 Certificates
 - [Click to view more certificates](https://github.com/BowlaSunsun/Certificate)
 
 ## 📬 Contact ME
