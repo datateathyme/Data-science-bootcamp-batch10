@@ -2,9 +2,9 @@
 ##  📁  Google Sheets : Lessons Learned
 **🍔 What did I learn from sprint google sheets**
 
-- Data Entry 
-- Array Formular 
-- Import Data from URL [ CSV / XML / HTML Table / FEED ]
+- [x] Data Entry 
+- [x] Array Formular 
+- [x] Import Data from URL [ CSV / XML / HTML Table / FEED ]
     - [HW#1 Create an <cafe.xml> file](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%231_cafe.xml)
   
    **Example Import Data from URL.xml**
@@ -35,27 +35,27 @@
 
       1. Locate the third book:  **```//book[3]```**  (This would select the third book element in the document.)
       2. Find the second author of the third book: Assuming the authors are listed in a child element named "author", you might use **```//book[3]/author[2]```** (This would select the second author element within the third book element.)
-- Table Function
-- Filter and Sort Data
+- [x] Table Function
+- [x] Filter and Sort Data
   -  [Click view more: HW#2 Dynamic Sorting](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%232_Dynamic%20Sorting.md)
-- Create Conditions
+- [x] Create Conditions
   - multiple conditions using : **``` * (AND) / + (OR)```** 
-- Conditional Formatting
+- [x] Conditional Formatting
   - [Click view more: HW#3 Conditional Formatting](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%233_Conditional%20Formatting.md) 
-- Query and Summarize Data
+- [x] Query and Summarize Data
   - *```Example:  =QUERY(EMPLOYEES,"select A, B, C, E where E>= 50000 order by E desc limit 5") :
          👉🏻 ดึงข้อมูลพนักงานที่มีเงินเดือนมากกว่าหรือเท่ากับ 50000 เรียงข้อมูลจากมากไปน้อย เลือกดึงมาแค่ 5 แถวบนสุด```*
   - *```Example: =QUERY(EMPLOYEES,"select sum(E), avg(E), min(E), max(E), count(E)") :
           👉🏻 Aggregate functions [E = Column Salary]```*
   - *```Example: =QUERY(EMPLOYEES,"select F, sum(E), avg(E) group by F") : 👉🏻 ดูผลรวมเงินเดือน และเงินเดือนเฉลี่ย จับกลุ่มตาม Gender```*
-- Project Dynamic Query
+- [x] Project Dynamic Query
   - [Click view more: HW#4 Dynamic Query](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%234_Dynamic%20Query.md)
-- Vlookup
+- [x] Vlookup
   - [Click view more: HW#5 Vlookup](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%235_Vlookup.md)
-- Working with Date / Text
-- Project - Convert TH to EN Date
-- Project - Sparkline Basics
-- Replace missing value
+- [x] Working with Date / Text
+- [x] Project - Convert TH to EN Date
+- [x] Project - Sparkline Basics
+- [x] Replace missing value
   - Deletion:
     - Remove rows or columns with missing values.
     - Suitable when the number of missing values is small and doesn't significantly impact the analysis.
