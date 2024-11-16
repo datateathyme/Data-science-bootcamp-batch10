@@ -1,5 +1,5 @@
 # 🎄 Data Science Bootcamp batch10 
-🔮 My data science and analytics projects and what I learned from **:Datarockie**
+  My data science and analytics projects and what I learned from **:Datarockie**
 
 ## 🥇 Core course: What I Learned 
 
@@ -58,7 +58,7 @@ Spreadsheets, SQL , R Programming , Python , Dashboard
 - LinkedIn: *coming soon*
 - Portfolio: *coming soon*
 
-Thanks for stopping by my corner of the internet! 💫✨
+  Thanks for stopping by my corner of the internet! 💫✨
 
 
 ## 🎨 Test Insert Image
