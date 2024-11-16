@@ -47,6 +47,7 @@
           👉🏻 Aggregate functions [E = Column Salary]```*
   - *```Example: =QUERY(EMPLOYEES,"select F, sum(E), avg(E) group by F") : 👉🏻 ดูผลรวมเงินเดือน และเงินเดือนเฉลี่ย จับกลุ่มตาม Gender```*
 - Project Dynamic Query
+  - [Click view more: Dynamic Query ](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%234_Dynamic%20Query.md)
 - Vlookup
 - Working with Date / Text
 - Project - Convert TH to EN Date
