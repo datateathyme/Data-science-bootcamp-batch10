@@ -53,8 +53,8 @@
 - [x] Vlookup / Xlookup
   - [Click view more: HW#5 Vlookup](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%235_Vlookup.md)
 - [x] Working with Date / Text
-  - [Click view more: HW#6 Project - Convert TH to EN Date](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%236_Convert%20TH%20to%20EN%20Date.md)
 - [x] Project - Convert TH to EN Date
+  - [Click view more: HW#6 Project - Convert TH to EN Date](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%236_Convert%20TH%20to%20EN%20Date.md)
 - [x] Project - Sparkline Basics
 - [x] Replace missing value
   - Deletion:
