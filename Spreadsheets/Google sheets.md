@@ -55,7 +55,8 @@
 - [x] Working with Date / Text
 - [x] Project - Convert TH to EN Date
   - [Click view more: HW#6 Project - Convert TH to EN Date](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%236_Convert%20TH%20to%20EN%20Date.md)
-- [x] Project - Sparkline Basics
+- [x] Project - ID Card Parser
+  - [Click view more: HW#7 Project - ID Card Parser]
 - [x] Replace missing value
   - Deletion:
     - Remove rows or columns with missing values.
