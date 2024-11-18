@@ -3,7 +3,7 @@
 ```
   1. แยกวันเดือนปี =ArrayFormula(SPLIT(D4:D9," "))		
   2. แปลงเดือน	=ArrayFormula(VLOOKUP(F4:F9,A4:B15,2,FALSE))		
-  3. แปลงปี     =(G4-543)		
+  3. แปลงปี      =(G4-543)		
   4. EN Date    =ArrayFormula(DATE(J4:J9,I4:I9,E4:E9))
 ```		
 **🖼 *'Convert TH to EN Date'*** 
