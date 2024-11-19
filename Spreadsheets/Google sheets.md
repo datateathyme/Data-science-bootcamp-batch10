@@ -57,6 +57,7 @@
   - [Click view more: HW#6 Project - Convert TH to EN Date](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%236_Convert%20TH%20to%20EN%20Date.md)
 - [x] Project - ID Card Parser
   - [Click view more: HW#7 Project - ID Card Parser](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%237_ID%20Card%20Parser.md)
+- [x] Pivot Table 
 - [x] Replace missing value
   - Deletion:
     - Remove rows or columns with missing values.
