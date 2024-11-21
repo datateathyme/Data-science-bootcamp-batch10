@@ -60,6 +60,8 @@
 - [x] Pivot Table
   - Example: summarise and create line chart compare total revenue between 2019 and 2020
   ![Comparing Total_rev 2019   2020 _GG4](https://github.com/user-attachments/assets/8a69819f-a525-419e-8547-7cc82a43941f)
+  ![Profit   tax](https://github.com/user-attachments/assets/88dcee11-49e2-48b5-a5a6-e45241c6d2d3)
+
 - [x] Replace missing value
   - Deletion:
     - Remove rows or columns with missing values.
