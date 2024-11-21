@@ -1,5 +1,5 @@
 ## 🎍 Homework7: Project - ID Card Parser
-- [x] 🏷 extract specific parts of text within a cell using the REGEXEXTRACT function in Google Sheets. This function uses regular expressions to identify and extract the desired information.
+- [x] 🛎 extract specific parts of text within a cell using the REGEXEXTRACT function in Google Sheets. This function uses regular expressions to identify and extract the desired information.
   
 - **🖼 *'ID Card Parser'*** 
 ![Project-ID Card Parser](https://github.com/user-attachments/assets/1508b1a6-2a64-4624-9d73-631ef32b1165)
