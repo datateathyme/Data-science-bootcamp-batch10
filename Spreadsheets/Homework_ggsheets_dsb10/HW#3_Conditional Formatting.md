@@ -1,6 +1,6 @@
 ## 🎍 Homework3: Conditional Formatting 
 ### 🛎  โจทย์คือ พนักงานคนไหนเป็น "Excellent Performance" ให้ highlight ทั้งแถว
-- [x] **🍟 Steps to create a custom formula : Conditional formatting**
+- [x] **🍣 Steps to create a custom formula : Conditional formatting**
 1. Select the Range:
    - Select the entire range of data you want to format
 2. Open Conditional Formatting:
