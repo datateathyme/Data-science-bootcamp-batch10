@@ -1,4 +1,4 @@
-## Homework3: Conditional Formatting 
+## 🏡 Homework3: Conditional Formatting 
 ### 🏷  โจทย์คือ พนักงานคนไหนเป็น "Excellent Performance" ให้ highlight ทั้งแถว
 - [x] **🍟 Steps to create a custom formula : Conditional formatting**
 1. Select the Range:
