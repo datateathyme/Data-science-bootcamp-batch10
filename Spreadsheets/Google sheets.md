@@ -57,7 +57,9 @@
   - [Click view more: HW#6 Project - Convert TH to EN Date](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%236_Convert%20TH%20to%20EN%20Date.md)
 - [x] Project - ID Card Parser
   - [Click view more: HW#7 Project - ID Card Parser](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%237_ID%20Card%20Parser.md)
-- [x] Pivot Table 
+- [x] Pivot Table
+  - Example: summarise and create line chart compare total revenue between 2019 and 2020
+  ![Comparing Total_rev 2019   2020 _GG4](https://github.com/user-attachments/assets/8a69819f-a525-419e-8547-7cc82a43941f)
 - [x] Replace missing value
   - Deletion:
     - Remove rows or columns with missing values.
