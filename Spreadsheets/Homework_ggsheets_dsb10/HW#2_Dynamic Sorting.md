@@ -1,5 +1,5 @@
 ## 🎍 Homework2: Added Dynamic Sorting Functions with checkbox
-### 🥧 โจทย์คือ Sort salaries in descending order when the checkbox is clicked
+### 🛎 โจทย์คือ Sort salaries in descending order when the checkbox is clicked
 
 **🍟 Step : Create Dynamic Filters with Dropdowns --> Add Sort dynamic function**
 
