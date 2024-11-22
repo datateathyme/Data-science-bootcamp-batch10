@@ -3,7 +3,15 @@
 **🍔 What did I learn from sprint google sheets**
 
 - [x] Data Entry 
-- [x] Array Formular 
+- [x] Array Formular
+    - To Do	
+      1. Format to dollar	
+      2. Increaase salary by 10% next year	
+      3. Create email address for each employee	
+      4. Check if email is valid	
+	 
+     ![drop down salary %increase ](https://github.com/user-attachments/assets/1a71c704-c8ab-4781-916b-4d383250984a)
+
 - [x] Import Data from URL [ CSV / XML / HTML Table / FEED ]
     - [HW#1 Create an <cafe.xml> file](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%231_cafe.xml)
   
