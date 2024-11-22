@@ -124,7 +124,9 @@ WHERE state IN ('California', 'Texas')
 ORDER BY state;
 
 --------------------------------------
-
+## This query retrieves detailed information about transactions by combining data from four tables. 
+  It links transactions with customers, menu items, and the staff involved in the purchase, providing a comprehensive overview of each transaction.
+  
 SELECT
     T.transactionId      AS  T_id,
     T.transactionDate    AS  T_date,
