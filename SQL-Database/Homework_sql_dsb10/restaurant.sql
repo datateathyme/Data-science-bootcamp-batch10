@@ -164,6 +164,9 @@ LIMIT 3;
 
 --------------------------------------
 ## Create new column segment spenders
+ # The query analyzes customer transaction data to categorize customers into three segments 
+  based on their spending activity: high, medium, and low spenders. 
+  It then displays the customer ID, first name, total number of transactions
   
 SELECT
     C.customerId,
@@ -210,7 +213,8 @@ JOIN transactions_maneger  AS T1
 ON S1.staffId = T1.staffId;
 
 --------------------------------------
-
+## Group the customers by their state.
+  
 SELECT
   ROW_number() OVER(PARTITION BY state)  AS customer_id ,
   state,
