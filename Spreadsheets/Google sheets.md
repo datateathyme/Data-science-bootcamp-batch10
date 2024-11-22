@@ -4,9 +4,9 @@
 
 - [x] Data Entry 
 - [x] Array Formular
-    - To Do	
+    - 🍱 **To Do**	
       1. Format to dollar	
-      2. Increaase salary by 10% next year	
+      2. Increaase salary dropdown list by 10% - 30% next year	
       3. Create email address for each employee	
       4. Check if email is valid	
 	 
