@@ -182,6 +182,7 @@ ORDER BY 3 DESC;
 
 --------------------------------------
 ## This query retrieves information specifically for a manager with staffId=1 
+  # 1. We first identify managers from the staff table.
   
 WITH  staff_manager AS  (
   SELECT * FROM staff
