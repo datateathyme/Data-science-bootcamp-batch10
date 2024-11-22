@@ -4,7 +4,7 @@
 - [x] ER Diagram
 - [x] SQL clauses we use in our Data Analyst role
 - [x] Clean missing value using **COALESCE()**
-- [X] STRFTIME *(SQLite)* -- extract, date_format
+- [X] STRFTIME *(SQLite)* extract, date_format -- STRFTIME is a specific function for SQLite
 - [x] CASE WHEN
 - [x] Common Table Expression (CTE) -- WITH clause / subquery
 - [x] Window function 
