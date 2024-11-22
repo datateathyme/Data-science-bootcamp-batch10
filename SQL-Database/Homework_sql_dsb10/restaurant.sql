@@ -4,7 +4,7 @@
   -staff 
   -manu 
   -ingredient
-  write sql queries at least 3 queries (select, where, join)
+  -write sql queries at least 3 queries (select, where, join)
   -with clause 
   -subquery
   -aggregate function & group by
@@ -104,7 +104,7 @@ UPDATE customers
 SET state = 'Texas'  
 WHERE customerId = 6; 
 
-
+--------------------------------------
 .mode table
 .header on
 
@@ -120,6 +120,7 @@ WHERE state IN ('California', 'Texas')
     AND email LIKE '%@datayahoo%'
 ORDER BY state;
 
+--------------------------------------
 
 SELECT
     T.transactionId      AS  T_id,
@@ -139,6 +140,7 @@ JOIN menu           AS  M
 JOIN staff          AS  S
   ON T.staffId = S.staffId;
 
+--------------------------------------
 
 SELECT 
     M.name,
@@ -156,6 +158,7 @@ GROUP BY M.name
 ORDER BY 6 DESC
 LIMIT 3;
 
+--------------------------------------
 
 SELECT
     C.customerId,
@@ -172,6 +175,7 @@ JOIN customers    AS  C
 GROUP BY C.customerId 
 ORDER BY 3 DESC;
 
+--------------------------------------
 
 WITH  staff_manager AS  (
   SELECT * FROM staff
@@ -193,6 +197,7 @@ FROM staff_manager         AS S1
 JOIN transactions_maneger  AS T1
 ON S1.staffId = T1.staffId;
 
+--------------------------------------
 
 SELECT
   ROW_number() OVER(PARTITION BY state)  AS customer_id ,
