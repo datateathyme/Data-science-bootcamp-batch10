@@ -163,7 +163,8 @@ ORDER BY 6 DESC
 LIMIT 3;
 
 --------------------------------------
-
+## Create new column segment spenders
+  
 SELECT
     C.customerId,
     C.firstname,
@@ -180,7 +181,8 @@ GROUP BY C.customerId
 ORDER BY 3 DESC;
 
 --------------------------------------
-
+## This query retrieves information specifically for a manager with staffId=1 
+  
 WITH  staff_manager AS  (
   SELECT * FROM staff
 WHERE position = 'Manager'
