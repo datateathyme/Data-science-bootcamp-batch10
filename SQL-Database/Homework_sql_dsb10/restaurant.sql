@@ -111,9 +111,8 @@ WHERE customerId = 6;
 .mode table
 .header on
 
-## This query retrieves customer information,
-   It then filters these customers to include only those residing in California or Texas. Finally, it sorts the results by the customer's state.
-  
+---------------------------------------
+
 SELECT 
     customerid,
     firstname,
@@ -125,6 +124,7 @@ FROM customers
 WHERE state IN ('California', 'Texas')
     AND email LIKE '%@datayahoo%'
 ORDER BY state;
+
 
 --------------------------------------
 ## This query retrieves detailed information about transactions by combining data from four tables. 
