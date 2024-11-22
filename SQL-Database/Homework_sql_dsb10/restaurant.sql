@@ -1,4 +1,4 @@
-/* เหลือใส่คำอธิบายเพิ่มเติม 
+/* 
   create at least 3 tables (Insert table) : restaurant
   -transaction 
   -staff 
