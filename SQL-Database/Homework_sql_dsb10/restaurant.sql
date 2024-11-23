@@ -1,3 +1,4 @@
+--------------------------------------
 /* 
   create at least 3 tables (Insert table) : restaurant
   -transaction 
@@ -9,6 +10,7 @@
   -subquery
   -aggregate function & group by
 */
+--------------------------------------
 
 ## Create sample data for the 'staff', 'customer', and 'transaction' tables.
   
@@ -77,7 +79,7 @@ INSERT INTO transactions VALUES
   (9, 4, '2022-08-09',4,6, 90.00,  1),
   (10,6, '2022-08-09',1,3, 102.6,  2);
 
-------
+--------------------------------------
 ## Add a new column to the 'customers' table and update data.
   
 ALTER TABLE customers
