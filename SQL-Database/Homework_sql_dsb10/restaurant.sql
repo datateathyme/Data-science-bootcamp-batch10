@@ -1,4 +1,4 @@
---------------------------------------
+-------------------------------------------------------------------------------
 /* 
   create at least 3 tables (Insert table) : restaurant
   -transaction 
@@ -10,8 +10,7 @@
   -subquery
   -aggregate function & group by
 */
---------------------------------------
-
+-------------------------------------------------------------------------------
 ## Create sample data for the 'staff', 'customer', and 'transaction' tables.
   
 CREATE TABLE staff (
@@ -79,7 +78,7 @@ INSERT INTO transactions VALUES
   (9, 4, '2022-08-09',4,6, 90.00,  1),
   (10,6, '2022-08-09',1,3, 102.6,  2);
 
---------------------------------------
+-------------------------------------------------------------------------------
 ## Add a new column to the 'customers' table and update data.
   
 ALTER TABLE customers
@@ -109,11 +108,11 @@ UPDATE customers
 SET state = 'Texas'  
 WHERE customerId = 6; 
 
---------------------------------------
+-------------------------------------------------------------------------------
 .mode table
 .header on
 
----------------------------------------
+-------------------------------------------------------------------------------
 
 SELECT 
     customerid,
@@ -128,7 +127,7 @@ WHERE state IN ('California', 'Texas')
 ORDER BY state;
 
 
---------------------------------------
+-------------------------------------------------------------------------------
 ## This query is designed to provide a comprehensive understanding of transactions by linking related data from multiple tables.
   
 SELECT
@@ -149,7 +148,7 @@ JOIN menu           AS  M
 JOIN staff          AS  S
   ON T.staffId = S.staffId;
 
---------------------------------------
+-------------------------------------------------------------------------------
 ## Find the top 3 menu items based on sales data.
   
 SELECT 
@@ -168,7 +167,7 @@ GROUP BY M.name
 ORDER BY 6 DESC
 LIMIT 3;
 
---------------------------------------
+-------------------------------------------------------------------------------
 ## Create a new column 'segment' to categorize customers as high, medium, or low spenders based on their transaction history
   
 SELECT
@@ -186,7 +185,7 @@ JOIN customers    AS  C
 GROUP BY C.customerId 
 ORDER BY 3 DESC;
 
---------------------------------------
+-------------------------------------------------------------------------------
 ## By matching managers with their transactions, this query provides a detailed overview of the manager with staff ID 1's performance.
   
   
@@ -210,7 +209,7 @@ FROM staff_manager         AS S1
 JOIN transactions_maneger  AS T1
 ON S1.staffId = T1.staffId;
 
---------------------------------------
+-------------------------------------------------------------------------------
 ## Group the customers by their state.
   
 SELECT
