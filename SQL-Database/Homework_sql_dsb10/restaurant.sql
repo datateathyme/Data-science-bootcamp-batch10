@@ -78,7 +78,7 @@ INSERT INTO transactions VALUES
   (10,6, '2022-08-09',1,3, 102.6,  2);
 
 ------
-## ALTER TABLE : used to modify an existing table named "customers" by adding a new column to it ['State'].
+## ALTER TABLE : used to modify an existing table named "customers" by adding a new column to it and update data.
   
 ALTER TABLE customers
 ADD state VARCHAR(50); 
