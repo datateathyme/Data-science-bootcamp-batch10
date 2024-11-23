@@ -167,10 +167,7 @@ ORDER BY 6 DESC
 LIMIT 3;
 
 --------------------------------------
-## Create new column segment spenders
- # The query analyzes customer transaction data to categorize customers into three segments 
-  based on their spending activity: high, medium, and low spenders. 
-  It then displays the customer ID, first name, total number of transactions
+## Create a new column 'segment' to categorize customers as high, medium, or low spenders based on their transaction history
   
 SELECT
     C.customerId,
