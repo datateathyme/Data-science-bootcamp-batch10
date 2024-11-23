@@ -10,7 +10,7 @@
   -aggregate function & group by
 */
 
-## Create mockup data and add values  3 tables > staff,customer,transaction
+## Create sample data for the 'staff', 'customer', and 'transaction' tables.
   
 CREATE TABLE staff (
   staffId      int PRIMARY KEY,
