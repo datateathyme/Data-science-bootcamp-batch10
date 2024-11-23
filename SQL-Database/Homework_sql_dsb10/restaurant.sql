@@ -148,7 +148,7 @@ JOIN staff          AS  S
   ON T.staffId = S.staffId;
 
 --------------------------------------
-## Top 3 Best-Selling Menu Items
+## Find the top 3 menu items based on sales data.
   
 SELECT 
     M.name,
