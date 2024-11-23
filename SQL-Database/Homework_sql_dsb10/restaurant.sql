@@ -113,7 +113,8 @@ WHERE customerId = 6;
 .header on
 
 -------------------------------------------------------------------------------
-
+## Select data and filter customers by state: California and Texas
+  
 SELECT 
     customerid,
     firstname,
