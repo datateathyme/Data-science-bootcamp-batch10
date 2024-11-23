@@ -185,12 +185,7 @@ GROUP BY C.customerId
 ORDER BY 3 DESC;
 
 --------------------------------------
-## This query retrieves information specifically for a manager with staffId=1 
-  # 1. We first identify managers from the staff table.
-  # 2. Then, we find transactions made by a specific manager (whose staffId is 1) from the transactions table.
-  # 3. Finally, we combine information from both temporary result sets, matching managers to their transactions, 
-  and retrieve details like names, positions, transaction details (ID, date, menu ID, quantity), 
-  and total amount (renamed as total_sale for clarity).
+## By matching managers with their transactions, this query provides a detailed overview of the manager with staff ID 1's performance.
   
   
 WITH  staff_manager AS  (
