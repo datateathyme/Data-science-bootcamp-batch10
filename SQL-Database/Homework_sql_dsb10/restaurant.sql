@@ -127,8 +127,7 @@ ORDER BY state;
 
 
 --------------------------------------
-## This query retrieves detailed information about transactions by combining data from four tables. 
-  It links transactions with customers, menu items, and the staff involved in the purchase, providing a comprehensive overview of each transaction.
+## This query is designed to provide a comprehensive understanding of transactions by linking related data from multiple tables.
   
 SELECT
     T.transactionId      AS  T_id,
