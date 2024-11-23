@@ -11,7 +11,7 @@
   -aggregate function & group by
 */
 -------------------------------------------------------------------------------
-## Create sample data for the 'staff', 'customer', and 'transaction' tables.
+## Create sample data for the 'staff', 'customers', and 'transactions' tables.
   
 CREATE TABLE staff (
   staffId      int PRIMARY KEY,
