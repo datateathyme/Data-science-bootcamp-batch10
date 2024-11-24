@@ -17,6 +17,7 @@
 - [X] STRFTIME *(SQLite)* extract, date_format -- STRFTIME is a specific function for SQLite
 - [x] CASE WHEN
 - [x] Common Table Expression (CTE) -- WITH clause / subquery
+- [x] UNION / UNION ALL
 - [x] Window function
   - ROW_number() OVER()
   - ROW_number() OVER(PARTITION BY ...)
