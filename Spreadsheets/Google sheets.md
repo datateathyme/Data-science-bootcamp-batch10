@@ -17,10 +17,10 @@
   
   - **Example Import Data from URL.xml**
     - [example data /bookstore.xml](https://raw.githubusercontent.com/toyeiei/jetbrains-python/master/bookshop.xml)
-     ```javascript
+     ```
      =IMPORTXML(URL.xml,"//title")
      ```
-     ```javascript
+     ```
     =IMPORTXML(URL.xml,"//Author")
      ```
     | Book name  | Author |
@@ -31,7 +31,7 @@
     | Learning XML | Erik T. Ray |
 
     - **🛎 If you want to know who is the second author of the third book in bookstore?**
-     ```javascript
+     ```sql
     You can use the XPath concept to find the answer and select the index you want to know.
 
     Ex. =IMPORTXML(URL.xml,"/bookstore/book[3]/author[2]")
