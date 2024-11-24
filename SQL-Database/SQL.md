@@ -6,7 +6,7 @@
 - [x] Insert Data / Create table / Create backup table
 - [x] Drop table / Delete record
 - [x] SELECT * FROM table_name WHERE condition; 
-- [x] Alter table
+- [x] Alter table / Update
 - [x] Join table
 - [x] Filter data
 - [x] Aggregate Functions
