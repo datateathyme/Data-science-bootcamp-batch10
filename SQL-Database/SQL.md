@@ -11,7 +11,7 @@
 - [x] Filter data
 - [x] Aggregate Functions
 - [x] Count Distinct
-- [x] Group by / Order by / Limit
+- [x] Group by / Having / Order by / Limit
 - [x] Working with datetime in SQLite
 - [x] Clean missing value using *COALESCE()*
 - [X] STRFTIME *(SQLite)* extract, date_format -- STRFTIME is a specific function for SQLite
