@@ -1,0 +1,45 @@
+Table transaction {
+  transactionId int [primary key]
+  customerId int
+  date datetime
+  totalAmount REAL
+  staffId int
+}
+
+Table customers {
+  customerId int [primary key]
+  firstname nvarchar
+  lastname nvarchar
+  email varchar
+}
+
+Table menus {
+  menuId int [primary key]
+  name text
+  price real
+}
+
+Table staff {
+  staffId int [primary key]
+  name nvarchar
+  position varchar
+  salary real
+}
+
+Table order_item {
+  orderId int [primary key]
+  customerId int
+  menuId int
+  quantity int
+}
+
+// reference
+Ref: customers.customerId < food_order.customerId
+Ref: customers.customerId < transaction.transactionId
+Ref: staff.staffId < transaction.transactionId
+Ref: customers.customerId < menus.menuId
+Ref: menus.menuId < food_order.orderId
+Ref: staff.staffId < transaction.staffId
+Ref: transaction.transactionId < food_order.orderId
+Ref: transaction.customerId < menus.menuId
+
