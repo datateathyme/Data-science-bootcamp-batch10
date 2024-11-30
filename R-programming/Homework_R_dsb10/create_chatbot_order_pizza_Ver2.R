@@ -1,3 +1,4 @@
+## homework in R create chatbot order pizza Ver.2
 ## create menu 
 # Pizza menu 
 pizza_menu <- data.frame(
@@ -14,7 +15,7 @@ drink_menu <- data.frame(
 )
 
 
-## order version 2 while loop
+## order version 2 used a while loop
 pizza_order_v2 <- function() {
   print("Hello! Welcome to Pizza Pie Palace. Let's get cheesy!")
   print("Pizza Menu: Let them choose ")
