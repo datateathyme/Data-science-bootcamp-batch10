@@ -1,5 +1,6 @@
-## homework
-## create game pao ying chub -- 10 round
+## homework 
+## create game pao ying chub 
+-- play a game `rock paper and scissors` 10 round
   
 ## generate a random computer choice
 gen_computer_choice <- function() {
