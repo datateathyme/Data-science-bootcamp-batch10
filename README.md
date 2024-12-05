@@ -61,5 +61,5 @@ Spreadsheets, SQL , R Programming , Python , Dashboard
 Thanks for stopping by my corner of the internet! 💫✨
 
 
-## 🎨 Quick plot data
+## 🎨 Quick dashboard ggsheets
 ![data dashboard](https://github.com/user-attachments/assets/64b651eb-8093-4562-b6da-a79f33aadc38)
