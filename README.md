@@ -62,4 +62,4 @@ Thanks for stopping by my corner of the internet! 💫✨
 
 
 ## 🎨 Test Insert Image
-![data dashboard](https://www.entechlog.com/images/blog/data/cricket-analysis-using-mage-ai/03_hu795565b011bef6cdd13255c84c390541_232280_1849x930_resize_q100_h2_box_3.webp)
+![data dashboard](https://github.com/user-attachments/assets/64b651eb-8093-4562-b6da-a79f33aadc38)
