@@ -58,7 +58,7 @@ Spreadsheets, SQL , R Programming , Python , Dashboard
 - LinkedIn: *coming soon*
 - Portfolio: *coming soon*
 
-Thanks for stopping by my corner of the internet! 💫✨
+**Thanks for stopping by my corner of the internet! 💫✨**
 
 
 ## 🎨 Quick dashboard ggsheets
