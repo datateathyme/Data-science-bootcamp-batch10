@@ -64,6 +64,6 @@ Spreadsheets, SQL , R Programming , Python , Dashboard
 ## 🎨 Quick dashboard ggsheets
   - Create Dashboard in ggsheets: Quick and Simple Ver.
 ![data dashboard](https://github.com/user-attachments/assets/64b651eb-8093-4562-b6da-a79f33aadc38)
-  - Dashboard ggsheets: with out gridlines
+  - Removed gridlines for a cleaner dashboard appearance.
 ![Quick-dashboard_ggsheets_without_gridlines](https://github.com/user-attachments/assets/5ebf6092-5c54-41d5-b0b2-35c3ff66303f)
 
