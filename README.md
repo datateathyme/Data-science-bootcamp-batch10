@@ -7,7 +7,7 @@
 2. Building A Second Brain
 3. Google sheets
 4. SQL Database
-5. Programming Foundation
+5. R Programming Foundation
 6. Data Transformation
 7. Data Visualization
 8. Essential Statistics
