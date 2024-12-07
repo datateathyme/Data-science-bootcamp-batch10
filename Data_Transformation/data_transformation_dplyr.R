@@ -165,4 +165,36 @@ imdb_prep <- imdb %>%
 ## export file
 write.csv(imdb_prep, "imdb_prep.csv", row.names = FALSE)
 
+## packages("tidyverse") => dplyr tidyr ggplot2
+## load library
+library(tidyverse)
 
+## data.frame vs. tibble 
+df_tibble <- tibble(id = 1:3, name = c("toy", "jisoo", "lisa"))
+df <- data.frame(id = 1:3, name = c("toy", "jisoo", "lisa"))
+
+class(df_tbiible)
+class(df)
+
+## covert dataframe to tibble  
+mtcars
+mtcars_tibble <- tibble(mtcars)
+
+## sample_n == random 
+set.seed(42)
+sample_n(mtcars, size=5)
+
+sample_frac(mtcars, size=0.50, replace = T)
+
+## slice()
+mtcars %>% 
+  slice(1:5)
+
+mtcars %>% 
+  slice(6:10)
+
+mtcars %>%
+  slice(c(1, 3, 5))
+
+mtcars %>% 
+  slice( sample(nrow(mtcars), 10))
