@@ -1,4 +1,4 @@
-# ggplot2 in R
+# 🔴🟡🟢 ggplot2 in R
 
 **🍱 Let's see below**
 
@@ -80,6 +80,6 @@ ggplot(small_diamonds , aes(carat, price, col=cut))  +
     ![ggplot2_Data_Viz_inR](https://github.com/user-attachments/assets/af8d968c-7eeb-4a6d-8dbc-bd9ace83e4cb)
   - Scatter plot : Mapping color in cut
     ![ggplot2_Data_Viz_inR_2](https://github.com/user-attachments/assets/11c57deb-5506-42bf-afd1-e19570e333af)
-  - Bar plot: Mapping color in cut position = "stack"
+  - Bar plot : Mapping color in cut position = "stack"
     ![ggplot2_Data_Viz_inR_4](https://github.com/user-attachments/assets/040e88a9-b06d-423e-8908-139c3fbf98fb)
  
