@@ -81,5 +81,5 @@ ggplot(small_diamonds , aes(carat, price, col=cut))  +
   - Mapping color in cut
     ![ggplot2_Data_Viz_inR_2](https://github.com/user-attachments/assets/11c57deb-5506-42bf-afd1-e19570e333af)
   - Mapping color in cut position = "stack"
-    ![ggplot2_Data_Viz_inR_3](https://github.com/user-attachments/assets/6df1fad6-631f-4762-a696-540b8b2071c0)
+    ![ggplot2_Data_Viz_inR_4](https://github.com/user-attachments/assets/040e88a9-b06d-423e-8908-139c3fbf98fb)
  
