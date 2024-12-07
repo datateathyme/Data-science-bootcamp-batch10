@@ -1,4 +1,5 @@
-# 🔴🟡🟢 ggplot2 in R
+# Data Visualization in R programming
+## 🔴🟡🟢 ggplot2 in R
 
 **🍱 Let's see below**
 
