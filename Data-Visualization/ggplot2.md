@@ -75,6 +75,9 @@ ggplot(small_diamonds , aes(carat, price, col=cut))  +
   facet_wrap(~ color, ncol=2) +
   theme_minimal()
 ```
-- Example :
- - ![ggplot2_Data_Viz_inR](https://github.com/user-attachments/assets/af8d968c-7eeb-4a6d-8dbc-bd9ace83e4cb)
- - ![ggplot2_Data_Viz_inR_2](https://github.com/user-attachments/assets/11c57deb-5506-42bf-afd1-e19570e333af)
+- [x] Example : ggplot2 
+  - FACET : small multiples
+    ![ggplot2_Data_Viz_inR](https://github.com/user-attachments/assets/af8d968c-7eeb-4a6d-8dbc-bd9ace83e4cb)
+  - Mapping color in cut
+    ![ggplot2_Data_Viz_inR_2](https://github.com/user-attachments/assets/11c57deb-5506-42bf-afd1-e19570e333af)
+ 
