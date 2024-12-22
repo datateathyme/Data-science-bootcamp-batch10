@@ -1,5 +1,5 @@
 # 🎄 Data Science Bootcamp batch10 
-  My Data Science & Analytics Projects and Key Learnings from `**:Datarockie**`
+  My Data Science & Analytics Projects and Key Learnings from **`:Datarockie`**
 
 ## 🥇 Core course: What I Learned 
 
