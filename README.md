@@ -45,7 +45,7 @@
 5. Linear Regregression Model using caret
 
 ## 🛠 Skills
-Spreadsheets, SQL , R Programming , Python , Dashboard 
+Spreadsheets, SQL , R Programming , Python , Dashboard, Spreadsheets, Statistics, Economic, Business & Marketing
 
 ## 🎖 Digital Badge
 - [Certified Professional Data Analyst](https://api.badgr.io/public/assertions/zVGZaGrSQXiWZQasDTgkFQ?identity__email=chanakarn.data789%40gmail.com)
