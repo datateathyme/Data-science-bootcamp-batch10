@@ -47,6 +47,9 @@
 ## 🛠 Skills
 Spreadsheets, SQL , R Programming , Python , Dashboard 
 
+## 📜 Certified Professional Data Analyst
+- [Certified Professional Data Analyst](https://api.badgr.io/public/assertions/zVGZaGrSQXiWZQasDTgkFQ?identity__email=chanakarn.data789%40gmail.com)
+
 ## 📜 Certificates
 - [Click to view more certificates](https://github.com/BowlaSunsun/Certificate)
 
