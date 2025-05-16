@@ -59,7 +59,7 @@ Spreadsheets, SQL , R Programming , Python , Dashboard, Statistics, Economic, Bu
 
 - Email: chanakarn.data789@gmail.com
 - LinkedIn: [Chanakarn Chuklin](https://www.linkedin.com/in/chanakarn-chuklin/)
-- Portfolio: *coming soon*
+- Portfolio: *website coming soon*
 
 **💖 Thanks for stopping by my corner of the internet! 💫✨**
 
