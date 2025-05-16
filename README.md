@@ -36,7 +36,7 @@
 - Intro to ML Engineering 101
 
 
-## 🍔 My personal projects
+## 📂 My personal projects
 
 1. SQL supermarket analytics
 2. SQL churn analytics
