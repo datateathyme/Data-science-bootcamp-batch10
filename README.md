@@ -58,7 +58,7 @@ Spreadsheets, SQL , R Programming , Python , Dashboard, Statistics, Economic, Bu
 🍫 Let's create something amazing together! Reach out to me at:
 
 - Email: chanakarn.data789@gmail.com
-- LinkedIn: *coming soon*
+- LinkedIn: [Chanakarn Chuklin](https://www.linkedin.com/in/chanakarn-chuklin/)
 - Portfolio: *coming soon*
 
 **💖 Thanks for stopping by my corner of the internet! 💫✨**
