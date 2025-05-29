@@ -1,5 +1,7 @@
 ## Let's use a simple logistic regression model 
-library(tidyverse)
+linstall.packages("titanic")
+install.packages("caret")
+
 library(caret)
 library(titanic)
 
