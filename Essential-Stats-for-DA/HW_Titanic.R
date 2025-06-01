@@ -37,7 +37,7 @@ model <- glm(Survived ~ Pclass + Sex + Age + SibSp,
 p_train <- predict(model, type = "response")
 train_data$pred <- ifelse(p_train >= 0.5, 1, 0) 
 
-result_train <- train_data[ , c("PassengerId", "Survived", "Pclass", "Age", "SibSp", "Sex", "pred")]
+result_train <- train_data[, c("PassengerId", "Survived", "Pclass", "Sex", "Age", "SibSp", "pred")]
 tibble(result_train)
 
 ## Score and Evaluate
