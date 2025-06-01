@@ -1,12 +1,14 @@
 ## Let's use a simple logistic regression model 
 linstall.packages("titanic")
 install.packages("caret")
+install.packages("tidyverse")
 
 library(caret)
 library(titanic)
+library(tibble)
 
 data("titanic_train")
-head(titanic_train)
+tibble(titanic_train)
 
 ## Drop NA (missing values)
 titanic_train <- na.omit(titanic_train)
@@ -17,6 +19,8 @@ titanic_train$Sex <- factor(titanic_train$Sex,
                             levels = c("male", "female"), 
                             labels = c(0, 1))
 
+## Check data after cleaned data and convert data
+tibble(titanic_train)
 
 ## Split Data [train 70% : test 30%]
 set.seed(42)
