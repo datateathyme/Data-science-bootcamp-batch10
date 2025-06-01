@@ -7,7 +7,7 @@ library(caret)
 library(titanic)
 library(tibble)
 
-##  Load and Explore Dataset
+## Load and Explore Dataset
 data("titanic_train")
 tibble(titanic_train)
 
