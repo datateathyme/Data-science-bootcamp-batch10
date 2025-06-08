@@ -51,7 +51,16 @@ student_grades %>%
   arrange(desc(Percentage)) %>%
   head(10)
 
-
+print("--- สรุปค่าสถิติคะแนนเปอร์เซ็นต์โดยรวม ---")
+sum_grades <- student_grades %>%
+  summarize(
+    min_percentage = min(Percentage),
+    q1_percentage = quantile(Percentage, prob = 0.25),
+    avg_percentage = mean(Percentage),
+    median_percentage = quantile(Percentage, prob = 0.5),
+    q3_percentage = quantile(Percentage, prob = 0.75),
+    max_percentage = max(Percentage)
+  )
 
 ## กราฟ Histogram แสดงการกระจายตัวของคะแนนรวม (Percentage)
 ggplot(student_grades, aes(x = Percentage)) +
