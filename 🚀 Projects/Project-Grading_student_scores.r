@@ -59,7 +59,8 @@ sum_grades <- student_grades %>%
     avg_percentage    = mean(Percentage),
     median_percentage = quantile(Percentage, prob = 0.5),
     q3_percentage     = quantile(Percentage, prob = 0.75),
-    max_percentage    = max(Percentage)
+    max_percentage    = max(Percentage),
+    sd_percentage     = sd(Percentage) 
   )
 
 ## กราฟ Histogram แสดงการกระจายตัวของคะแนนรวม (Percentage)
