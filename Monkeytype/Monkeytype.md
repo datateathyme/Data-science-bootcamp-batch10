@@ -6,4 +6,4 @@
 🍿 Feel free to explore my scores below!
 
 ## 🎯 My Monkeytype Scores
-![2024-06-26](images/wpm_progress_graph.png)
+
