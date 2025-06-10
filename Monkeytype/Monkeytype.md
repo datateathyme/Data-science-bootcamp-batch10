@@ -7,4 +7,4 @@
 
 ## 🎯 My Monkeytype Scores
 Min = 42 Max = 62
-
+- [Check out the scores](https://github.com/datateathyme/Data-science-bootcamp-batch10/tree/main/Monkeytype/monkeytype)
