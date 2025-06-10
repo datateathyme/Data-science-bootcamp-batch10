@@ -6,4 +6,5 @@
 🍿 Feel free to explore my scores below!
 
 ## 🎯 My Monkeytype Scores
+Min = 42 Max = 62
 
