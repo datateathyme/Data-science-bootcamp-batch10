@@ -16,3 +16,11 @@ df <- data.frame(friends,
           movie_lover)
 
 View(df)
+
+### create dataframe from list
+my_list <- list(friends = friends,
+                ages = ages,
+                location = location ,
+                movie = movie_lover)
+
+data.frame(my_list)
