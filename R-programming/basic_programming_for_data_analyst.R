@@ -38,7 +38,7 @@ income - expense
 
 money_in_my_pocket <- 150
 my_age <- 25
-my_name <- "chanakarn bowla"
+my_name <- "sunsun"
 movie_lover <- TRUE #FALSE
 
 today_date <- as.Date("2024-07-02")
@@ -59,7 +59,7 @@ as.numeric("100")
 ## 4. dataframe
 
 ## [3.1] vector, contains only single data types
-friends <- c("mind", "jorin", "fay", "may", "bec")
+friends <- c("may", "kevin", "jay", "emi", "binnie")
 ages <- c(25, 25, 22, 26, 21)
 marvel_lover <- c(T, F, T, F, F)
 
