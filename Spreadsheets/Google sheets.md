@@ -44,6 +44,7 @@
       1. Locate the third book:  **```//book[3]```**  (This would select the third book element in the document.)
       2. Find the second author of the third book: Assuming the authors are listed in a child element named "author", you might use **```//book[3]/author[2]```** (This would select the second author element within the third book element.)
 - [x] Table Function
+  - 🎞'Group by Column 'Performance' '
 - [x] Filter and Sort Data
   -  [Click view more: HW#2 Dynamic Sorting](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%232_Dynamic%20Sorting.md)
 - [x] Create Conditions
