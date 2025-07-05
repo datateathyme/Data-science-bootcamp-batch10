@@ -70,6 +70,8 @@
 - [x] Working with Date / Text
    - 🎞'Extract Hire Date and Calculate Experience (Years)'   
   ![Image](https://github.com/user-attachments/assets/40715b59-6b66-4d3c-9ab7-1b10e42fd536)
+- 🎞'Working with Text (String)'
+   
 - [x] Project - Convert TH to EN Date
   - [Click view more: HW#6 Project - Convert TH to EN Date](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%236_Convert%20TH%20to%20EN%20Date.md)
 - [x] Project - ID Card Parser
