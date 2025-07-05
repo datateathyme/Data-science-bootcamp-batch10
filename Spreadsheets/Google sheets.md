@@ -45,6 +45,7 @@
       2. Find the second author of the third book: Assuming the authors are listed in a child element named "author", you might use **```//book[3]/author[2]```** (This would select the second author element within the third book element.)
 - [x] Table Function
   - 🎞'Group by Column 'Performance' '
+  ![Image](https://github.com/user-attachments/assets/bcb0cd88-a43c-4858-ac0c-998cb2b5ea16)
 - [x] Filter and Sort Data
   -  [Click view more: HW#2 Dynamic Sorting](https://github.com/BowlaSunsun/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Homework_ggsheets_dsb10/HW%232_Dynamic%20Sorting.md)
 - [x] Create Conditions
