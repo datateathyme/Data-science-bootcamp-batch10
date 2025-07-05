@@ -1,4 +1,4 @@
-# 🌼🌻 Welcome to Google sheets world !!
+# 🌼🌻 Welcome to Google Sheets World !!
 ##  📁  Google Sheets : Lessons Learned
 **🍔 What did I learn from sprint google sheets**
 
