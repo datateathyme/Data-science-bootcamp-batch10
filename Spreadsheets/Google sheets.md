@@ -2,7 +2,8 @@
 ##  📁  Google Sheets : Lessons Learned
 **🍔 What did I learn from sprint google sheets**
 
-- [x] Data Entry 
+- [x] Data Entry
+    - 🎞'Entering Data: Types and Basic Summaries '
 - [x] Array Formular
     - 🍱 **To Do**	
       1. Format to dollar	
