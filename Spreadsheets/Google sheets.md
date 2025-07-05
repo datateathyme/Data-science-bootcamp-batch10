@@ -4,6 +4,7 @@
 
 - [x] Data Entry
     - 🎞'Entering Data: Types and Basic Summaries '
+      ![Image](https://github.com/user-attachments/assets/fe75bb18-9343-4b56-9304-207873feaa6f)
 - [x] Array Formular
     - 🍱 **To Do**	
       1. Format to dollar	
