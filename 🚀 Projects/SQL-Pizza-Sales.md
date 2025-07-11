@@ -35,3 +35,26 @@ SELECT COUNT(DISTINCT order_id) AS Total_orders FROM pizza_sales;
 ```sql
 SELECT SUM(quantity) / COUNT(DISTINCT order_id) AS Avg_pizzas_per_order FROM pizza_sales;
 ```
+### 💡 B. Daily Trend for Total Orders
+**ต้องการผลลัพธ์เป็นชื่อวันในสัปดาห์ (Monday, Tuesday, ...) สำหรับแนวโน้มรายวัน (7 วัน)**
+```sql
+SELECT
+     STRFTIME('%w', SUBSTR(order_date, 7, 4) || '-' || SUBSTR(order_date, 4, 2) || '-' || SUBSTR(order_date, 1, 2)) AS Day_of_week_number,
+     CASE STRFTIME('%w', SUBSTR(order_date, 7, 4) || '-' || SUBSTR(order_date, 4, 2) || '-' || SUBSTR(order_date, 1, 2))
+        when '0' then 'Sunday'
+        when '1' then 'Monday'
+        when '2' then 'Tuesday'
+        when '3' then 'Wednesday'
+        when '4' then 'Thursday'
+        when '5' then 'Friday'
+        when '6' then 'Saturday'
+     END AS Day_of_week_name,
+     COUNT (DISTINCT order_id) as Total_orders     
+FROM
+    pizza_sales
+GROUP BY
+    Day_of_week_name
+ORDER BY
+    Total_orders;
+```
+
