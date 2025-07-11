@@ -23,3 +23,15 @@ SELECT SUM(total_price) AS Total_Revenue FROM pizza_sales;
 ```sql
 SELECT ROUND(SUM(total_price) / COUNT(DISTINCT order_id),2) AS Avg_order_value FROM pizza_sales;
 ```
+**3. Total Pizzas Sold จำนวนพิซซ่าทั้งหมดที่ขายออกไป**
+```sql
+SELECT SUM(quantity) AS Total_pizza_sold FROM pizza_sales;
+```
+**4. Total Orders นับจำนวนออร์เดอร์ที่ได้รับทั้งหมด**
+```sql
+SELECT COUNT(DISTINCT order_id) AS Total_orders FROM pizza_sales;
+```
+**5. Average Pizzas Per Order จำนวนพิซซ่าเฉลี่ยต่อ 1 ออร์เดอร์**
+```sql
+SELECT SUM(quantity) / COUNT(DISTINCT order_id) AS Avg_pizzas_per_order FROM pizza_sales;
+```
