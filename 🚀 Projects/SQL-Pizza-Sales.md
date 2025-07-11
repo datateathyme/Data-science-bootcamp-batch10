@@ -73,3 +73,35 @@ GROUP BY
 ORDER BY
     Order_Hour;
 ```
+### 💡 D. % of Sales by Pizza Category
+**คำนวณเปอร์เซ็นต์ยอดขายตามหมวดหมู่พิซซ่า**
+```sql
+WITH PizzaCategorySales AS (
+    SELECT
+        pizza_category,
+        SUM(total_price) AS Category_Revenue
+    FROM
+        pizza_sales
+    WHERE
+        pizza_category IS NOT NULL AND pizza_category != ''
+    GROUP BY
+        pizza_category
+),
+TotalSales AS (
+    SELECT
+        SUM(total_price) AS Grand_Total_Revenue
+    FROM
+        pizza_sales
+    WHERE
+        pizza_category IS NOT NULL AND pizza_category != '' -- Ensure consistency with category sales filter
+)
+SELECT
+    PCS.pizza_category,
+    PCS.Category_Revenue,
+    ROUND((PCS.Category_Revenue * 100.0) / TS.Grand_Total_Revenue, 2) AS Percentage_of_Sales
+FROM
+    PizzaCategorySales AS PCS,
+    TotalSales AS TS
+ORDER BY
+    Percentage_of_Sales DESC; -- Order by percentage to see top categories
+```
