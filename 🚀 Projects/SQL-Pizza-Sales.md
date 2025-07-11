@@ -83,7 +83,7 @@ WITH PizzaCategorySales AS (
     FROM
         pizza_sales
     WHERE
-        pizza_category IS NOT NULL AND pizza_category != ''
+        pizza_category IS NOT NULL AND pizza_category != '' -- กรองข้อมูลที่หมวดหมู่ไม่ใช่ค่าว่าง
     GROUP BY
         pizza_category
 ),
@@ -93,7 +93,7 @@ TotalSales AS (
     FROM
         pizza_sales
     WHERE
-        pizza_category IS NOT NULL AND pizza_category != '' -- Ensure consistency with category sales filter
+        pizza_category IS NOT NULL AND pizza_category != '' -- กรองข้อมูลที่หมวดหมู่ไม่ใช่ค่าว่าง
 )
 SELECT
     PCS.pizza_category,
