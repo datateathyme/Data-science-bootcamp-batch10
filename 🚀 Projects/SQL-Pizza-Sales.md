@@ -41,13 +41,13 @@ SELECT SUM(quantity) / COUNT(DISTINCT order_id) AS Avg_pizzas_per_order FROM piz
 SELECT
      STRFTIME('%w', SUBSTR(order_date, 7, 4) || '-' || SUBSTR(order_date, 4, 2) || '-' || SUBSTR(order_date, 1, 2)) AS Day_of_week_number,
      CASE STRFTIME('%w', SUBSTR(order_date, 7, 4) || '-' || SUBSTR(order_date, 4, 2) || '-' || SUBSTR(order_date, 1, 2))
-        when '0' then 'Sunday'
-        when '1' then 'Monday'
-        when '2' then 'Tuesday'
-        when '3' then 'Wednesday'
-        when '4' then 'Thursday'
-        when '5' then 'Friday'
-        when '6' then 'Saturday'
+        WHEN '0' THEN 'Sunday'
+        WHEN '1' THEN 'Monday'
+        WHEN '2' THEN 'Tuesday'
+        WHEN '3' THEN 'Wednesday'
+        WHEN '4' THEN 'Thursday'
+        WHEN '5' THEN 'Friday'
+        WHEN '6' THEN 'Saturday'
      END AS Day_of_week_name,
      COUNT (DISTINCT order_id) as Total_orders     
 FROM
