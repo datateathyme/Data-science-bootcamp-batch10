@@ -35,7 +35,7 @@ SELECT COUNT(DISTINCT order_id) AS Total_orders FROM pizza_sales;
 ```sql
 SELECT SUM(quantity) / COUNT(DISTINCT order_id) AS Avg_pizzas_per_order FROM pizza_sales;
 ```
-### 💡 B. Daily Trend for Total Orders
+### 💡 B.Daily Trend for Total Orders
 **ต้องการผลลัพธ์เป็นชื่อวันในสัปดาห์ (Monday, Tuesday, ...) สำหรับแนวโน้มรายวัน (7 วัน)**
 ```sql
 SELECT
@@ -57,4 +57,19 @@ GROUP BY
 ORDER BY
     Total_orders;
 ```
-
+### 💡 C.Hourly Trend for Orders
+**สร้าง แนวโน้มออร์เดอร์รายชั่วโมง จากคอลัมน์ order_time**
+```sql
+SELECT
+    STRFTIME('%H', order_time) AS Order_Hour, -- ดึงชั่วโมงออกมา (00-23)
+    COUNT(DISTINCT order_id) AS Total_Orders
+FROM
+    pizza_sales
+WHERE
+    order_time IS NOT NULL -- กรองข้อมูลที่ order_time ไม่เป็น NULL
+    AND order_time != ''   -- กรองข้อมูลที่ order_time ไม่เป็นค่าว่าง
+GROUP BY
+    Order_Hour
+ORDER BY
+    Order_Hour;
+```
