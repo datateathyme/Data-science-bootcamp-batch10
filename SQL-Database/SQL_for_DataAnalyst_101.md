@@ -78,8 +78,9 @@ JOIN tracks  AS tr
 ON al.AlbumId = tr.AlbumId
 WHERE ar.name = 'BackBeat';
 ```
-**🌻random rows**
+**🌻getting random rows**
 ```sql
+-- Exploring Random Tracks
 SELECT 
     name,
     RANDOM()
