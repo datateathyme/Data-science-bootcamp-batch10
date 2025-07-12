@@ -115,3 +115,9 @@ UPDATE employee
 SET email = 'ceo@company.com'
 WHERE id = 1; -- ระบุตำแหน่งที่ต้องการเปลี่ยน
 ```
+**🌻copy and drop table**
+```sql
+-- backup table
+CREATE TABLE employee_backup AS
+SELECT * FROM employee;
+```
