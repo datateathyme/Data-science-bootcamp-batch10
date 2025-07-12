@@ -2,11 +2,11 @@
 **🌻create table employee**
 ```sql
 CREATE TABLE employee (
-        id INT UNIQUE, --UNIQUE key ห้ามซ้ำกัน
+        id INT UNIQUE, -- กำหนด id เป็น unique ห้ามซ้ำ
   	name TEXT,
   	department TEXT,
   	position TEXT,
-  	salary REAL  --REAL ตัวเลขที่มีทศนิยมได้ เป็นค่าตัวเลขแบบเรียลๆๆจริงๆเลยมีทศนิยมได้
+  	salary REAL  -- REAL ตัวเลขที่มีทศนิยมได้ เป็นค่าตัวเลขแบบเรียลๆๆจริงๆเลยมีทศนิยมได้
 );
 ```
 **🌻insert data into employee**
@@ -44,3 +44,4 @@ FROM employee
 ORDER BY salary DESC
 LIMIT 3;
 ```
+**🌻transform column create new salary column**
