@@ -63,7 +63,7 @@ SELECT
 FROM invoices
 WHERE year = 2011;
 ```
-**🌻JOIN table**
+**🌻JOIN table: joining data across multiple tables: Artists, Albums, Tracks**
 ```sql
 SELECT 
     ar.ArtistId,
@@ -76,4 +76,5 @@ JOIN albums  AS al
 ON ar.ArtistId = al.ArtistId
 JOIN tracks  AS tr
 ON al.AlbumId = tr.AlbumId
+WHERE ar.name = 'BackBeat';
 ```
