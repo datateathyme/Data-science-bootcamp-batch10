@@ -45,3 +45,12 @@ ORDER BY salary DESC
 LIMIT 3;
 ```
 **🌻transform column create new salary column (15% increase)**
+```sql
+SELECT 
+    name,
+    salary,
+    ROUND(salary * 1.15) AS new_salary -- ROUND เพื่อให้เป็นตัวเลขจำนวนเต็ม
+FROM employee
+ORDER BY salary DESC
+LIMIT 3;
+```
