@@ -63,3 +63,13 @@ SELECT
     LOWER(name) || '@company.com' AS company_email -- LOWER เปลี่ยนชื่อเป็นตัวพิมพ์เล็กทั้งหมด
 FROM employee;
 ```
+**🌻filter data**
+```sql
+-- AND operator
+SELECT * FROM employee
+WHERE department = 'Marketing' and salary > 90000; 
+
+-- OR operator
+SELECT * FROM employee
+WHERE department = 'Marketing' OR department = 'IT';
+```
