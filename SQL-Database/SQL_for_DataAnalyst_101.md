@@ -43,3 +43,13 @@ SELECT
 FROM customers;
 ```
 **🌻working with Date-Time in SQLite**
+```sql
+SELECT 
+    invoicedate,
+    STRFTIME('%Y', invoicedate)    AS year,
+    STRFTIME('%m', invoicedate)    AS month,
+    STRFTIME('%d', invoicedate)    AS day,
+    STRFTIME('%Y-%m', invoicedate) AS monthid
+FROM invoices
+WHERE year = '2010';
+```
