@@ -101,3 +101,7 @@ WHERE id IN (2,4);
 ```sql
 ALTER TABLE employee RENAME TO MyEmployee;
 ```
+```sql
+ALTER TABLE employee
+ADD email TEXT; -- ADD ตั้งชื่อคอลัมน์ใหม่
+```
