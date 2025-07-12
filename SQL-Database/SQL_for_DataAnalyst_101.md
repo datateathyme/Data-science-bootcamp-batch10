@@ -29,3 +29,4 @@ SELECT
 FROM tracks;
 ```
 **🌷result**
+![Image](https://github.com/user-attachments/assets/c1231eef-d404-47b8-af77-6bfa7f996f0d)
