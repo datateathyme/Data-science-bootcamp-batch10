@@ -109,4 +109,9 @@ ADD email TEXT; -- ADD ตั้งชื่อคอลัมน์ใหม่
 -- เพิ่มข้อมูลลงในคอลัมน์ใหม่ที่สร้างขึ้นมา
 UPDATE employee
 SET email = 'admin@company.com'; -- สมมติว่าพนักงานทุกคนใช้อีเมลเดียวกันหมด
+
+-- เปลี่ยนเฉพาะตำแหน่งที่ต้องการ -> เขียน WHERE clause
+UPDATE employee
+SET email = 'ceo@company.com'
+WHERE id = 1; -- ระบุตำแหน่งที่ต้องการเปลี่ยน
 ```
