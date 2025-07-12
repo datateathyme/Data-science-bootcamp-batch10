@@ -1,9 +1,10 @@
 # 📂 SQL for Data Analyst 101
 **🌻select columns**
 ```sql
-SELECT
+SELECT 
     firstname,
     lastname,
     country
-FROM customers;
+FROM customers
+LIMIT 10;
 ```
