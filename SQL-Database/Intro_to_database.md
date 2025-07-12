@@ -97,3 +97,4 @@ WHERE id = 5;
 DELETE FROM employee
 WHERE id IN (2,4);
 ```
+**🌻alter table**
