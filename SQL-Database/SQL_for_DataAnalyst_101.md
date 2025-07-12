@@ -31,3 +31,14 @@ FROM tracks;
 ```
 **🌷result**
 ![Image](https://github.com/user-attachments/assets/c1231eef-d404-47b8-af77-6bfa7f996f0d)
+**🌻Customer Segmentation: Corporate vs. End Customer**
+```sql
+-- CASE WHEN
+SELECT 
+    company,
+    CASE 
+    	WHEN company is not NULL THEN 'Corporate'
+        ELSE 'End Customer'
+    END AS segment
+FROM customers;
+```
