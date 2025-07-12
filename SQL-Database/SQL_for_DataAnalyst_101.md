@@ -42,3 +42,4 @@ SELECT
     END AS segment
 FROM customers;
 ```
+**🌻working with Date-Time in SQLite**
