@@ -72,4 +72,12 @@ WHERE department = 'Marketing' and salary > 90000;
 -- OR operator
 SELECT * FROM employee
 WHERE department = 'Marketing' OR department = 'IT';
+
+-- IN operator == OR
+SELECT * FROM employee
+WHERE department IN ('Marketing', 'IT');
+
+-- filter number
+SELECT * FROM employee
+WHERE salary <= 90000;
 ```
