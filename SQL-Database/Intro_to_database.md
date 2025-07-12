@@ -54,3 +54,12 @@ FROM employee
 ORDER BY salary DESC
 LIMIT 3;
 ```
+**🌻create new column (company_email)**
+```sql
+SELECT 
+    name,
+    salary,
+    ROUND(salary * 1.15)          AS new_salary,
+    LOWER(name) || '@company.com' AS company_email -- LOWER เปลี่ยนชื่อเป็นตัวพิมพ์เล็กทั้งหมด
+FROM employee;
+```
