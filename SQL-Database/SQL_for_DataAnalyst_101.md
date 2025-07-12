@@ -20,3 +20,12 @@ LIMIT 10;
 ```
 **🌷result**
 ![Image](https://github.com/user-attachments/assets/18128d2b-8215-4dd9-a803-4925fec867b5)
+**🌻transforming numeric data: minutes & mb**
+```sql
+SELECT 
+    name,
+    ROUND(milliseconds / 60000.0, 2)   AS minute,
+    ROUND(bytes / (1024*1024.0) , 2)   AS mb
+FROM tracks;
+```
+**🌷result**
