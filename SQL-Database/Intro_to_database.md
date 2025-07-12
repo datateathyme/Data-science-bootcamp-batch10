@@ -22,7 +22,10 @@ INSERT INTO employee VALUES
     (5, 'Walker', 'IT', 'Manager', 68000); 
 ```
 
-
+**🌻select all columns from employee**
+```sql
+SELECT * FROM employee;
+```
 
 
 
