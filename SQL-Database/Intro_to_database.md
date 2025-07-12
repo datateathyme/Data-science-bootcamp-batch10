@@ -98,3 +98,6 @@ DELETE FROM employee
 WHERE id IN (2,4);
 ```
 **🌻alter table (เปลี่ยนชื่อ table หรือ เพิ่มคอลัมน์ใหม่ได้)**
+```sql
+ALTER TABLE employee RENAME TO MyEmployee;
+```
