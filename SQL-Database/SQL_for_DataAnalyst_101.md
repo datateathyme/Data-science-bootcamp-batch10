@@ -18,3 +18,5 @@ SELECT
 FROM customers
 LIMIT 10;
 ```
+**🌷result**
+![Image](https://github.com/user-attachments/assets/18128d2b-8215-4dd9-a803-4925fec867b5)
