@@ -91,4 +91,8 @@ WHERE id = 1; -- ตำแหน่งที่ต้องการไปแก
 ```sql
 DELETE FROM employee
 WHERE id = 5;
+
+-- ลบหลาย record พร้อมกัน โดยใช้ IN operator ได้
+DELETE FROM employee
+WHERE id IN (2,4);
 ```
