@@ -26,6 +26,12 @@ INSERT INTO employee VALUES
 ```sql
 SELECT * FROM employee;
 ```
-
-
+**🌻select some columns from employee**
+```sql
+SELECT 
+    id,
+    name,
+    salary
+FROM employee;
+```
 
