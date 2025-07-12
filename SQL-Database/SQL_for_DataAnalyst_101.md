@@ -79,3 +79,19 @@ ON al.AlbumId = tr.AlbumId
 WHERE ar.name = 'BackBeat';
 ```
 **🌻random rows**
+```sql
+SELECT 
+    name,
+    RANDOM()
+FROM tracks
+ORDER By RANDOM() DESC
+LIMIT 10;
+```
+```sql
+-- ไม่ต้องใส่ RANDOM() ใน SELECT ก็ได้
+SELECT 
+    name
+FROM tracks
+ORDER By RANDOM() DESC
+LIMIT 10;
+```
