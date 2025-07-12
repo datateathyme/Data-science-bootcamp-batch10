@@ -53,3 +53,13 @@ SELECT
 FROM invoices
 WHERE year = '2010';
 ```
+```sql
+SELECT 
+    invoicedate,
+    CAST(STRFTIME('%Y', invoicedate) AS INT)  AS year, -- ใช้ CAST เปลี่ยน data type
+    STRFTIME('%m', invoicedate)               AS month,
+    STRFTIME('%d', invoicedate)               AS day,
+    STRFTIME('%Y-%m', invoicedate)            AS monthid
+FROM invoices
+WHERE year = 2011;
+```
