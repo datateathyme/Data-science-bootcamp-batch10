@@ -121,3 +121,8 @@ WHERE id = 1; -- ระบุตำแหน่งที่ต้องการ
 CREATE TABLE employee_backup AS
 SELECT * FROM employee;
 ```
+```sql
+-- drop table *ก่อนจะ drop ต้องดูดีๆ เพราะไม่มีปุ่มย้อนกลับ ลบแล้วลบเลย
+CREATE TABLE employee_backup AS
+SELECT * FROM employee;
+```
