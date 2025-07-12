@@ -34,4 +34,13 @@ SELECT
     salary
 FROM employee;
 ```
-
+**🌻select top 3 highest paid employees**
+```sql
+SELECT 
+    id,
+    name,
+    salary
+FROM employee
+ORDER BY salary DESC
+LIMIT 3;
+```
