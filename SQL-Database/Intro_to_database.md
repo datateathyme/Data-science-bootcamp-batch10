@@ -102,6 +102,11 @@ WHERE id IN (2,4);
 ALTER TABLE employee RENAME TO MyEmployee;
 ```
 ```sql
+-- สร้างคอลัมน์ใหม่
 ALTER TABLE employee
 ADD email TEXT; -- ADD ตั้งชื่อคอลัมน์ใหม่
+
+-- เพิ่มข้อมูลลงในคอลัมน์ใหม่ที่สร้างขึ้นมา
+UPDATE employee
+SET email = 'admin@company.com'; -- สมมติว่าพนักงานทุกคนใช้อีเมลเดียวกันหมด
 ```
