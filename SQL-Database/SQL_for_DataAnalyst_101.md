@@ -63,3 +63,17 @@ SELECT
 FROM invoices
 WHERE year = 2011;
 ```
+**🌻JOIN table**
+```sql
+SELECT 
+    ar.ArtistId,
+    ar.name  AS artistName,
+    al.Title AS albumTitle,
+    tr.name  AS trackName,
+    tr.Composer
+FROM artists AS ar
+JOIN albums  AS al
+ON ar.ArtistId = al.ArtistId
+JOIN tracks  AS tr
+ON al.AlbumId = tr.AlbumId
+```
