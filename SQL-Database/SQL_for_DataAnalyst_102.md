@@ -22,7 +22,16 @@ SELECT * FROM customers
 WHERE country = 'USA' AND state = 'CA' ;
 ```
 ```sql
--- OR "หรือ"
+-- OR "หรือ" เงื่อนไขใดเงื่อนไขหนึ่งเป็นจริงจะดึงผลลัพธ์ออกมาให้เรา
 SELECT * FROM customers
 WHERE country = 'USA' OR country = 'Canada' ;
+```
+```sql
+-- NOT operator == กรองเงื่อนไขที่เราไม่ต้องการออก
+SELECT * FROM customers
+WHERE NOT (country = 'USA' OR country = 'Canada' OR country = 'France');
+
+-- NOT IN
+SELECT * FROM customers
+WHERE country NOT IN ('USA', 'Canada', 'France');
 ```
