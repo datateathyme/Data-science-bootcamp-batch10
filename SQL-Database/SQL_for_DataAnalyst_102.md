@@ -37,6 +37,7 @@ WHERE country NOT IN ('USA', 'Canada', 'France'); -- เขียนแบบน
 ```
 **🌻filter data part2**
 ```sql
+-- IN operator
 SELECT * FROM customers
 WHERE country IN ('Brazil', 'Germany', 'Norway')
 ORDER BY country;
