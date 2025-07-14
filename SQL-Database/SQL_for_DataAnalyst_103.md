@@ -50,3 +50,6 @@ JOIN tracks  AS C
  ON C.AlbumId = B.AlbumId
 WHERE A.Name = 'Aerosmith';
 ```
+**🌻review type of JOIN**
+
+![Image](https://github.com/user-attachments/assets/8fdff890-63e8-43ae-b6a3-df99c8ab80a2)
