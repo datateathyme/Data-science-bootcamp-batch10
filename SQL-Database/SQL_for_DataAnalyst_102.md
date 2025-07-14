@@ -164,6 +164,14 @@ FROM customers;
 -- join table with 'WHERE' clause
 SELECT * FROM artists, albums
 WHERE artists.ArtistId = albums.ArtistId;
+
+-- select column
+SELECT 
+    artists.ArtistId,
+    artists.name AS artist_name,
+    albums.title AS album_name
+FROM artists, albums
+WHERE artists.ArtistId = albums.ArtistId;
 ```
 ```sql
 -- JOIN ON
