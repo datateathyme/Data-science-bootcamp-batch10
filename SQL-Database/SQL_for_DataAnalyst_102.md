@@ -107,3 +107,22 @@ SELECT
 FROM customers
 WHERE phone LIKE '%99%'; -- เลข 99 จะอยู่ตำแหน่งก็ได้ ถ้าใส่ '%_%'
 ```
+```sql
+SELECT 
+    firstname, 
+    lastname, 
+    country,
+    email,
+    phone
+FROM customers
+WHERE firstname LIKE 'J_hn';
+
+SELECT 
+    firstname, 
+    lastname, 
+    country,
+    email,
+    phone
+FROM customers
+WHERE firstname LIKE 'Rober__'
+```
