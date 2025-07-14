@@ -33,5 +33,5 @@ WHERE NOT (country = 'USA' OR country = 'Canada' OR country = 'France');
 
 -- NOT IN
 SELECT * FROM customers
-WHERE country NOT IN ('USA', 'Canada', 'France');
+WHERE country NOT IN ('USA', 'Canada', 'France'); -- เขียนแบบนี้สั้นกว่า
 ```
