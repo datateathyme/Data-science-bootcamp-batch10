@@ -5,3 +5,11 @@
 SELECT * FROM customers
 WHERE firstname = 'Leonie';
 ```
+```sql
+SELECT * FROM customers
+WHERE country = 'USA';
+
+-- ถ้าไม่แน่ใจว่าตัวอักษรในคอลัมน์นั้นเป็นตัวพิมพ์เล็กหรือพิมพ์ใหญ่ให้เปลี่ยนชื่อคอลัมน์เป็นตัวพิมพ์เล็กหรือพิมพ์ใหม่ทั้งหมดไปเลย
+SELECT * FROM customers
+WHERE LOWER(country) = 'usa'; -- เปลี่ยนตัวอักษรในคอลัมน์ให้เป็นตัวพิมพ์เล็กทั้งหมดเพื่อง่ายต่อการค้นหา
+```
