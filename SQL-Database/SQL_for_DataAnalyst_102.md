@@ -163,7 +163,7 @@ FROM customers;
 ```sql
 -- join table with 'WHERE' clause
 SELECT * FROM artists, albums
-WHERE artists.ArtistId = albums.ArtistId;
+WHERE artists.ArtistId = albums.ArtistId; -- PK = FK
 
 -- select column
 SELECT 
@@ -171,11 +171,54 @@ SELECT
     artists.name AS artist_name,
     albums.title AS album_name
 FROM artists, albums
-WHERE artists.ArtistId = albums.ArtistId;
+WHERE artists.ArtistId = albums.ArtistId -- PK = FK
+ AND artists.ArtistId IN (8, 100, 120); -- ศิลปิน id นี้ออกมาแล้วกี่ album
 ```
 ```sql
 -- JOIN ON
 SELECT * FROM artists
 JOiN albums
 ON artists.ArtistId = albums.ArtistId;
+```
+```sql
+-- join 3 table with 'WHERE' clause
+SELECT 
+    artists.ArtistId,
+    artists.name AS artist_name,
+    albums.title AS album_name,
+    tracks.name  AS track_name
+FROM artists, albums, tracks
+WHERE artists.ArtistId = albums.ArtistId
+ AND albums.AlbumId = tracks.AlbumId
+ AND artists.ArtistId = 100;
+```
+**🌻Aggregate functions**
+```sql
+-- Aggregate functions
+SELECT 
+    ROUND(AVG(milliseconds),2)  AS avg_mill, -- ROUND ปรับทศนิยมให้เหลือ 2 จุด
+    SUM(milliseconds)           AS sum_mill,
+    MIN(milliseconds)           AS min_mill,
+    MAX(milliseconds)           AS max_mill,
+    COUNT(milliseconds)         AS count_mill
+FROM tracks;
+```
+**🌻COUNT Distinct**
+```sql
+-- UNIQUE value
+-- ลูกค้าทั้งหมดมี 59 คน มาจาก 24 ประเทศ
+SELECT 
+    COUNT(DISTINCT(country)) AS n_country,
+    COUNT(*)                 AS n_customer
+FROM customers;
+```
+**🌻GROUP BY**
+```sql
+-- GROUP BY
+SELECT 
+    country,
+    COUNT(*) AS count_country
+FROM customers
+GROUP BY country -- คอลัมน์ไหนอยู่ใน GROUP BY คอลัมน์นั้นต้องอยู๋ใน SELECT ด้วย
+ORDER By count_country DESC; -- sort data in descending order 
 ```
