@@ -68,3 +68,22 @@ WHERE company IS NOT NULL; -- filter value IS NOT NULL
 SELECT * FROM customers
 WHERE company IS NULL;
 ```
+**🌻filter data part3 -- pattern matching**
+```sql
+-- pattern matching
+SELECT 
+    firstname, 
+    lastname, 
+    country,
+    email
+FROM customers
+WHERE email LIKE '%@gmail.com'; -- หา email ลูกค้าที่ลงท้ายด้วย '@gmail.com'
+
+SELECT 
+    firstname, 
+    lastname, 
+    country,
+    email
+FROM customers
+WHERE email LIKE '%@gmail.com'AND country = 'USA'; -- AND country in USA
+```
