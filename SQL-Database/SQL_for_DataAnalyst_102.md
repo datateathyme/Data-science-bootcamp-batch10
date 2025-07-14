@@ -140,3 +140,22 @@ SELECT
     COALESCE(company, 'End Customer') AS 'Company Clean' -- ใส่ '' ถ้าอยากตั้งชื่อแบบมี space
 FROM customers;
 ```
+```sql
+SELECT 
+    company,
+    COALESCE(company, 'End Customer') AS 'Company Clean',
+    CASE 
+    	WHEN company IS NULL THEN 'End Customer'
+        ELSE company -- แทนที่ด้วยค่าเดิม
+    END AS 'Company Clean2'
+FROM customers;
+
+SELECT 
+    company,
+    COALESCE(company, 'End Customer') AS 'Company Clean',
+    CASE 
+    	WHEN company IS NULL THEN 'End Customer'
+        ELSE 'Corporate' -- แทนที่ด้วยค่าใหม่
+    END AS 'Company Clean3'
+FROM customers;
+```
