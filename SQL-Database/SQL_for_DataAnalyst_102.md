@@ -42,3 +42,8 @@ SELECT * FROM customers
 WHERE country IN ('Brazil', 'Germany', 'Norway')
 ORDER BY country;
 ```
+```sql
+-- BETWEEN AND
+SELECT * FROM customers
+WHERE customerid BETWEEN 5 AND 10;
+```
