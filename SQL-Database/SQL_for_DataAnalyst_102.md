@@ -159,3 +159,15 @@ SELECT
     END AS segment
 FROM customers;
 ```
+**🌻JOIN data using 'WHERE'**
+```sql
+-- join table with 'WHERE' clause
+SELECT * FROM artists, albums
+WHERE artists.ArtistId = albums.ArtistId;
+```
+```sql
+-- JOIN ON
+SELECT * FROM artists
+JOiN albums
+ON artists.ArtistId = albums.ArtistId;
+```
