@@ -36,3 +36,8 @@ SELECT * FROM customers
 WHERE country NOT IN ('USA', 'Canada', 'France'); -- เขียนแบบนี้สั้นกว่า
 ```
 **🌻filter data part2**
+```sql
+SELECT * FROM customers
+WHERE country IN ('Brazil', 'Germany', 'Norway')
+ORDER BY country;
+```
