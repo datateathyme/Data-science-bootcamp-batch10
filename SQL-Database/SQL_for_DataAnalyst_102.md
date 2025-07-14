@@ -16,3 +16,8 @@ WHERE LOWER(country) = 'usa'; -- เปลี่ยนตัวอักษร�
 SELECT * FROM customers
 WHERE LOWER(country) = 'united kingdom';
 ```
+```sql
+-- AND เชื่อม 2 เงื่อนไขที่เป็นจริงทั้งคู่
+SELECT * FROM customers
+WHERE country = 'USA' AND state = 'CA' ;
+```
