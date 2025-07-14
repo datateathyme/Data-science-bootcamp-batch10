@@ -60,7 +60,11 @@ SELECT invoicedate FROM invoices
 WHERE invoicedate BETWEEN '2009-01-01 00:00:00' AND '2009-01-31 20:00:00';
 ```
 ```sql
--- filter Null values
+-- filter values is not Null 
 SELECT * FROM customers
 WHERE company IS NOT NULL; -- filter value IS NOT NULL
+
+-- filter Null valuse
+SELECT * FROM customers
+WHERE company IS NULL;
 ```
