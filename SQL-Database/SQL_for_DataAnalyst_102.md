@@ -127,3 +127,16 @@ SELECT
 FROM customers
 WHERE firstname LIKE 'Rober__' -- matching 2 character
 ```
+**🌻COALESCE -- manipulate NULL/missing values**
+```sql
+-- แทนที่ค่า NULL / missing values
+SELECT 
+    company,
+    COALESCE(company, 'End Customer') AS CompanyClean -- แทนที่ NULL เลือกคอลัมน์และแทนที่ด้วยค่าใหม่ที่ต้องการ 
+FROM customers;
+
+SELECT 
+    company,
+    COALESCE(company, 'End Customer') AS 'Company Clean' -- ใส่ '' ถ้าอยากตั้งชื่อแบบมี space
+FROM customers;
+```
