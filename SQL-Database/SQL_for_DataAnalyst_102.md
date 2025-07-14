@@ -21,3 +21,8 @@ WHERE LOWER(country) = 'united kingdom';
 SELECT * FROM customers
 WHERE country = 'USA' AND state = 'CA' ;
 ```
+```sql
+-- OR "หรือ"
+SELECT * FROM customers
+WHERE country = 'USA' OR country = 'Canada' ;
+```
