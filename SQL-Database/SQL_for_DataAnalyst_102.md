@@ -222,3 +222,28 @@ FROM customers
 GROUP BY country -- คอลัมน์ไหนอยู่ใน GROUP BY คอลัมน์นั้นต้องอยู๋ใน SELECT ด้วย
 ORDER By count_country DESC; -- sort data in descending order 
 ```
+```sql
+-- Aggregate, join table, group by, order by, limit
+SELECT 
+    genres.name,
+    COUNT(*) AS count_song
+FROM genres, tracks
+WHERE genres.GenreId = tracks.GenreId
+GROUP BY genres.name
+ORDER BY count_song DESC
+LIMIT 5;
+```
+**🌻HAVING -- filter after group by**
+```sql
+-- ใช้กรองข้อมูลหลัง GROUP BY
+-- กรองกลุ่มที่เราต้องการ
+SELECT 
+    genres.name,
+    COUNT(*) AS count_song
+FROM genres, tracks
+WHERE genres.GenreId = tracks.GenreId -- WHERE filter table -> filter เพลง 'Rock' ทิ้งก่อนไปทำ GROUP BY
+ AND genres.name <> 'Rock' -- <> คือ ไม่เท่ากับ
+GROUP BY genres.name
+HAVING count_song >= 100 -- HAVING filter GROUP
+ORDER BY count_song DESC;
+```
