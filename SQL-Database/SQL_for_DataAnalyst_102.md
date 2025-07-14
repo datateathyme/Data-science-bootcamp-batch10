@@ -51,3 +51,16 @@ WHERE customerid BETWEEN 5 AND 10;
 SELECT * FROM customers
 WHERE customerid >= 5 AND customerid <= 10;
 ```
+```sql
+-- filter DateTime
+SELECT invoicedate FROM invoices
+WHERE invoicedate BETWEEN '2009-02-01' AND '2009-02-31';
+
+SELECT invoicedate FROM invoices
+WHERE invoicedate BETWEEN '2009-01-01 00:00:00' AND '2009-01-31 20:00:00';
+```
+```sql
+-- filter Null values
+SELECT * FROM customers
+WHERE company IS NOT NULL; -- filter value IS NOT NULL
+```
