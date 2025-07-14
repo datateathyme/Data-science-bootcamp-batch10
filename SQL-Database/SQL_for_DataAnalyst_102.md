@@ -156,6 +156,6 @@ SELECT
     CASE 
     	WHEN company IS NULL THEN 'End Customer'
         ELSE 'Corporate' -- แทนที่ด้วยค่าใหม่
-    END AS 'Company Clean3'
+    END AS segment
 FROM customers;
 ```
