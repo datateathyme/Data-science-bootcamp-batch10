@@ -7,7 +7,7 @@ WHERE firstname = 'Leonie';
 ```
 ```sql
 SELECT * FROM customers
-WHERE country = 'USA';
+WHERE country = 'USA'; -- key ที่ค้นหาต้องเหมือนในคอลัมน์เป๊ะๆ
 
 -- ถ้าไม่แน่ใจว่าตัวอักษรในคอลัมน์นั้นเป็นตัวพิมพ์เล็กหรือพิมพ์ใหญ่ให้เปลี่ยนชื่อคอลัมน์เป็นตัวพิมพ์เล็กหรือพิมพ์ใหม่ทั้งหมดไปเลย
 SELECT * FROM customers
