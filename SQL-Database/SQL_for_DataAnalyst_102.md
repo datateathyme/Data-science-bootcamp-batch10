@@ -247,3 +247,25 @@ GROUP BY genres.name
 HAVING count_song >= 100 -- HAVING filter GROUP
 ORDER BY count_song DESC;
 ```
+**🌻ORDER BY - sort data**
+```sql
+SELECT 
+    genres.name,
+    COUNT(*) AS count_song
+FROM genres, tracks
+WHERE genres.GenreId = tracks.GenreId
+GROUP BY genres.name
+ORDER BY count_song DESC -- sort data in descending order
+LIMIT 5; -- limit top 5
+```
+```sql
+SELECT 
+    genres.name,
+    COUNT(*) AS count_song
+FROM genres 
+JOIN tracks
+ ON genres.GenreId = tracks.GenreId
+GROUP BY genres.name
+ORDER BY count_song DESC
+LIMIT 5;
+```
