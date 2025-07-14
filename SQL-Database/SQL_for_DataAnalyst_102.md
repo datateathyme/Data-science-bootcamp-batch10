@@ -46,4 +46,8 @@ ORDER BY country;
 -- BETWEEN AND
 SELECT * FROM customers
 WHERE customerid BETWEEN 5 AND 10;
+
+-- ได้ผลลัพธ์เหมือนด้านบนแต่เขียนยาวกว่า
+SELECT * FROM customers
+WHERE customerid >= 5 AND customerid <= 10;
 ```
