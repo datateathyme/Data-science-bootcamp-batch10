@@ -18,10 +18,35 @@ WHERE A.ArtistId = B.ArtistId -- PK=FK
 ```sql
 SELECT 
     A.ArtistId,
-    A.Name   AS artist_name,
-    B.Title  AS album_name
+    A.Name   AS artistName,
+    B.Title  AS albumName
 FROM artists AS A
 JOIN albums  AS B
 ON A.ArtistId = B.ArtistId
 WHERE A.Name LIKE 'C%';
+```
+```sql
+-- Default JOIN = INNER JOIN
+SELECT 
+    A.ArtistId,
+    A.Name   AS artistName,
+    B.Title  AS albumName,
+    C.Name   AS trackName
+FROM artists AS A
+JOIN albums  AS B
+ ON A.ArtistId = B.ArtistId
+JOIN tracks  AS C
+ ON C.AlbumId = B.AlbumId
+WHERE A.Name LIKE 'C%';
+```
+```sql
+-- count song of 'Aerosmith'
+SELECT 
+    COUNT(*) AS Aerosmith_Songs
+FROM artists AS A
+JOIN albums  AS B
+ ON A.ArtistId = B.ArtistId
+JOIN tracks  AS C
+ ON C.AlbumId = B.AlbumId
+WHERE A.Name = 'Aerosmith';
 ```
