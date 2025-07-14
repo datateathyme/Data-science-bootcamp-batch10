@@ -1,6 +1,6 @@
 # 📂 SQL for Data Analysts 102: A Chinook Database Case Study
 ### ⛱ This area showcases foundational SQL skills essential for data analysis, demonstrated through practical queries on the chinook.db database. 
-**🌻filter data |**
+**🌻filter data part1**
 ```sql
 SELECT * FROM customers
 WHERE firstname = 'Leonie';
@@ -35,3 +35,4 @@ WHERE NOT (country = 'USA' OR country = 'Canada' OR country = 'France');
 SELECT * FROM customers
 WHERE country NOT IN ('USA', 'Canada', 'France'); -- เขียนแบบนี้สั้นกว่า
 ```
+**🌻filter data part2**
