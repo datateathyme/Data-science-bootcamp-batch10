@@ -52,4 +52,4 @@ WHERE A.Name = 'Aerosmith';
 ```
 **🌻review type of JOIN**
 
-![Image](https://github.com/user-attachments/assets/8fdff890-63e8-43ae-b6a3-df99c8ab80a2)
+![Image](https://github.com/user-attachments/assets/0ca59bad-8b18-4a52-bfaa-6b5f92064f81)
