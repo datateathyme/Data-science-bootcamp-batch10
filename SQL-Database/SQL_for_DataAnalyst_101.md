@@ -47,6 +47,7 @@ FROM customers;
 ```
 **🌻working with Date-Time in SQLite**
 ```sql
+-- STRFTIME is a specific function for SQLite
 SELECT 
     invoicedate,
     STRFTIME('%Y', invoicedate)    AS year,
