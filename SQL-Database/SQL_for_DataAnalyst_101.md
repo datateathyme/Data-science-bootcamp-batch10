@@ -11,6 +11,7 @@ LIMIT 10;
 ```
 **🌻create new columns -> fullName & email**
 ```sql
+-- create/ transform columns
 SELECT 
     firstname,
     lastname,
@@ -32,6 +33,8 @@ FROM tracks;
 **🌷result**
 ![Image](https://github.com/user-attachments/assets/c1231eef-d404-47b8-af77-6bfa7f996f0d)
 **🌻customer segmentation: Corporate vs. End Customer**
+- CASE WHEN ใช้ในการเขียนเงื่อนไข สร้างคอลัมน์ใหม่ เราจะเขียน CASE WHEN ใน SELECT clause
+- 🐣  Note : เปิดด้วย ```CASE``` และปิดท้ายด้วย ```END``` / ```WHEN``` คือเงื่อนไข ส่วน ```THEN``` คือ Value
 ```sql
 -- CASE WHEN
 SELECT 
