@@ -159,7 +159,7 @@ SELECT
     END AS segment
 FROM customers;
 ```
-**🌻JOIN data using 'WHERE'**
+**🌻JOIN data using ```WHERE```**
 ```sql
 -- join table with 'WHERE' clause
 SELECT * FROM artists, albums
@@ -212,7 +212,7 @@ SELECT
     COUNT(*)                 AS n_customer
 FROM customers;
 ```
-**🌻GROUP BY**
+**🌻```GROUP BY```**
 ```sql
 -- GROUP BY
 SELECT 
@@ -233,7 +233,7 @@ GROUP BY genres.name
 ORDER BY count_song DESC
 LIMIT 5;
 ```
-**🌻HAVING -- filter after group by**
+**🌻```HAVING``` -- filter after group by**
 ```sql
 -- ใช้กรองข้อมูลหลัง GROUP BY
 -- กรองกลุ่มที่เราต้องการ
@@ -247,7 +247,7 @@ GROUP BY genres.name
 HAVING count_song >= 100 -- HAVING filter GROUP
 ORDER BY count_song DESC;
 ```
-**🌻ORDER BY - sort data**
+**🌻```ORDER BY``` - sort data**
 ```sql
 SELECT 
     genres.name,
