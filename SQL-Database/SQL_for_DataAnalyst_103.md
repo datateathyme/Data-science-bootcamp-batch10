@@ -151,3 +151,19 @@ WHERE e1.manager_id = e2.id
 ![Image](https://github.com/user-attachments/assets/802376f3-2538-40fb-a2ee-bb78138a34d1)
 
 **🌻intersect and except**
+ - INTERSECT return เฉพาะ distinct rows ที่มีในสองตาราง การใช้งานคล้ายๆ INNER JOIN return row ที่ match ค่ากัน
+ - EXCEPT return เฉพาะ distinct rows ในตารางด้านซ้ายที่ ไม่มี ในตารางด้านขวา
+
+```sql
+-- คือ id หนังสือ ที่มีอยู่ใน 2 table [Note: เราต้องใส่ id ถ้าใส่ * จะรันไม่ได้]
+-- ผลลัพธ์จะรีเทิร์น id 1 , 4, 5 ที่มีใน 2 table 
+SELECT id FROM book_shop
+INTERSECT -- intersect = which books are in both tables
+SELECT id From favourite_book
+```
+```sql
+-- ถ้าอยากรู้ว่า id ไหน ที่มีใน book_shop แต่ไม่มีใน favorite_book ให้ใช้ EXCEPT
+SELECT id FROM book_shop
+EXCEPT -- except = which books are in the left table, but not in the right tables
+SELECT id From favourite_book
+```
