@@ -69,6 +69,15 @@ WHERE year = 2011;
 ```
 **🌻JOIN table: joining data across multiple tables: Artists, Albums, Tracks**
 ```sql
+-- review join syntax
+SELECT 
+	A.column,
+	B.column
+FROM tableA AS A
+JOIN tableB AS B
+	ON A.primary_key = B.foreign_key;
+```
+```sql
 SELECT 
     ar.ArtistId,
     ar.name  AS artistName,
@@ -87,7 +96,7 @@ WHERE ar.name = 'BackBeat';
 -- Exploring Random Tracks
 SELECT 
     name,
-    RANDOM()
+    RANDOM() -- Random() ไม่ต้องใส่ในนี้ก็ได้ ใส่ใน order by อย่างเดียวก็ได้
 FROM tracks
 ORDER By RANDOM() DESC
 LIMIT 10;
@@ -97,6 +106,6 @@ LIMIT 10;
 SELECT 
     name
 FROM tracks
-ORDER By RANDOM() DESC
+ORDER By RANDOM() DESC 
 LIMIT 10;
 ```
