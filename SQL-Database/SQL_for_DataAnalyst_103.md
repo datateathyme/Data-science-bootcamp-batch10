@@ -80,3 +80,22 @@ INSERT INTO favorite_book VALUES
     (4, 'Charles Duhigg', 12007),
     (5, 'Malcolm Gladwell', 12063);
 ```
+```sql
+SELECT * FROM book_shop;
+SELECT * FROM favorite_book;
+```
+**🌻INNER JOIN and LEFT JOIN**
+```sql
+-- inner join
+SELECT * FROM book_shop  As A
+INNER JOIN favorite_book AS B  ON A.id = B.id;
+
+-- the same result join with 'WHERE' clause
+SELECT * FROM book_shop, favorite_book
+WHERE book_shop.id = favorite_book.id;
+```
+```sql
+-- left join
+SELECT * FROM book_shop  AS A 
+LEFT JOIN favorite_book  AS B ON A.id = B.id;
+```
