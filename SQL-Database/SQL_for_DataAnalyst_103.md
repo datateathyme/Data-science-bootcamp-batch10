@@ -134,3 +134,17 @@ INSERT INTO employee VALUES
     (9, 'Joe', 'AM', 6),
     (10, 'Anna', 'AM', 7);
 ```
+```sql
+-- self join
+SELECT 
+    e1.name  AS staff,
+    e1.level AS staff_level,
+    e2.name  AS manager,
+    e2.level AS manager_level, 
+    e1.name || ' reports to ' || e2.name AS comment
+FROM employee AS e1, employee AS e2
+WHERE e1.manager_id = e2.id
+```
+
+**⛱ result**
+
