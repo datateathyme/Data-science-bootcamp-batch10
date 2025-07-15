@@ -1,6 +1,6 @@
 # 📂 SQL for Data Analysts 103: A Chinook Database Case Study
 ### ⛱ This area showcases foundational SQL skills essential for data analysis, demonstrated through practical queries on the chinook.db database. 
-**🌻select data from multiple tables using 'WHERE' - 'PK = FK'**
+**🌻select data from multiple tables using ```WHERE``` - ```PK = FK```**
 ```sql
 SELECT * FROM artists, albums
 WHERE artists.ArtistId = albums.ArtistId;
@@ -14,7 +14,7 @@ FROM artists AS A, albums AS B
 WHERE A.ArtistId = B.ArtistId -- PK=FK
  AND A.Name LIKE 'C%';
 ```
-**🌻convert 'WHERE' to 'INNER JOIN'**
+**🌻convert ```WHERE``` to ```INNER JOIN```**
 ```sql
 SELECT 
     A.ArtistId,
@@ -84,7 +84,7 @@ INSERT INTO favorite_book VALUES
 SELECT * FROM book_shop;
 SELECT * FROM favorite_book;
 ```
-**🌻INNER JOIN and LEFT JOIN**
+**🌻```INNER JOIN and LEFT JOIN```**
 ```sql
 -- inner join
 SELECT * FROM book_shop  As A
@@ -99,7 +99,7 @@ WHERE book_shop.id = favorite_book.id;
 SELECT * FROM book_shop  AS A 
 LEFT JOIN favorite_book  AS B ON A.id = B.id;
 ```
-**🌻CROSS JOIN (aka. Cartesian)**
+**🌻```CROSS JOIN``` (aka. Cartesian)**
 
 **🌷cross join ไม่ต้องมี PK=FK (table x table)**
 ```sql
@@ -112,7 +112,7 @@ SELECT * FROM ranks, suits;
 -- หรือเขียนแบบนี้ก็ได้
 SELECT * FROM ranks CROSS JOIN suits ORDER BY suit;
 ```
-**🌻Self join - table can join itself (self-join)**
+**🌻```Self join``` - table can join itself (self-join)**
 ```sql
 -- CREATE TABLE
 CREATE TABLE employee (
@@ -151,8 +151,8 @@ WHERE e1.manager_id = e2.id
 ![Image](https://github.com/user-attachments/assets/802376f3-2538-40fb-a2ee-bb78138a34d1)
 
 **🌻intersect and except**
- - INTERSECT return เฉพาะ distinct rows ที่มีในสองตาราง การใช้งานคล้ายๆ INNER JOIN return row ที่ match ค่ากัน
- - EXCEPT return เฉพาะ distinct rows ในตารางด้านซ้ายที่ ไม่มี ในตารางด้านขวา
+ - ```INTERSECT``` return เฉพาะ distinct rows ที่มีในสองตาราง การใช้งานคล้ายๆ INNER JOIN return row ที่ match ค่ากัน
+ - ```EXCEPT``` return เฉพาะ distinct rows ในตารางด้านซ้ายที่ ไม่มี ในตารางด้านขวา
 
 ```sql
 -- คือ id หนังสือ ที่มีอยู่ใน 2 table [Note: เราต้องใส่ id ถ้าใส่ * จะรันไม่ได้]
@@ -169,8 +169,8 @@ SELECT id From favourite_book
 ```
 **🌻Union & Union All**
 - Union = คือการเอา 2 table มาต่อกัน แต่ถ้าต้องการเก็บค่า Duplicate ที่ซ้ำกันไว้ให้เติมคำว่า ALL
-- [x] Union = จะลบ Duplicate row ทิ้ง
-- [x] Union ALL = จะเก็บ Duplicate row ไว้
+- [x] ```Union``` = จะลบ Duplicate row ทิ้ง
+- [x] ```Union ALL``` = จะเก็บ Duplicate row ไว้
 
 ```sql
 --  Union = จะลบ Duplicate row ทิ้ง
@@ -185,7 +185,7 @@ UNION ALL
 SELECT * FROM book_shop_new;
 ```
 **🌻intro to subqueries**
-- Subqueries คือเทคนิคการเขียน nested query หรือ 'SELECT ซ้อน SELECT'
+- ```Subqueries``` คือเทคนิคการเขียน nested query หรือ ```SELECT ซ้อน SELECT```
 
 ```sql
 
