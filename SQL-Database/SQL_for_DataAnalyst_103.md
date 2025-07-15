@@ -186,3 +186,14 @@ SELECT * FROM book_shop_new;
 ```
 **🌻intro to subqueries**
 - Subqueries คือเทคนิคการเขียน nested query หรือ 'SELECT ซ้อน SELECT'
+
+```sql
+
+-- basic subqueries in WHERE clause
+SELECT * FROM tracks 
+WHERE milliseconds = (SELECT max(milliseconds) FROM tracks);
+
+SELECT firstname, lastname, country FROM
+ (SELECT * FROM customers
+  WHERE country = 'USA')
+```
