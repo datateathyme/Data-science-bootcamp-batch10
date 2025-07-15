@@ -16,6 +16,8 @@ WHERE LOWER(country) = 'usa'; -- เปลี่ยนตัวอักษร�
 SELECT * FROM customers
 WHERE LOWER(country) = 'united kingdom';
 ```
+- `AND` สองเงื่อนไขเป็นจริงทั้งคู่
+- `OR` เงื่อนไขใดเงื่อนไขหนึ่งเป็นจริง
 ```sql
 -- AND เชื่อม 2 เงื่อนไขที่เป็นจริงทั้งคู่
 SELECT * FROM customers
@@ -59,6 +61,7 @@ WHERE invoicedate BETWEEN '2009-02-01' AND '2009-02-31';
 SELECT invoicedate FROM invoices
 WHERE invoicedate BETWEEN '2009-01-01 00:00:00' AND '2009-01-31 20:00:00';
 ```
+- ```NULL```
 ```sql
 -- filter values is not Null 
 SELECT * FROM customers
@@ -98,6 +101,7 @@ FROM customers
 WHERE email NOT LIKE '%@hotmail.com';
 ```
 ```sql
+-- Find customers with phone number include 99
 SELECT 
     firstname, 
     lastname, 
@@ -108,7 +112,8 @@ FROM customers
 WHERE phone LIKE '%99%'; -- เลข 99 จะอยู่ตำแหน่งก็ได้ ถ้าใส่ '%_%'
 ```
 ```sql
--- wildcard '_' 
+-- wildcard '_'
+-- Find customers firstname like 'John' etc.
 SELECT 
     firstname, 
     lastname, 
@@ -128,6 +133,8 @@ FROM customers
 WHERE firstname LIKE 'Rober__' -- matching 2 character
 ```
 **🌻COALESCE -- manipulate NULL/missing values**
+- Replace missing value = แทนที่ค่า null ด้วยคำที่เราต้องการ โดยใช้ ```COALESCE```
+- ชื่อคอลัมน์ที่ตั้งใหม่หลัง AS ถ้าต้องการมีช่องว่างให้ใส่  ```‘ single_quote ’```  
 ```sql
 -- แทนที่ค่า NULL / missing values
 SELECT 
@@ -140,6 +147,7 @@ SELECT
     COALESCE(company, 'End Customer') AS 'Company Clean' -- ใส่ '' ถ้าอยากตั้งชื่อแบบมี space
 FROM customers;
 ```
+- เราสามารถใช้ CASE เพื่อเขียนเงื่อนไข ทำความสะอาดข้อมูลคอลัมน์ที่มีค่า NULL ได้ตามตัวอย่างด้านล่าง
 ```sql
 SELECT 
     company,
