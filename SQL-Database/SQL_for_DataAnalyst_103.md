@@ -167,3 +167,20 @@ SELECT id FROM book_shop
 EXCEPT -- except = which books are in the left table, but not in the right tables
 SELECT id From favourite_book
 ```
+**🌻Union & Union All**
+- Union = คือการเอา 2 table มาต่อกัน แต่ถ้าต้องการเก็บค่า Duplicate ที่ซ้ำกันไว้ให้เติมคำว่า ALL
+- [x] Union = จะลบ Duplicate row ทิ้ง
+- [x] Union ALL = จะเก็บ Duplicate row ไว้
+
+```sql
+--  Union = จะลบ Duplicate row ทิ้ง
+SELECT * from book_shop
+UNION
+SELECT * FROM book_shop_new;
+```
+```sql
+-- Union ALL = จะเก็บ Duplicate row ไว้
+SELECT * from book_shop
+UNION ALL
+SELECT * FROM book_shop_new;
+```
