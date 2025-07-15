@@ -1,6 +1,7 @@
 # 📂 Introduction to SQL
 **🌻create table employee**
 ```sql
+-- create table employee
 CREATE TABLE employee (
         id INT UNIQUE, -- กำหนด id เป็น unique ห้ามซ้ำ
   	name TEXT,
@@ -11,6 +12,7 @@ CREATE TABLE employee (
 ```
 **🌻insert data into employee**
 ```sql
+-- insert data into employee
 INSERT INTO employee VALUES 
     (1, 'David', 'Marketing', 'CEO', 100000),
     (2, 'John', 'Marketing', 'VP', 85000),
@@ -89,13 +91,26 @@ WHERE id = 1; -- ตำแหน่งที่ต้องการไปแก
 ```
 **🌻delete data (! ก่อนจะลบอะไรต้องดูดีๆก่อน)**
 ```sql
+DELETE FROM table_name WHERE condition;
+```
+```sql
 -- (id = 5, name = 'Walker')
 DELETE FROM employee
 WHERE id = 5;
 
--- ลบหลาย record พร้อมกัน โดยใช้ IN operator ได้
+-- ลบหลาย record พร้อมกัน หรือลบหลายคนพร้อมกัน โดยใช้ IN operator ได้
 DELETE FROM employee
 WHERE id IN (2,4);
+```
+🌷 ** ถ้าไม่ใส่ WHERE clause คือการลบทุก record in table
+```sql
+-- DELETE Syntax
+
+DELETE FROM table_name;
+
+-- SQL DELETE Example
+
+DELETE FROM Customers;
 ```
 **🌻alter table (เปลี่ยนชื่อ table หรือ เพิ่มคอลัมน์ใหม่ได้)**
 ```sql
@@ -121,8 +136,8 @@ WHERE id = 1; -- ระบุตำแหน่งที่ต้องการ
 CREATE TABLE employee_backup AS
 SELECT * FROM employee;
 ```
+🌷 ** Big Note: ถ้าลบหรือ drop table ต้องระวังและดูดีๆเพราะไม่สามารถกู้ข้อมูลได้ ดังนั้นก่อนจะลบต้องดูให้ดีๆก่อน
 ```sql
--- drop table *ก่อนจะ drop ต้องดูดีๆ เพราะไม่มีปุ่มย้อนกลับ ลบแล้วลบเลย
-CREATE TABLE employee_backup AS
-SELECT * FROM employee;
+-- Remove the Customers table:
+DROP TABLE Customers;
 ```
