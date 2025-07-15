@@ -99,3 +99,38 @@ WHERE book_shop.id = favorite_book.id;
 SELECT * FROM book_shop  AS A 
 LEFT JOIN favorite_book  AS B ON A.id = B.id;
 ```
+**🌻CROSS JOIN (aka. Cartesian)**
+
+**🌷cross join ไม่ต้องมี PK=FK (table x table)**
+```sql
+SELECT * FROM ranks;
+SELECt * FROM suits;
+
+-- cross join
+SELECT * FROM ranks, suits;
+
+-- หรือเขียนแบบนี้ก็ได้
+SELECT * FROM ranks CROSS JOIN suits ORDER BY suit;
+```
+**🌻Self join - table can join itself (self-join)**
+```sql
+-- CREATE TABLE
+CREATE TABLE employee (
+    id INT,
+    name TEXT,
+    level TEXT,
+    manager_id INT 
+);
+
+INSERT INTO employee VALUES 
+    (1, 'David', 'CEO', NULL),
+    (2, 'John', 'SVP', 1),
+    (3, 'Mary', 'VP', 2),
+    (4, 'Adam', 'VP', 2),
+    (5, 'Scott', 'Manager', 3),
+    (6, 'Louise', 'Manager', 3),
+    (7, 'Kevin', 'Manager', 4),
+    (8, 'Takeshi', 'Manager', 4),
+    (9, 'Joe', 'AM', 6),
+    (10, 'Anna', 'AM', 7);
+```
