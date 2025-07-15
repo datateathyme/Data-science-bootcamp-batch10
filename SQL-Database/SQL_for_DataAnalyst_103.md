@@ -149,3 +149,5 @@ WHERE e1.manager_id = e2.id
 **⛱ result**
 
 ![Image](https://github.com/user-attachments/assets/802376f3-2538-40fb-a2ee-bb78138a34d1)
+
+**🌻intersect and except**
