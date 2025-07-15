@@ -184,3 +184,5 @@ SELECT * from book_shop
 UNION ALL
 SELECT * FROM book_shop_new;
 ```
+**🌻intro to subqueries**
+- Subqueries คือเทคนิคการเขียน nested query หรือ 'SELECT ซ้อน SELECT'
