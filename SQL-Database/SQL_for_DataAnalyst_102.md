@@ -47,14 +47,14 @@ ORDER BY country;
 ```sql
 -- BETWEEN AND
 SELECT * FROM customers
-WHERE customerid BETWEEN 5 AND 10;
+WHERE customerid BETWEEN 5 AND 10; -- inclusive คือ รวมเลข 5 กับ 10 เข้ามาด้วย 
 
 -- ได้ผลลัพธ์เหมือนด้านบนแต่เขียนยาวกว่า
 SELECT * FROM customers
 WHERE customerid >= 5 AND customerid <= 10;
 ```
 ```sql
--- filter DateTime
+-- BETWEEN AND with DATE TIME column
 SELECT invoicedate FROM invoices
 WHERE invoicedate BETWEEN '2009-02-01' AND '2009-02-31';
 
@@ -72,6 +72,10 @@ SELECT * FROM customers
 WHERE company IS NULL;
 ```
 **🌻filter data part3 -- pattern matching**
+- [x] Wildcards
+  - ```%``` matches any number of characters (0 or more)
+  - ```_``` matches single character
+  - ข้อจำกัดของ ```LIKE``` คือเป็นการ match แบบ case-insensitive แปลว่า J_HN และ j_hn จะได้ผลลัพธ์เหมือนกัน
 ```sql
 -- wildcard '%' {matching}
 SELECT 
