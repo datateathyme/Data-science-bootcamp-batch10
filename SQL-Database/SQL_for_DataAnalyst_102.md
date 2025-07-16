@@ -232,6 +232,9 @@ SELECT
 FROM tracks;
 ```
 **🌻COUNT Distinct**
+- เลือก vaules ที่ไม่ซ้ำกัน
+- นับจำนวน value ที่ไม่ซ้ำกันออกมา
+- Count Distinct = unique value = เลือกค่าที่ ยูนีค ดึงค่าที่ซ้ำกันออกมาแค่ค่าเดียว
 ```sql
 -- UNIQUE value
 -- ลูกค้าทั้งหมดมี 59 คน มาจาก 24 ประเทศ
@@ -262,6 +265,8 @@ ORDER BY count_song DESC
 LIMIT 5;
 ```
 **🌻```HAVING``` -- filter after group by**
+- ```WHERE``` clause จะเกิดขึ้นก่อน ```HAVING```
+- เราใช้ ```HAVING``` สำหรับ filter กลุ่ม (เขียนหลังจาก ```GROUP BY clause```) ส่วน ```WHERE``` ใช้ filter ข้อมูลในตาราง (เขียนก่อน ```GROUP BY clause```)
 ```sql
 -- ใช้กรองข้อมูลหลัง GROUP BY
 -- กรองกลุ่มที่เราต้องการ
@@ -270,12 +275,14 @@ SELECT
     COUNT(*) AS count_song
 FROM genres, tracks
 WHERE genres.GenreId = tracks.GenreId -- WHERE filter table -> filter เพลง 'Rock' ทิ้งก่อนไปทำ GROUP BY
- AND genres.name <> 'Rock' -- <> คือ ไม่เท่ากับ
+ AND genres.name <> 'Rock' -- <> แปลว่า ไม่เท่ากับ
 GROUP BY genres.name
 HAVING count_song >= 100 -- HAVING filter GROUP
 ORDER BY count_song DESC;
 ```
-**🌻```ORDER BY``` - sort data**
+**🌻```ORDER BY``` and ```LIMIT``` - sort data**
+- ```ORDER BY``` = sorts results based on a specified column (ascending or descending)
+- ```LIMIT``` = จำกัดจำนวนแถวที่ต้องการให้แสดงผล
 ```sql
 SELECT 
     genres.name,
