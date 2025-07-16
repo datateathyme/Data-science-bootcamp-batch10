@@ -175,6 +175,19 @@ FROM customers;
 **🌻JOIN data using ```WHERE```**
 - วิธีการดึงข้อมูลจากหลายตารางด้วย ```WHERE``` clause เทียบเท่ากับการเขียน ```INNER JOIN```
 - หัวใจของการดึงข้อมูลแบบ JOIN คือ ```primary key = foreign key``` {PK=FK}
+
+```sql
+** WHERE clause
+
+SELECT * FROM table1 , table2
+WHERE table1.ArtistId = table2.ArtistId
+
+----------------------------------------
+** compare inner join
+
+SELECT * FROM table1 JOIN table2
+ON table1.ArtistId = table2.ArtistId
+```
 ```sql
 -- join table with 'WHERE' clause
 SELECT * FROM artists, albums
