@@ -75,7 +75,7 @@ WHERE company IS NULL;
 - [x] Wildcards
   - ```%``` matches any number of characters (0 or more)
   - ```_``` matches single character
-  - ข้อจำกัดของ ```LIKE``` คือเป็นการ match แบบ case-insensitive แปลว่า J_HN และ j_hn จะได้ผลลัพธ์เหมือนกัน
+  - ข้อจำกัดของ ```LIKE``` คือเป็นการ match แบบ case-insensitive แปลว่า ```J_HN และ j_hn``` จะได้ผลลัพธ์เหมือนกัน
 ```sql
 -- wildcard '%' {matching}
 SELECT 
@@ -127,6 +127,7 @@ SELECT
 FROM customers
 WHERE firstname LIKE 'J_hn'; -- matching 1 character
 
+-- Find customers firstname like 'Roberto' etc.
 SELECT 
     firstname, 
     lastname, 
@@ -172,6 +173,8 @@ SELECT
 FROM customers;
 ```
 **🌻JOIN data using ```WHERE```**
+- วิธีการดึงข้อมูลจากหลายตารางด้วย ```WHERE``` clause เทียบเท่ากับการเขียน ```INNER JOIN```
+- หัวใจของการดึงข้อมูลแบบ JOIN คือ ```primary key = foreign key``` {PK=FK}
 ```sql
 -- join table with 'WHERE' clause
 SELECT * FROM artists, albums
