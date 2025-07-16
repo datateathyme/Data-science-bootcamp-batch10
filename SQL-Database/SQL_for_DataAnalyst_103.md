@@ -2,10 +2,12 @@
 ### ⛱ This area showcases foundational SQL skills essential for data analysis, demonstrated through practical queries on the chinook.db database. 
 **🌻select data from multiple tables using ```WHERE``` - ```PK = FK```**
 ```sql
+-- join tables using WHERE clause
 SELECT * FROM artists, albums
 WHERE artists.ArtistId = albums.ArtistId;
 ```
 ```sql
+-- using aliases for tables and columns
 SELECT 
     A.ArtistId,
     A.Name   AS artist_name,
@@ -50,8 +52,25 @@ JOIN tracks  AS C
  ON C.AlbumId = B.AlbumId
 WHERE A.Name = 'Aerosmith';
 ```
+- analyzes customer and invoice data to summarize key metrics by country.
+```sql
+-- calculates the number of unique customers, total transactions, and total revenue
+-- for each country, then orders the results by the number of customers in descending order.
+SELECT 
+    customers.country, 
+    COUNT(DISTINCT customers.customerid) AS n_customers,
+    COUNT(invoices.total) AS n_transactions,
+    SUM(invoices.total)   AS total_revenue
+FROM customers  
+JOIN invoices 
+ON customers.customerid = invoices.customerid 
+GROUP BY 1 
+ORDER BY 2 DESC;
+```
 **🌻review type of JOIN**
-
+- ```JOIN``` หรือ ```INNER JOIN``` คือ default join มาตรฐานของภาษา SQL เป็น the most popular join สำหรับงาน ```Data Analysis```
+- SQLite ไม่รองรับ ```RIGHT JOIN และ FULL OUTER JOIN```
+  
 ![Image](https://github.com/user-attachments/assets/0ca59bad-8b18-4a52-bfaa-6b5f92064f81)
 
 **🌻review create table**
