@@ -9,7 +9,7 @@
 2. One-to-Many (อันนี้ใช้เยอะสุดเลย)
 3. Many-to-Many
 
-## 💾 Example practical queries
+## 📝 Example practical queries
 ```sql
 SELECT 
     firstname,
