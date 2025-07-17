@@ -8,3 +8,15 @@
 1. One-to-One
 2. One-to-Many (อันนี้ใช้เยอะสุดเลย)
 3. Many-to-Many
+
+## 💾 Example practical queries
+```sql
+SELECT 
+    firstname,
+    lastname,
+    firstname || ' ' || lastname AS fullName, --camel case 
+    LOWER(firstname) || '.' || LOWER(SUBSTR(lastname,1,2)) || '@company.com'  AS email
+FROM customers
+ORDER BY 1
+LIMIT 5;
+```
