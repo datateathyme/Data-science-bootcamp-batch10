@@ -83,7 +83,20 @@ SELECT * FROM Customers WHERE Email IS NULL;
 SELECT * FROM Employees WHERE PhoneNumber IS NOT NULL;
 ```
 
-
+### 🌻 Join Table 
+- [x] **🌷 join 4 table**
+```sql
+SELECT 
+    artists.ArtistId,
+    artists.Name  AS artistName,
+    albums.Title  AS albumName,
+    tracks.Name   AS tracksName,
+    genres.Name   AS genreName
+FROM artists, albums, tracks, genres
+WHERE artists.ArtistId = albums.ArtistId
+ AND  albums.AlbumId   = tracks.AlbumId
+ AND  tracks.GenreId   = genres.GenreId
+```
 
 
 
