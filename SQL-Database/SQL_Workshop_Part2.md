@@ -136,8 +136,28 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5;
 ```
-
-
+```sql
+-- ศิลปินคนไหน ออกอัลบัมมาแล้วเยอะที่สุด ติดTop 10
+SELeCT 
+    A.Name         AS artistName,
+    COUNT(B.Title) AS n_albums
+FROM artists A, albums B
+WHERE A.ArtistId = B.ArtistId
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10;
+```
+```sql
+-- convert to INNER JOIN
+SELeCT 
+    A.Name         AS artistName,
+    COUNT(B.Title) AS n_albums
+FROM artists  A
+INNER JOIN albums B ON A.ArtistId = B.ArtistId
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10;
+```
 
 
 
