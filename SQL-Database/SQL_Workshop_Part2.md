@@ -1,13 +1,13 @@
 # 🗂 SQL Workshop Part2: A Chinook Database Case Study 🌻
 ### ⛱ This area showcases foundational SQL skills essential for data analysis, demonstrated through practical queries on the chinook.db database. 
 ## 📝 Example practical queries
-**🌻Basic Syntax ```WHERE```**
+### 🌻Basic Syntax ```WHERE```
 ```sql
 SELECT column1, column2
 FROM table_name
 WHERE condition;
 ```
-- [x] Comparison Operators
+- [x] 🌷 **Comparison Operators**
 - ```=```  Equal to
 - ```<>``` or ```!=``` Not equal to
 - ```>``` Greater than
@@ -19,7 +19,7 @@ WHERE condition;
 SELECT * FROM Customers WHERE Age > 30; -- selects customers older than 30
 SELECT * FROM Products WHERE Price = 100; -- selects products with a price of 100
 ```
-- [x] Logical Operators
+- [x] 🌷 **Logical Operators**
 - ```AND```: Combines two or more conditions. ```All conditions must be 'TRUE'```
 - ```OR```: Combines two or more conditions. ```At least one condition must be 'TRUE'```
 - ```NOT```: Negates a condition
@@ -35,7 +35,7 @@ SELECT * FROM Employees WHERE Department = 'Sales' AND Salary > 50000;
 SELECT * FROM Orders WHERE Region = 'North' OR Region = 'South';
 SELECT * FROM Students WHERE NOT Grade = 'F';
 ```
-- [x] ```LIKE```: Used for pattern matching with wildcards
+- [x] 🌷 **```LIKE```: Used for pattern matching with wildcards**
 - ```%``` Represents zero, one, or multiple characters
 - ```_``` Represents a single character
 
@@ -43,17 +43,17 @@ SELECT * FROM Students WHERE NOT Grade = 'F';
 SELECT * FROM Customers WHERE FirstName LIKE 'J%'; -- names starting with 'J'
 SELECT * FROM Products WHERE ProductName LIKE '%apple%'; -- names containing 'apple'
 ```
-- [x] ```IN```: Specifies a list of possible values for a column
+- [x] 🌷 **```IN```: Specifies a list of possible values for a column**
 
 ```sql
 SELECT * FROM Employees WHERE City IN ('London', 'Paris', 'Berlin');
 ```
-- [x] ```BETWEEN```: Selects values within a specified inclusive range
+- [x] 🌷 **```BETWEEN```: Selects values within a specified inclusive range**
 
 ```sql
 SELECT * FROM Products WHERE Price BETWEEN 50 AND 100;
 ```
-- [x] ```IS NULL / IS NOT NULL```: Checks for NULL (missing) values.
+- [x] 🌷 **```IS NULL / IS NOT NULL```: Checks for NULL (missing) values.**
 
 ```sql
 SELECT * FROM Customers WHERE Email IS NULL;
