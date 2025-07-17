@@ -44,6 +44,15 @@ SELECT * FROM Customers WHERE FirstName   LIKE 'J%'; -- names starting with 'J'
 SELECT * FROM Products  WHERE ProductName LIKE '%apple%'; -- names containing 'apple'
 SELECT * FROM Customers WHERE FirstName   LIKE 'J_hn'; 
 ```
+```sql
+SELECT 
+    ar.ArtistId  AS ID,
+    ar.Name      AS artistName,
+    al.Title     AS albumsName
+FROM artists     AS ar, albums  AS al
+WHERE ar.ArtistId = al.ArtistId 
+  AND ar.Name    LIKE 'C%';
+```
 - [x] 🌷 **```IN```: specifies a list of possible values for a column**
 
 ```sql
