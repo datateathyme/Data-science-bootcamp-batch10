@@ -20,9 +20,9 @@ SELECT * FROM Customers WHERE Age > 30; -- selects customers older than 30
 SELECT * FROM Products WHERE Price = 100; -- selects products with a price of 100
 ```
 - [x] 🌷 **Logical Operators**
-- ```AND```: Combines two or more conditions. ```All conditions must be 'TRUE'```
-- ```OR```: Combines two or more conditions. ```At least one condition must be 'TRUE'```
-- ```NOT```: Negates a condition
+- ```AND```: combines two or more conditions. ```All conditions must be 'TRUE'```
+- ```OR```: combines two or more conditions. ```At least one condition must be 'TRUE'```
+- ```NOT```: negates a condition
 
 ```sql
 -- WHERE clause used to filter condition
@@ -36,8 +36,8 @@ SELECT * FROM Orders WHERE Region = 'North' OR Region = 'South';
 SELECT * FROM Students WHERE NOT Grade = 'F';
 ```
 - [x] 🌷 **```LIKE```: used for pattern matching with wildcards**
-- ```%``` Represents zero, one, or multiple characters
-- ```_``` Represents a single character
+- ```%``` represents zero, one, or multiple characters
+- ```_``` represents a single character
 
 ```sql
 SELECT * FROM Customers WHERE FirstName LIKE 'J%'; -- names starting with 'J'
