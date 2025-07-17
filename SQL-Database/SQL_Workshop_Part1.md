@@ -15,8 +15,27 @@ SELECT
     firstname,
     lastname,
     firstname || ' ' || lastname AS fullName, --camel case 
-    LOWER(firstname) || '.' || LOWER(SUBSTR(lastname,1,2)) || '@company.com'  AS email
+    LOWER(firstname) || '.' || LOWER(SUBSTR(lastname,1,2)) || '@company.com' AS email
 FROM customers
 ORDER BY 1
 LIMIT 5;
+```
+```sql
+---value function
+SELECT 
+    name,
+    ROUND(milliseconds/ 60000.0 ,2)  AS minute,
+    ROUND(bytes / (1024*1024.0) ,4)  As mb
+FROM tracks;
+```
+```sql
+-- strftime() works with DATETIME
+SELECT 
+    invoicedate,
+    STRFTIME('%Y',invoicedate)   AS year,
+    STRFTIME('%m', invoicedate)  AS month,
+    STRFTIME('%d', invoicedate)  AS day,
+    STRFTIME('%Y-%m', invoicedate) AS monthID
+FROM invoices
+WHERE monthID = '2009-05';
 ```
