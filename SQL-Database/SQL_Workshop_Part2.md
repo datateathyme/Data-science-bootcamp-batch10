@@ -17,7 +17,7 @@ WHERE condition;
 
 ```sql
 SELECT * FROM Customers WHERE Age > 30; -- selects customers older than 30
-SELECT * FROM Products WHERE Price = 100; -- selects products with a price of 100
+SELECT * FROM Products  WHERE Price = 100; -- selects products with a price of 100
 ```
 - [x] 🌷 **Logical Operators**
 - ```AND```: combines two or more conditions. ```All conditions must be 'TRUE'```
