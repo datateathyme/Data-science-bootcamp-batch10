@@ -54,6 +54,18 @@ WHERE ar.ArtistId = al.ArtistId
   AND ar.Name  LIKE 'C%'
   AND al.Title LIKE 'C%';
 ```
+```sql
+-- covert to INNER JOIN
+SELECT 
+    ar.ArtistId  AS ID,
+    ar.Name      AS artistName,
+    al.Title     AS albumsName
+FROM artists     AS ar 
+JOIN albums      AS al
+ ON ar.ArtistId = al.ArtistId
+ AND ar.Name  LIKE 'C%'
+ AND al.Title LIKE 'C%';
+```
 - [x] 🌷 **```IN```: specifies a list of possible values for a column**
 
 ```sql
