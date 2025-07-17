@@ -97,11 +97,45 @@ WHERE artists.ArtistId = albums.ArtistId
  AND  albums.AlbumId   = tracks.AlbumId
  AND  tracks.GenreId   = genres.GenreId
 ```
+- convert to ```INNER JOIN```
 
+```sql
+SELECT 
+    artists.ArtistId,
+    artists.Name  AS artistName,
+    albums.Title  AS albumName,
+    tracks.Name   AS tracksName,
+    genres.Name   AS genreName
+FROM artists 
+JOIN albums  ON  artists.ArtistId = albums.ArtistId
+JOIN tracks  ON  albums.AlbumId   = tracks.AlbumId
+JOIN genres  ON  tracks.GenreId   = genres.GenreId
+WHERE albums.Title LIKE '%The %' AND genres.Name = 'Rock';
+```
+- Aggregate Function
+```sql
+ -- Aggregate Function
+ SELECT 
+    AVG(milliseconds / 60000.0)  AS avg_min,
+    SUM(milliseconds / 60000.0)  AS sum_min,
+    MIN(milliseconds / 60000.0)  AS min_min,
+    MAX(milliseconds / 60000.0)  AS max_min,
+    COUNT(milliseconds)          AS count_mill
+FROM tracks;
+```
+- JOIN, GROUP BY , ORDER BY
 
-
-
-
+```sql
+-- นับจำนวนเพลงที่อยู่ในแต่ละ genre
+SELECT 
+      A.Name        AS genreName,
+      COUNT(B.Name) AS n_songs
+FROM  genres A, tracks B
+WHERE A.GenreId = B.GenreId
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 5;
+```
 
 
 
