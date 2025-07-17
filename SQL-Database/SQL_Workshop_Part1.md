@@ -48,5 +48,5 @@ SELECT
     CAST(STRFTIME('%d', invoicedate) AS INT)     AS day,
     STRFTIME('%Y-%m', invoicedate)               AS monthID
 FROM invoices
-WHERE year = 2009; -- numeric
+WHERE year = 2009; -- numeric (INTEGER)
 ```
