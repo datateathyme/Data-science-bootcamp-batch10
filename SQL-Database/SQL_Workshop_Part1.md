@@ -37,5 +37,16 @@ SELECT
     STRFTIME('%d', invoicedate)    AS day,
     STRFTIME('%Y-%m', invoicedate) AS monthID
 FROM invoices
-WHERE monthID = '2009-05';
+WHERE monthID = '2009-05'; -- 'string'
+```
+```sql
+-- CAST() covert data type
+SELECT
+    invoicedate,
+    CAST(STRFTIME('%Y',invoicedate)  AS INT)     AS year,
+    CAST(STRFTIME('%m', invoicedate) AS INT)     AS month,
+    CAST(STRFTIME('%d', invoicedate) AS INT)     AS day,
+    STRFTIME('%Y-%m', invoicedate)               AS monthID
+FROM invoices
+WHERE year = 2009; -- numeric
 ```
