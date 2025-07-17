@@ -35,7 +35,7 @@ SELECT * FROM Employees WHERE Department = 'Sales' AND Salary > 50000;
 SELECT * FROM Orders WHERE Region = 'North' OR Region = 'South';
 SELECT * FROM Students WHERE NOT Grade = 'F';
 ```
-- [x] 🌷 **```LIKE```: Used for pattern matching with wildcards**
+- [x] 🌷 **```LIKE```: used for pattern matching with wildcards**
 - ```%``` Represents zero, one, or multiple characters
 - ```_``` Represents a single character
 
@@ -43,17 +43,17 @@ SELECT * FROM Students WHERE NOT Grade = 'F';
 SELECT * FROM Customers WHERE FirstName LIKE 'J%'; -- names starting with 'J'
 SELECT * FROM Products WHERE ProductName LIKE '%apple%'; -- names containing 'apple'
 ```
-- [x] 🌷 **```IN```: Specifies a list of possible values for a column**
+- [x] 🌷 **```IN```: specifies a list of possible values for a column**
 
 ```sql
 SELECT * FROM Employees WHERE City IN ('London', 'Paris', 'Berlin');
 ```
-- [x] 🌷 **```BETWEEN...AND...```: Selects values within a specified inclusive range**
+- [x] 🌷 **```BETWEEN...AND...```: selects values within a specified inclusive range**
 
 ```sql
 SELECT * FROM Products WHERE Price BETWEEN 50 AND 100;
 ```
-- [x] 🌷 **```IS NULL / IS NOT NULL```: Checks for NULL (missing) values.**
+- [x] 🌷 **```IS NULL / IS NOT NULL```: checks for NULL (missing) values.**
 
 ```sql
 SELECT * FROM Customers WHERE Email IS NULL;
