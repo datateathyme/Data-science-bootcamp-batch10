@@ -40,7 +40,7 @@ FROM invoices
 WHERE monthID = '2009-05'; -- 'string'
 ```
 ```sql
--- CAST() covert data type
+-- CAST() used to covert data type in SQL
 SELECT
     invoicedate,
     CAST(STRFTIME('%Y',invoicedate)  AS INT)     AS year,
