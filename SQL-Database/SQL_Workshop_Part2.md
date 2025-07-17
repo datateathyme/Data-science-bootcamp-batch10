@@ -32,16 +32,17 @@ WHERE customerid = 29 OR customerid = 30;
 ```sql
 -- logical operators = AND, OR, NOT
 SELECT * FROM Employees WHERE Department = 'Sales' AND Salary > 50000;
-SELECT * FROM Orders WHERE Region = 'North' OR Region = 'South';
-SELECT * FROM Students WHERE NOT Grade = 'F';
+SELECT * FROM Orders    WHERE Region = 'North' OR Region = 'South';
+SELECT * FROM Students  WHERE NOT Grade = 'F';
 ```
 - [x] 🌷 **```LIKE```: used for pattern matching with wildcards**
 - ```%``` represents zero, one, or multiple characters
 - ```_``` represents a single character
 
 ```sql
-SELECT * FROM Customers WHERE FirstName LIKE 'J%'; -- names starting with 'J'
-SELECT * FROM Products WHERE ProductName LIKE '%apple%'; -- names containing 'apple'
+SELECT * FROM Customers WHERE FirstName   LIKE 'J%'; -- names starting with 'J'
+SELECT * FROM Products  WHERE ProductName LIKE '%apple%'; -- names containing 'apple'
+SELECT * FROM Customers WHERE FirstName   LIKE 'J_hn'; 
 ```
 - [x] 🌷 **```IN```: specifies a list of possible values for a column**
 
