@@ -1,20 +1,33 @@
 # 🗂 SQL Workshop Part2: A Chinook Database Case Study 🌻
 ### ⛱ This area showcases foundational SQL skills essential for data analysis, demonstrated through practical queries on the chinook.db database. 
 ## 📝 Example practical queries
-**🌻Basic Syntax**
+**🌻Basic Syntax ```WHERE```**
 ```sql
 SELECT column1, column2
 FROM table_name
 WHERE condition;
 ```
+- [x] Comparison Operators
+- ```=```  Equal to
+- ```<>``` or ```!=``` Not equal to
+- ```>``` Greater than
+- ```<``` Less than
+- ```>=``` Greater than or equal to
+- ```<=``` Less than or equal to
+
+```sql
+SELECT * FROM Customers WHERE Age > 30; -- selects customers older than 30
+SELECT * FROM Products WHERE Price = 100; -- selects products with a price of 100
+```
+- [x] Logical Operators
+- ```AND```: Combines two or more conditions. ```All conditions must be 'TRUE'```
+- ```OR```: Combines two or more conditions. ```At least one condition must be 'TRUE'```
+- ```NOT```: Negates a condition
+
 ```sql
 -- WHERE clause used to filter condition
 SELECT * FROM customers
 WHERE customerid = 29 OR customerid = 30;
-```
-```sql
-SELECT * FROM Customers WHERE Age > 30; -- selects customers older than 30
-SELECT * FROM Products WHERE Price = 100; -- selects products with a price of 100
 ```
 ```sql
 -- logical operators = AND, OR, NOT
@@ -30,3 +43,32 @@ SELECT * FROM Students WHERE NOT Grade = 'F';
 SELECT * FROM Customers WHERE FirstName LIKE 'J%'; -- names starting with 'J'
 SELECT * FROM Products WHERE ProductName LIKE '%apple%'; -- names containing 'apple'
 ```
+- [x] ```IN```: Specifies a list of possible values for a column
+
+```sql
+SELECT * FROM Employees WHERE City IN ('London', 'Paris', 'Berlin');
+```
+- [x] ```BETWEEN```: Selects values within a specified inclusive range
+
+```sql
+SELECT * FROM Products WHERE Price BETWEEN 50 AND 100;
+```
+- [x] ```IS NULL / IS NOT NULL```: Checks for NULL (missing) values.
+
+```sql
+SELECT * FROM Customers WHERE Email IS NULL;
+SELECT * FROM Employees WHERE PhoneNumber IS NOT NULL;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
