@@ -51,7 +51,8 @@ SELECT
     al.Title     AS albumsName
 FROM artists     AS ar, albums  AS al
 WHERE ar.ArtistId = al.ArtistId 
-  AND ar.Name LIKE 'C%';
+  AND ar.Name  LIKE 'C%'
+  AND al.Title LIKE 'C%';
 ```
 - [x] 🌷 **```IN```: specifies a list of possible values for a column**
 
