@@ -1,4 +1,4 @@
-# 📂 Introduction to SQL
+# 📂 Introduction to SQL 🌻
 **🌻create table employee**
 ```sql
 -- create table employee
