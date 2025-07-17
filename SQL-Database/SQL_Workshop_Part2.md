@@ -48,7 +48,7 @@ SELECT * FROM Products WHERE ProductName LIKE '%apple%'; -- names containing 'ap
 ```sql
 SELECT * FROM Employees WHERE City IN ('London', 'Paris', 'Berlin');
 ```
-- [x] 🌷 **```BETWEEN```: Selects values within a specified inclusive range**
+- [x] 🌷 **```BETWEEN...AND...```: Selects values within a specified inclusive range**
 
 ```sql
 SELECT * FROM Products WHERE Price BETWEEN 50 AND 100;
