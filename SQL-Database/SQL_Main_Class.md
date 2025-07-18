@@ -65,6 +65,15 @@ SELECT
 FROM customers
 WHERE LOWER(country) IN ('brazil', 'usa', 'united kingdom'); 
 ```
+```sql
+SELECT 
+    customerid,
+    invoicedate,
+    total
+FROM invoices
+WHERE total BETWEEN 7 AND 15
+ORDER BY total;
+```
 **🌷 pattern matching**
 ```sql
 SELECT 
@@ -90,4 +99,34 @@ SELECT
     email
 FROM customers
 WHERE email REGEXP '.+@yahoo.+';
+```
+### 🌻 create new table
+```sql
+CREATE TABLE b2b_customers AS 
+    SELECT firstname, lastname, company, email, country
+    FROM customers
+    WHERE company IS NOT NULL
+```
+### 🌻 join table
+```sql
+select 
+    ar.Name,
+    al.Title,
+    tr.Name
+from artists AS ar
+JOIN albums  AS al ON ar.ArtistId = al.ArtistId
+JOIN tracks  AS tr ON al.AlbumId = tr.AlbumId
+```
+```sql
+select 
+    ar.Name  AS artistName,
+    al.Title AS albumName,
+    tr.Name  AS trackName,
+    ge.Name  AS genreName,
+    tr.Milliseconds,
+    tr.Bytes
+from artists AS ar
+JOIN albums  AS al ON ar.ArtistId = al.ArtistId
+JOIN tracks  AS tr ON al.AlbumId  = tr.AlbumId
+JOIN genres  AS ge ON tr.GenreId  = ge.GenreId
 ```
