@@ -280,6 +280,18 @@ GROUP BY genres.name
 HAVING count_song >= 100 -- HAVING filter GROUP
 ORDER BY count_song DESC;
 ```
+```sql
+SELECT 
+    t1.customerid,
+    t1.FirstName,
+    t1.LastName,
+    SUM(total)  AS total_invoice
+FROM customers  AS t1
+JOIN invoices   AS t2
+ON t1.CustomerId = t2.CustomerId
+GROUP BY t1.customerid
+HAVING t1.customerid = 5;
+```
 **🌻```ORDER BY``` and ```LIMIT``` - sort data**
 - ```ORDER BY``` = sorts results based on a specified column (ascending or descending)
 - ```LIMIT``` = จำกัดจำนวนแถวที่ต้องการให้แสดงผล
