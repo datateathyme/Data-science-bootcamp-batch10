@@ -173,7 +173,23 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 10;
 ```
+**🌻 ลูกค้า id ที่ 5 มี total_invoice เท่ากับเท่าไหร่**
+```sql
+-- join table customers and invoices select column group by customerid and filter customerid = 5 
+SELECT 
+    t1.customerid,
+    t1.FirstName,
+    t1.LastName,
+    SUM(total)  AS total_invoice
+FROM customers  AS t1
+JOIN invoices   AS t2
+ON t1.CustomerId = t2.CustomerId
+GROUP BY t1.customerid
+HAVING t1.customerid = 5;
 
+-----------
+result: 40.62
+```
 
 
 
