@@ -112,6 +112,21 @@ JOIN tracks  ON  albums.AlbumId   = tracks.AlbumId
 JOIN genres  ON  tracks.GenreId   = genres.GenreId
 WHERE albums.Title LIKE '%The %' AND genres.Name = 'Rock';
 ```
+```sql
+SELECT 
+    A.ArtistId,
+    A.name     AS artisName,
+    B.Title    AS albumName,
+    C.Name     AS trackName,
+    C.Composer AS composer,
+    D.Name     AS genreName
+FROM artists AS A
+JOIN albums  AS B ON A.ArtistId = B.ArtistId
+JOIN tracks  AS C ON B.AlbumId  = C.AlbumId
+JOIN genres  AS D ON C.GenreId  = D.GenreId
+WHERE D.name IN ('Rock', 'Jazz')
+ AND  A.name LIKE 'The %'
+```
 - Aggregate Function
 ```sql
  -- Aggregate Function
