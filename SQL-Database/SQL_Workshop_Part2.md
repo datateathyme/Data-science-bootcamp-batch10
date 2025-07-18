@@ -180,7 +180,7 @@ SELECT
     t1.customerid,
     t1.FirstName,
     t1.LastName,
-    SUM(total)  AS total_invoice
+    SUM(total)  AS total_invoice  -- sum total from invoices
 FROM customers  AS t1
 JOIN invoices   AS t2
 ON t1.CustomerId = t2.CustomerId
