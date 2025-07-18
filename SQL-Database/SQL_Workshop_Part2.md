@@ -115,7 +115,7 @@ WHERE albums.Title LIKE '%The %' AND genres.Name = 'Rock';
 ```sql
 SELECT 
     A.ArtistId,
-    A.name     AS artisName,
+    A.Name     AS artisName,
     B.Title    AS albumName,
     C.Name     AS trackName,
     C.Composer AS composer,
