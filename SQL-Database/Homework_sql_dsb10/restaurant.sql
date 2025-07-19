@@ -5,7 +5,7 @@
   -staff 
   -manu 
   -ingredient
-  -write sql queries at least 3 queries (select, where, join)
+  write sql queries at least 3 queries (select, where, join)
   -with clause 
   -subquery
   -aggregate function & group by
