@@ -293,3 +293,44 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5;
 ```
+### 🌻 window function
+- สร้างคอลัมน์ใหม่เข้าไปอยู่ใน Table
+
+```sql
+-- create new column : customerid
+SELECT 
+    ROW_NUMBER() OVER() AS customerid,
+    firstname,
+    lastname,
+    country
+FROm customers
+```
+- รันตัวเลข จับกลุ่มตามประเทศ
+```sql
+SELECT 
+    ROW_NUMBER() OVER(PARTITION BY country) AS customerid, -- รันตัวเลข จับกลุ่มตามประเทศ
+    firstname,
+    lastname,
+    country
+FROm customers
+```
+- แบ่งกลุ่มออกเป็นจำนวนเท่าๆกัน
+```sql
+-- segmentation
+SELECT
+    name,
+    milliseconds,
+    NTILE(5) OVER(ORDER BY milliseconds) AS length_segment -- แบ่งกลุ่มออกเป็น 5 กลุ่ม โดยเรียงความยาวจากน้อยไปมากก่อน แล้วแบ่งออกเป็น5กลุ่ม โดยมีจำนวนเพลงเท่าๆกัน
+FROM tracks
+```
+- แต่ละกลุ่มที่แบ่งออกมาแล้วด้านบน มีจำนวนเพลงกี่เพลง
+```sql
+SELECT length_segment, COUNT(*) FROM (
+   SELECT 
+    name,
+    milliseconds,
+    NTILE(5) OVER(ORDER BY milliseconds) AS length_segment
+   FROM tracks
+)
+GROUP BY length_segment;
+```
