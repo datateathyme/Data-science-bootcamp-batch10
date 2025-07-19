@@ -10,6 +10,7 @@ SELECT
 FROM customers; 
 ```
 ```sql
+-- combine two columns
 SELECT 
     firstname,
     lastname,
@@ -118,6 +119,7 @@ JOIN albums  AS al ON ar.ArtistId = al.ArtistId
 JOIN tracks  AS tr ON al.AlbumId = tr.AlbumId
 ```
 ```sql
+-- join 4 table 
 select 
     ar.Name  AS artistName,
     al.Title AS albumName,
@@ -129,4 +131,165 @@ from artists AS ar
 JOIN albums  AS al ON ar.ArtistId = al.ArtistId
 JOIN tracks  AS tr ON al.AlbumId  = tr.AlbumId
 JOIN genres  AS ge ON tr.GenreId  = ge.GenreId
+```
+```sql
+-- นับจำนวนเพลง จับกลุ่มตาม genre
+select 
+    ge.Name                       AS genreName,
+    COUNT(*)                      AS n_track,
+    ROUND(AVG(tr.Milliseconds),2) AS avg_mill,
+    SUM(tr.Bytes)                 AS sun_bytes
+from artists AS ar
+JOIN albums  AS al ON ar.ArtistId = al.ArtistId
+JOIN tracks  AS tr ON al.AlbumId  = tr.AlbumId
+JOIN genres  AS ge ON tr.GenreId  = ge.GenreId
+GROUP BY ge.Name
+```
+### 🌻 Aggregate Function
+```sql
+SELECT 
+    COUNT(*)          AS n,
+    AVG(bytes)        AS avg_bytes,
+    SUM(bytes)        AS sum_bytes,
+    MIN(milliseconds) AS min_mill,
+    MAX(milliseconds) AS max_mill
+FROM tracks;
+```
+```sql
+-- create new columns
+SELECT 
+    name,
+    ROUND(milliseconds / 60000.0, 2)  AS min,
+    ROUND(bytes / (1024*1024.0) , 2)  AS mb
+FROM tracks;
+```
+```sql
+SELECT 
+    COUNT(*), 
+    COUNT(firstname),
+    COUNT(company) -- null 49 values
+FROM customers;
+```
+### 🌻 ```CASE WHEN``` == IF
+```sql
+-- WHEN: condition THEN: 'value'
+SELECT 
+    firstname,
+    company,  
+    CASE 
+    	WHEN company IS NULL     THEN 'customer'
+        WHEN company IS NOT NULL THEN 'corporate'
+    END AS segment
+FROM customers;
+```
+```sql
+SELECT 
+    firstname,
+    company,  
+    country,
+    CASE
+    	WHEN country IN ('USA', 'Canada')              THEN 'North America'
+        WHEN country IN ('Italy', 'France', 'Belgium') THEN 'Europe'
+        ELSE 'other regions'
+    END AS region
+FROM customers;
+```
+### 🌻 ```DATETIME``` SQLite
+```sql
+SELECT 
+    invoiceid, 
+    invoicedate,
+    billingcountry
+FROM invoices
+WHERE invoicedate BETWEEN '2009-01-01 00:00:00' AND '2009-01-03 00:00:00';
+
+-- 
+SELECT 
+    invoiceid, 
+    invoicedate,
+    billingcountry
+FROM invoices
+WHERE invoicedate <= '2009-01-03 00:00:00';
+
+--
+SELECT 
+    invoiceid, 
+    invoicedate,
+    billingcountry
+FROM invoices
+WHERE invoicedate < '2009-02-01';
+```
+**🌷 STRFTIME → ปรับ format Time** >>  Note: Date in SQLite = 'Text' 
+```sql
+SELECT 
+    invoicedate,
+    STRFTIME('%Y', invoicedate)    AS year,
+    STRFTIME('%m', invoicedate)    AS month,
+    STRFTIME('%d', invoicedate)    AS day,
+    STRFTIME('%Y-%m', invoicedate) AS monthid
+FROM invoices
+WHERE monthid = '2009-09';
+
+--
+Note: */ Date in SQLite = 'Text' */ 
+```
+### 🌻Common Table Expression (CTE) / using ```WITH clause```
+- Common Table Expression (CTE)
+- WITH clause / subquery -> การประกาศตัวแปลชั่วคราว
+- subquery = query ซ้อน query -> SELECT ซ้อน SELECT
+- SELECT ด้านใน รันก่อน ค่อยออกมารัน SELECT ด้านนอก
+```sql
+-- subquery = query ซ้อน query -> SELECT ซ้อน SELECT
+SELECT firstname, lastname, email
+FROM (
+  SELECT * FROM customers
+  WHERE country = 'USA'
+)
+```
+- โจทย์คือ ต้องการทราบชื่อเพลง ที่มีค่า milliseconds > มากว่า  AVG(milliseconds)
+```sql
+SELECT name FROM tracks
+WHERE milliseconds > (
+  SELECT AVG(milliseconds) FROM tracks
+)
+```
+- CTE (WITH)
+     - CTE(with) --> เป็นการประกาศตัวแปลชั่วคราวขึ้นมาใช้ก่อนเพื่อความสะดวก แล้วค่อยดึงข้อมูลขึ้นมา
+     - CTE(with) --> สามารถประกาศได้หลายตัวแปล
+```sql
+variable1 = (SELECT * ......)
+variable2 = (SELECT * ......)
+```
+```sql
+-- CTE (with)
+WITH usa_customers AS (
+	SELECT * FROM customers
+    WHERE country = 'USA'
+)
+
+SELECT firstname, email
+FROM usa_customers
+```
+- รายชื่อลูกค้า 5 คนแรกของประเทศ USA ที่ใช้จ่ายกับเรามากที่สุดในปี 2010
+```sql
+-- CTE (with)
+WITH 
+	usa_customers AS (
+	SELECT * FROM customers
+    WHERE country = 'USA'
+),
+	invoice_y2010 AS (
+    SELECT * FROM invoices
+    WHERE invoicedate BETWEEN '2010-01-01' AND '2010-12-31'
+)
+
+SELECT 
+    t1.firstname || ' ' || t1.lastname AS fullName,
+    SUM(total)
+FROM usa_customers AS t1
+JOIN invoice_y2010 AS t2
+ON t1.customerid = t2.customerid
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 5;
 ```
