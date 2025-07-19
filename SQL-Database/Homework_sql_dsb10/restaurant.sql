@@ -195,7 +195,7 @@ WITH  staff_manager AS  (
   SELECT * FROM staff
 WHERE position = 'Manager'
 ),
-transactions_maneger AS(
+transactions_manager AS(
   SELECT* from transactions
   WHERE staffId = 1
 )
@@ -208,7 +208,7 @@ SELECT
   T1.quantity ,
   T1.total_amount          AS total_sale
 FROM staff_manager         AS S1
-JOIN transactions_maneger  AS T1
+JOIN transactions_manager  AS T1
 ON S1.staffId = T1.staffId;
 
 -------------------------------------------------------------------------------
