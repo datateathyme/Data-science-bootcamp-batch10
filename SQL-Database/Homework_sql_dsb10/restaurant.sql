@@ -1,11 +1,12 @@
 -------------------------------------------------------------------------------
 /* 
-  create at least 3 tables (Insert table) : restaurant
+  Create at least 3 tables (Insert table) : restaurant
   -transaction 
   -staff 
   -manu 
   -ingredient
-  write sql queries at least 3 queries (select, where, join)
+
+  Write sql queries at least 3 queries (select, where, join)
   -with clause 
   -subquery
   -aggregate function & group by
