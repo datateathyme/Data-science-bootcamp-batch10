@@ -346,3 +346,9 @@ SELECT length_segment, COUNT(*) FROM (
 )
 GROUP BY length_segment;
 ```
+### 🌻 CREARE VIEW : virtual table (ตารางเสมือน)
+```sql
+CREATE VIEW usa_customers AS 
+    SELECT * FROM customers
+    WHERE country = 'USA';
+```
