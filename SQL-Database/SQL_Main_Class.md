@@ -40,6 +40,8 @@ SELECT
     ROUND(total * 0.07,2)  AS vat
 FROM invoices;
 ```
+- ***result*** 
+![Image](https://github.com/user-attachments/assets/b0688632-8cc4-4daa-b33c-db26990ba1a4)
 
 **🌷 clean data**
 ```sql
