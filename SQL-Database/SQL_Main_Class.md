@@ -352,4 +352,6 @@ GROUP BY length_segment;
 CREATE VIEW usa_customers AS 
     SELECT * FROM customers
     WHERE country = 'USA';
+
+SELECT * FROM usa_customers;
 ```
