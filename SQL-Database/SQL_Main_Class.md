@@ -31,6 +31,16 @@ SELECT
    'Hello ' || firstname AS greeting
 FROM customers;
 ```
+```sql
+SELECT 
+    invoicedate,
+    billingaddress,
+    billingcity,
+    total,
+    ROUND(total * 0.07,2)  AS vat
+FROM invoices;
+```
+
 **🌷 clean data**
 ```sql
 -- COALESCE() replace missing values
