@@ -346,7 +346,7 @@ SELECT length_segment, COUNT(*) FROM (
 )
 GROUP BY length_segment;
 ```
-### 🌻 CREARE VIEW : virtual table (ตารางเสมือน)
+### 🌻 CREARE VIEW : virtual table (ตารางเสมือน: ถ้ามีข้อมูลไหลเข้ามาใหม่ตารางจะอัพเดตอัตโนมัติ)
 ```sql
 CREATE VIEW usa_customers AS 
     SELECT * FROM customers
