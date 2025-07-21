@@ -1,6 +1,6 @@
 # 📂 SQL for Data Analysts 102: A Chinook Database Case Study 🌻
 ### ⛱ This area showcases foundational SQL skills essential for data analysis, demonstrated through practical queries on the chinook.db database. 
-**🌻filter data part1**
+### **🌻filter data part1**
 ```sql
 SELECT * FROM customers
 WHERE firstname = 'Leonie';
@@ -37,7 +37,7 @@ WHERE NOT (country = 'USA' OR country = 'Canada' OR country = 'France');
 SELECT * FROM customers
 WHERE country NOT IN ('USA', 'Canada', 'France'); -- เขียนแบบนี้สั้นกว่า
 ```
-**🌻filter data part2**
+### **🌻filter data part2**
 ```sql
 -- IN operator
 SELECT * FROM customers
@@ -71,7 +71,7 @@ WHERE company IS NOT NULL; -- filter value IS NOT NULL
 SELECT * FROM customers
 WHERE company IS NULL;
 ```
-**🌻filter data part3 -- pattern matching**
+### **🌻filter data part3 -- pattern matching**
 - [x] Wildcards
   - ```%``` matches any number of characters (0 or more)
   - ```_``` matches single character
@@ -137,7 +137,7 @@ SELECT
 FROM customers
 WHERE firstname LIKE 'Rober__' -- matching 2 character
 ```
-**🌻COALESCE -- manipulate NULL/missing values**
+### **🌻COALESCE -- manipulate NULL/missing values**
 - Replace missing value = แทนที่ค่า null ด้วยคำที่เราต้องการ โดยใช้ ```COALESCE```
 - ชื่อคอลัมน์ที่ตั้งใหม่หลัง AS ถ้าต้องการมีช่องว่างให้ใส่  ```‘ single_quote ’```  
 ```sql
@@ -172,7 +172,7 @@ SELECT
     END AS segment
 FROM customers;
 ```
-**🌻JOIN data using ```WHERE```**
+### **🌻JOIN data using ```WHERE```**
 - วิธีการดึงข้อมูลจากหลายตารางด้วย ```WHERE``` clause เทียบเท่ากับการเขียน ```INNER JOIN```
 - หัวใจของการดึงข้อมูลแบบ JOIN คือ ```primary key = foreign key``` {PK=FK}
 
@@ -220,7 +220,7 @@ WHERE artists.ArtistId = albums.ArtistId
  AND albums.AlbumId = tracks.AlbumId
  AND artists.ArtistId = 100;
 ```
-**🌻Aggregate functions**
+### **🌻Aggregate functions**
 ```sql
 -- Aggregate functions
 SELECT 
@@ -231,7 +231,7 @@ SELECT
     COUNT(milliseconds)         AS count_mill
 FROM tracks;
 ```
-**🌻COUNT Distinct**
+### **🌻COUNT Distinct**
 - เลือก vaules ที่ไม่ซ้ำกัน
 - นับจำนวน value ที่ไม่ซ้ำกันออกมา
 - Count Distinct = unique value = เลือกค่าที่ ยูนีค ดึงค่าที่ซ้ำกันออกมาแค่ค่าเดียว
@@ -243,7 +243,8 @@ SELECT
     COUNT(*)                 AS n_customer
 FROM customers;
 ```
-**🌻```GROUP BY```**
+### **🌻```GROUP BY```**
+- group by + aggregate function -- ใช้คู่กัน
 ```sql
 -- GROUP BY
 SELECT 
@@ -264,7 +265,7 @@ GROUP BY genres.name
 ORDER BY count_song DESC
 LIMIT 5;
 ```
-**🌻```HAVING``` -- filter after group by**
+### **🌻```HAVING``` -- filter after group by**
 - ```WHERE``` clause จะเกิดขึ้นก่อน ```HAVING```
 - เราใช้ ```HAVING``` สำหรับ filter กลุ่ม (เขียนหลังจาก ```GROUP BY clause```) ส่วน ```WHERE``` ใช้ filter ข้อมูลในตาราง (เขียนก่อน ```GROUP BY clause```)
 ```sql
@@ -292,7 +293,7 @@ ON t1.CustomerId = t2.CustomerId
 GROUP BY t1.customerid
 HAVING t1.customerid = 5;
 ```
-**🌻```ORDER BY``` and ```LIMIT``` - sort data**
+### **🌻```ORDER BY``` and ```LIMIT``` - sort data**
 - ```ORDER BY``` = sorts results based on a specified column (ascending or descending)
 - ```LIMIT``` = จำกัดจำนวนแถวที่ต้องการให้แสดงผล
 ```sql
