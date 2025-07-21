@@ -173,7 +173,7 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 10;
 ```
-**🌻 ลูกค้า id ที่ 5 มี total_invoice เท่ากับเท่าไหร่**
+### **🌻 ลูกค้า id ที่ 5 มี total_invoice เท่ากับเท่าไหร่**
 ```sql
 -- join table customers and invoices select column group by customerid and filter customerid = 5 
 SELECT 
