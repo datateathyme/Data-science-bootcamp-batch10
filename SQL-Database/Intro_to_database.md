@@ -1,5 +1,5 @@
 # 📂 Introduction to SQL 🌻
-**🌻create table employee**
+### **🌻create table employee**
 ```sql
 -- create table employee
 CREATE TABLE employee (
@@ -10,7 +10,7 @@ CREATE TABLE employee (
   	salary REAL  -- REAL ตัวเลขที่มีทศนิยมได้ เป็นค่าตัวเลขแบบเรียลๆๆจริงๆเลยมีทศนิยมได้
 );
 ```
-**🌻insert data into employee**
+### **🌻insert data into employee**
 ```sql
 -- insert data into employee
 INSERT INTO employee VALUES 
@@ -24,11 +24,11 @@ INSERT INTO employee VALUES
     (5, 'Walker', 'IT', 'Manager', 68000); 
 ```
 
-**🌻select all columns from employee**
+### **🌻select all columns from employee**
 ```sql
 SELECT * FROM employee;
 ```
-**🌻select some columns from employee**
+### **🌻select some columns from employee**
 ```sql
 SELECT 
     id,
@@ -36,7 +36,7 @@ SELECT
     salary
 FROM employee;
 ```
-**🌻select top 3 highest paid employees**
+### **🌻select top 3 highest paid employees**
 ```sql
 SELECT 
     id,
@@ -46,7 +46,7 @@ FROM employee
 ORDER BY salary DESC
 LIMIT 3;
 ```
-**🌻transform column create new salary column (15% increase)**
+### **🌻transform column create new salary column (15% increase)**
 ```sql
 SELECT 
     name,
@@ -56,7 +56,7 @@ FROM employee
 ORDER BY salary DESC
 LIMIT 3;
 ```
-**🌻create new column (company_email)**
+### **🌻create new column (company_email)**
 ```sql
 SELECT 
     name,
@@ -65,7 +65,7 @@ SELECT
     LOWER(name) || '@company.com' AS company_email -- LOWER เปลี่ยนชื่อเป็นตัวพิมพ์เล็กทั้งหมด
 FROM employee;
 ```
-**🌻filter data**
+### **🌻filter data**
 ```sql
 -- AND operator
 SELECT * FROM employee
@@ -83,13 +83,13 @@ WHERE department IN ('Marketing', 'IT');
 SELECT * FROM employee
 WHERE salary <= 90000;
 ```
-**🌻update data**
+### **🌻update data**
 ```sql
 UPDATE employee  -- เราต้องการ update ที่ table ชื่อว่า employee
 SET salary = 99000 -- แก้ไข้ที่คอลัมน์เงินเดือน เปลี่ยนจาก 100,000 เป็น 99,000
 WHERE id = 1; -- ตำแหน่งที่ต้องการไปแก้ไขข้อมูล หรือต้องการแก้ไขที่ไหน
 ```
-**🌻delete data (! ก่อนจะลบอะไรต้องดูดีๆก่อน)**
+### **🌻delete data (! ก่อนจะลบอะไรต้องดูดีๆก่อน)**
 ```sql
 DELETE FROM table_name WHERE condition;
 ```
@@ -112,7 +112,7 @@ DELETE FROM table_name;
 
 DELETE FROM Customers;
 ```
-**🌻alter table (เปลี่ยนชื่อ table หรือ เพิ่มคอลัมน์ใหม่ได้)**
+### **🌻alter table (เปลี่ยนชื่อ table หรือ เพิ่มคอลัมน์ใหม่ได้)**
 ```sql
 ALTER TABLE employee RENAME TO MyEmployee;
 ```
@@ -130,7 +130,7 @@ UPDATE employee
 SET email = 'ceo@company.com'
 WHERE id = 1; -- ระบุตำแหน่งที่ต้องการเปลี่ยน
 ```
-**🌻copy and drop table**
+### **🌻copy and drop table**
 ```sql
 -- backup table
 CREATE TABLE employee_backup AS
