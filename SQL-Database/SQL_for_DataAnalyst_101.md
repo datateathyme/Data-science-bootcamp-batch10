@@ -1,6 +1,6 @@
 # 📂 SQL for Data Analysts 101: A Chinook Database Case Study 🌻
 ### ⛱ This area showcases foundational SQL skills essential for data analysis, demonstrated through practical queries on the chinook.db database. 
-**🌻select columns**
+### **🌻select columns**
 ```sql
 SELECT 
     firstname,
@@ -9,7 +9,7 @@ SELECT
 FROM customers
 LIMIT 10;
 ```
-**🌻create new columns -> fullName & email**
+### **🌻create new columns -> fullName & email**
 ```sql
 -- create/ transform columns
 SELECT 
@@ -22,7 +22,8 @@ LIMIT 10;
 ```
 **🌷result**
 ![Image](https://github.com/user-attachments/assets/18128d2b-8215-4dd9-a803-4925fec867b5)
-**🌻transforming numeric data: minutes & mb**
+
+### **🌻transforming numeric data: minutes & mb**
 ```sql
 SELECT 
     name,
@@ -32,7 +33,8 @@ FROM tracks;
 ```
 **🌷result**
 ![Image](https://github.com/user-attachments/assets/c1231eef-d404-47b8-af77-6bfa7f996f0d)
-**🌻customer segmentation: Corporate vs. End Customer**
+
+### **🌻customer segmentation: Corporate vs. End Customer**
 - CASE WHEN ใช้ในการเขียนเงื่อนไข สร้างคอลัมน์ใหม่ เราจะเขียน CASE WHEN ใน SELECT clause
 - 🐣  Note : เปิดด้วย ```CASE``` และปิดท้ายด้วย ```END``` / ```WHEN``` คือเงื่อนไข ส่วน ```THEN``` คือ Value
 ```sql
@@ -45,7 +47,7 @@ SELECT
     END AS segment
 FROM customers;
 ```
-**🌻working with Date-Time in SQLite**
+### **🌻working with Date-Time in SQLite**
 ```sql
 -- STRFTIME is a specific function for SQLite
 SELECT 
@@ -67,7 +69,7 @@ SELECT
 FROM invoices
 WHERE year = 2011;
 ```
-**🌻JOIN table: joining data across multiple tables: Artists, Albums, Tracks**
+### **🌻JOIN table: joining data across multiple tables: Artists, Albums, Tracks**
 ```sql
 -- review join syntax
 SELECT 
@@ -91,7 +93,7 @@ JOIN tracks  AS tr
 ON al.AlbumId = tr.AlbumId
 WHERE ar.name = 'BackBeat';
 ```
-**🌻getting random rows**
+### **🌻getting random rows**
 ```sql
 -- Exploring Random Tracks
 SELECT 
