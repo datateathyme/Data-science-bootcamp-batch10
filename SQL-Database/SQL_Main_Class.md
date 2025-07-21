@@ -40,6 +40,9 @@ SELECT
     ROUND(total * 0.07,2)  AS vat
 FROM invoices;
 ```
+- ***result*** 
+![Image](https://github.com/user-attachments/assets/b0688632-8cc4-4daa-b33c-db26990ba1a4)
+
 ```sql
 SELECT 
     ge.name,
@@ -53,11 +56,24 @@ GROUP BY 1
 ORDER BY 2 DESC ;
 ```
 - ***result***
+![Image](https://github.com/user-attachments/assets/6a85f52c-2819-4e54-926e-41600f7e9b4c)
+
+```sql
+SELECT 
+    ar.name   AS artistName,
+    ge.name   AS genre,
+    COUNT(*)  AS song
+FROM artists ar
+JOIN albums  al ON ar.ArtistId = al.ArtistId
+JOIN tracks  tr ON al.AlbumId  = tr.AlbumId
+JOIN genres  ge ON tr.GenreId  = ge.GenreId
+WHERE ge.name IN ('Jazz', 'Pop', 'Rock')
+ORDER BY 3 DESC
+LIMIT 3;
+```
+- ***result***
 
 
-
-- ***result*** 
-![Image](https://github.com/user-attachments/assets/b0688632-8cc4-4daa-b33c-db26990ba1a4)
 
 **🌷 clean data**
 ```sql
