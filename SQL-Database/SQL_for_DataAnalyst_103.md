@@ -1,6 +1,6 @@
 # 📂 SQL for Data Analysts 103: A Chinook Database Case Study 🌻
 ### ⛱ This area showcases foundational SQL skills essential for data analysis, demonstrated through practical queries on the chinook.db database. 
-**🌻select data from multiple tables using ```WHERE``` - ```PK = FK```**
+### **🌻select data from multiple tables using ```WHERE``` - ```PK = FK```**
 ```sql
 -- join tables using WHERE clause
 SELECT * FROM artists, albums
@@ -16,7 +16,7 @@ FROM artists AS A, albums AS B
 WHERE A.ArtistId = B.ArtistId -- PK=FK
  AND A.Name LIKE 'C%';
 ```
-**🌻convert ```WHERE``` to ```INNER JOIN```**
+### **🌻convert ```WHERE``` to ```INNER JOIN```**
 ```sql
 SELECT 
     A.ArtistId,
@@ -67,13 +67,13 @@ ON customers.customerid = invoices.customerid
 GROUP BY 1 
 ORDER BY 2 DESC;
 ```
-**🌻review type of JOIN**
+### **🌻review type of JOIN**
 - ```JOIN``` หรือ ```INNER JOIN``` คือ default join มาตรฐานของภาษา SQL เป็น the most popular join สำหรับงาน ```Data Analysis```
 - SQLite ไม่รองรับ ```RIGHT JOIN และ FULL OUTER JOIN```
   
 ![Image](https://github.com/user-attachments/assets/0ca59bad-8b18-4a52-bfaa-6b5f92064f81)
 
-**🌻review create table**
+### **🌻review create table**
 - [x] เราไม่สามารถสร้าง table ชื่อซ้ำกับ existing tables ใน database ได้ ต้อง DROP TABLE หรือ ALTER TABLE เปลี่ยนชื่อตารางไม่ให้ซ้ำกัน
 - ```INT``` = Column ที่เป็นตัวเลขจำนวนเต็ม
 - ```TEXT``` = ข้อความ ตัวหนังสือ
@@ -107,7 +107,7 @@ INSERT INTO favorite_book VALUES
 SELECT * FROM book_shop;
 SELECT * FROM favorite_book;
 ```
-**🌻```INNER JOIN and LEFT JOIN```**
+### **🌻```INNER JOIN and LEFT JOIN```**
 ```sql
 -- inner join
 SELECT * FROM book_shop  As A
@@ -122,7 +122,7 @@ WHERE book_shop.id = favorite_book.id;
 SELECT * FROM book_shop  AS A 
 LEFT JOIN favorite_book  AS B ON A.id = B.id;
 ```
-**🌻```CROSS JOIN``` (aka. Cartesian)**
+### **🌻```CROSS JOIN``` (aka. Cartesian)**
 
 **🌷cross join ไม่ต้องมี PK=FK (table x table)**
 -  ```CROSS JOIN``` มีอีกชื่อว่า Cartesian Product ถ้าตารางซ้ายมี 7 แถว ตารางขวามี 5 แถว result set ของเราจะออกมาทั้งหมด 7 x 5 = 35 แถว (คูณกัน)
@@ -137,7 +137,7 @@ SELECT * FROM ranks, suits;
 -- หรือเขียนแบบนี้ก็ได้
 SELECT * FROM ranks CROSS JOIN suits ORDER BY suit;
 ```
-**🌻```Self join``` - table can join itself (self-join)**
+### **🌻```Self join``` - table can join itself (self-join)**
 - เราใช้ ```SELF JOIN``` เพื่อ join table เชื่อมตารางเข้ากับตัวมันเอง นิยมใช้ในกรณีแบบ hierarchy(ลำดับชั้น) เช่น manager - staff
 - ส่วนใหญ่ ```SELF JOIN``` มักเจอใน table employee => Report_to
 - เวลาใช้ ```SELF JOIN``` ชื่อ table ห้ามซ้ำกัน ต้องใส่ ``AS`` ตั้งชื่อใหม่ Ex. ```t1 , t2```
@@ -179,7 +179,7 @@ WHERE e1.manager_id = e2.id
 
 ![Image](https://github.com/user-attachments/assets/802376f3-2538-40fb-a2ee-bb78138a34d1)
 
-**🌻intersect and except**
+### **🌻intersect and except**
  - ```INTERSECT``` return เฉพาะ distinct rows ที่มีในสองตาราง การใช้งานคล้ายๆ ```INNER JOIN``` return row ที่ match ค่ากัน
  - ```EXCEPT``` return เฉพาะ distinct rows ค่าที่มีในตารางด้านซ้าย แต่ไม่มีในตารางด้านขวา
 
@@ -196,7 +196,7 @@ SELECT id FROM book_shop
 EXCEPT -- except = which books are in the left table, but not in the right tables
 SELECT id From favourite_book
 ```
-**🌻Union & Union All (append)**
+### **🌻Union & Union All (append)**
 - [x] Union = คือการเอา 2 table มาต่อกัน แต่ถ้าต้องการเก็บค่า Duplicate ที่ซ้ำกันไว้ให้เติมคำว่า ALL
 -  ```Union``` = จะลบ Duplicate row ทิ้ง
 -  ```Union ALL``` = จะเก็บ Duplicate row ไว้
@@ -213,7 +213,7 @@ SELECT * from book_shop
 UNION ALL
 SELECT * FROM book_shop_new;
 ```
-**🌻intro to subqueries**
+### **🌻intro to subqueries**
 - ```Subqueries``` คือเทคนิคการเขียน nested query หรือ ```SELECT ซ้อน SELECT```
 
 ```sql
@@ -226,7 +226,7 @@ SELECT firstname, lastname, country FROM
  (SELECT * FROM customers
   WHERE country = 'USA')
 ```
-**🌻```CAST``` used to convert data type in SQL**
+### **🌻```CAST``` used to convert data type in SQL**
 - ```TYPEOF``` used for check data type
 
 ```sql
@@ -249,7 +249,7 @@ SELECT TYPEOF(CAST('100' AS real))  -- real ตัวเลขทศนิยม
 SELECT TYPEOF(CAST( 100 AS TEXT)) -- convert int to text
 ```
 ### 📑 work with text
-**🌻```SUBSTRING()```**
+### **🌻```SUBSTRING()```**
 - SUBSTRING(firstname ,1,2 ) ตัดตัวอักษร
 
 ```sql
