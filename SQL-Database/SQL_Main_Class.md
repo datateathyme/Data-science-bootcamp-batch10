@@ -72,8 +72,7 @@ ORDER BY 3 DESC
 LIMIT 3;
 ```
 - ***result***
-
-
+![Image](https://github.com/user-attachments/assets/0ba3dd70-be47-432c-a30d-5513459a8d8e)
 
 **🌷 clean data**
 ```sql
