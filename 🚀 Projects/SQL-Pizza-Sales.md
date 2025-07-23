@@ -1,5 +1,6 @@
-# 📁 SQL & Excel Portfolio Project | Data Analyst Portfolio Project | For Beginners🌻
-## 📑 PROBLEM STATEMENT
+# 📁SQL Portfolio Project: Pizza Sales🍕
+### 🌻 Portfolio | Data Analyst Portfolio Project | SQL Project | For Beginners
+## 📑 ภาพรวมโปรเจกต์
 ### 💡 KPIs REQUIREMENT
 เราต้องการวิเคราะห์ key indicators หรือตัวชี้วัดสำคัญจากข้อมูลยอดขายพิซซ่า เพื่อให้เข้าใจประสิทธิภาพธุรกิจของเรามากขึ้น โดยเฉพาะอย่างยิ่ง เราจะคำนวณข้อมูลต่อไปนี้
 
