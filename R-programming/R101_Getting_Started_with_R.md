@@ -139,3 +139,4 @@ as.numeric(FALSE)
 - [ ] 2. matrix
 - [ ] 3. list
 - [ ] 4. data frame
+### 🌻1. vector
