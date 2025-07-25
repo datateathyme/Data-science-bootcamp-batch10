@@ -384,13 +384,13 @@ df[c(1, 3), c(1, 3)]
 > ages[ ages <= 30]
 [1] 26 27 28
 ```
-🌹 **Subset by name with Vector**
+🌹 **Subset by condition with Vector**
 ```r
 temperatures <- c(22, 25, 18, 30, 20)
 hot_days <- temperatures[temperatures > 20] # เลือกวันที่อุณหภูมิสูงกว่า 20
 # result: 22 25 30
 ```
-🌹 **Subset by name with Matrix**
+🌹 **Subset by condition with Matrix**
 ```r
 my_matrix <- matrix(1:9, nrow = 3, byrow = TRUE)
 #      [,1] [,2] [,3]
@@ -408,7 +408,7 @@ print(my_matrix)
 # [2,]   NA   NA    6
 # [3,]    7    8    9
 ```
-🌹 **Subset by name with Data Frame**
+🌹 **Subset by condition with Data Frame**
 - เลือกแถวตามเงื่อนไขในคอลัมน์เดียว
 ```r
 df <- data.frame(
