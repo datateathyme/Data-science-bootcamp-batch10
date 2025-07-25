@@ -158,7 +158,7 @@ as.numeric(FALSE)
 16:25
 
 ## sequence generation 
-seq(from=1 , to =100 ,by=5) -- เริ่มที่เลข 1 ถึง 100 กระโดดทีละ 5
+seq(from=1 , to =100 ,by=5) -- เริ่มต้นที่เลข 1 ถึง(สิ้นสุด) 100 เพิ่มขึ้นทีละ 5
 
 ## help file
 help("seq")
