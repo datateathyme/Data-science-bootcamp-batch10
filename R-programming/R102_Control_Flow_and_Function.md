@@ -118,3 +118,46 @@ for (i in 1:10) {
 # [1] "กำลังประมวลผล: 4"
 # [1] "พบเลข 5 แล้ว! หยุดเลย!"
 ```
+## 🍁 Function
+- R ใช้ keyword function ในการประกาศ function ใหม่
+```r
+## create our first funciton
+greeting <- function() {
+  print("Hello world!")
+}
+
+greeting_name <- function(name) {
+  print( paste("Hello!", name) )
+}
+
+-----------------------------------
+** function ซ้อน function 
+
+greeting_name <- function(name) {   
+  print( paste("Hello!", name) )
+}
+
+-- console -- function in function 
+
+> func <- function() {
++   greeting()
++   greeting_name("Sun")
++ }
+> 
+> func()
+[1] "Hello world!"
+[1] "Hello! Sun"
+
+-------------------------------------
+***
+
+greeting_name <- function(name) {
+  print( paste ("Hello!", name))
+}
+
+> greeting_name("may")
+[1] "Hello! may"
+> 
+> greeting_name("jay")
+[1] "Hello! jay"
+```
