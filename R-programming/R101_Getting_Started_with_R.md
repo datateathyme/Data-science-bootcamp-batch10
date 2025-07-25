@@ -97,3 +97,8 @@ result:
 > class(animals)
 [1] "factor"
 ```
+### 🍁 5. date / time
+```r
+time_now <- Sys.time()
+class(time_now)
+```
