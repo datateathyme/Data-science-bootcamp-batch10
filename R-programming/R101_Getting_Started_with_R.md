@@ -116,6 +116,7 @@ class(time_now)
 x <- 100
 class(x)
 
+# convert data type
 char_x <- as.character(x)
 num_x <- as.numeric(char_x)
 class(char_x)
