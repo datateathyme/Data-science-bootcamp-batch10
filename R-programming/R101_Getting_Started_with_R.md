@@ -264,7 +264,7 @@ my_list$item4
 > my_list$item2[ c(1,3) ]
 [1] "Lunar" "Muvmuv"
 ```
-- [ ] 🌷 **Subset by position**
+### 🌷 **Subset by position**
 ```r
 ## subset by position
 > friends[1]
@@ -282,7 +282,7 @@ my_list$item4
 > > > friends[ c(1,3,5)]
 [1] "wan" "aan" "top"
 ```
-🌷 **Subset by position with vector**
+- [ ] 🌷 **Subset by position with vector**
 - เลือกค่าเดียว
 ```r
 my_vector <- c(10, 20, 30, 40, 50)
@@ -309,7 +309,7 @@ my_vector[-3] # ไม่รวมตัวที่ 3
 my_vector[c(-1, -5)] # ไม่รวมที่ 1 และ 5
 # result: 20 30 40
 ```
-🌷 **Subset by position with Matrix**
+- [ ] 🌷 **Subset by position with Matrix**
 - [ ] การเลือกข้อมูลใน Matrix ต้องระบุตำแหน่งทั้งแถว (row) และคอลัมน์ (column) ในรูปแบบ [row_index, column_index]
 - เลือกดึงขึ้นมาค่าเดียว
 ```r
@@ -336,7 +336,7 @@ my_matrix[c(1, 3), c(1, 2)] # เลือกแถวที่ 1, 3 และ�
 # [1,]    1    2
 # [2,]    7    8
 ```
-🌷 **Subset by position with Data Frame**
+- [ ] 🌷 **Subset by position with Data Frame**
 - [ ] คล้ายกับ Matrix แต่มีความยืดหยุ่นกว่า
 - เลือกค่าเดียว
 ```r
@@ -374,7 +374,7 @@ df[c(1, 3), c(1, 3)]
 # 1   Alice   NY
 # 3 Charlie   SF
 ```
-- [ ] 🌹 **Subset by condition**
+### 🌹 **Subset by condition**
 - เป็นการเลือกข้อมูลโดยใช้เงื่อนไข TRUE หรือ FALSE ผลลัพธ์จากเงื่อนไขจะเป็น logical vector ที่มีขนาดเท่ากับข้อมูลต้นฉบับ ซึ่งจะใช้ในการเลือกสมาชิกที่ตรงตามเงื่อนไข
 ```r
 > ages
@@ -384,13 +384,13 @@ df[c(1, 3), c(1, 3)]
 > ages[ ages <= 30]
 [1] 26 27 28
 ```
-🌹 **Subset by condition with Vector**
+- [ ] 🌹 **Subset by condition with Vector**
 ```r
 temperatures <- c(22, 25, 18, 30, 20)
 hot_days <- temperatures[temperatures > 20] # เลือกวันที่อุณหภูมิสูงกว่า 20
 # result: 22 25 30
 ```
-🌹 **Subset by condition with Matrix**
+- [ ] 🌹 **Subset by condition with Matrix**
 ```r
 my_matrix <- matrix(1:9, nrow = 3, byrow = TRUE)
 #      [,1] [,2] [,3]
@@ -408,7 +408,7 @@ print(my_matrix)
 # [2,]   NA   NA    6
 # [3,]    7    8    9
 ```
-🌹 **Subset by condition with Data Frame**
+- [ ] 🌹 **Subset by condition with Data Frame**
 - เลือกแถวตามเงื่อนไขในคอลัมน์เดียว
 ```r
 df <- data.frame(
@@ -465,7 +465,7 @@ filtered_subset2 <- subset(df, City %in% c("LA", "NY"))
 หมายเหตุ: %in% ใช้ตรวจสอบว่าสมาชิกอยู่ในชุดของค่าที่กำหนดหรือไม่
 ```
 
-- [ ] 🌼 **Subset by name**
+### 🌼 **Subset by name**
 - [ ] ใช้ได้กับโครงสร้างข้อมูลที่มีชื่อกำกับ เช่น lists, data frames, หรือ named vectors
 -  Using function names(ages) ← friends
 -  แปล - ใช้ function names แล้วโยน (ages) เพิ่มชื่อเพื่อนเข้าไปใน ages
@@ -493,7 +493,7 @@ top
 top aan bee 
  28  32  31
 ```
-🌼 **Subset by name with Named Vector**
+- [ ] 🌼 **Subset by name with Named Vector**
 ```r
 scores <- c(Math = 90, Science = 85, English = 92)
 scores["Math"] # เลือกค่าโดยใช้ชื่อ "Math"
@@ -502,7 +502,7 @@ scores[c("Science", "English")] # เลือกหลายค่าด้ว�
 # result:   Science English
 #              85      92
 ```
-🌼 **Subset by name with List**
+- [ ] 🌼 **Subset by name with List**
 - `[[ ]]`  ใช้ดึงสมาชิกเดียวออกมาจาก list. ผลลัพธ์จะเป็นคลาสของสมาชิกนั้นๆ
 ```r
 my_list <- list(a = 1:3, b = "hello", c = TRUE)
@@ -528,7 +528,7 @@ my_list$b
 # result: "hello"
 ```
 
-🌼**Subset by name with Data Frame**
+- [ ] 🌼**Subset by name with Data Frame**
 - โดยใช้ชื่อคอลัมน์ (และ $)
 ```r
 df <- data.frame(
