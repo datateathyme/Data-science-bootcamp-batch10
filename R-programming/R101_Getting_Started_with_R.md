@@ -64,3 +64,15 @@ result:
 [1] "character"
 [1] "character"
 ```
+### 🍁 3. logical
+```r
+result <- 1 + 1 == 2
+print(result); class(result)
+
+----
+result:
+> result <- 1 + 1 == 2
+> print(result); class(result)
+[1] TRUE
+[1] "logical"
+```
