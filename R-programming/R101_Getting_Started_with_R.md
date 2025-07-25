@@ -330,6 +330,7 @@ top aan bee
 4     bee   31      Tokyo        TRUE
 5     top   28 Manchester        TRUE
 
+## subset by position
 > df[1,3] -- select row 1 : col 3
 [1] "New York"
 
@@ -350,6 +351,7 @@ top aan bee
 1   26  New York        TRUE
 2   27    London        TRUE
 
+## subset by name
 > df[  ,"friends"]  -- select column friend , all row --- [row, column]
 [1] "wan" "ink" "aan" "bee" "top"
 
@@ -363,6 +365,7 @@ top aan bee
 5     top Manchester
 > 
 
+## subset by condition
 ** 👇🏻 ดึงชื่อเพื่อนที่ชอบหนัง หรือ  == TRUE, ดึงมาทุกคอลลัมน์
 > df[ df$movie_lover == TRUE, ] -- syntax filter dataframe in R 
   friends ages  locations movie_lover
