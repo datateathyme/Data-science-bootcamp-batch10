@@ -19,3 +19,4 @@ rm(saving)
 10 < 2
 10 > 2
 ```
+## 🌻 data types 📑
