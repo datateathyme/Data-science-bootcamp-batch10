@@ -26,7 +26,7 @@ print(age)
 class(age)
 
 ## 2. character
-my_name <- "Toy"
+my_name <- "Sunsun"
 my_university <- "Rangsit University"
 print(my_name)
 print(my_university)
