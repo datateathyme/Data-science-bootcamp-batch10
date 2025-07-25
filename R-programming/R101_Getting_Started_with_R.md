@@ -234,6 +234,64 @@ my_list_df <- list(friends = friends,
 list_df <- data.frame(my_list_df)
 ```
 ## 🍁 subset
-- [ ] subset by name
 - [ ] subset by position
+- [ ] subset by name
 - [ ] subset by condition
+
+```r
+## List 
+
+my_name <- "Sun"
+my_friend <- c("Lunar","Any", "Muvmuv")
+m1 <- matrix(1:25, ncol=5)
+R_is_cool <- TRUE
+
+my_list <- list(item1 = my_name,
+                item2 = my_friend,
+                item3 = m1,
+                item4 = R_is_cool)
+my_list$item3
+my_list$item4
+
+-------------------------------------
+## Using $ select column and subset by position 
+> my_list$item4
+[1] TRUE
+> my_list$item2[2:3]
+[1] "Any" "Muvmuv"
+> my_list$item2
+[1] "Lunar" "Any" "Muvmuv"
+> my_list$item2[ c(1,3) ]
+[1] "Lunar" "Muvmuv"
+```
+- [ ] 🌷 **Subset by position**
+```r
+## subset by position
+> friends[1]
+[1] "wan"
+> friends[2]
+[1] "ink"
+> friends[3]
+[1] "aan"
+> friends[5]
+[1] "top"
+> friends[2:3]
+[1] "ink" "aan"
+> friends[2:5]
+[1] "ink" "aan" "bee" "top"
+> > > friends[ c(1,3,5)]
+[1] "wan" "aan" "top"
+```
+- [ ] 🌷 **Subset by condition**
+```r
+> ages
+[1] 26 27 32 31 28
+> ages[ ages > 30]
+[1] 32 31
+> ages[ ages <= 30]
+[1] 26 27 28
+```
+- [ ] 🌷 **Subset by name**
+```r
+
+```
