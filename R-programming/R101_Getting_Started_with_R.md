@@ -317,7 +317,10 @@ top
 > ages[ c("top","aan","bee") ]
 top aan bee 
  28  32  31
-----------------------------------------------
+```
+------
+### 🌻 Example subset data
+```r
 > > View(df)  
  > df
   friends ages  locations movie_lover
