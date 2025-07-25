@@ -76,3 +76,24 @@ result:
 [1] TRUE
 [1] "logical"
 ```
+### 🍁 4. factor
+- คือ ตัวแปรประเภทข้อมูลเชิงหมวดหมู่ (categorical data) เช่น
+  - เพศ: "ชาย", "หญิง"
+  - ระดับการศึกษา: "ประถม", "มัธยม", "ปริญญาตรี", "ปริญญาโท"
+```r
+animals <- c("dog", "cat", "cat", "hippo")
+class(animals)
+
+animals <- factor(animals)
+class(animals)
+
+----
+result:
+> animals <- c("dog", "cat", "cat", "hippo")
+> class(animals)
+[1] "character"
+> 
+> animals <- factor(animals)
+> class(animals)
+[1] "factor"
+```
