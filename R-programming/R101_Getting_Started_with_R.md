@@ -19,6 +19,18 @@ rm(saving)
 10 < 2
 10 > 2
 ```
+## 🍁 compare text / characters
+```r
+"Hello" == "Hello"
+"Hello" == "hello"
+
+----
+result:
+> "Hello" == "Hello"
+[1] TRUE
+> "Hello" == "hello"
+[1] FALSE
+```
 ## 🌻 data types 📑
 ### 🍁 1. numeric
 ```r
