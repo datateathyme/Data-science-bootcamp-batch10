@@ -34,3 +34,21 @@ result:
 > class(age)
 [1] "numeric"
 ```
+### 🍁 2. character
+```r
+my_name <- "Sunsun"
+my_university <- "Rangsit University"
+print(my_name)
+print(my_university)
+class(my_name); class(my_university) -- ; print result พร้อมกัน
+
+----
+result:
+> print(my_name)
+[1] "Sunsun"
+> print(my_university)
+[1] "Rangsit University"
+> class(my_name); class(my_university)
+[1] "character"
+[1] "character"
+```
