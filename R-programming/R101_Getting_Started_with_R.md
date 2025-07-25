@@ -31,8 +31,8 @@ result:
 > "Hello" == "hello"
 [1] FALSE
 ```
-## 🌻 data types 📑
-### 🍁 1. numeric
+## 🍁 data types 📑
+### 🌻 1. numeric
 ```r
 age <- 25
 print(age)
@@ -46,7 +46,7 @@ result:
 > class(age)
 [1] "numeric"
 ```
-### 🍁 2. character
+### 🌻 2. character
 ```r
 my_name <- "Sunsun"
 my_university <- "Rangsit University"
@@ -64,7 +64,7 @@ result:
 [1] "character"
 [1] "character"
 ```
-### 🍁 3. logical
+### 🌻 3. logical
 ```r
 result <- 1 + 1 == 2
 print(result); class(result)
@@ -76,7 +76,7 @@ result:
 [1] TRUE
 [1] "logical"
 ```
-### 🍁 4. factor
+### 🌻 4. factor
 - คือ ตัวแปรประเภทข้อมูลเชิงหมวดหมู่ (categorical data) เช่น
   - เพศ: "ชาย", "หญิง"
   - ระดับการศึกษา: "ประถม", "มัธยม", "ปริญญาตรี", "ปริญญาโท"
@@ -97,8 +97,9 @@ result:
 > class(animals)
 [1] "factor"
 ```
-### 🍁 5. date / time
+### 🌻 5. date / time
 ```r
 time_now <- Sys.time()
 class(time_now)
 ```
+## 🍁 convert data types
