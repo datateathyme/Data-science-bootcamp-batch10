@@ -12,7 +12,7 @@
 ```r
 score <- 85
 
-if (score >= 80) { print("passed") } else { print("failed") }
+ifelse (socre >= 80, "Passed", "Failed")
 ```
 ## 🍁 การเขียนเงื่อนไข `IF`
 - 🌵 การเขียนเงื่อนไข IF เป็นพื้นฐานของ computer program ทุกภาษาจะมีโครงสร้างการเขียนเหมือนกันเลย คือ condition, if TRUE, else FALSE
