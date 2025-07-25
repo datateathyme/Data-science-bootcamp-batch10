@@ -292,6 +292,96 @@ my_list$item4
 [1] 26 27 28
 ```
 - [ ] 🌷 **Subset by name**
+-  Using function names(ages) ← friends
+-  แปล - ใช้ function names แล้วโยน (ages) เพิ่มชื่อเพื่อนเข้าไปใน ages
+-  👆 สมมติว่าต้องการใส่ชื่อเพื่อนไปในอายุด้วยให้ใช้ฟังก์ชัน names( ) 
 ```r
+> ages
+wan ink aan bee top 
+ 26  27  32  31  28 
+> 
+> names(ages) <- friends
+> 
+> ages
+wan ink aan bee top 
+ 26  27  32  31  28 
+> 
 
+> ages["wan"]
+wan 
+ 26 
+> ages["top"]
+top 
+ 28 
+ 
+> ages[ c("top","aan","bee") ]
+top aan bee 
+ 28  32  31
+----------------------------------------------
+> > View(df)  
+ > df
+  friends ages  locations movie_lover
+1     wan   26   New York        TRUE
+2     ink   27     London        TRUE
+3     aan   32     London       FALSE
+4     bee   31      Tokyo        TRUE
+5     top   28 Manchester        TRUE
+
+> df[1,3] -- select row 1 : col 3
+[1] "New York"
+
+> df[2,4] -- select row 2 : col 4
+[1] TRUE
+
+> df[1:2,4] -- select row 1 - 2 : col 4
+[1] TRUE TRUE
+
+> df[1:2, ] -- select row 1 - 2 : All column
+  friends ages locations movie_lover
+1     wan   26  New York        TRUE
+2     ink   27    London        TRUE
+> 
+
+> df[1:2, 2:4] -- select row 1 - 2 : col 2 - 4
+  ages locations movie_lover
+1   26  New York        TRUE
+2   27    London        TRUE
+
+> df[  ,"friends"]  -- select column friend , all row --- [row, column]
+[1] "wan" "ink" "aan" "bee" "top"
+
+** 👇🏻 select 2 column c("friends", "locations") , all row
+> df[ ,c("friends", "locations")]
+  friends  locations
+1     wan   New York
+2     ink     London
+3     aan     London
+4     bee      Tokyo
+5     top Manchester
+> 
+
+** 👇🏻 ดึงชื่อเพื่อนที่ชอบหนัง หรือ  == TRUE, ดึงมาทุกคอลลัมน์
+> df[ df$movie_lover == TRUE, ] -- syntax filter dataframe in R 
+  friends ages  locations movie_lover
+1     wan   26   New York        TRUE
+2     ink   27     London        TRUE
+4     bee   31      Tokyo        TRUE
+5     top   28 Manchester        TRUE
+
+> df[ df$movie_lover == FALSE, ]
+  friends ages locations movie_lover
+3     aan   32    London       FALSE
+
+** 👇🏻 ดึงชื่อเพื่อนที่ ages < 30, ดึงมาทุกคอลลัมน์
+> df[ df$ages < 30, ]
+  friends ages  locations movie_lover
+1     wan   26   New York        TRUE
+2     ink   27     London        TRUE
+5     top   28 Manchester        TRUE
+> 
+
+** 👇🏻 ดึงชื่อเพื่อนที่ name == "top" , ดึงมาทุกคอลลัมน์
+> df[ df$friends == "top", ]
+  friends ages  locations movie_lover
+5     top   28 Manchester        TRUE
 ```
