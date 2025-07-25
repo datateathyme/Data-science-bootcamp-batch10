@@ -90,7 +90,7 @@ ages <- c(30, 32, 25, 29, 32)
 is_male <- c(T, F, F, T, T)
 
 
-## matrix
+## 2. matrix
 x <- 1:25
 length(x)
 dim(x) <- c(5,5)
@@ -106,10 +106,10 @@ m2 <- matrix(1:6, ncol=3, nrow=2, byrow=T)
 m2 + 100
 m2 * 4
 
-## list
+## 3. list
 
-my_name <- "Toy"
-my_friends <- c("bae", "ink", "zue")
+my_name <- "Sunsun"
+my_friends <- c("jan", "ink", "zue")
 m1 <- matrix(1:25, ncol=5)
 R_is_cool <- TRUE
 
@@ -121,6 +121,7 @@ my_list <- list(item1 = my_name,
 my_list$item3
 my_list$item4
 
+## 4. datafrme
 ## data frame this df have 4 vector 5 values
 
 ## dataframe type 1
