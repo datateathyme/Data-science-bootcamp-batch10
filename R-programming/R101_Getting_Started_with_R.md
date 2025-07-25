@@ -10,8 +10,9 @@ saving <- income - expense
 ```r
 rm(saving)
 ```
-## 🍁 compare values 
+## 🍁 comparison operators
 ```r
+## compare values
 1 + 1 == 2
 2 * 2 <= 4
 5 >= 10
