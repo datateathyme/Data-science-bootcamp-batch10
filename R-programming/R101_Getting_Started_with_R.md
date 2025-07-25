@@ -103,7 +103,7 @@ time_now <- Sys.time()
 class(time_now)
 ```
 ## 🍁 convert data types
-### main functions
+### 🌻 main functions
 - [ ] as.numeric()
 - [ ] as.character()
 - [ ] as.logical()
@@ -125,4 +125,12 @@ result:
 [1] "numeric"
 > class(char_x)
 [1] "character"
+```
+### 🌻 logical: TRUE / FALSE
+```r
+## logical: TRUE / FALSE
+as.logical(1)
+as.logical(0)
+as.numeric(TRUE)
+as.numeric(FALSE)
 ```
