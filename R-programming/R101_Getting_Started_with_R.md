@@ -176,7 +176,8 @@ x <- 1:25
 length(x) -- length ใช้นับจำนวน หรือความยาวของข้อมูล
 dim(x) <- c(5,5) -- dim(dimension) = ในตัวอย่างคือ 5 row 5 column
 
-matrix(1:25, ncol=5 , byrow=TRUE) --  byrow = เปลี่ยนแถวแนวตั้ง เรียงใหม่เป็นแนวนอน
+## create matrix
+matrix(1:25, ncol=5 , byrow=TRUE) -- byrow = เปลี่ยนแถวแนวตั้ง เรียงใหม่เป็นแนวนอน
 matrix(1:6, ncol=3)
 matrix(1:6, ncol=3, nrow=2, byrow=T)
 
