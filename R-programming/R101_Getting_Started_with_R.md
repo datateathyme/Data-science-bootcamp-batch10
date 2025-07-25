@@ -233,3 +233,7 @@ my_list_df <- list(friends = friends,
 
 list_df <- data.frame(my_list_df)
 ```
+## 🍁 subset
+- [ ] subset by name
+- [ ] subset by position
+- [ ] subset by condition
