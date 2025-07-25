@@ -10,3 +10,7 @@ saving <- income - expense
 ```r
 rm(saving)
 ```
+## 🍁 compare values 
+```r
+
+```
