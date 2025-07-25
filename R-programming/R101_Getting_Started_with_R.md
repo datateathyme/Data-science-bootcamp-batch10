@@ -193,7 +193,7 @@ my_list$item3
 my_list$item4
 ```
 
-### 🌻 4. datafrme
+### 🌻 4. dataframe
 ```r
 ## data frame this df have 4 vector 5 values
 
