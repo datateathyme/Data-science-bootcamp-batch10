@@ -7,3 +7,6 @@ expense <- 30000
 saving <- income - expense
 ```
 ## 🍁 remove variables 
+```r
+rm(saving)
+```
