@@ -157,3 +157,21 @@ friends <- c("david", "marry", "anna", "john", "william")
 ages <- c(30, 32, 25, 29, 32)
 is_male <- c(T, F, F, T, T)
 ```
+### 🌻 2. matrix 
+```r
+## 2. matrix
+x <- 1:25
+length(x)
+dim(x) <- c(5,5)
+
+matrix(1:25, ncol=5 , byrow=TRUE)
+matrix(1:6, ncol=3)
+matrix(1:6, ncol=3, nrow=2, byrow=T)
+
+m1 <- matrix(1:25, ncol=5 , byrow=TRUE)
+m2 <- matrix(1:6, ncol=3, nrow=2, byrow=T)
+
+## element wise computation
+m2 + 100
+m2 * 4
+```
