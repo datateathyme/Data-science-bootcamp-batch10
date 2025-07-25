@@ -101,6 +101,15 @@ for (i in 1:ncol(USArrests) ) {
 }
 
 ```
+- create function used with for loop
+```r
+cal_mean_by_col <- function(df) {    ## df= dataframe
+  for (i in 1:ncol(df) ) {
+    print( names(df)[i] )
+    print( mean(df[[i]]))
+  }
+}
+```
 ## 🍁 การเขียน `while loop`
 - while true do somthing ในขณะที่เงื่อนไขเป็นจริงให้ทำบางสิ่ง
 - รูปแบบ: `while (condition) { statements }`
