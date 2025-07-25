@@ -171,18 +171,18 @@ is_male <- c(T, F, F, T, T)
 ### 🌻 2. matrix 
 ```r
 ## 2. matrix
-x <- 1:25
-length(x)
-dim(x) <- c(5,5)
+x <- 1:25 
+length(x) -- length ใช้นับจำนวน หรือความยาวของข้อมูล
+dim(x) <- c(5,5) -- dim(dimension) = ในตัวอย่างคือ 5 row 5 column
 
-matrix(1:25, ncol=5 , byrow=TRUE)
+matrix(1:25, ncol=5 , byrow=TRUE) --  byrow = เปลี่ยนแถวแนวตั้ง เรียงใหม่เป็นแนวนอน
 matrix(1:6, ncol=3)
 matrix(1:6, ncol=3, nrow=2, byrow=T)
 
 m1 <- matrix(1:25, ncol=5 , byrow=TRUE)
 m2 <- matrix(1:6, ncol=3, nrow=2, byrow=T)
 
-## element wise computation
+## element wise computation = แปลว่าการ บวก ลบ คูณ หาร ทีละตัว
 m2 + 100
 m2 * 4
 ```
