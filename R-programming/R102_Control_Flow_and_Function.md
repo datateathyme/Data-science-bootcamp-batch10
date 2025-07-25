@@ -87,6 +87,20 @@ for (i in 1:5) {
 }
 # result: 1 2 3 4 5
 ```
+```r
+# loop over a dataframe
+data()
+
+nrow(USArrests)
+ncol(USArrests)
+head(USArrests)
+
+for (i in 1:ncol(USArrests) ) {
+  print( names(USArrests)[i] )
+  print( mean(USArrests[[i]]))
+}
+
+```
 ## 🍁 การเขียน `while loop`
 - while true do somthing ในขณะที่เงื่อนไขเป็นจริงให้ทำบางสิ่ง
 - รูปแบบ: `while (condition) { statements }`
