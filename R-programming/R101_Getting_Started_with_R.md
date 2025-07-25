@@ -20,3 +20,17 @@ rm(saving)
 10 > 2
 ```
 ## 🌻 data types 📑
+### 🍁 1. numeric
+```r
+age <- 25
+print(age)
+class(age)
+
+----
+result:
+> age <- 25
+> print(age)
+[1] 25
+> class(age)
+[1] "numeric"
+```
