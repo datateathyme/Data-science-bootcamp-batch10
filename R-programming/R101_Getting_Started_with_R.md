@@ -175,3 +175,48 @@ m2 <- matrix(1:6, ncol=3, nrow=2, byrow=T)
 m2 + 100
 m2 * 4
 ```
+### 🌻 3. list
+
+```
+## 3. list
+my_name <- "Sunsun"
+my_friends <- c("jan", "ink", "zue")
+m1 <- matrix(1:25, ncol=5)
+R_is_cool <- TRUE
+
+my_list <- list(item1 = my_name,
+                item2 = my_friends,
+                item3 = m1,
+                item4 = R_is_cool)
+
+my_list$item3
+my_list$item4
+```
+
+### 🌻 4. datafrme
+```r
+## data frame this df have 4 vector 5 values
+
+## dataframe type 1
+friends <- c("wan", "ink", "aan", "bee", "top")
+
+ages <- c(26, 27, 32, 31, 28)
+locations <- c("New York", "London", "London",
+               "Tokyo" , "Manchester")
+movie_lover <- c(T, T, F, T, T)
+
+df <- data.frame(friends,
+           ages,
+           locations,
+           movie_lover)
+
+View(df)
+
+## dataframe type 2 -- create dataframe from list
+my_list_df <- list(friends = friends,
+                   ages = ages,
+                   location = locations,
+                   movie = movie_lover)
+
+list_df <- data.frame(my_list_df)
+```
