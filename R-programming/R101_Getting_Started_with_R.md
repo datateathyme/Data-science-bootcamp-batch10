@@ -140,3 +140,20 @@ as.numeric(FALSE)
 - [ ] 3. list
 - [ ] 4. data frame
 ### 🌻1. vector
+```r
+## 1. vector
+
+1:10
+16:25
+
+## sequence generation 
+seq(from=1 , to =100 ,by=5)
+
+## help file
+help("seq")
+
+## function c
+friends <- c("david", "marry", "anna", "john", "william")
+ages <- c(30, 32, 25, 29, 32)
+is_male <- c(T, F, F, T, T)
+```
