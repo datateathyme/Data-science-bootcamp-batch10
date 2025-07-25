@@ -134,3 +134,8 @@ as.logical(0)
 as.numeric(TRUE)
 as.numeric(FALSE)
 ```
+## 🍁 Data structures
+- [ ] 1. vector
+- [ ] 2. matrix
+- [ ] 3. list
+- [ ] 4. data frame
