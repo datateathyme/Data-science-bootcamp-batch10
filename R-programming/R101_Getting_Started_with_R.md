@@ -131,6 +131,7 @@ result:
 ### 🌻 logical: TRUE / FALSE
 ```r
 ## logical: TRUE / FALSE
+# convert data type
 as.logical(1)
 as.logical(0)
 as.numeric(TRUE)
