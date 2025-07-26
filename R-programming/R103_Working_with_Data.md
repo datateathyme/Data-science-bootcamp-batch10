@@ -3,6 +3,9 @@
 ## 🍁 CSV
 - [ ] 🌵 `read_csv()` ใช้อ่านไฟล์ .csv comma separated values เป็น common data format ที่ data analyst เราใช้กันเป็นประจำ
 ```r
+install.packages("readr")
+library(readr)
+
 read_csv("fileName.csv")
 ```
 ```r
@@ -158,4 +161,22 @@ library(dplyr)
 5  5  Lisa London      UK
 > 
 ** join ใช้ key แต่ bind_cols ไม่ใช้ key
+```
+## 🍁 SQL 
+- [ ] 🌵 `sqldf()` ใช้เขียน SQL เพื่อจัดการกับ dataframe ที่อยู่ใน R
+```r
+# load library sqldf
+library(sqldf)
+library(readr)
+
+school <- read_csv("school.csv")
+
+sqldf("select * from school;")
+
+sqldf("select avg(student), sum(student) from school;")
+
+sqldf("select school_id, school_name, country from school;")
+
+sql_query <- "select * from school where country = 'USA';"
+usa_school <- sqldf(sql_query)
 ```
