@@ -45,6 +45,7 @@ result[[2]]
 result[[3]]
 ```
 ## 🍁 Google sheets
+- [ ] 🌵 `read_sheet()` ใช้อ่าน data จาก Google Sheets ถ้าเป็น public link ก่อนใช้คำสั่ง read_sheet() ให้เรารันคำสั่ง gs4_deauth() ก่อน (แปลว่า ลิ้งที่เราจะอ่านไฟล์เป็น public link ไม่ต้องมีการ login)
 ```r
 library(googlesheets4)
 
@@ -56,4 +57,36 @@ read_sheet(url, sheet="student")
 
 df <- read_sheet(url, sheet="student") ## เราสามารถฝากค่าไว้ใน df ได้
 ##  แล้วเราก็จะได้ dataframe from google sheets มาอยู่ใน program R
+```
+## 🍁 JSON 
+- [ ] 🌵 `fromJSON()` ใช้อ่านไฟล์ `.json` เข้ามาเป็น list ใน R แล้วค่อยใช้ฟังก์ชัน data.frame() เพื่อเปลี่ยน list -> data frame ได้
+```r
+##JAVASCRIPT ## Json file concept = "key": [ values pair ]
+
+library(jsonlite) ## load before read file JSON
+
+bp <- data.frame(fromJSON("blackpink.json")) ## fromJSON("name file .json")
+## change convert list to dataframe 👆
+View(bp)
+```
+## 🍁 Bind Rows (เท่ากับ UNION ALL in SQL)
+- [ ] 🌵 `bind_rows()` เทียบเท่ากับการเขียน UNION ALL ใน SQL — ต่อ dataframe เข้าด้วยกัน หรือเอา dataframe มาเรียงต่อกัน
+```r
+library(dplyr)
+library(readxl)
+
+#read excel file
+econ <- read_excel("student.xlsx", sheet=1)
+business <- read_excel("student.xlsx", sheet=2)
+data <- read_excel("student.xlsx", sheet=3)
+
+---------------
+
+#bind_rows == SQL UNION ALL
+bind_rows(econ, business, data) -- standard
+
+** 👇 ถ้าสมมติ dataframe เรามมีเป็น 10-20 df 
+แนะนำว่า ควรสร้างเป็น list ของ dataframe ขึ้นมาก่อน โดยการใช้ f(x) =list()
+list_df <- list(econ, business, data, .....dataframe ก่อนอื่น สมมติถ้ามีอีก) 
+full_df <- bind_rows(list_df)
 ```
