@@ -157,5 +157,5 @@ library(dplyr)
 4  4 David London      UK
 5  5  Lisa London      UK
 > 
-** join use key but bind_cols ไม่ใช้ key
+** join ใช้ key แต่ bind_cols ไม่ใช้ key
 ```
