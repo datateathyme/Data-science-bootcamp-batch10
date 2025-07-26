@@ -91,3 +91,71 @@ bind_rows(econ, business, data) ## standard
 list_df <- list(econ, business, data) 
 full_df <- bind_rows(list_df)
 ```
+## 🍁 Bind Cols (!= JOIN)
+- [ ] 🌵 `bind_cols()` ไม่เทียบเท่ากับการเขียน join เพราะ bind columns ไม่จำเป็นต้องใช้ key ใดๆ แค่เอา data frame สองตัวมาวางต่อกัน ซ้าย-ขวา
+- [ ] 🌵  `rep( )` = create duplicate something  Ex.``` city = c( rep("BKK",3), rep("London",2) ```
+```r
+# bind_cols() != JOIN
+
+
+
+df1 <- data.frame(
+    id = 1:5,
+    name = c("John","Marry", "Anna",
+             "David", "Lisa")
+)
+
+**👇🏻 rep = function ที่ช่วยสร้าง value ติดกัน เช่นในex. สร้าง "BKK" ติดกัน 3 ครั้ง 
+df2 <- data.frame(
+    city = c( rep("BKK",3), rep("London",2) ),  
+    country = c( rep("TH",3), rep("UK",2))
+)
+
+-----------------------------------------------------------------
+## just load  library(dplyr) first => step 1
+## before use f(x) bind_cols() => step 2
+
+library(dplyr) 
+               
+> df1
+  id  name
+1  1  John
+2  2 Marry
+3  3  Anna
+4  4 David
+5  5  Lisa
+> df2
+    city country
+1    BKK      TH
+2    BKK      TH
+3    BKK      TH
+4 London      UK
+5 London      UK
+
+> bind_cols(df1, df2)
+  id  name   city country
+1  1  John    BKK      TH
+2  2 Marry    BKK      TH
+3  3  Anna    BKK      TH
+4  4 David London      UK
+5  5  Lisa London      UK
+> 
+> bind_cols(df2, df1)
+    city country id  name
+1    BKK      TH  1  John
+2    BKK      TH  2 Marry
+3    BKK      TH  3  Anna
+4 London      UK  4 David
+5 London      UK  5  Lisa
+> 
+------
+> left_join(df1,df2, by="id")
+  id  name   city country
+1  1  John    BKK      TH
+2  2 Marry    BKK      TH
+3  3  Anna    BKK      TH
+4  4 David London      UK
+5  5  Lisa London      UK
+> 
+** join use key but bind_cols ไม่ใช้ key
+```
