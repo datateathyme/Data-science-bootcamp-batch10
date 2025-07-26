@@ -199,12 +199,26 @@ library(RSQLite)
 conn <- dbConnect(SQLite(), "chinook.db")
 
 # 2. get data
-dbListTables(conn)
-dbListFields(conn, "customers")
+dbListTables(conn) ## ดู table
+dbListFields(conn, "customers")  ## ดู column ใน table ที่เลือกขึ้นมา
 
 df <- dbGetQuery(conn, "select * from customers where country = 'USA'")
 df2 <- dbGetQuery(conn, "select * from customers where country = 'United Kingdom'")
 
 # 3. close connection
 dbDisconnect(conn)
+```
+## 🍁 How to save data in R / Save environment/ saveRDS() 
+- [ ] 🌵 เราสามารถ save data ใน R ได้สองแบบ และสามารถโหลดข้อมูลกลับมาใช้ได้อีกครั้งในอนาคต
+1. `save.image()` ใช้ save objects ทั้งหมดที่อยู่ใน environment (i.e. workspace) ของเราเข้าไปที่ไฟล์ `.RData`
+2. `saveRDS()` ใช้ save single object แค่ไฟล์เดียวที่ไฟล์ `.rds`
+
+- ถ้าต้องการโหลด **.RData** ให้ใช้ฟังก์ชัน `load()` หรือถ้าอยากจะโหลด **.rds** ให้ใช้ฟังก์ชัน `readRDS()`
+```r
+> save.image(file = "data.RData")  ## SAVE ALL object
+> load(file = "data.Rdata") ## load file กลับมา
+
+> saveRDS(usa_school, file = "usa_school.rds") ## SAVE single object 
+> readRDS("usa_school.rds") ## load file กลับมา
+> usa_school <- readRDS("usa_school.rds") ## ฝากค่ากลับชื่อเดิมได้เลย
 ```
