@@ -185,3 +185,26 @@ sql_query <- "select * from school where country = 'USA';"
 sqldf(sql_query) ## หลังจากประกาศ query ขึ้นมาเสร็จแล้ว จังหวะที่จะรันก็เอามาใส่ใน sqldf()ได้เลย
 usa_school <- sqldf(sql_query) ## ฝากค่าไว้ในสิ่งที่เราต้องการได้เลย ตามตัวอย่าง
 ```
+## 🍁 SQLite
+- [ ] 🌵 ใน R เราใช้ library `RSQLite` เพื่อจัดการกับข้อมูลใน sqlite .db file ขั้นตอนการทำงานกับ database จะแบ่งเป็น 3 steps ง่ายๆ
+1. connect to database i.e. open connection
+2. get data (with SQL)
+3. disconnect from database i.e. close connection
+```r
+# load library
+library(RSQLite)
+
+# connect to SQLite database (.db file)
+# 1. open connection
+conn <- dbConnect(SQLite(), "chinook.db")
+
+# 2. get data
+dbListTables(conn)
+dbListFields(conn, "customers")
+
+df <- dbGetQuery(conn, "select * from customers where country = 'USA'")
+df2 <- dbGetQuery(conn, "select * from customers where country = 'United Kingdom'")
+
+# 3. close connection
+dbDisconnect(conn)
+```
