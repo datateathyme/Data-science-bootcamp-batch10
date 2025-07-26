@@ -28,3 +28,19 @@ read_excel("name file.xlsx", sheet="Data")
 read_excel("name file.xlsx", sheet="Economic")
 read_excel("name file.xlsx", sheet="Business")
 ```
+```r
+** how to loop เข้าไปแล้วอ่านทุก sheets
+
+result <- list()
+
+## อันนี้เรารู้ว่าไฟล์มี 3 sheets  [ i ] = 1, 2, 3
+for (i in 1:3) {   
+  result[[i]] <- read_excel("students.xlsx", sheet=i)
+}
+
+** subset list สกัด ออกมาทีละ sheets👇🏻
+
+result[[1]]
+result[[2]]
+result[[3]]
+```
