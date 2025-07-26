@@ -5,3 +5,7 @@
 ```r
 read_csv("fileName.csv")
 ```
+```r
+## Ex.
+read_csv("student.csv")
+```
