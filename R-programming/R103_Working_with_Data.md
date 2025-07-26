@@ -88,6 +88,6 @@ bind_rows(econ, business, data) ## standard
 
 ** 👇 ถ้าสมมติ dataframe เรามมีเป็น 10-20 df 
 ## แนะนำว่า ควรสร้างเป็น list ของ dataframe ขึ้นมาก่อน โดยการใช้ f(x) =list()
-list_df <- list(econ, business, data, .....dataframe ก่อนอื่น สมมติถ้ามีอีก) 
+list_df <- list(econ, business, data) 
 full_df <- bind_rows(list_df)
 ```
