@@ -44,3 +44,16 @@ result[[1]]
 result[[2]]
 result[[3]]
 ```
+## 🍁 Google sheets
+```r
+library(googlesheets4)
+
+url <- "url file from google sheets"
+
+gs_deauth() ## Use this function for run before f( read_sheet() )
+
+read_sheet(url, sheet="student")
+
+df <- read_sheet(url, sheet="student") ## เราสามารถฝากค่าไว้ใน df ได้
+##  แล้วเราก็จะได้ dataframe from google sheets มาอยู่ใน program R
+```
