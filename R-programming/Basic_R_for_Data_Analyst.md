@@ -6,3 +6,4 @@
 - [ ]  **3.data structures**
 - [ ]  **4.function**
 - [ ]  **5.control flow**
+## 🎄 [ 1 ] variable
