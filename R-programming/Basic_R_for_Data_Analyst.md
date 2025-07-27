@@ -323,3 +323,39 @@ df[ df$friends == "Noah", ]
 	id friends ages own_a_dog city
 3  3    Noah   28     FALSE  LON
 ```
+### 🎄 create a new column in data frame
+- Create a new column in data frame พิมพ์ $ หลัง df ได้เลย แล้วต่อด้วยชื่อคอลัมน์ใหม่
+- แต่ต้องมีขนาด vector เท่ากับจำนวนข้อมูลใน df ก่อนหน้า
+```r
+df$fav_menu <- c("somtum", "hotdog", "pizza",
+"french fried", "hotdog")
+```
+### 🎄 remove column 
+- type → **`df$fav_menu  / df$column need to delete` ← NULL**
+- assign ← ค่า **`NULL`** คำว่า  **`NULL`**  ต้องเป็นตัวพิมพ์ใหญ่ทั้งหมด
+
+```r
+## remove column 
+df$fav_menu <- NULL
+
+** old column -> fav_menu 
+> df
+  id friends ages own_a_dog city     fav_menu
+1  1 William   35      TRUE  BKK       somtum
+2  2   James   32      TRUE  LON       hotdog
+3  3    Noah   28     FALSE  LON        pizza
+4  4    Emma   29     FALSE  TOK   french fried
+5  5     Ava   30     FALSE  TOK       hotdog
+
+> ## remove column
+> df$fav_menu <- NULL
+## new column -> after assign NULL for delete column -> fav_menu 
+> df
+  id friends ages own_a_dog city
+1  1 William   35      TRUE  BKK
+2  2   James   32      TRUE  LON
+3  3    Noah   28     FALSE  LON
+4  4    Emma   29     FALSE  TOK
+5  5     Ava   30     FALSE  TOK
+>
+```
