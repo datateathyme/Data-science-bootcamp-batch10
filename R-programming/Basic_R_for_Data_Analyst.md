@@ -94,3 +94,25 @@ result :
 ## 3. list
 ## 4. dataframe
 ```
+### 🎄 [3.1] vector
+```r
+## [3.1] vector
+friends <- c("William", "James", "Noah", "Emma", "Ava")
+ages <- c(25, 32, 28, 29, 30)
+marvel_lover <- c(TRUE, FALSE, TRUE, FALSE, FALSE)
+```
+### 🎄 length # count ความยาว หรือจำนวน ใน vecor c()
+```r
+ages <- c(25, 32, 28, 29, 30)
+marvel_lover <- c(T, F, T, F, F) 
+
+length(ages)
+[1] 5
+> length(marvel_lover)
+[1] 5
+
+> friends
+[1] "William", "James", "Noah", "Emma", "Ava"
+> length(friends)
+[1] 5
+```
