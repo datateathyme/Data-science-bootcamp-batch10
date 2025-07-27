@@ -409,7 +409,7 @@ read.csv( "name file" )
 read.csv("fullDf_R05.csv")
 df <- read.csv("fullDf_R05.csv")
 ```
-## 🎄 [ 4 ] function
+## 🎄 [ 4 ] function 
 ```r
 ## [4] create function
 hello <- function() {
@@ -438,4 +438,98 @@ hello_name <- function(name) {
 result:
 > hello_name("sunsun")
 [1] "Hello !!,  sunsun Nice to meet U:"
+```
+## 🎄 [ 5 ] control flow
+### 🌻 if for while 
+- [ ] if
+```r
+# if
+## write same IFS() in google sheets 
+score = 68
+
+if (score >= 80) {
+  print("A")
+} else if (score >= 70) {
+  print("B")
+} else if (score >= 60) {
+  print("C")
+} else if (score >= 50) {
+  print("D")
+} else {
+  print("F")
+}
+```
+```r
+## create function with if
+grading <- function(score) {
+  if (score >= 80) {
+    return("A")
+  } else if (score >= 70) {
+    return("B")
+  } else if (score >= 60) {
+    return("C")
+  } else if (score >= 50) {
+    return("D")
+  } else {
+    return("Failed")
+  }
+}
+```
+- [ ] for
+```r
+## for loop 
+## vectorization
+nums <- c(25, 30, 40, 100, 1225)
+
+## 1:10 %% 2 == 0 
+for (i in nums ) {
+  if (i %% 2 == 0) {
+    print(paste0(i, ": two number"))
+  } else {
+    print(paste0(i, ": odd number"))
+  }
+}
+```
+- [ ] while คือในขณะที่ เงื่อนไขนี้เป็นจริง ให้ทำสิ่งนี้
+```r
+## while loop 
+while (condition) {
+  ## do something
+}
+----
+count <- 0
+
+while (count <5) {
+  print("I miss you so so much ") 
+  count = count + 1 ## สำคัญมากต้องใส่เพื่อหยุด loop ถ้าไม่ใส่จะกลายเป็น infinite loop
+  if (count == 5) {
+    print("It's ok just be fine")
+  }
+}
+```
+## 🎄  take input from a user
+```r
+readline("what is your name: ")
+```
+```r
+## Facebook Login(Page) Logic 
+## Facebook Login(Page) Logic 
+users <- c("emily", "jo", "mint")
+pw <- 1234
+
+----
+## create function fb login
+
+fb_login <- function() {
+  print("Welcome to facebook!")
+  username <- readline("Username: ")
+  password <- readline("Password: ")
+  if ((username %in% users) & (password == pw)) {
+    print("Login successfully!")
+  } else {
+    print("Try again!")
+  }
+}
+
+## !! %in% = คือ syntax พิเศษที่ช่วยเช็คว่าข้อมูลนี้อยู่ในนี้หรือเปล่า 
 ```
