@@ -94,12 +94,12 @@ result :
 ## 3. list
 ## 4. dataframe
 ```
-### 🎄 [3.1] vector
+### 🎄 [3.1] vector (contains only single data type)
 ```r
 ## [3.1] vector
-friends <- c("William", "James", "Noah", "Emma", "Ava")
-ages <- c(25, 32, 28, 29, 30)
-marvel_lover <- c(TRUE, FALSE, TRUE, FALSE, FALSE)
+friends <- c("William", "James", "Noah", "Emma", "Ava") ## character
+ages <- c(25, 32, 28, 29, 30)  ## numeric
+marvel_lover <- c(TRUE, FALSE, TRUE, FALSE, FALSE) ## logical
 ```
 ### 🎄 length # count ความยาว หรือจำนวน ใน vecor c()
 ```r
