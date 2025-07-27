@@ -386,3 +386,18 @@ result:
 6  6    wick   25      TRUE Seoul
 7  7      ky   26      TRUE Seoul
 ```
+## 💾 write csv file
+```r
+## write csv file
+write.csv(full_df, "result.csv.", row.names = F)
+
+write.csv(ชื่อเดต้าเฟรมที่เราต้องการwrite, "ชื่อไฟล์ที่เราต้องการตั้ง.csv.",
+F= เราไม่เอาเลขข้างหน้าของ row มาด้วย)
+```
+## 💾 read csv file
+```r
+read.csv( "name file" )
+----
+read.csv("fullDf_R05.csv")
+df <- read.csv("fullDf_R05.csv")
+```
