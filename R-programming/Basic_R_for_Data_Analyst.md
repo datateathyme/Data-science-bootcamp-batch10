@@ -56,3 +56,29 @@ result:
 > class(today_date)
 [1] "Date"
 ```
+### 🎄 change data types [ covert data types ]
+- Using = `as.`  พิมพ์ as.แล้วลองเลื่อนขึ้นลงได้ 
+```r
+## change data types
+as.numeric("100")
+as.numeric(TRUE)
+as.numeric(FALSE)
+as.character(555)
+as.logical(1)
+as.logical(0)
+-----------------------
+result :
+ ## change data types
+> as.numeric("100")
+[1] 100
+> as.numeric(TRUE)
+[1] 1
+> as.numeric(FALSE)
+[1] 0
+> as.character(555)
+[1] "555"
+> as.logical(1)
+[1] TRUE
+> as.logical(0)
+[1] FALSE
+```
