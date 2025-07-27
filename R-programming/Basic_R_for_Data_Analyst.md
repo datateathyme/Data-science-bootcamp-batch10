@@ -359,3 +359,30 @@ df$fav_menu <- NULL
 5  5     Ava   30     FALSE  TOK
 >
 ```
+### 🎄 create new row and how to append or union 2 table
+- type → **`rbind`**( table1, table2)
+- **`rbind`** = row bind **นำ row ทั้ง 2 table มาต่อกัน**
+```r
+## create new row and how to append or union 2 table
+df2 <- data.frame(
+    id = 6:7,
+    friends = c("wick", "ky"),
+    ages = c(25, 26),
+    own_a_dog = c(T, T),
+    city = c("Seoul", "Seoul")
+)
+
+## row bind 
+full_df <- rbind(df, df2)
+
+result: 
+> full_df
+  id friends ages own_a_dog  city
+1  1 William   35      TRUE   BKK
+2  2   James   32      TRUE   LON
+3  3    Noah   28     FALSE   LON
+4  4    Emma   29     FALSE   TOK
+5  5     Ava   30     FALSE   TOK
+6  6    wick   25      TRUE Seoul
+7  7      ky   26      TRUE Seoul
+```
