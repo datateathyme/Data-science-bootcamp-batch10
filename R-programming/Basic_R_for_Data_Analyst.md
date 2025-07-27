@@ -26,3 +26,33 @@ rm(income)
 - 2.character 🆎🆗
 - 3.logical ✅❎
 - 4.date 📆⏰
+
+```r
+## [2] data types
+## numeric , character, logical, date 
+
+my_pocket_money <- 150
+my_age <- 25
+my_name <- "sunsun"
+movie_lover <- TRUE
+today_date <- as.Date("2024-11-25") 
+```
+### 🎄 check data types
+```r
+## check data type  
+class(my_age)
+class(my_name)
+class(movie_lover)
+class(today_date)
+
+----
+result:
+> class(my_age)
+[1] "numeric"
+> class(my_name)
+[1] "character"
+> class(movie_lover)
+[1] "logical"
+> class(today_date)
+[1] "Date"
+```
