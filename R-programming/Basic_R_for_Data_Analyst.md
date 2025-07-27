@@ -401,3 +401,33 @@ read.csv( "name file" )
 read.csv("fullDf_R05.csv")
 df <- read.csv("fullDf_R05.csv")
 ```
+## 🎄 [ 4 ] function
+```r
+## [4] create function
+hello <- function() {
+    print("Hello world!")
+}
+
+## create a new function `cube`
+cube <- function(base, power) {
+  base ** power
+}
+```
+```r
+hello_name <- function(name) {
+  print(paste("Hello ", name))
+}
+
+hello_world <- function(name) {
+  print(paste("Hello,", name, "!"))
+}
+
+-------------------------------------------------------------
+hello_name <- function(name) {
+  print(paste("Hello !!, ", name, "Nice to meet U:"))
+}
+
+result:
+> hello_name("sunsun")
+[1] "Hello !!,  sunsun Nice to meet U:"
+```
