@@ -45,6 +45,24 @@ student_grades <- student_data %>%
             ifelse(Percentage >= 50, "D", "F"))))
   )
 
+## optional หรือเขียนเงื่อนไขโดยใช้ `case_when()`
+library(dplyr) # ตรวจสอบให้แน่ใจว่าได้โหลดแพ็กเกจ dplyr แล้ว
+
+student_grades <- student_data %>%
+  mutate(
+    TotalScore = Assignment1 + Assignment2 + Quiz1 + Midterm + FinalExam,
+    Percentage = (TotalScore / total_max_score) * 100
+  ) %>%
+  mutate(
+    Grade = case_when(
+      Percentage >= 80 ~ "A",
+      Percentage >= 70 ~ "B",
+      Percentage >= 60 ~ "C",
+      Percentage >= 50 ~ "D",
+      TRUE ~ "F" # เงื่อนไขสุดท้ายสำหรับค่าอื่นๆ ทั้งหมดที่เหลือ
+    )
+  )
+
 ## Result
 student_grades %>%
   select(student_id,student_name, TotalScore, Percentage, Grade) %>%
