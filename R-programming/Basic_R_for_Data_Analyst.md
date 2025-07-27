@@ -562,9 +562,20 @@ result:
 [1] "I still miss my ex"
 [1] "I move on already"
 ```
-## 🎄  take input from a user
+## 🎄 `readline ( )` # take input from a user
+- ประกาศฟังก์ชัน **`readline( )`** แล้วรอรับ input from user :
+- user input is character : จะเป็น text หรือข้อความเสมอ
 ```r
-readline("what is your name: ")
+readline("what's your name: ")
+readline("how are you today? ")
+
+> readline("what's your name: ")
+what's your name: sun
+[1] "sun"
+> 
+> readline("how are you today? ")
+how are you today? I'm fine
+[1] "I'm fine"
 ```
 ```r
 ## Facebook Login(Page) Logic 
