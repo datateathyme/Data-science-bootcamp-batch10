@@ -248,3 +248,78 @@ city <- c("BKK", "LON", "LON",
 ## data.frame
 df <- data.frame(id, friends, ages, own_a_dog, city)
 ```
+### 🎄 `str()`
+- review  : โครงสร้างของ dataframe เบื้องต้น ว่ามีกี่ row , col
+- review : column name 
+- review : data type and show some data in data frame
+```r
+> str(df)
+'data.frame':	5 obs. of  5 variables:
+ $ id       : int  1 2 3 4 5
+ $ friends  : chr  "William" "James" "Noah" "Emma" ...
+ $ ages     : num  35 32 28 29 30
+ $ own_a_dog: logi  TRUE TRUE FALSE FALSE FALSE
+ $ city     : chr  "BKK" "LON" "LON" "TOK" ...
+```
+### 🎄 `dim ()` วิธี check dimension แบบเร็วๆ
+```r
+> dim(df)
+[1] 5 5 ## Row , Column
+```
+### 🎄 `summary()`
+- เป็นการหาค่าสถิตเบื้องต้นของคอลัมน์ทุกคอลัมน์ที่อยู่ใน data frame
+- มี impact เยอะมาก กับคอลัมน์ที่เป็น**`ตัวเลข`**
+```r
+> summary(df)
+       id      friends               ages     
+ Min.   :1   Length:5           Min.   :28.0  
+ 1st Qu.:2   Class :character   1st Qu.:29.0  
+ Median :3   Mode  :character   Median :30.0  
+ Mean   :3                      Mean   :30.8  
+ 3rd Qu.:4                      3rd Qu.:32.0  
+ Max.   :5                      Max.   :35.0  
+ own_a_dog           city          
+ Mode :logical   Length:5          
+ FALSE:3         Class :character  
+ TRUE :2         Mode  :character  
+
+```
+### 🎄 Subset dataframe
+- [ ] 🌵 three ways that we can subset in R
+- [ ] 1. by position
+- [ ] 2. by name
+- [ ] 3. by condition
+```r
+## three ways that we can subset in R
+> ## []
+> ## 1. by position
+> ## 2. by name
+> ## 3. by condition
+
+** ใครบ้างที่เป็นเจ้าของน้องหมา 
+
+> df[ df$own_a_dog == TRUE,  ]
+  id friends ages own_a_dog city
+1  1   William  35      TRUE  BKK
+2  2    James   32      TRUE  LON
+> 
+------------------------------------------------------------
+
+> df[ df$own_a_dog == FALSE, ]
+  id friends ages own_a_dog city
+3  3    Noah   28     FALSE  LON
+4  4    Emma   29     FALSE  TOK
+5  5     Ava   30     FALSE  TOK
+------------------------------------------------------------
+** filter or find friend the name is "William"
+"Filter friends by the name 'William'"
+
+> df[ df$friend == "William", ]
+  id friends ages own_a_dog city
+1  1   William  35      TRUE  BKK
+> 
+
+df[ df$friends == "Noah", ]
+	id friends ages own_a_dog city
+3  3    Noah   28     FALSE  LON
+```
