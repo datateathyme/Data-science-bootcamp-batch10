@@ -83,7 +83,7 @@ result :
 [1] FALSE
 ```
 ## 🎄 [ 3 ] data structures
-- `1.vector:` เก็บข้อมูล 1 dimension และเก็บข้อมูลได้ 1 ประเภท vector, contains only single data type ex.c("alice","emily","frank") / c(1, 2, 3)
+- `1.vector:` เก็บข้อมูล 1 dimension และเก็บข้อมูลได้ 1 ประเภท [vector contains only single data type ex.c("alice","emily","frank") / c(1, 2, 3)]
 - `2.matrix:` 2D vector = เก็บข้อมูล 2 dimension
 - `3.list:` เทียบเท่ากับ playlist จะเก็บอะไรไว้ในนี้ก็ได้
 - `4.dataframe:` table csv, มี column - row, table anything
