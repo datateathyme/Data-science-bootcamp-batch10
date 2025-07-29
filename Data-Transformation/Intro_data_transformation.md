@@ -14,3 +14,4 @@ install.packages("dplyr")    --> Package นี้ติดตั้งแค่
 library(dplyr)    --> run ทุกครั้งที่เปิดโปรแกรมใช้งานขึ้นมาใหม่
 
 ```
+## 🔐 Core Function in dplyr
