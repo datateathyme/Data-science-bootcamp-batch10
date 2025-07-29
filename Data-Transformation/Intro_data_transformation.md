@@ -63,6 +63,9 @@ tail(imdb)   --> tail print 6 แถวล่างสุด
 ## ดูจำนวนแถวและคอลัมน์
 nrow(imdb)
 ncol(imdb)
+
+## เรียกดูชื่อคอลัมน์
+names(imdb)
 ```
 ## 🔐 Select Columns
 ### 📩 Pipe Operator
@@ -78,14 +81,65 @@ mtcars %>% select(mpg, wt, hp)
 df %>% select() %>% filter() %>% mutate() %>% arrange()
 ```
 ```r
-
 ## select columns
-select(imdb, MOVIE_NAME, RATING )
-select(imdb, 1, 5)
-
+select(imdb, MOVIE_NAME, RATING ) ## select from column name
+select(imdb, 1, 5)  ## select from column index
+ 
+```
+### 📩 Rename column
+```r
 ## rename column name
 select(imdb, movie_name = MOVIE_NAME, released_year = YEAR)
 
-select(imdb, movie_name = MOVIE_NAME,   --> เปลี่ยนชื่อคอลัมน์ ใส่ชื่อใหม่ = ชื่อเก่า
+select(imdb, movie_name = MOVIE_NAME,  ## >> เปลี่ยนชื่อคอลัมน์ ใส่ชื่อใหม่ = ชื่อเก่า
              released_year = YEAR)
+```
+```r
+## เปลี่ยนชื่อให้เป็นตัวพิมพ์เล็กทั้งหมด tolower
+names(imdb) <- tolower(names(imdb))
+```
+### 📩 Ex. Pipe Operator `%>% Select data`
+```r
+## pipe operator
+head(imdb)
+
+imdb %>% 
+  select( movie_name = MOVIE_NAME, released_year = YEAR) %>% 
+  head(10)
+```
+### 📩 Ex. Pipe Operator `%>% Filter data`
+```r
+## filter data 
+filter(imdb, SCORE >= 9.0)
+
+imdb %>% filter(SCORE >= 9.0)
+
+imdb %>% 
+  select(movie_name, year, score) %>%
+  filter(score >= 9)
+
+result:
+               movie_name year score
+1 The Shawshank Redemption 1994   9.3
+2            The Godfather 1972   9.2
+3          The Dark Knight 2008   9.0
+4   The Godfather: Part II 1974   9.0
+```
+```r
+## filter with & (and) , | (or)
+
+imdb %>% 
+  select(movie_name, year, score) %>%
+  filter(score >= 9 & year > 2000)
+
+imdb %>%
+  select(movie_name, length, score) %>%
+  filter(score == 8.8 | score == 8.3 | score == 9.0)
+
+## หรือเขียน or โดยใช้ %in% ได้ผลลัพธ์เหมือนด้านบน
+imdb %>%
+  select(movie_name, length, score) %>%
+  filter(score %in% c(8.3, 8.8, 9.0))
+
+  
 ```
