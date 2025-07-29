@@ -49,3 +49,43 @@ $ GENRE      <chr> "Drama", "Crime, Drama", "A…
 $ SCORE      <dbl> 9.3, 9.2, 9.0, 9.0, 8.9, 8.…
 
 ```
+```r
+## print head and tail of data
+head(imdb)    --> head จะ print 6 แถวแรกของ dataframe ออกมาดู
+
+## print head and tail of data
+head(imdb, 10 )    --> ถ้าจะ print 10 แถวแรกให้ใส่เลข 10 เข้าไป
+
+## print head and tail of data
+head(imdb, 10)
+tail(imdb)   --> tail print 6 แถวล่างสุด
+
+## ดูจำนวนแถวและคอลัมน์
+nrow(imdb)
+ncol(imdb)
+```
+## 🔐 Select Columns
+### 📩 Pipe Operator
+- `dplyr` มาพร้อมกับ pipe operator `%>%` ที่ใช้ในการเขียน pipeline (ตามชื่อของมันเลย) ตัวอย่าง code ด้านล่างทั้งสองแบบได้ผลลัพธ์เหมือนกัน
+```r
+## select columns
+select(mtcars, mpg, wt, hp)
+
+## select columns
+mtcars %>% select(mpg, wt, hp)
+
+## การเขียน %>% เชื่อมหลายฟังก์ชันเข้าด้วยกัน
+df %>% select() %>% filter() %>% mutate() %>% arrange()
+```
+```r
+
+## select columns
+select(imdb, MOVIE_NAME, RATING )
+select(imdb, 1, 5)
+
+## rename column name
+select(imdb, movie_name = MOVIE_NAME, released_year = YEAR)
+
+select(imdb, movie_name = MOVIE_NAME,   --> เปลี่ยนชื่อคอลัมน์ ใส่ชื่อใหม่ = ชื่อเก่า
+             released_year = YEAR)
+```
