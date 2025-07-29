@@ -141,5 +141,41 @@ imdb %>%
   select(movie_name, length, score) %>%
   filter(score %in% c(8.3, 8.8, 9.0))
 
-  
+```
+```r
+## filter string columns
+imdb %>%
+  select(movie_name, genre, rating) %>%
+  filter(rating == "R")
+
+
+imdb %>%
+  select(movie_name, genre, rating) %>%
+  filter(genre == "Drama")
+
+imdb %>%
+  select(movie_name, genre, rating) %>%
+  filter(grepl("Drama", imdb$genre))  ## grepl หา Drama โดยไม่สนใจว่า Drama อยู่ในตำแหน่งไหน
+
+imdb %>%
+  select(movie_name) %>%
+  filter(grepl("The", imdb$movie_name))
+```
+### 📩 Ex. Pipe Operator `%>% mutate` # create new column
+```r
+## create new column
+
+imdb %>%
+  mutate(score_group = if_else(score >= 9, "High Rating", "Low Rating"))
+
+imdb %>%
+  select(movie_name, score, length) %>%
+  mutate(score_group = if_else(score >= 9, "High Rating", "Low Rating"),
+         length_group = if_else(length >= 120, "Long Film", "Short Film"))
+
+
+imdb %>%
+  select(movie_name, score) %>%
+  mutate(score_update = score + 0.1) %>%
+  head(10)
 ```
