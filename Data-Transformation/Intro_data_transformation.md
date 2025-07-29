@@ -23,3 +23,29 @@ library(dplyr)    --> run ทุกครั้งที่เปิดโปร
 | arrange() | เรียงข้อมูล | 
 | summarise() | สรุปผลสถิติ | 
 | group_by() | จับกลุ่มข้อมูล | 
+
+## 🔐 Load data 
+### 📩 read csv file 'imdb.csv' into R studio
+```r
+## read csv file 'imdb.csv' into R studio
+imdb <- read.csv("imdb.csv", stringsAsFactors = FALSE) ## คอลัมน์ที่เป็นตัวอักษรไม่เปลี่ยนเป็น factor เก็บไว้เป็นตัวอักษรเหมือนเดิม
+View(imdb) 
+```
+## 🔐 Review data structure
+```r
+## review data structure
+glimpse(imdb)
+
+----
+result:
+Rows: 100
+Columns: 7
+$ NO         <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, …
+$ MOVIE_NAME <chr> "The Shawshank Redemption",…
+$ YEAR       <int> 1994, 1972, 2008, 1974, 200…
+$ RATING     <chr> "R", "R", "PG-13", "R", "PG…
+$ LENGTH     <int> 142, 175, 152, 202, 201, 15…
+$ GENRE      <chr> "Drama", "Crime, Drama", "A…
+$ SCORE      <dbl> 9.3, 9.2, 9.0, 9.0, 8.9, 8.…
+
+```
