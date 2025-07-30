@@ -179,3 +179,16 @@ imdb %>%
   mutate(score_update = score + 0.1) %>%
   head(10)
 ```
+### 📩 Ex. Pipe Operator `%>% arrange` # sort data
+```r
+## arrange data 
+head(imdb)
+
+imdb %>%
+  arrange(length) %>%  ## ascending order
+  head(10)
+
+imdb %>%
+  arrange(desc(length)) %>%   ## descending order
+  head(10)
+```
