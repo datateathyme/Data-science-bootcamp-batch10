@@ -228,3 +228,21 @@ imdb %>%
             max_length  = max(length),
             n           = n())
 ```
+## 🔐 Join Tables
+```r
+## join data
+favorite_films <- data.frame(id = c(5, 10, 25, 30, 98))
+
+favorite_films %>%
+  inner_join(imdb, by = c("id" = "no")) ## by = join ด้วย c("id" = "no")
+```
+## 🔐 write CSV file (export result)
+```r
+## write CSV file (export result)
+imdb_prep <- imdb %>%
+  select(movie_name, year, rating, length, score) %>%
+  filter(rating == "R" & year > 2000)
+
+## export file
+write.csv(imdb_prep, "imdb_prep.csv", row.names = FALSE)
+```
