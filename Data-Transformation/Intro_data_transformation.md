@@ -246,3 +246,18 @@ imdb_prep <- imdb %>%
 ## export file
 write.csv(imdb_prep, "imdb_prep.csv", row.names = FALSE)
 ```
+## 🔐 data.fram vs. tibble
+- ผลลัพธ์เหมือนกัน แต่การแสดงผล tibble จะอ่านง่ายกว่า data.frame
+```r
+## install.packages("tidyverse")
+# dplyr tidyr ggplot2
+library(tidyverse)
+
+# data.frame vs. tibble
+df_tibble <- tibble(id = 1:3, name = c("bobby", "jisoo", "lisa"))
+df <- data.frame(id = 1:3, name = c("bobby", "jisoo", "lisa"))
+
+## convert data.frame to tibble
+mtcars
+mtcars_tibble <- tibble(mtcars)
+```
