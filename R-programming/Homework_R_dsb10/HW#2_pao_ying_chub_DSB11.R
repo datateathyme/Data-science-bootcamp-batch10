@@ -73,3 +73,4 @@ play_game <- function() {
   print("Thank you for playing a game! I hope you enjoyed it.")
 }
 
+print(play_game)
