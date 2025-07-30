@@ -8,3 +8,14 @@ library(tidyverse)
 library(glue)
 library(RSQLite)
 ```
+## 🔐 `glue` > create string template
+```r
+## glue => create string template
+name <- "sunsun"
+age <- 25
+
+glue("Hello my name is {name}, and I'm {age} year old.")
+
+## result:
+Hello my name is sunsun, and I'm 25 year old.
+```
