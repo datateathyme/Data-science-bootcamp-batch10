@@ -191,4 +191,40 @@ imdb %>%
 imdb %>%
   arrange(desc(length)) %>%   ## descending order
   head(10)
+
+## sort 2 column
+imdb %>%
+  arrange(rating, desc(length))
+```
+### 📩 Ex. Pipe Operator `%>% summarise & group by` # summary statistics
+```r
+## summarise 
+imdb %>%
+  summarise(mean_length = mean(length),
+            sum_length  = sum(length),
+            sd_length   = sd(length),
+            min_length  = min(length),
+            max_length  = max(length),
+            n           = n())
+
+## summarise and group by
+imdb %>%
+  group_by(rating) %>%
+  summarise(mean_length = mean(length),
+            sum_length  = sum(length),
+            sd_length   = sd(length),
+            min_length  = min(length),
+            max_length  = max(length),
+            n           = n())
+
+## summarise and group by and filter null
+imdb %>%
+  filter(rating != "") %>%  ## filter rating ไม่เท่ากับ ค่าว่าง (null)
+  group_by(rating) %>%
+  summarise(mean_length = mean(length),
+            sum_length  = sum(length),
+            sd_length   = sd(length),
+            min_length  = min(length),
+            max_length  = max(length),
+            n           = n())
 ```
