@@ -304,6 +304,6 @@ mtcars %>%
   slice(c(1,3,5))  ## == > select row 1, 3, 5
 
 mtcars %>%
-  slice( sample(nrow(mtcars),10)) ## == > sample_n(mtcars, size=5) 
+  slice( sample(nrow(mtcars),10)) ## == > sample_n(mtcars, size=10) 
   # เป็นการสุ่ม data ขึ้นมา 10 แถว ใช้งานเหมือนกัน
 ```
