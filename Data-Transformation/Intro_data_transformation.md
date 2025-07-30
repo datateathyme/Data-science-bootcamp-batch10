@@ -246,7 +246,7 @@ imdb_prep <- imdb %>%
 ## export file
 write.csv(imdb_prep, "imdb_prep.csv", row.names = FALSE)
 ```
-## 🔐 data.fram vs. tibble
+## 🔐 data.frame vs. tibble
 - ผลลัพธ์เหมือนกัน แต่การแสดงผล tibble จะอ่านง่ายกว่า data.frame
 ```r
 ## install.packages("tidyverse")
