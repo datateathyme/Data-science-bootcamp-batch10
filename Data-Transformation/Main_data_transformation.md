@@ -533,3 +533,92 @@ result:
 3 Paul  Beatles   bass  
 4 Keith Aerosmith guitar
 ```
+### 📩 UNION Data in R 
+```r
+## union data == SQL 
+-- this syntax in SQL -- 
+SELECT * FROM jan_sale
+UNION ALL
+SELECT * FROM fab_sale;
+
+-- create 2 df -- 
+## union data == SQL 
+df1 <- data.frame(
+  id = 1:3,
+  name = c("toy", "john", "marry")
+)
+
+df2 <- data.frame(
+  id = 3:5,
+  name = c("marry", "anna", "david")
+)
+
+> df1
+  id  name
+1  1   toy
+2  2  john
+3  3 marry
+> df2
+  id  name
+1  3 marry
+2  4  anna
+3  5 david
+```
+```r
+## union row
+bind_rows(df1, df2)
+
+> bind_rows(df1, df2)
+  id  name
+1  1   toy
+2  2  john
+3  3 marry
+4  3 marry
+5  4  anna
+6  5 david
+
+df1 %>%
+  bind_rows(df2)    ##  bind_rows(df1, df2) => เขียนแบบไหนก็ได้ ได้ คำตอบเหมือนกัน
+
+result:
+  id  name
+1  1   toy
+2  2  john
+3  3 marry
+4  3 marry
+5  4  anna
+6  5 david
+```
+```r
+## UNION ALL
+## used bind rows
+df1 %>%
+  bind_rows(df2)
+
+## UNION use distinct == remove duplicate
+## bind rows and then remove duplicates
+df1 %>%
+  bind_rows(df2) %>%
+  distinct()  ## ****
+
+** From this to Below 👇  
+    id  name
+1  1   toy
+2  2  john
+3  3 marry  -- marry
+4  3 marry  -- marry
+5  4  anna
+6  5 david
+
+** From above to This 👇
+> df1 %>%
++   bind_rows(df2) %>%
++   distinct()  ## => use distinct == remove duplicate
+  id  name
+1  1   toy
+2  2  john
+3  3 marry  -- marry
+4  4  anna
+5  5 david
+
+```
