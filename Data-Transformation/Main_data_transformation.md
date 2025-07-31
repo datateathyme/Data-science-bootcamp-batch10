@@ -213,4 +213,14 @@ mtcars %>%
 mtcars %>%
   select(model, hp, wt, am) %>%
   filter(grepl("^M.+", model) & hp >= 180)
+
+mtcars %>%
+  select(model, hp, wt, am) %>%
+  filter(grepl("^M.+", model)) %>%
+  arrange(hp)
+
+mtcars %>%
+  select(model, hp, wt, am) %>%
+  filter(grepl("^M.+", model)) %>%
+  arrange(-hp)  ## shortcut descending order using -hp in column numeric
 ```
