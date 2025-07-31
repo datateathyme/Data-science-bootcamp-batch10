@@ -518,3 +518,18 @@ band_members %>%
 3 Paul  Beatles bass  
 4 Keith NA      guitar
 ```
+```r
+band_members %>%
+  full_join(band_instruments, by = "name") %>%
+  mutate(plays = replace_na(plays, "drum"),
+         band  = replace_na(band, "Aerosmith"))
+
+result:
+# A tibble: 4 × 3
+  name  band      plays 
+  <chr> <chr>     <chr> 
+1 Mick  Stones    drum  
+2 John  Beatles   guitar
+3 Paul  Beatles   bass  
+4 Keith Aerosmith guitar
+```
