@@ -100,5 +100,5 @@ df4 <- read_tsv("https://raw.githubusercontent.com/toyeiei/data-traninig/refs/he
 ## install.packages(readxl)
 library(readxl)
 
-df5 <- read_excel("student_05.xlsx")
+df5 <- read_excel("student_05.xlsx", sheet = 1)  ## upload file in working directory ก่อน
 ```
