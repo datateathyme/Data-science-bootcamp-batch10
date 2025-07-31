@@ -222,5 +222,18 @@ mtcars %>%
 mtcars %>%
   select(model, hp, wt, am) %>%
   filter(grepl("^M.+", model)) %>%
-  arrange(-hp)  ## shortcut descending order using -hp in column numeric
+  arrange(-hp)  ## shortcut for descending order using -hp in column numeric
+
+m_cars <- mtcars %>%
+  select(model, hp, wt, am) %>%
+  filter(grepl("^M.+", model)) %>%
+  arrange(am, desc(hp))
+``` 
+### 📩 mutate and summarise
+```r
+mtcars %>% 
+  filter(hp < 100) %>%
+  select(model, am, hp) %>%
+## create new column 
+  mutate(am_label = ifelse(am == 0, "Auto", "Manual"))
 ```
