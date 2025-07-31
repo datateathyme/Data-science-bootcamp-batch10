@@ -229,11 +229,44 @@ m_cars <- mtcars %>%
   filter(grepl("^M.+", model)) %>%
   arrange(am, desc(hp))
 ``` 
-### 📩 mutate and summarise
+### 📩 mutate
 ```r
-mtcars %>% 
+hp_df <- mtcars %>% 
   filter(hp < 100) %>%
   select(model, am, hp) %>%
-## create new column 
-  mutate(am_label = ifelse(am == 0, "Auto", "Manual"))
+  ## create new column 
+  mutate(am_label = ifelse(am == 0, "Auto", "Manual"),
+         hp_scale = hp/100, 
+         hp_double = hp*2)
+```
+### 📩 summarise
+```r
+## summarise
+mtcars %>%
+  summarise(mean_hp = mean(hp),
+            sum_hp  = sum(hp),
+            median_hp = median(hp), 
+            sd_hp  = sd(hp), 
+            n = n())
+
+mtcars %>%
+  filter(wt <= 5) %>%
+  summarise(mean_hp = mean(hp),
+            sum_hp  = sum(hp),
+            median_hp = median(hp), 
+            sd_hp  = sd(hp), 
+            n = n())
+```
+```r
+> mtcars %>%
++   summarise(mean_hp = mean(hp),
++             sum_hp  = sum(hp))
+   mean_hp sum_hp
+1 146.6875   4694
+```
+- เทียบเท่ากับการเขียน sqldf
+```r
+> sqldf("select avg(hp), sum(hp) from mtcars")
+   avg(hp) sum(hp)
+1 146.6875    4694
 ```
