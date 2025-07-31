@@ -126,8 +126,24 @@ class(temp)
 [1] "data.frame"
 ```
 # 🔐 data transformation 101
+## 🔐 Core Function in dplyr
+| **Function** | **What is does?** | 
+|---|---|
+| select() | เลือกคอลัมน์ | 
+| filter() | ฟิลเตอร์ข้อมูลด้วยเงื่อนไข | 
+| mutate() | สร้างคอลัมน์ใหม่ | 
+| arrange() | เรียงข้อมูล | 
+| summarise() | สรุปผลสถิติ | 
+| group_by() | จับกลุ่มข้อมูล | 
 
 ```r
 ## data transformation 101
-library(tidyverse)
+library(tidyverse) ## OR library(dplyr)
+
+## Hadley Wickham
+## 1. select column == SQL select
+## 2. filter rows == SQL where
+## 3. arrange == SQL order by
+## 4. mutate (create new columns)
+## 5. summarise == SQL aggregate function
 ```
