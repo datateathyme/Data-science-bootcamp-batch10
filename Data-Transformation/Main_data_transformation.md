@@ -456,6 +456,27 @@ band_members %>%
 4 Keith NA      guitar
 
 ```
+### 📩  join in case key names are not the same
+```r
+## join in case key names are not the same 
+band_members %>%
+  rename(friend = name)
+
+band_members %>%
+  rename(friend = name) %>%
+  left_join(band_instruments, by = c("friend"="name"))
+  
+  > band_members %>%
++   rename(friend = name) %>%
++   left_join(band_instruments, by = c("friend" = "name"))
+# A tibble: 3 × 3
+  friend band    plays 
+  <chr>  <chr>   <chr> 
+1 Mick   Stones  NA    
+2 John   Beatles guitar
+3 Paul   Beatles bass  
+
+```
 ### 📩 Drop na 
 ```r
 ## full outer join 
@@ -533,7 +554,7 @@ result:
 3 Paul  Beatles   bass  
 4 Keith Aerosmith guitar
 ```
-### 📩 UNION Data in R 
+### 📩 `bind_rows()` UNION Data in R 
 ```r
 ## union data == SQL 
 -- this syntax in SQL -- 
@@ -621,4 +642,60 @@ df1 %>%
 4  4  anna
 5  5 david
 
+```
+## 📩 Tip & Trick bind rows() multiple 
+```r
+## dataframe
+df1 <- data.frame(
+  id = 1:3,
+  name = c("toy", "john", "marry")
+)
+
+df2 <- data.frame(
+  id = 3:5,
+  name = c("marry", "anna", "david")
+)
+
+df3 <- data.frame(
+  id = 6:8,
+  name = c("a", "b", "c")
+)
+
+df4 <- data.frame(
+  id = 9:10,
+  name = c("d", "e"))
+
+df1;df2;df3;df4
+
+## Tip & Trick 
+## bind rows old version
+df1 %>%
+  bind_rows(df2) %>%
+  bind_rows(df3) %>%
+  bind_rows(df4) %>%
+  distinct()
+
+## shortcut when we have multiple dataframe 
+list_df <- list(df1, df2, df3, df4) # --> create list and input df in list 
+
+list_df %>%
+  bind_rows() %>%
+  distinct()
+  
+  > ## shortcut when we have multiple dataframe 
+> list_df <- list(df1, df2, df3, df4)
+> list_df %>%
++   bind_rows() %>%
++   distinct()
+   id  name
+1   1   toy
+2   2  john
+3   3 marry
+4   4  anna
+5   5 david
+6   6     a
+7   7     b
+8   8     c
+9   9     d
+10 10     e
 ```
