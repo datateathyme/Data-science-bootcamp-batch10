@@ -80,3 +80,25 @@ dbGetQuery(con, "select names from students")
 
 dbDisconnect(con)
 ```
+## 🔐 read file into R
+```r
+## read file into R
+
+## Split data: using commas
+df1 <- read_csv("https://raw.githubusercontent.com/toyeiei/data-traninig/refs/heads/main/student_01.csv")
+
+## Split data: using semicolons
+df2 <- read_csv2("https://raw.githubusercontent.com/toyeiei/data-traninig/refs/heads/main/student_02.csv")
+
+## Split data: using delim "|"
+df3 <- read_delim("https://raw.githubusercontent.com/toyeiei/data-traninig/refs/heads/main/student_03.txt", delim = "|")
+
+## Split data: using tsv (Tab-Separated Values)
+df4 <- read_tsv("https://raw.githubusercontent.com/toyeiei/data-traninig/refs/heads/main/student_04.tsv")
+
+## read excel file, sheet1
+## install.packages(readxl)
+library(readxl)
+
+df5 <- read_excel("student_05.xlsx")
+```
