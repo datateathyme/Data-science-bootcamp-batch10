@@ -456,3 +456,65 @@ band_members %>%
 4 Keith NA      guitar
 
 ```
+### 📩 Drop na 
+```r
+## full outer join 
+band_members %>%
+  full_join(band_instruments, by = "name") %>%
+  drop_na()
+
+> ## full outer join 
+> band_members %>%
++   full_join(band_instruments, by = "name") %>%
++   drop_na()
+# A tibble: 2 × 3
+  name  band    plays 
+  <chr> <chr>   <chr> 
+1 John  Beatles guitar
+2 Paul  Beatles bass  
+
+## before drop na
+> ## full outer join 
+> band_members %>%
++   full_join(band_instruments, by = "name")
+# A tibble: 4 × 3
+  name  band    plays 
+  <chr> <chr>   <chr> 
+1 Mick  Stones  NA    
+2 John  Beatles guitar
+3 Paul  Beatles bass  
+4 Keith NA      guitar
+
+** In R => full join drop na == inner join !!!  
+```
+### 📩 replace na in dplyr == SQL COALESCE
+```r
+** Before replace
+> band_members %>%
++   full_join(band_instruments, by = "name")
+# A tibble: 4 × 3
+  name  band    plays 
+  <chr> <chr>   <chr> 
+1 Mick  Stones  NA    
+2 John  Beatles guitar
+3 Paul  Beatles bass  
+4 Keith NA      guitar
+
+
+## replace na == SQL COALESCE 
+band_members %>%
+  full_join(band_instruments, by = "name") %>%
+  mutate(plays = replace_na(plays, "drum"))
+  
+## AFTER :  replace na == SQL COALESCE 
+> band_members %>%
++   full_join(band_instruments, by = "name") %>%
++   mutate(plays = replace_na(plays, "drum")) -- ****
+# A tibble: 4 × 3
+  name  band    plays 
+  <chr> <chr>   <chr> 
+1 Mick  Stones  drum  
+2 John  Beatles guitar
+3 Paul  Beatles bass  
+4 Keith NA      guitar
+```
