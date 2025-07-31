@@ -270,3 +270,189 @@ mtcars %>%
    avg(hp) sum(hp)
 1 146.6875    4694
 ```
+## 🔐 recap dplyr 
+- [x]  1. select
+- [x]  2. filter
+- [x]  3. arrange
+- [x]  4. mutate
+- [x]  5. summarise
+- [x]  other function: count, distinct
+- [x]  join tables, bind_row, bind_col
+
+```r
+## recap dplyr 
+# 1. select
+# 2. filter
+# 3. arrange
+# 4. mutate
+# 5. summarise
+# other function: count, distinct
+# join tables, bind_row, bind_col
+
+data('mtcars')
+df <- mtcars %>% 
+  rownames_to_column(var="model") %>%
+  tibble()
+
+
+## random sample / sampling
+set.seed(42)
+df %>%
+  sample_n(3)
+
+df %>%
+  sample_frac(0.2)
+
+```
+```r
+df %>% 
+  select(model, am) %>%
+  mutate(am = ifelse(am == 0, "Auto", "Manual")) %>%
+  count(am)
+
+----
+result:
+# A tibble: 2 × 2
+  am         n
+  <chr>  <int>
+1 Auto      19
+2 Manual    13
+```
+```r
+df %>% 
+  select(model, am) %>%
+  mutate(am = ifelse(am == 0, "Auto", "Manual")) %>%
+  count(am) %>%
+  mutate(pct = n/sum(n))  ## สร้างคอลัมน์เปอร์เซ็นต์ขึ้นมาใหม่
+
+----
+result:
+# A tibble: 2 × 3
+  am         n   pct
+  <chr>  <int> <dbl>
+1 Auto      19 0.594
+2 Manual    13 0.406
+```
+### 📩 distinct
+```r
+## distinct
+df %>% 
+  select(model, am) %>%
+  mutate(am = ifelse(am == 0, "Auto", "Manual")) %>%
+  distinct(am)
+
+----
+result:
+# A tibble: 2 × 1
+  am    
+  <chr> 
+1 Manual
+2 Auto 
+```
+```r
+model_names <- df %>% 
+  select(model, am) %>%
+  mutate(am = ifelse(am == 0, "Auto", "Manual")) %>%
+  distinct(model) %>%
+  pull() ## pull ดึงค่าที่ไม่ซ้ำกันออกมาเป็น vector
+
+----
+result:
+ [1] "Mazda RX4"           "Mazda RX4 Wag"      
+ [3] "Datsun 710"          "Hornet 4 Drive"     
+ [5] "Hornet Sportabout"   "Valiant"            
+ [7] "Duster 360"          "Merc 240D"          
+ [9] "Merc 230"            "Merc 280"
+
+> model_names[grepl("Mazda.+", model_names)]
+[1] "Mazda RX4"     "Mazda RX4 Wag"
+```
+### 📩 join tables
+- inner, [ left, right, full ] = outer
+```r
+## join tables
+data()
+
+## SQL joins 4 types
+## inner, [ left, right, full ] == outer join
+
+## inner join
+inner_join(band_members, band_instruments, by = "name")
+
+> ## inner join
+> inner_join(band_members, band_instruments, by = "name")
+# A tibble: 2 × 3
+  name  band    plays 
+  <chr> <chr>   <chr> 
+1 John  Beatles guitar
+2 Paul  Beatles bass  
+> 
+------------------------------------------------------------------------------------------
+## other write recommend like this
+band_members %>%
+  inner_join(band_instruments, by ="name")
+
+
+> ## other write recommend like this
+> band_members %>%
++   inner_join(band_instruments, by ="name")
+# A tibble: 2 × 3
+  name  band    plays 
+  <chr> <chr>   <chr> 
+1 John  Beatles guitar
+2 Paul  Beatles bass  
+>
+
+**** inner == เอาเฉพาะ tables ที่แมทค่ากันได้ คือ เอามาเฉพาะแถวที่เหมือนกัน
+---------------------------------------------------------------------------
+## left join 
+band_members %>%
+  left_join(band_instruments, by ="name")
+  
+> ## left join 
+> band_members %>%
++   left_join(band_instruments, by ="name")
+# A tibble: 3 × 3
+  name  band    plays 
+  <chr> <chr>   <chr> 
+1 Mick  Stones  NA    
+2 John  Beatles guitar
+3 Paul  Beatles bass  
+> 
+
+**** left == เอา tables ซ้ายเป็นตัวตั้ง อันไหนแมทค่ากันได้ดึงค่ามา อันไหนแมทไม่ได้ใส่ค่าว่าง Na
+-------------------------------------------------------------------------------------------------------------------
+## right join 
+band_members %>%
+  right_join(band_instruments, by ="name")
+  
+ > ## right join 
+> band_members %>%
++   right_join(band_instruments, by ="name")
+# A tibble: 3 × 3
+  name  band    plays 
+  <chr> <chr>   <chr> 
+1 John  Beatles guitar
+2 Paul  Beatles bass  
+3 Keith NA      guitar
+
+**** right ==  เอา tables ขวาเป็นตัวตั้ง อันไหนแมทค่ากันได้ดึงค่ามา อันไหนแมทไม่ได้ใส่ค่าว่าง Na
+
+---------------------------------------------------------------------------------------------------------
+
+## full outer join 
+band_members %>%
+  full_join(band_instruments, by = "name") 
+  
+> ## full outer join 
+> band_members %>%
++   full_join(band_instruments, by = "name")
+# A tibble: 4 × 3
+  name  band    plays 
+  <chr> <chr>   <chr> 
+1 Mick  Stones  NA    
+2 John  Beatles guitar
+3 Paul  Beatles bass  
+4 Keith NA      guitar
+
+```
