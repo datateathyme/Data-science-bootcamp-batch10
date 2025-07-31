@@ -97,8 +97,32 @@ df3 <- read_delim("https://raw.githubusercontent.com/toyeiei/data-traninig/refs/
 df4 <- read_tsv("https://raw.githubusercontent.com/toyeiei/data-traninig/refs/heads/main/student_04.tsv")
 
 ## read excel file, sheet1
-## install.packages(readxl)
+## install.packages("readxl")
 library(readxl)
 
 df5 <- read_excel("student_05.xlsx", sheet = 1)  ## upload file in working directory ก่อน
 ```
+### 📩 list.file()
+```
+> list.files(pattern = "*.json")
+[1] "blackpink.json"  "example_df.json"
+[3] "my_profile.json"
+```
+### 📩 how to  read a json file into R
+```r
+## how to  read a json file into R
+install.packages("jsonlite")
+library(jsonlite)
+
+my_profile <- fromJSON("my_profile.json")
+```
+```r
+## read json as dataframe
+temp <- fromJSON("example_df.json")
+class(temp)
+
+----
+> class(temp)
+[1] "data.frame"
+```
+# 🔐 data transformation 101
