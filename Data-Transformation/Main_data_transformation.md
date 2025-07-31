@@ -126,3 +126,8 @@ class(temp)
 [1] "data.frame"
 ```
 # 🔐 data transformation 101
+
+```r
+## data transformation 101
+library(tidyverse)
+```
