@@ -565,7 +565,7 @@ df2 <- data.frame(
 3  5 david
 ```
 ```r
-## union row
+## append data 
 bind_rows(df1, df2)
 
 > bind_rows(df1, df2)
