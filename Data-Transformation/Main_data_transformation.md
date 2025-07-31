@@ -65,6 +65,7 @@ dbRemoveTable(con, "branches")
 dbDisconnect(con)
 ```
 ### 📩 create a new database
+- [Homework: Create a new reataurant.db](https://github.com/datateathyme/Data-science-bootcamp-batch10/blob/main/Data-Transformation/Homework/create_a_new_restuarant.md)
 ```r
 ## create a new database 
 
