@@ -146,4 +146,71 @@ library(tidyverse) ## OR library(dplyr)
 ## 3. arrange == SQL order by
 ## 4. mutate (create new columns)
 ## 5. summarise == SQL aggregate function
+
+## preview data
+head(mtcars)
+
+colnames(mtcars)
+rownames(mtcars)
+
+car_names <- rownames(mtcars)
+
+## create new column
+mtcars$model <- car_names
+
+## remove rownames
+rownames(mtcars) <- NULL
+```
+### 📩 how to select columns
+```r
+## how to select columns
+select(mtcars, hp, wt, am) ## subset by name
+
+select(mtcars, 1:5, 10) ## subset by position
+
+select(mtcars, am, hp, 10) ## ## subset by name and position
+
+select(mtcars, contains("a")) ## subset by condition
+```
+### 📩 data transformation pipeline
+```r
+## data transformation pipeline
+mtcars %>%
+  select(hp, wt, am)
+
+
+mtcars %>%
+  select(model, hp, wt, am) %>%
+  filter(hp >= 200 & wt < 5 & am == "Auto")
+
+mtcars %>%
+  select(model, hp, wt, am) %>%
+  filter(hp >= 200 | hp <= 90) %>%
+  arrange(desc(hp))
+
+mtcars %>%
+  select(model, hp, wt, am) %>%
+  filter(between (hp, 100, 180)) ## แรงม้า hp อยู่ระหว่าง 100 - 180
+
+```
+- [ ] **อยากได้รถยนต์ที่ชื่อขึ้นต้นด้วย M 🚗**
+```r
+> grep("^M.+", car_names)
+ [1]  1  2  8  9 10 11 12 13 14 31
+
+> id <- grep("^M.+", car_names)
+> car_names[id]
+ [1] "Mazda RX4"     "Mazda RX4 Wag" "Merc 240D"    
+ [4] "Merc 230"      "Merc 280"      "Merc 280C"    
+ [7] "Merc 450SE"    "Merc 450SL"    "Merc 450SLC"  
+[10] "Maserati Bora"
+```
+```r
+mtcars %>%
+  select(model, hp, wt, am) %>%
+  filter(grepl("^M.+", model))
+
+mtcars %>%
+  select(model, hp, wt, am) %>%
+  filter(grepl("^M.+", model) & hp >= 180)
 ```
