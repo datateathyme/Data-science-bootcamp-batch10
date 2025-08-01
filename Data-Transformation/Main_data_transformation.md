@@ -616,7 +616,7 @@ df <- data.frame(id, friends, spending)
 avg_spending <- mean(df$spending, na.rm=TRUE)
 
 ## mean imputation
-df %>% 
+clean_df <- df %>% 
   mutate(spending = replace_na(spending, avg_spending))
 ```
 ```r
