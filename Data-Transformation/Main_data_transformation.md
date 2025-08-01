@@ -167,6 +167,7 @@ rownames(mtcars) <- NULL
 select(mtcars, model, 1:10)
 
 m <- select(mtcars, model, everything()) # using everything() ดึงที่เหลือทั้งหมดไว้ด้านขวา
+View(m)
 ```
 ### 📩 how to select columns
 ```r
