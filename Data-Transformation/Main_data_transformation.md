@@ -842,3 +842,29 @@ ggplot(data =mtcars,
   geom_smooth(se=F) +
   theme_minimal()
 ```
+## 🔐 wide vs. long data format
+### data analyst prefer [LONG format]
+- [x] Long Format (tidy Data)
+   - [ ] [Important] one column, one data type 1 คอลัมน์ จะเก็บข้อมูลแค่ 1 ประเภท
+```r
+install.packages("tidye")
+library(tidyr)
+
+View(world_bank_pop)
+
+## apply dplyr + tidyr turn wide to long data format 
+long_df <- world_bank_pop %>%
+  filter(indicator  == "SP.URB.TOTL") %>%
+  pivot_longer(cols      = `2000`:`2017`,  ## เปลี่ยนคอลัมน์นี้ไปใส่ใน คอลัมน์ใหม่ "year"
+               names_to  = "year", ## ตั้งชื่อคอลัน์ใหม่ 
+               values_to = "population") ## value ให้นำมาใส่ในคอลัมน์ population
+
+View(long_df)
+```
+```r
+## convert long to wide format
+long_df %>%
+  pivot_wider(names_from = "year",
+              values_from = "population") %>%
+  View()
+```
