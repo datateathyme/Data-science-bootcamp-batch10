@@ -864,7 +864,7 @@ View(long_df)
 ```r
 ## convert long to wide format
 long_df %>%
-  pivot_wider(names_from = "year",
+  pivot_wider(names_from  = "year",
               values_from = "population") %>%
   View()
 ```
