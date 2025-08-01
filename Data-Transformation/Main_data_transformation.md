@@ -868,14 +868,18 @@ long_df %>%
               values_from = "population") %>%
   View()
 ```
-### 🔏 convert wide to long format csv file
+### 🔏 convert wide to long format [csv file]
 ```r
 ### read csv file
 samsung_sales <- read.csv("samsungsales.csv")
 
-samsung_sales %>%
-  pivot_longer(cols = s24:s25u,
-               names_to = "model",
+clean_ss_sales <- samsung_sales %>%
+  pivot_longer(cols      = s24:s25u,
+               names_to  = "model",
                values_to = "sales") %>%
   renames(country = Country) %>% ## ชื่อใหม่ = ชื่อเก่า
   mutate(model = if_else(model == "s25.", "s25p", model) ## ค่าที่นำเข้าจาก csv เพี้ยนไป จึงเขียนเงื่อนไขเพื่อเปลี่ยนชื่อใหม่ ถ้า model เท่ากับ "s25." ให้เปลี่ยนเป็น "s25p" ถ้าไม่ใช่ให้ใส่ค่าเดิม จึงแทนที่ด้วย model
+
+## write csv file
+write.csv(clean_ss_sales, "clean_data.csv", row.names=FALSE)
+```
