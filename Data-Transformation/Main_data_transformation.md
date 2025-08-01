@@ -251,8 +251,8 @@ hp_df <- mtcars %>%
   filter(hp < 100) %>%
   select(model, am, hp) %>%
   ## create new column 
-  mutate(am_label = ifelse(am == 0, "Auto", "Manual"),
-         hp_scale = hp/100, 
+  mutate(am_label  = ifelse(am == 0, "Auto", "Manual"),
+         hp_scale  = hp/100, 
          hp_double = hp*2)
 ```
 ### 📩 if-else create new segment column
@@ -281,19 +281,32 @@ mtcars %>%
 ```r
 ## summarise
 mtcars %>%
-  summarise(mean_hp = mean(hp),
-            sum_hp  = sum(hp),
+  summarise(mean_hp   = mean(hp),
+            sum_hp    = sum(hp),
             median_hp = median(hp), 
-            sd_hp  = sd(hp), 
-            n = n())
+            sd_hp     = sd(hp), 
+            n         = n())
 
 mtcars %>%
   filter(wt <= 5) %>%
-  summarise(mean_hp = mean(hp),
-            sum_hp  = sum(hp),
+  summarise(mean_hp   = mean(hp),
+            sum_hp    = sum(hp),
             median_hp = median(hp), 
+            sd_hp     = sd(hp), 
+            n         = n())
+```
+```r
+## summarise() with group_by()
+mtcars %>% 
+  select(mosel, am, hp) %>%
+  mutate(am = if_else(am == 0, "Auto", "Manual")) %>%
+  group_by(am) %>%
+  summarise(avg_hp = mean(hp), 
+            sum_hp = sum(hp), 
+            med_hp = median(hp),
             sd_hp  = sd(hp), 
-            n = n())
+            var_hp = var(hp), 
+            n      = n())
 ```
 ```r
 > mtcars %>%
