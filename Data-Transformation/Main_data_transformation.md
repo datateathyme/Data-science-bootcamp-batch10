@@ -169,6 +169,45 @@ select(mtcars, model, 1:10)
 m <- select(mtcars, model, everything()) # using everything() ดึงที่เหลือทั้งหมดไว้ด้านขวา
 View(m)
 ```
+### 📩 rename column
+```r
+## rename
+mtcars %>%
+  select(model,
+         horse_power  = hp,
+         transmission = am,
+         weight       = wt) %>%
+  head()
+```
+### 📩 sample, slice, pull
+```r
+## sample, slice, pull
+## sample
+mtcars %>%
+  sample_n(2)
+
+mtcars %>% 
+  sample_frac(0.2)
+
+## slice
+mtcars %>%
+  slice(1:5)
+
+mtcars %>%
+  slice(6:10)
+
+mtcars %>%
+  slice(c(1, 3, 5))
+
+## pull data as vector
+mtcars %>%
+  pull(model)
+
+mtcars %>%
+  filter(hp > 100) %>%
+  pull(model)
+
+```
 ### 📩 how to select columns
 ```r
 ## how to select columns
