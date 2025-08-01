@@ -843,7 +843,7 @@ ggplot(data =mtcars,
   theme_minimal()
 ```
 ## 🔐 wide vs. long data format
-### data analyst prefer [LONG format]
+### 🔏 data analyst prefer [LONG format]
 - [x] Long Format (tidy Data)
    - [ ] [Important] one column, one data type 1 คอลัมน์ จะเก็บข้อมูลแค่ 1 ประเภท
 ```r
@@ -868,7 +868,7 @@ long_df %>%
               values_from = "population") %>%
   View()
 ```
-### convert wide to long format csv file
+### 🔏 convert wide to long format csv file
 ```r
 ### read csv file
 samsung_sales <- read.csv("samsungsales.csv")
