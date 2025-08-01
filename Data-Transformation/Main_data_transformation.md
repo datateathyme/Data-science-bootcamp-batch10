@@ -297,6 +297,7 @@ mtcars %>%
 ```
 ```r
 ## summarise() with group_by()
+## ใช้ group_by() ก่อน summarise() หาค่าสถิติแบ่งตามกลุ่ม
 mtcars %>% 
   select(mosel, am, hp) %>%
   mutate(am = if_else(am == 0, "Auto", "Manual")) %>%
