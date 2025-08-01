@@ -19,7 +19,7 @@ glue("Hello my name is {name}, and I'm {age} year old.")
 ## result:
 Hello my name is sunsun, and I'm 25 year old.
 ```
-## 🔐 connect sqlite database
+## 🔐 connect RSQLite database
 ```r
 ## connect sqlite database
 ## create connection
@@ -63,6 +63,15 @@ dbRemoveTable(con, "branches")
 
 ## disconnect database
 dbDisconnect(con)
+```
+```r
+## write a new tablel with pipe(dplyr)
+library(dplyr)
+dbWriteTable(con, "models", mtcars %>%
+               select(mpg, hp, wt) %>%
+               filter(hp > 200)) 
+
+dbGetQuery(con, "select * from models")
 ```
 ### 📩 create a new database
 - [Homework: Create a new reataurant.db](https://github.com/datateathyme/Data-science-bootcamp-batch10/blob/main/Data-Transformation/Homework/create_a_new_restuarant.md)
