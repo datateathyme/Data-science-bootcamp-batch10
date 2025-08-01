@@ -599,7 +599,25 @@ band_members %>%
 
 ** In R => full join drop na == inner join !!!  
 ```
-### 📩 replace na in dplyr == SQL COALESCE
+### 📩 replace_na() in dplyr == SQL COALESCE
+- clean Na in dataframe
+- `replace_na()`
+```r
+## clean Na in dataframe 
+## replace_na()
+
+id <- 1:5
+friends <- c("jay", "john", "mary", "anna", "david")
+spending <- c(100, 150, NA, 200, 180)
+
+df <- data.frame(id, friends, spending)
+
+## replace with close friends => avg()
+avg_spending <- mean(df$spending, na.rm=TRUE)
+
+df %>% 
+  mutate(spending = replace_na(spending, avg_spending))
+```
 ```r
 ** Before replace
 > band_members %>%
