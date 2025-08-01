@@ -72,6 +72,16 @@ dbWriteTable(con, "models", mtcars %>%
                filter(hp > 200)) 
 
 dbGetQuery(con, "select * from models")
+
+----
+## ** แนะนำว่าเขียนแบบนี้ดีกว่า
+mini_df <- mtcars %>%
+  select(mpg, hp, wt) %>%
+  filter(hp > 200)
+
+dbWriteTable(con, "models", mini_df ) 
+
+dbGetQuery(con, "select * from models")
 ```
 ### 📩 create a new database
 - [Homework: Create a new reataurant.db](https://github.com/datateathyme/Data-science-bootcamp-batch10/blob/main/Data-Transformation/Homework/create_a_new_restuarant.md)
