@@ -180,6 +180,14 @@ select(mtcars, am, hp, 10) ## ## subset by name and position
 
 select(mtcars, contains("a")) ## subset by condition
 ```
+### 📩 helper verbs to select column
+```r
+## helper verbs to select column
+select(mtcars, starts_with("h"))
+select(mtcars, starts_with("a"))
+select(mtcars, ends_with("p"))
+select(mtcars, contains("a"))
+```
 ### 📩 data transformation pipeline
 ```r
 ## data transformation pipeline
