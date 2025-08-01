@@ -161,6 +161,13 @@ mtcars$model <- car_names
 ## remove rownames
 rownames(mtcars) <- NULL
 ```
+### 📩 move 'model' to the left
+```r
+## move 'model' to the left
+select(mtcars, model, 1:10)
+
+m <- select(mtcars, model, everything()) # using everything() ดึงที่เหลือทั้งหมดไว้ด้านขวา
+```
 ### 📩 how to select columns
 ```r
 ## how to select columns
