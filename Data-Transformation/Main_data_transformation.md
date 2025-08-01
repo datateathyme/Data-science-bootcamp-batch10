@@ -569,6 +569,8 @@ band_members %>%
 
 ```
 ### 📩 Drop na 
+- data loss <= 5%, acceptable rate
+- `drop_na()`
 ```r
 ## full outer join 
 band_members %>%
