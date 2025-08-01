@@ -255,6 +255,28 @@ hp_df <- mtcars %>%
          hp_scale = hp/100, 
          hp_double = hp*2)
 ```
+### 📩 if-else create new segment column
+```r
+## if-else create new segment column
+mtcars %>% 
+  select(model, hp) %>%
+  mutate(segment  = if_else(hp>200, "high", "low")) %>%
+  mutate(segment2 = case_when(
+    hp > 200 ~ "high", 
+    hp > 100 ~ "medium", 
+    TRUE ~ "low" ## TRUE -- คือเงื่อนไขอื่นๆที่เหลือ
+  ))
+
+----
+mtcars %>% 
+  select(model, hp) %>%
+  mutate(segment  = if_else(hp>200, "high", "low")) %>%
+  mutate(segment2 = case_when(
+    hp > 200 ~ "high", 
+    hp > 100 ~ "medium", 
+   hp <= 100 ~ "low"
+  ))
+```
 ### 📩 summarise
 ```r
 ## summarise
