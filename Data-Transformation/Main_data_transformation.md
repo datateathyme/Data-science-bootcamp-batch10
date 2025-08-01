@@ -615,6 +615,7 @@ df <- data.frame(id, friends, spending)
 ## replace with close friends => avg()
 avg_spending <- mean(df$spending, na.rm=TRUE)
 
+## mean imputation
 df %>% 
   mutate(spending = replace_na(spending, avg_spending))
 ```
