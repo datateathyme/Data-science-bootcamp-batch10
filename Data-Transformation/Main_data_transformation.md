@@ -699,3 +699,34 @@ list_df %>%
 9   9     d
 10 10     e
 ```
+## 🔐 basic data visualization
+- ** `qplot` == guick plot ใช้ในการ plot chart แบบเร็วๆๆ
+```r
+## basic data visualization
+## grammar of graphic
+library(tidyverse) ## ggplot2
+
+head(mtcars)
+
+## qplot == shortcut plot
+## histogram
+qplot(mpg, data=mtcars, geom="histogram", bins=10)
+
+## density
+qplot(mpg, data=mtcars, geom="density")
+
+## scatter plot
+qplot(x=hp, y=mpg, data=mtcars, geom="point" )
+
+## ggplot full option
+ggplot(data =mtcars,
+       aes(x=hp, y=mpg)) +
+  geom_point()
+  
+  ## ggplot full option
+ggplot(data =mtcars,
+       aes(x=hp, y=mpg)) +
+  geom_point(col="salmon") +
+  geom_smooth(se=F) +
+  theme_minimal()
+```
