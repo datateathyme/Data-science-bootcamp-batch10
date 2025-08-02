@@ -116,6 +116,7 @@ lm(mpg ~ hp, data = mtcars) # slop ติดลบ
 ```
 ![Image](https://github.com/user-attachments/assets/c226b23a-c409-4077-8f7f-89a9d107bd0a)
 
+## 🔴🟡🟢 ggplot2 in R
 ```r
 ## Intro to data viz in R
 ## library tidyverse
