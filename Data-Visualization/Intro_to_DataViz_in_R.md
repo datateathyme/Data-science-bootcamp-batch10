@@ -211,3 +211,13 @@ ggplot(diamonds, aes(cut, fill=color)) +
   geom_bar(position = "fill")
 ```
 
+![Image](https://github.com/user-attachments/assets/a4610c81-b085-4aac-aabf-eceb53d87355)
+
+### 📩 Scatter Plot 
+```r
+## Scatter plot
+small_diamonds <- sample_n(diamonds, 5000)
+
+ggplot(small_diamonds , aes(carat, price)) +
+  geom_point()
+```
