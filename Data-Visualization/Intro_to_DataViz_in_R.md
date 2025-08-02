@@ -93,6 +93,12 @@ boxplot(mtcars_no_outlier$hp)
 ```
 ![Image](https://github.com/user-attachments/assets/ce160cab-fe44-4642-a9f9-22f9cb322e46)
 
+```r
+## Box Plot 2 variable
+## Quanlitative x Quantitative
+boxpot(mpg ~ am , data = mtcars)
+
+```
 
 ```r
 ## Intro to data viz in R
