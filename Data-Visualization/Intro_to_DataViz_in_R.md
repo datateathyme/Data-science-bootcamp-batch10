@@ -221,3 +221,17 @@ small_diamonds <- sample_n(diamonds, 5000)
 ggplot(small_diamonds , aes(carat, price)) +
   geom_point()
 ```
+![Image](https://github.com/user-attachments/assets/01c4a910-398e-47d7-bf4e-ddc4327fc377)
+
+### 📩 FACET : small multiples
+```r
+## FACET : small multiples
+ggplot(small_diamonds , aes(carat, price)) +
+  geom_point() +
+  facet_wrap( ~ color)
+
+#### FACET : small multiples
+ggplot(small_diamonds , aes(carat, price)) +
+  geom_point() +
+  facet_wrap( ~ color, ncol = 4)
+```
