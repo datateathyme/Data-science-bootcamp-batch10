@@ -144,7 +144,57 @@ note >> size   = ปรับขนาดจุดในกราฟ
                  10 15 แล้วแต่ แต่ไม่ควรใช้ค่า default ที่ 30
 ```
 
+```r
+## ggplot2
+## library tidyverse
+library(tidyverse)
 
+## First ggplot
+ggplot(data = mtcars, mapping = aes(x = hp, y = mpg)) +
+  geom_point() +
+  geom_smooth() +
+  geom_rug() +
+  theme_minimal()
+
+
+ggplot(mtcars, aes(hp,mpg)) +
+  geom_point(size = 3, col = "blue", alpha = 0.5)
+
+ggplot(mtcars, aes(hp)) +
+  geom_histogram(bins = 10, fill = "red", alpha = 0.5)
+  
+ggplot(mtcars, aes(hp)) +
+  geom_boxplot()
+
+p <- ggplot(mtcars, aes(hp))
+p + geom_histogram(bins =10)
+p + geom_density()
+p + geom_boxplot()
+
+##  Box plot by group
+diamonds %>%
+  count(cut)
+
+result:
+# A tibble: 5 × 2
+  cut           n
+  <ord>     <int>
+1 Fair       1610
+2 Good       4906
+3 Very Good 12082
+4 Premium   13791
+5 Ideal     21551
+
+##  Box plot by group
+diamonds %>%
+  count(cut)
+
+ggplot(diamonds, aes(cut)) +
+  geom_bar(fill = "#0366fc")
+  
+ggplot(diamonds, aes(cut, fill=color)) +
+  geom_bar()
+```
 
 
 
