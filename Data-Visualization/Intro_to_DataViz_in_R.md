@@ -51,6 +51,28 @@ result:
 ```
 ![Image](https://github.com/user-attachments/assets/2a254804-89e8-4991-a336-a05b27a50727)
 
+### 📩 Box Plot
+```r
+## Box Plot
+boxplot(mtcars$hp)
+fivenum(mtcars$hp)
+
+min(mtcars$hp)
+quantile(mtcars$hp, probs = c(.25, .5, .75))
+max(mtcars$hp)
+----
+result:
+> fivenum(mtcars$hp)
+[1]  52  96 123 180 335
+> min(mtcars$hp)
+[1] 52
+> quantile(mtcars$hp, probs = c(.25, .5, .75))
+  25%   50%   75% 
+ 96.5 123.0 180.0 
+> max(mtcars$hp)
+[1] 335
+```
+
 ```r
 ## Intro to data viz in R
 ## library tidyverse
