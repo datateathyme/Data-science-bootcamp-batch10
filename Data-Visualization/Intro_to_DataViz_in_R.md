@@ -205,3 +205,9 @@ ggplot(diamonds, aes(cut, fill=color)) +
   geom_bar(position = "dodge")
 ```
 ![Image](https://github.com/user-attachments/assets/112cf114-50b6-46b0-a4ef-95206d443b38)
+
+```r
+ggplot(diamonds, aes(cut, fill=color)) +
+  geom_bar(position = "fill")
+```
+
