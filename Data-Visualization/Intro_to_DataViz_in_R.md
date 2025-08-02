@@ -265,3 +265,12 @@ ggplot(small_diamonds , aes(carat, price)) +
        y = "Price USD",
        caption = "Sourse: Diamonds from ggplot2 package")
 ```
+![Image](https://github.com/user-attachments/assets/b5192a0c-27b9-4df8-ac98-5f7444af03a1)
+
+```r
+## Final example
+ggplot(small_diamonds , aes(carat, price, col=cut))  +
+  geom_point(size = 2, alpha = 0.9) +
+  facet_wrap(~ color, ncol=2) +
+  theme_minimal()
+```
