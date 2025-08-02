@@ -14,6 +14,23 @@ hist(mtcars$mpg)
 ```
 ![Image](https://github.com/user-attachments/assets/22303218-1b4b-45be-8cc1-bac18d0e04e3)
 
+### 📩 Analyzing hourse power
+```r
+## Analyzing hourse power
+hist(mtcars$hp)
+mean(mtcars$hp)
+median(mtcars$hp)
+----
+result:
+> mean(mtcars$hp)
+[1] 146.6875
+> median(mtcars$hp)
+[1] 123
+```
+- จากกราฟจะเห็นว่ามีลักษณะเบ้ขวา ซึ่งทำให้ค่าเฉลี่ย(mean)ถูกดึงอยู่สูงกว่าค่ากลาง(median)
+
+
+
 ```r
 ## Intro to data viz in R
 ## library tidyverse
