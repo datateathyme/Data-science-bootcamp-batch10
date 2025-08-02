@@ -105,7 +105,12 @@ boxplot(mpg ~ am , data = mtcars,
 ```r
 ## Scatter Plot
 ## 2 Quantitative
-plot(mtcars$hp, mtcars$mpg, pch = 16)
+plot(mtcars$hp, mtcars$mpg, pch = 16,
+     col="blue", 
+     main = "Relationship between HP and MPG",
+     xlab = "Hourse Power",
+     ylab = "Miles Per Gallon")
+
 cor(mtcars$hp, mtcars$mpg) # coพrelation เป็นลบ
 lm(mpg ~ hp, data = mtcars) # slop ติดลบ
 ```
