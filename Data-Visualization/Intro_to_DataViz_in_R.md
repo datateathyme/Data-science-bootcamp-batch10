@@ -96,9 +96,10 @@ boxplot(mtcars_no_outlier$hp)
 ```r
 ## Box Plot 2 variable
 ## Quanlitative x Quantitative
-boxpot(mpg ~ am , data = mtcars)
-
+boxplot(mpg ~ am , data = mtcars, 
+       col = c("gold", "salmon"))
 ```
+![Image](https://github.com/user-attachments/assets/29c17b97-d86a-43cf-9647-a2cac1e8b8f6)
 
 ```r
 ## Intro to data viz in R
