@@ -274,3 +274,4 @@ ggplot(small_diamonds , aes(carat, price, col=cut))  +
   facet_wrap(~ color, ncol=2) +
   theme_minimal()
 ```
+![Image](https://github.com/user-attachments/assets/d85c248e-5fa2-4688-af9e-5745e40f3573)
