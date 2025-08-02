@@ -111,10 +111,10 @@ plot(mtcars$hp, mtcars$mpg, pch = 16,
      xlab = "Hourse Power",
      ylab = "Miles Per Gallon")
 
-cor(mtcars$hp, mtcars$mpg) # coพrelation เป็นลบ
+cor(mtcars$hp, mtcars$mpg) # correlation เป็นลบ
 lm(mpg ~ hp, data = mtcars) # slop ติดลบ
 ```
-![Image](https://github.com/user-attachments/assets/fd99db26-3bea-43d4-b2aa-feab59eeffdf)
+![Image](https://github.com/user-attachments/assets/c226b23a-c409-4077-8f7f-89a9d107bd0a)
 
 ```r
 ## Intro to data viz in R
