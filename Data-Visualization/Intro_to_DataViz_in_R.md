@@ -107,7 +107,7 @@ boxplot(mpg ~ am , data = mtcars,
 ## 2 Quantitative
 plot(mtcars$hp, mtcars$mpg, pch = 16)
 ```
-
+![Image](https://github.com/user-attachments/assets/fd99db26-3bea-43d4-b2aa-feab59eeffdf)
 
 ```r
 ## Intro to data viz in R
