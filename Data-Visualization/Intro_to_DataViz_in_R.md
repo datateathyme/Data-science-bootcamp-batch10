@@ -72,6 +72,27 @@ result:
 > max(mtcars$hp)
 [1] 335
 ```
+![Image](https://github.com/user-attachments/assets/ce9d83fd-30dd-45ad-91bb-e4c3e1628095)
+
+```r
+## whisker calculation
+q3 <- quantile(mtcars$hp, probs = .75)
+q1 <- quantile(mtcars$hp, probs = .25)
+IQR_hp <- q3 - q1
+
+q3 + 1.5*IQR_hp
+q1 - 1.5*IQR_hp
+
+boxplot.stats(mtcars$hp, coef = 1.5)
+
+## filter out outliers
+mtcars_no_outlier <- mtcars %>% 
+  filter(hp < 335)
+
+boxplot(mtcars_no_outlier$hp)
+```
+
+
 
 ```r
 ## Intro to data viz in R
