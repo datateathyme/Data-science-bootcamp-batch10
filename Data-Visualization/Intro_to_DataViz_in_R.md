@@ -123,7 +123,26 @@ lm(mpg ~ hp, data = mtcars) # slop ติดลบ
 library(tidyverse)
 ```
 
+```r
+## First Plot
+ggplot(data = mtcars, mapping = aes(x = hp, y = mpg)) + 
+  geom_point() +
+  geom_smooth() +
+  geom_rug()
 
+ggplot(mtcars, aes(hp,mpg)) +
+  geom_point(size = 3, col = "blue", alpha = 0.5 ) 
+
+ggplot(mtcars, aes(hp)) +
+  geom_histogram(bins = 10, fill = "red", alpha = 0.5)
+
+note >> size   = ปรับขนาดจุดในกราฟ
+        col    = เปลี่ยนสีจุด
+        alpha  = ปรับความจางของจุด มีค่าเท่ากับ 0 - 1
+        fill   = เทสี กราฟ ที่เป็น บาร์กราฟ หรือ ฮิสโตแกรม  
+        bins   = เป็นค่า default สำหรับhistogram ปกติ = 30 โดยปกติเราต้องใส่ค่าเองเช่น
+                 10 15 แล้วแต่ แต่ไม่ควรใช้ค่า default ที่ 30
+```
 
 
 
