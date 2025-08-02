@@ -195,6 +195,13 @@ ggplot(diamonds, aes(cut)) +
 ggplot(diamonds, aes(cut, fill=color)) +
   geom_bar()
 ```
+![Image](https://github.com/user-attachments/assets/23d64606-0485-47af-9f81-03719056817c)
 
-
+```r
+ggplot(diamonds, aes(cut, fill=color)) +
+  geom_bar(position = "stack")
+  
+  ggplot(diamonds, aes(cut, fill=color)) +
+  geom_bar(position = "dodge")
+```
 
