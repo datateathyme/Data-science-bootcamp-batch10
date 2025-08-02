@@ -99,7 +99,7 @@ boxplot(mtcars_no_outlier$hp)
 boxplot(mpg ~ am , data = mtcars, 
        col = c("gold", "salmon"))
 ```
-![Image](https://github.com/user-attachments/assets/29c17b97-d86a-43cf-9647-a2cac1e8b8f6)
+![Image](https://github.com/user-attachments/assets/6679b971-0d58-4584-864f-3c01edff4950)
 
 ```r
 ## Intro to data viz in R
