@@ -216,6 +216,7 @@ ggplot(diamonds, aes(cut, fill=color)) +
 ### 📩 Scatter Plot 
 ```r
 ## Scatter plot
+set.seed(42)
 small_diamonds <- sample_n(diamonds, 5000)
 
 ggplot(small_diamonds , aes(carat, price)) +
