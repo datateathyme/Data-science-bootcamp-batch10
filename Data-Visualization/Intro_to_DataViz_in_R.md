@@ -100,7 +100,13 @@ boxplot(mpg ~ am , data = mtcars,
        col = c("gold", "salmon"))
 ```
 ![Image](https://github.com/user-attachments/assets/6679b971-0d58-4584-864f-3c01edff4950)
+### 📩 Scatter Plot
 
+```r
+## Scatter Plot
+## 2 Quantitative
+plot(mtcars$hp, mtcars$mpg)
+```
 ```r
 ## Intro to data viz in R
 ## library tidyverse
