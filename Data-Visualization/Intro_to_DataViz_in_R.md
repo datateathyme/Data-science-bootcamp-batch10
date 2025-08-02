@@ -12,7 +12,7 @@ Data Visualization ช่วยให้เราเข้าใจข้อม�
 ## basic plot (base R)
 hist(mtcars$mpg)
 ```
-
+![Image](https://github.com/user-attachments/assets/22303218-1b4b-45be-8cc1-bac18d0e04e3)
 
 ```r
 ## Intro to data viz in R
