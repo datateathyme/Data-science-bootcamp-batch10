@@ -105,8 +105,10 @@ boxplot(mpg ~ am , data = mtcars,
 ```r
 ## Scatter Plot
 ## 2 Quantitative
-plot(mtcars$hp, mtcars$mpg)
+plot(mtcars$hp, mtcars$mpg, pch = 16)
 ```
+
+
 ```r
 ## Intro to data viz in R
 ## library tidyverse
