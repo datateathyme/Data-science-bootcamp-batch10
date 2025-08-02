@@ -48,5 +48,5 @@ flights_df %>%
 # Finding the Most Popular Routes
 flights_df %>%
   count(origin, dest) %>%
-  arrange(desc(n))
-
+  arrange(desc(n)) %>%
+  head(10)
