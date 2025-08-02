@@ -49,6 +49,8 @@ result:
    Auto Manual 
     19     13 
 ```
+![Image](https://github.com/user-attachments/assets/2a254804-89e8-4991-a336-a05b27a50727)
+
 ```r
 ## Intro to data viz in R
 ## library tidyverse
