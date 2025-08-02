@@ -28,7 +28,8 @@ result:
 [1] 123
 ```
 - จากกราฟจะเห็นว่ามีลักษณะเบ้ขวา ซึ่งทำให้ค่าเฉลี่ย(mean)ถูกดึงอยู่สูงกว่าค่ากลาง(median)
-
+  
+![Image](https://github.com/user-attachments/assets/ce0c911c-09a3-4bd4-9a1f-7dbe62b477ae)
 
 
 ```r
