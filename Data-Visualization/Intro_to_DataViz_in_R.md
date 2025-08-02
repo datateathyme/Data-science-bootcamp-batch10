@@ -15,7 +15,7 @@ hist(mtcars$mpg)
 ![Image](https://github.com/user-attachments/assets/22303218-1b4b-45be-8cc1-bac18d0e04e3)
 
 ### 📩 Analyzing hourse power
-- [x] Histogram - One Quantitative variable (ตัวแปรเชิงปริมาณ{ตัวเลข} 1 ตัว)
+- [x] 🌻 Histogram - One Quantitative Variable (ตัวแปรเชิงปริมาณ{ตัวเลข} 1 ตัว)
 ```r
 ## Analyzing hourse power
 hist(mtcars$hp)
@@ -34,6 +34,7 @@ result:
 ![Image](https://github.com/user-attachments/assets/ce0c911c-09a3-4bd4-9a1f-7dbe62b477ae)
 
 ## 📩 convert column `am` to factor
+- [x] 🌻 Bar plot - One Quanlitative Variable (ตัวแปรเชิงคุณภาพ 1 ตัว)
 ```r
 str(mtcars)
 mtcars$am <- factor(mtcars$am, 
