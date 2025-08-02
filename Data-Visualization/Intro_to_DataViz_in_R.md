@@ -251,3 +251,17 @@ ggplot(small_diamonds , aes(carat, price)) +
   facet_wrap( ~ color, ncol = 2) +
   theme_minimal()
 ```
+![Image](https://github.com/user-attachments/assets/671eba22-8097-4645-bc3c-304408378995)
+
+```r
+## FACET : small multiples
+ggplot(small_diamonds , aes(carat, price)) +
+  geom_point() +
+  geom_smooth(method = "lm", col="red") +
+  facet_wrap( ~ color, ncol = 2) +
+  theme_minimal() +
+  labs(title = "Relationship between carat and price by color",
+       x = "Carat",
+       y = "Price USD",
+       caption = "Sourse: Diamonds from ggplot2 package")
+```
