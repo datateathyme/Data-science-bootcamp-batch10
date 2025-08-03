@@ -42,7 +42,8 @@ flights_df %>%
 flights_df %>%
   mutate(speed = distance / air_time * 60) %>%
   arrange(desc(speed)) %>%
-  select(flight, carrier, origin, dest, speed)
+  select(flight, carrier, origin, dest, speed) %>%
+  left_join(airlines)
 
  
 # Finding the Most Popular Routes
