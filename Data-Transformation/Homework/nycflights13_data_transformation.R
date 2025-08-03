@@ -25,7 +25,7 @@ flights_df %>%
   arrange(-avg_dep_delay)
 
 
-# Find the busiest airports (in terms of flights)
+# Find the busiest airports 
 flights_df %>%
   group_by(dest) %>%
   summarise(n_flights = n()) %>%
