@@ -232,12 +232,12 @@ new_df <- data.frame(
   weight = c(5, 4, 7, 6, 10)
 )
 
-ggplot(new_df, aes(weight, price, color=fruit)) + 
+ggplot(new_df, aes(weight, price, color=fruit)) +  ## fruit = discrete using manual
   geom_point(size =3) +
   scale_color_manual(values = c("#FECC02","#9209B8")) +
   theme_minimal()
 
-ggplot(new_df, aes(weight, price, color=price)) +
+ggplot(new_df, aes(weight, price, color=price)) + ## price = continuous using gradient
   geom_point(size =3) +
   theme_minimal() +
   scale_color_gradient(low="gold", high="blue")
