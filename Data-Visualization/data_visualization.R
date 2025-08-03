@@ -58,7 +58,7 @@ spending <- factor(spending,
                    ordered = TRUE)
 
 ## factor 
-## 1. categorical data [nominal data ] 2. ordinal data
+## 1. categorical data [nominal data ] 2. ordinal data [เรียงลำดับ สูง กลาง ต่ำ]
 
 ## one variable - continuous
 
