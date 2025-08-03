@@ -5,7 +5,7 @@
 ## 2. data types: number (numeric), not a number (factor)
 
 ## Q: one variable, number
-## A: Histogram
+## A: Histogram / Density
 ```
 ```r
 ## data visualization + markdown
