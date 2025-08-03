@@ -1,3 +1,5 @@
+# 🧵 data visualization + markdown
+```r
 ## data visualization + markdown
 library(tidyverse)
 
@@ -9,10 +11,12 @@ ggplot(data = mtcars,
        mapping = aes(x=mpg, y=hp)) +
   geom_point() 
   
- 
+
 ## cheatsheet ggplot2 in R
 ## url cheatsheet in my notion _ Live07
-
+```
+## 🎨 discrete vs. continuous
+```r
 ## discrete vs. continuous
 
 ## discrete or factor
@@ -59,7 +63,9 @@ spending <- factor(spending,
 
 ## factor 
 ## 1. categorical data [nominal data ] 2. ordinal data [เรียงลำดับ สูง กลาง ต่ำ]
-
+```
+## 🎨 one variable - continuous
+```r
 ## one variable - continuous
 
 ggplot(mtcars, aes(mpg)) +
@@ -68,8 +74,9 @@ ggplot(mtcars, aes(mpg)) +
 base <- ggplot(mtcars, aes(mpg))
 base + geom_density()
 base + geom_histogram(bins=5, fill="salmon", col="black")
-
-
+```
+## 🎨 one variable - discrete / categorical
+```r
 ## one variable - discrete / categorical 
 mtcars %>%
   select(hp, wt, am) %>%
@@ -81,8 +88,9 @@ mtcars %>%
   select(hp, wt, am) %>%
   ggplot(aes(am, fill = am)) +
   geom_bar()
-
-
+```
+## 🎨 two variable - both continuous
+```r
 ## two variable - both continuous
 base <- ggplot(data = mtcars,
        mapping = aes(hp,mpg))
@@ -91,7 +99,9 @@ base +
   geom_point() +
   geom_smooth(method = "lm") +
   geom_rug()
-
+```
+## 🎨 setting vs. mapping 
+```r
 ## setting vs. mapping 
 ## setting
 base + 
@@ -117,7 +127,9 @@ base +
 
 base +
   geom_point(mapping = aes(col=wt)) #column: continuous
-  
+```
+## 🎨 diamonds data set  
+```r
 ## diamonds data set
 View(diamonds)
 
@@ -192,7 +204,9 @@ ggplot(small_df %>%
   geom_point(size =3, alpha=0.4) +
   geom_smooth(se = FALSE, col="red") +
   theme_minimal()
-
+```
+## 🎨 set title, caption, x/y labels
+```r
 ## set title, caption, x/y labels
 
 base3 <- ggplot(small_df %>%
@@ -207,7 +221,9 @@ base3 +
        caption = "Source: ggplot package",
        x= "Diamond Carat",
        y = "Price $ USD") 
-
+```
+## 🎨 change color manual 
+```r
 ## change color manual 
 new_df <- data.frame(
   id = 1:5,
@@ -225,7 +241,9 @@ ggplot(new_df, aes(weight, price, color=price)) +
   geom_point(size =3) +
   theme_minimal() +
   scale_color_gradient(low="gold", high="blue")
-
+```
+## 🎨 final tips - multiple dataframe in one chart 
+```r
 ## final tips - multiple dataframe in one chart 
 
 new_df1 <- new_df %>% filter(weight < 7)
@@ -240,9 +258,9 @@ ggplot() +
   geom_point(data = new_df2,
              mapping = aes(weight, price),
              color = "purple", size =3)
-
-
-
+```
+## 🐣 homework R markdown 
+```r
 ## homework R markdown 
 set.seed(42)
 small_df <- diamonds %>%
@@ -436,3 +454,4 @@ sum_depth <- small_df %>%
 
 
 print(sum_depth)
+```
