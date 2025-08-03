@@ -4,6 +4,7 @@
 - `ls` แสดงรายชื่อไฟล์ และDirectoryในตำแหน่งปัจจุบัน
 - `touch` สร้างไฟล์เปล่าใหม่ >> วิธีใช้ `touch new_file.txt`
 - `mkdir` สร้าง Directory ใหม่ >> วิธีใช้ `mkdir new_folder`
+- `rmdir` Delete Directory (folder)
 - `cd` ใช้สำหรับ Change Directory >>
   - `cd Desktop` ย้ายไปยังไดเรกทอรี Desktop
   - `cd ..` ย้ายกลับไปยัง Directory ก่อนหน้า ย้อนกลับไป 1 step
