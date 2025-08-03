@@ -1,5 +1,13 @@
 # 🧵 data visualization + markdown
 ```r
+## data visualization or chart 
+## 1. number of variables: one, two, more than teo vars
+## 2. data types: number (numeric), not a number (factor)
+
+## Q: one variable, number
+## A: Histogram
+```
+```r
 ## data visualization + markdown
 library(tidyverse)
 
