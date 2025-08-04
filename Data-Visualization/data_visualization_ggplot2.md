@@ -276,6 +276,8 @@ mtcars %>%
   scale_color_gradient(low = "blue",
                         high = "#E4080A")
 ```
+![Image](https://github.com/user-attachments/assets/a8eaa42d-8b2d-4c12-a549-0906581d1dc2)
+
 ## 🎨 final tips - multiple dataframe in one chart 
 ```r
 ## final tips - multiple dataframe in one chart 
