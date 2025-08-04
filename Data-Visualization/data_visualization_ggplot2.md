@@ -310,6 +310,17 @@ diamonds %>%
   )
 
 ```
+## 🎨 dplyr + ggplot
+```r
+## dplyr + ggplot
+diamonds %>%
+  filter(carat >= 0.5,
+         price >= 4000,
+         cut == "Ideal") %>%
+  count(clarity) %>%
+  ggplot(aes(clarity, n)) +
+  geom_col()
+```
 ## 🐣 homework R markdown 
 ```r
 ## homework R markdown 
