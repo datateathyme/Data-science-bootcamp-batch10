@@ -677,3 +677,37 @@ month(date_x, label = TRUE)
 day(date_x)
 wday(date_x, label = TRUE)
 ```
+```r
+## fordate date messy
+messy_date1 <- "April, 23, 2025"
+messy_date2 <- "23-04-2025"
+messy_date3 <- "Dec.15.2025"
+messy_date4 <- "2025 .. Jan -- 30"
+messy_date5 <- "jan - 31 - 2025"
+messy_date6 <- "12-12, 2025"
+
+## convert to date
+mdy(messy_date1)
+dmy(messy_date2)
+mdy(messy_date3)
+ymd("2025-02-20")
+ymd(messy_date4)
+mdy(messy_date5)
+mdy(messy_date6)
+----
+result:
+> mdy(messy_date1)
+[1] "2025-04-23"
+> dmy(messy_date2)
+[1] "2025-04-23"
+> mdy(messy_date3)
+[1] "2025-12-15"
+> ymd("2025-02-20")
+[1] "2025-02-20"
+> ymd(messy_date4)
+[1] "2025-01-30"
+> mdy(messy_date5)
+[1] "2025-01-31"
+> mdy(messy_date6)
+[1] "2025-12-12"
+```
