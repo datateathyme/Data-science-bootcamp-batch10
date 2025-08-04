@@ -270,6 +270,26 @@ ggplot() +
              mapping = aes(weight, price),
              color = "purple", size =3)
 ```
+```r
+## multiple dataset
+premium_di <- diamonds %>% 
+  filter(cut == "Premium") %>%
+  sample_n(500)
+
+good_di <- diamonds %>%
+  filter(cut == "Good") %>%
+  sample_n(500)
+
+ggplot() +
+  geom_point(data = premium_di,
+             mapping = aes(carat, price),
+             color = "red", alpha = 0.5) +
+  geom_point(data = good_di,
+             mapping = aes(carat, price),
+             color = "blue", alpha = 0.5) +
+  theme_minimal()
+```
+
 ## 🎨 mapped to aesthetic of the chart 
 ```r
 ## ggplot2: 2D
