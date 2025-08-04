@@ -266,6 +266,8 @@ ggplot(small_diamonds, aes(cut, fill = cut)) +
     "#9866CA"
   ))
 ```
+![Image](https://github.com/user-attachments/assets/bb453ae5-13f6-4521-bef6-79065000c53b)
+
 ## 🎨 final tips - multiple dataframe in one chart 
 ```r
 ## final tips - multiple dataframe in one chart 
