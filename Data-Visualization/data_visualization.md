@@ -213,22 +213,6 @@ ggplot(small_df %>%
   geom_smooth(se = FALSE, col="red") +
   theme_minimal()
 ```
-## 🎨 mapped to aesthetic of the chart 
-```r
-## ggplot2: 2D
-## add more variables
-## mapped to aesthetic of the chart 
-library(tidyverse)
-
-set.seed(42)
-small_diamonds <-  diamonds %>%
-  sample_frac(0.1)
-
-ggplot(small_diamonds, aes(x=carat, y=price)) +
-  geom_point(aes(color = clarity)) +
-  theme_minimal()
-```
-![Image](https://github.com/user-attachments/assets/919ad522-4ad1-4ce5-bcf7-227d9b6e767e)
 
 ## 🎨 set title, caption, x/y labels
 ```r
@@ -284,6 +268,23 @@ ggplot() +
              mapping = aes(weight, price),
              color = "purple", size =3)
 ```
+## 🎨 mapped to aesthetic of the chart 
+```r
+## ggplot2: 2D
+## add more variables
+## mapped to aesthetic of the chart 
+library(tidyverse)
+
+set.seed(42)
+small_diamonds <-  diamonds %>%
+  sample_frac(0.1)
+
+ggplot(small_diamonds, aes(x=carat, y=price)) +
+  geom_point(aes(color = clarity)) +
+  theme_minimal()
+```
+![Image](https://github.com/user-attachments/assets/919ad522-4ad1-4ce5-bcf7-227d9b6e767e)
+
 ## 🎨 Two approaches to statistics
 - [x] [1] graphical
 - [x] [2] numerical 
