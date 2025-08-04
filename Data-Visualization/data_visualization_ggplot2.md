@@ -321,6 +321,17 @@ diamonds %>%
   ggplot(aes(clarity, n)) +
   geom_col()
 ```
+## 🎨 boxplot
+```r
+## boxplot
+ggplot(small_diamonds, aes(x=cut, y=price)) +
+  geom_boxplot() + 
+  theme_minimal()
+
+ggplot(small_diamonds, aes(y=cut, x=price)) +
+  geom_boxplot() + 
+  theme_minimal()
+```
 ## 🐣 homework R markdown 
 ```r
 ## homework R markdown 
