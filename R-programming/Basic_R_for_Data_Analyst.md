@@ -661,8 +661,19 @@ result:
 ```
 ```r
 ## extract element from date
+## used locale because my output = TH 
 year(date_x)
-month(date_x, label = TRUE) ## jan, feb
+month(date_x, label = TRUE, locale = "en_US.UTF-8") ## jan, feb 
 day(date_x)
-wday(date_x, label = TRUE) ## weekday > mon, tue
+wday(date_x, label = TRUE, locale = "en_US.UTF-8") ## weekday > mon, tue
+```
+```r
+# Set the locale for time-related output to English
+Sys.setlocale("LC_TIME", "en_US.UTF-8")
+
+# Now original code should work
+year(date_x)
+month(date_x, label = TRUE)
+day(date_x)
+wday(date_x, label = TRUE)
 ```
