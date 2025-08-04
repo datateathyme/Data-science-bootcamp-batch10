@@ -228,6 +228,8 @@ ggplot(small_diamonds, aes(x=carat, y=price)) +
   geom_point(aes(color = clarity)) +
   theme_minimal()
 ```
+![Image](https://github.com/user-attachments/assets/919ad522-4ad1-4ce5-bcf7-227d9b6e767e)
+
 ## 🎨 set title, caption, x/y labels
 ```r
 ## set title, caption, x/y labels
