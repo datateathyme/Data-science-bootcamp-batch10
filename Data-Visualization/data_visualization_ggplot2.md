@@ -289,6 +289,7 @@ ggplot() +
              color = "blue", alpha = 0.5) +
   theme_minimal()
 ```
+![Image](https://github.com/user-attachments/assets/a0dcec82-19e4-4882-b52a-bb5671a9b1bc)
 
 ## 🎨 mapped to aesthetic of the chart 
 ```r
