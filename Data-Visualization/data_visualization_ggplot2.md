@@ -253,6 +253,19 @@ ggplot(new_df, aes(weight, price, color=price)) + ## price = continuous using gr
   theme_minimal() +
   scale_color_gradient(low="gold", high="blue")
 ```
+```r
+## set color manually
+ggplot(small_diamonds, aes(cut, fill = cut)) +
+  geom_bar() +
+  theme_minimal()+
+  scale_fill_manual(values = c(
+    "#E75C5D", 
+    "#E3AF5F",
+    "#38BBAC", 
+    "#389DD0",
+    "#9866CA"
+  ))
+```
 ## 🎨 final tips - multiple dataframe in one chart 
 ```r
 ## final tips - multiple dataframe in one chart 
