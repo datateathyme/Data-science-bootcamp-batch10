@@ -791,3 +791,48 @@ mtcars %>%
   arrange(hp) %>%
   mutate(segment = ntile(hp, 3))
 ```
+### 🐣 `lag(), lead()` 
+```r
+df %>%
+  select(name, score) %>%
+  mutate(score_lag = lag(score, 1),
+         diff = score - score_lag)
+----
+result:
+   name score score_lag diff
+1   toy    85        NA   NA
+2   joe    90        85    5
+3   ann    92        90    2
+4 jenny    88        92   -4
+5  lisa    88        88    0
+```
+```r
+## lag 
+df <- data.frame(
+  quarter = c("q1", "q2", "q3", "q4"),
+  salse = c(500, 600, 1000, 1500)
+)
+
+df %>%
+  mutate(salse_lag = lag(salse),
+         diff = salse - salse_lag)
+----
+result:
+  quarter salse salse_lag diff
+1      q1   500        NA   NA
+2      q2   600       500  100
+3      q3  1000       600  400
+4      q4  1500      1000  500
+```
+### 🐣 cumsum() บวกผลลัพธ์จากบนไล่ลงไปเรื่อยๆ
+```r
+df %>%
+  mutate(cum_sum = cumsum(salse))
+----
+result:
+  quarter salse cum_sum
+1      q1   500     500
+2      q2   600    1100
+3      q3  1000    2100
+4      q4  1500    3600
+```
