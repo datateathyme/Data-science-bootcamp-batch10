@@ -712,3 +712,75 @@ result:
 > mdy(messy_date6)
 [1] "2025-12-12"
 ```
+## 🎄 window function `row_number()` , `rank()`, `ntile()`
+### 🐣 `row_number()`
+```r
+## window function
+## create a new column
+## row_number()
+set.seed(42)
+mtcars %>% 
+  select(hp, wt, am) %>%
+  sample_n(10) %>%
+  arrange(hp) %>%
+  mutate(id = row_number())
+```
+```r
+set.seed(42)
+mtcars %>% 
+  select(hp, wt, am) %>%
+  sample_n(10) %>%
+  arrange(am, hp) %>%
+  group_by(am) %>%
+  mutate(id = row_number())
+```
+### 🐣 `rank()`
+```r
+## rank()
+## make dataframe
+df <- data.frame(
+  name = c("toy", "joe", "ann", "jenny", "lisa"),
+  score = c(85, 90, 92, 88, 88)
+)
+
+df %>%
+  mutate(row_num = row_number(),
+         min_rank = min_rank(score), 
+         dense_rank = dense_rank(score))
+
+----
+result:
+   name score row_num min_rank dense_rank
+1   toy    85       1        1          1
+2   joe    90       2        4          3
+3   ann    92       3        5          4
+4 jenny    88       4        2          2
+5  lisa    88       5        2          2
+```
+### 🐣 `ntile()`
+```r
+## ntile()
+df %>%
+  mutate(segment = ntile(score, 2)) ## แบ่ง score ออกเป็น 2 กลุ่มเท่าๆกัน
+----
+result:
+ name score segment
+1   toy    85       1
+2   joe    90       2
+3   ann    92       2
+4 jenny    88       1
+5  lisa    88       1
+```
+```r
+df %>%
+  mutate(segment = ntile(score, 2)) %>%
+  arrange(segment)
+----
+result:
+  name score segment
+1   toy    85       1
+2 jenny    88       1
+3  lisa    88       1
+4   joe    90       2
+5   ann    92       2
+```
