@@ -334,6 +334,12 @@ ggplot(small_diamonds, aes(y=cut, x=price)) +
 ```
 ![Image](https://github.com/user-attachments/assets/09149156-8656-4f54-b035-7cd0a0b6d75c)
 
+## 🎨 violin plot
+```r
+## violin plot
+ggplot(small_diamonds, aes(x=cut, y=price)) +
+  geom_violin()
+```
 ## 🐣 homework R markdown 
 ```r
 ## homework R markdown 
