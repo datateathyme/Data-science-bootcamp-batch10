@@ -268,6 +268,14 @@ ggplot(small_diamonds, aes(cut, fill = cut)) +
 ```
 ![Image](https://github.com/user-attachments/assets/bb453ae5-13f6-4521-bef6-79065000c53b)
 
+```r
+mtcars %>%
+  ggplot(aes(hp, mpg, color=hp)) +
+  geom_point(size = 5) +
+  theme_minimal() +
+  scale_color_gradient(low = "blue",
+                        high = "#E4080A")
+```
 ## 🎨 final tips - multiple dataframe in one chart 
 ```r
 ## final tips - multiple dataframe in one chart 
