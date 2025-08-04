@@ -638,7 +638,7 @@ fb_login <- function() {
 
 ## !! %in% = คือ syntax พิเศษที่ช่วยเช็คว่าข้อมูลนี้อยู่ในนี้หรือเปล่า 
 ```
-## 🎄 convert string to date in R
+## 🎄 convert string to date in R using `lubridate`
 ```r
 ## convert string to date in R
 library(tidyverse)
