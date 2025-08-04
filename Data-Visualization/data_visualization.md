@@ -213,6 +213,21 @@ ggplot(small_df %>%
   geom_smooth(se = FALSE, col="red") +
   theme_minimal()
 ```
+## 🎨 mapped to aesthetic of the chart 
+```r
+## ggplot2: 2D
+## add more variables
+## mapped to aesthetic of the chart 
+library(tidyverse)
+
+set.seed(42)
+small_diamonds <-  diamonds %>%
+  sample_frac(0.1)
+
+ggplot(small_diamonds, aes(x=carat, y=price)) +
+  geom_point(aes(color = clarity)) +
+  theme_minimal()
+```
 ## 🎨 set title, caption, x/y labels
 ```r
 ## set title, caption, x/y labels
