@@ -332,6 +332,8 @@ ggplot(small_diamonds, aes(y=cut, x=price)) +
   geom_boxplot() + 
   theme_minimal()
 ```
+![Image](https://github.com/user-attachments/assets/09149156-8656-4f54-b035-7cd0a0b6d75c)
+
 ## 🐣 homework R markdown 
 ```r
 ## homework R markdown 
