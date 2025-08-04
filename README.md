@@ -13,7 +13,7 @@
 8. Essential Statistics
 9. Deep Dive into Signficance Testing
 10. Looker studio Dashboard
-11. Essential ML for Data Analyst
+11. Essential Machine Learning ( ML ) for Data Analyst
 12. Essential Economics for Data Analyst
 13. Intro to Marketing & Business for Data Analyst
 14. Python Foundation
