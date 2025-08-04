@@ -713,6 +713,7 @@ result:
 [1] "2025-12-12"
 ```
 ## 🎄 window function `row_number()` , `rank()`, `ntile()`
+- [x] windown function จะอยู่ใน mutate() 
 ### 🐣 `row_number()`
 ```r
 ## window function
@@ -757,7 +758,7 @@ result:
 4 jenny    88       4        2          2
 5  lisa    88       5        2          2
 ```
-### 🐣 `ntile()`
+### 🐣 `ntile()` จัดกลุ่ม
 ```r
 ## ntile()
 df %>%
@@ -783,4 +784,10 @@ result:
 3  lisa    88       1
 4   joe    90       2
 5   ann    92       2
+```
+```r
+mtcars %>%
+  select(hp) %>%
+  arrange(hp) %>%
+  mutate(segment = ntile(hp, 3))
 ```
