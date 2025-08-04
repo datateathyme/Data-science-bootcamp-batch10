@@ -638,3 +638,31 @@ fb_login <- function() {
 
 ## !! %in% = คือ syntax พิเศษที่ช่วยเช็คว่าข้อมูลนี้อยู่ในนี้หรือเปล่า 
 ```
+## 🎄 convert string to date in R
+```r
+## convert string to date in R
+library(tidyverse)
+library(lubridate)
+
+x <- "2025-01-01"
+class(x)
+
+date_x <- ymd(x)
+class(date_x)
+----
+result:
+> x <- "2025-01-01"
+> class(x)
+[1] "character"
+
+> date_x <- ymd(x)
+> class(date_x)
+[1] "Date"
+```
+```r
+## extract element from date
+year(date_x)
+month(date_x, label = TRUE) ## jan, feb
+day(date_x)
+wday(date_x, label = TRUE) ## weekday > mon, tue
+```
