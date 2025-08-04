@@ -678,7 +678,7 @@ day(date_x)
 wday(date_x, label = TRUE)
 ```
 ```r
-## fordate date messy
+## format messy dates
 messy_date1 <- "April, 23, 2025"
 messy_date2 <- "23-04-2025"
 messy_date3 <- "Dec.15.2025"
@@ -686,7 +686,8 @@ messy_date4 <- "2025 .. Jan -- 30"
 messy_date5 <- "jan - 31 - 2025"
 messy_date6 <- "12-12, 2025"
 
-## convert to date
+## How do I format messy dates?
+## convert to date 
 mdy(messy_date1)
 dmy(messy_date2)
 mdy(messy_date3)
