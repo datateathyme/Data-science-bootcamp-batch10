@@ -181,15 +181,17 @@ small_df <- diamonds %>%
 ggplot(small_df, aes(carat,price, col=cut)) +
   geom_point(size =3, alpha=0.4) +
   theme_minimal()
-
-
+```
+## 🎨 facet, multiple sub - plot
+- facet using with column factor
+```r
 ## facet, multiple sub - plot
 base2 <- ggplot(small_df, aes(carat,price, col=cut)) +
   geom_point(size =3, alpha=0.4) +
   theme_minimal()
 
 base2 +
-  facet_wrap(~cut)
+  facet_wrap(~cut) ## facet using with column factor
 
 base2 +
   facet_wrap(~cut, ncol=2)
