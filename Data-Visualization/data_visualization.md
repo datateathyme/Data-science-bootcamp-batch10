@@ -267,6 +267,27 @@ ggplot() +
              mapping = aes(weight, price),
              color = "purple", size =3)
 ```
+## 🎨 overplotting
+```r
+## overplotting
+## install.packages("ggthemes")
+library(ggthemes)
+
+## create chart with summarise stat
+ggplot(data = small_diamonds, 
+       mapping = aes(x=price, y=carat)) +
+  geom_point(mapping = aes(color = cut, alpha = 0.7) +
+  theme_minimal()
+  
+diamonds %>%
+  group_by(cut) %>%
+  summarise(
+    n = n(),
+    avg_price = mean(price),
+    avg_carat = mean(carat)
+  )
+
+```
 ## 🐣 homework R markdown 
 ```r
 ## homework R markdown 
