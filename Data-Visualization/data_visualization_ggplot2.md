@@ -207,7 +207,7 @@ ggplot(small_df, aes(carat,price)) +
   geom_point(size =3, alpha=0.4) +
   geom_smooth(se = FALSE, col="red") +
   theme_minimal() +
-  facet_grid(color ~ cut)
+  facet_grid(color ~ cut) ## facet_grid(แกนx ~ แกนy)
 
 ggplot(small_df %>%
          filter(carat <= 2.5), aes(carat,price)) +
