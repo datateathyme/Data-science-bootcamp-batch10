@@ -267,7 +267,9 @@ ggplot() +
              mapping = aes(weight, price),
              color = "purple", size =3)
 ```
-## 🎨 overplotting
+## 🎨 Two approaches to statistics
+- [x] [1] graphical
+- [x] [2] numerical 
 ```r
 ## overplotting
 ## install.packages("ggthemes")
