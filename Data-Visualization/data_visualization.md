@@ -1,4 +1,4 @@
-# 🧵 data visualization + markdown
+# 🧵 data visualization + Rmarkdown
 ```r
 ## data visualization or chart 
 ## 1. number of variables: one, two, more than teo vars
