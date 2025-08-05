@@ -46,7 +46,7 @@ e.g. how many customer segments do we have in our database
 ![Image](https://github.com/user-attachments/assets/2d7bd18e-aef2-49b7-aacb-462be12e3a27)
 Source: Content designed and created by DataRockie
 
-## Basic Machine Learning Workflow
+## Basic Machine Learning Workflow (from Gemini)
 1. Define the Problem
    - Goal: What do we want to achieve?
    - Problem Type:
@@ -80,3 +80,5 @@ Source: Content designed and created by DataRockie
      - Try a different algorithm.
      - Go back to Feature Engineering.
    - Deployment: Use the final, refined model to make predictions on new data.
+     
+![Image](https://github.com/user-attachments/assets/7b31c970-4e94-40ae-bbf2-2c008791d294)
