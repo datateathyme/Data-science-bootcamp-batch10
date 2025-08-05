@@ -84,5 +84,10 @@ Source: Content designed and created by DataRockie
      - Try a different algorithm.
      - Go back to Feature Engineering.
    - Deployment: Use the final, refined model to make predictions on new data.
-     
+----
+### Testing Model
+- Testing model is a very important step in ML workflow
+- เพราะเราต้องการนำ model ไปทำนายกับ unseen data หรือข้อมูลที่เราไม่เคยเห็นมาก่อน
+- ดังนั้นผลลัพธ์ของการ train & test ต้องมีค่าใกล้เคียงกัน ถ้า Train data ได้คะแนนดี ตอนนำไป Test ก็ควรจะต้องได้คะแนนใกล้เคียงกัน เพื่อความแม่นยำในการนำไปทำนายกับข้อมูลในอนาคตที่เราไม่รู้
+- เราเรียกกระบวนกวนการนี้ว่า Generalization คือ model ที่ทำขึ้นมา ควรจะนำไปทำนายกับข้อมูลที่ไม่เคยเห็นมาก่อนได้ดี
 
