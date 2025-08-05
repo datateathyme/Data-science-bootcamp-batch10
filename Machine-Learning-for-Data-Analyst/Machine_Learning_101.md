@@ -21,9 +21,10 @@ model = lm(mpg ~ hp + wt + am, data = mtcars) ## lm == Algorithm
 ### 🔥 `Supervised Learning` 2 types
 - [x] 1. `Regression (numeric):` Used for predicting a continuous numerical value. (ใช้สำหรับทำนายค่าที่เป็นตัวเลข เช่น ราคา รายได้)
 - [x] 2. `Classification (category):` Used for predicting a categorical label. (ใช้สำหรับทำนายข้อมูลที่เป็นหมวดหมู่(factor) yes/no question)
-
-
-
+----
+### 🔥 `Unsupervised Learning` 
+e.g. how many customer segment do we have in our database
+- Learn from **`unlabeled data`** to find patterns and summarise data
 
 
 
