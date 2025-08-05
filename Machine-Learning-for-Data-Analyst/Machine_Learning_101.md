@@ -9,3 +9,22 @@
 ```
 model = lm(mpg ~ hp + wt + am, data = mtcars) ## lm == Algorithm
 ```
+## Types of ML
+- [x] Supervised Learning 🔥 (focus)
+- [x] Unsupervised Learning
+- [x] Reinforcement Learning
+----
+### 🔥 `Supervised Learning` aka. predictive models/ analytics
+- Learn from **`labeled data`** to make a prediction
+- ใช้สำหรับคอลัมน์ที่เราต้องการทำนาย เช่น ทำนายราคาบ้านในอนาคต ราคาหุ้น ฝนจะตกพรุ่งนี้ไหม churn pridiction
+
+
+
+
+
+
+
+
+
+
+
