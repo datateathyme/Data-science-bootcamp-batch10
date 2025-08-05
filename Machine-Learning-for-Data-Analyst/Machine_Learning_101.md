@@ -2,6 +2,9 @@
 ## What is ML?
 **Machine Learning** คือกระบวนการสอนให้คอมพิวเตอร์สามารถเรียนรู้และค้นหารูปแบบจากข้อมูล เพื่อให้คอมพิวเตอร์สามารถหาความสัมพันธ์ คาดการณ์ หรือตัดสินใจได้เองโดยอัตโนมัติ
 
+![Image](https://github.com/user-attachments/assets/005c6ab5-5db7-4cb6-b33e-8fd1022933a3)
+Source: Content designed and created by DataRockie
+
 ## What is Model?
 - [x] **`Algorithm`** + **`Data`** = **`Model`**
 - [ ] `Algorithm` i.e. Linear Regression, Logistic Regression, Decision Tree, KNN
