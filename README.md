@@ -45,7 +45,7 @@ My Data Science & Analytics Projects and Key Learnings from **`:Datarockie 🐣 
 5. Linear Regregression Model using caret
 
 ## 🛠 Skills
-Spreadsheets, SQL , R Programming , Python for DA, Dashboard (Looker Studio), Statistics, Economic, Business & Marketing
+Spreadsheets (Google sheets, Excel), SQL (SQLite) , R Programming (tidyverse, dplyr, ggplot2), Python for DA, Dashboard (Looker Studio), Statistics, Economic, Business & Marketing
 
 ## 🎖 Digital Badge
 - [Certified Professional Data Analyst](https://api.badgr.io/public/assertions/zVGZaGrSQXiWZQasDTgkFQ?identity__email=chanakarn.data789%40gmail.com)
