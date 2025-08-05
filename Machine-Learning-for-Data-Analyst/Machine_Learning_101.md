@@ -49,7 +49,7 @@ e.g. how many customer segments do we have in our database
 Source: Content designed and created by DataRockie
 
 ## Basic Machine Learning Workflow (from Gemini)
-
+![Image](https://github.com/user-attachments/assets/7b31c970-4e94-40ae-bbf2-2c008791d294)
 
 1. Define the Problem
    - Goal: What do we want to achieve?
