@@ -43,10 +43,14 @@ e.g. how many customer segments do we have in our database
 - โดย AI จะได้รับรางวัลเมื่อทำสิ่งที่ถูกต้อง และถูกลงโทษเมื่อทำผิด เพื่อให้ AI เรียนรู้ที่จะทำพฤติกรรมที่เหมาะสมที่สุดด้วยตัวเอง เช่น AI ที่เล่นเกมจะได้รับคะแนนเมื่อชนะและเสียคะแนนเมื่อแพ้ จนในที่สุด AI ก็จะเรียนรู้วิธีการเอาชนะเกมได้เอง
 ----
 ## Basic ML Workflow
+🔮 **Concept: Train - Test - Split**
+
 ![Image](https://github.com/user-attachments/assets/2d7bd18e-aef2-49b7-aacb-462be12e3a27)
 Source: Content designed and created by DataRockie
 
 ## Basic Machine Learning Workflow (from Gemini)
+
+
 1. Define the Problem
    - Goal: What do we want to achieve?
    - Problem Type:
@@ -81,4 +85,4 @@ Source: Content designed and created by DataRockie
      - Go back to Feature Engineering.
    - Deployment: Use the final, refined model to make predictions on new data.
      
-![Image](https://github.com/user-attachments/assets/7b31c970-4e94-40ae-bbf2-2c008791d294)
+
