@@ -43,4 +43,40 @@ e.g. how many customer segments do we have in our database
 - โดย AI จะได้รับรางวัลเมื่อทำสิ่งที่ถูกต้อง และถูกลงโทษเมื่อทำผิด เพื่อให้ AI เรียนรู้ที่จะทำพฤติกรรมที่เหมาะสมที่สุดด้วยตัวเอง เช่น AI ที่เล่นเกมจะได้รับคะแนนเมื่อชนะและเสียคะแนนเมื่อแพ้ จนในที่สุด AI ก็จะเรียนรู้วิธีการเอาชนะเกมได้เอง
 ----
 ## Basic ML Workflow
+![Image](https://github.com/user-attachments/assets/2d7bd18e-aef2-49b7-aacb-462be12e3a27)
+Source: Content designed and created by DataRockie
 
+## Basic Machine Learning Workflow
+1. Define the Problem
+   - Goal: What do we want to achieve?
+   - Problem Type:
+     - Regression: Predict a number (e.g., house price).
+     - Classification: Predict a category (e.g., spam or not spam).
+     - Clustering: Find groups (e.g., customer segments).
+2. Prepare Data
+   - Collection: Get the raw data.
+   - Cleaning:
+     - Handle missing values.
+     - Remove duplicates.
+     - Correct errors.
+   - Feature Engineering:
+     - Create new variables.
+     - Transform existing data.
+   - Split:
+     - Training Set (e.g., 80%): Used to build the model.
+     - Testing Set (e.g., 20%): Used to evaluate the model.
+3. Train the Model
+   - Algorithm Selection: Choose the right model for the problem (e.g., Linear Regression, Decision Tree, etc.).
+   - Fitting: The model learns patterns from the training data.
+4. Evaluate the Model
+   - Testing: Apply the trained model to the testing data.
+   - Metrics: Measure performance.
+     - Regression: Mean Squared Error.
+     - Classification: Accuracy, Precision, Recall.
+   - Diagnosis: How well did the model perform?
+5. Refine & Deploy
+   - Improvement:
+     - Adjust model settings (Hyperparameter Tuning).
+     - Try a different algorithm.
+     - Go back to Feature Engineering.
+   - Deployment: Use the final, refined model to make predictions on new data.
