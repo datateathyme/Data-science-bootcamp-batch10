@@ -43,7 +43,8 @@ e.g. how many customer segments do we have in our database
 - โดย AI จะได้รับรางวัลเมื่อทำสิ่งที่ถูกต้อง และถูกลงโทษเมื่อทำผิด เพื่อให้ AI เรียนรู้ที่จะทำพฤติกรรมที่เหมาะสมที่สุดด้วยตัวเอง เช่น AI ที่เล่นเกมจะได้รับคะแนนเมื่อชนะและเสียคะแนนเมื่อแพ้ จนในที่สุด AI ก็จะเรียนรู้วิธีการเอาชนะเกมได้เอง
 ----
 ## Basic ML Workflow
-🔮 **Concept: Train - Test - Split**
+🔮 **ML workflow แบบ Train-Test-Split แบ่งได้เป็น 4 ขั้นตอน `split data > train > score > evaluate`**
+
 
 ![Image](https://github.com/user-attachments/assets/2d7bd18e-aef2-49b7-aacb-462be12e3a27)
 Source: Content designed and created by DataRockie
@@ -90,4 +91,87 @@ Source: Content designed and created by DataRockie
 - เพราะเราต้องการนำ model ไปทำนายกับ unseen data หรือข้อมูลที่เราไม่เคยเห็นมาก่อน
 - ดังนั้นผลลัพธ์ของการ train & test ต้องมีค่าใกล้เคียงกัน ถ้า Train data ได้คะแนนดี ตอนนำไป Test ก็ควรจะต้องได้คะแนนใกล้เคียงกัน เพื่อความแม่นยำในการนำไปทำนายกับข้อมูลในอนาคตที่เราไม่รู้
 - เราเรียกกระบวนกวนการนี้ว่า Generalization คือ model ที่ทำขึ้นมา ควรจะนำไปทำนายกับข้อมูลที่ไม่เคยเห็นมาก่อนได้ดี
+----
+## Linear model
+```r
+## create our first model with caret
+install.packages("caret")
+library(caret)
 
+data("mtcars")
+head(mtcars)
+
+set.seed(42)
+n <- nrow(mtcars) # นับจำนวนแถวใน Dataframe
+id <- sample(n, size = 0.8 * n)
+train_data <- mtcars[id, ]
+test_data <- mtcars[-id, ]
+
+## create function and split data
+train_test_split <- function(data) {
+  set.seed(42)
+  n <- nrow(data) 
+  id <- sample(n, size = 0.8 * n)
+  train_data <- data[id, ]
+  test_data <- data[-id, ]
+  return(list(train_data, test_data))
+}
+
+split_data <- train_test_split(mtcars)
+
+## train model
+lm_model <- train(mpg ~ hp, 
+      data = split_data[[1]],
+      method = "lm")
+
+## score and evaluate
+p <- predict(lm_model, newdata = split_data[[2]])
+
+error <- split_data[[2]]$mpg - p
+rmse <- sqrt(mean(error **2))
+
+
+# rmse: train and test
+cat("Train: ", lm_model$results[[2]], "\nTest: ", rmse)
+```
+## Classification model
+```r
+## Classification model
+library(caret)
+
+data("mtcars")
+
+## prepare data
+mtcars$am <- factor(mtcars$am, 
+                    levels= c(0, 1),
+                    labels = c("Auto", "Manual"))
+
+## split data
+train_test_split <- function(data) {
+  set.seed(42)
+  n <- nrow(data) 
+  id <- sample(n, size = 0.7 * n)
+  train_data <- data[id, ]
+  test_data <- data[-id, ]
+  return(list(train_data, test_data))
+}
+
+split_data <- train_test_split(mtcars)
+
+## train model
+glm_model <- train(am ~ mpg, 
+                  data = split_data[[1]],
+                  method = "glm")
+
+## score and evaluate
+p <- predict(glm_model, newdata = split_data[[2]])
+
+acc <- mean( p == split_data[[2]]$am)
+
+# result
+acc_train <- 0.8
+acc_test <- 0.6
+
+# Accuracy: train and test
+cat("Accuracy Train: ", acc_train, "\nAccuracy Test: ", acc_test)
+```
