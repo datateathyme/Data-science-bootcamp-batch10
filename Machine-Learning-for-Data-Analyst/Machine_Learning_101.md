@@ -39,6 +39,10 @@ e.g. how many customer segments do we have in our database
 ----
 ## summary 
 
+![Image](https://github.com/user-attachments/assets/43b9e331-4fb9-485b-86b4-dbd9ee512496)
+
+Source: Content designed and created by DataRockie
+
 ----
 ### 🛸 `Reinforcement Learning`
 - Reinforcement Learning คือการสอนให้ AI เรียนรู้ผ่านการลองผิดลองถูก
