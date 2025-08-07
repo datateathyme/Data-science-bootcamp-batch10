@@ -44,6 +44,7 @@ ctrl <- trainControl(method = "CV", # k-fold cross validation
                     verboseIter = TRUE)  # print result
 
 ## repeated k-fold cv
+set.seed(42)
 ctrl <- trainControl(method = "repeatedcv", 
                      number = 5, # k
                      repeats = 5, 
