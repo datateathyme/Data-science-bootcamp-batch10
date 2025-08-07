@@ -89,3 +89,31 @@ knn <- train(mpg ~ .,
              trControl = ctrl)
 
 ```
+```r
+## k-fold cross validation
+set.seed(42)
+
+ctrl <- trainControl(method = "cv", 
+                     number = 5) # k
+
+knn <- train(mpg ~ ., 
+             data = prep_df$train, 
+             method = "knn",
+             metric = "MAE", 
+             trControl = ctrl)
+```
+### Leave one out CV
+```r
+## another example 
+## Leave one out cv
+
+set.seed(42)
+
+ctrl <- trainControl(method = "LOOCV")
+
+knn <- train(mpg ~ ., 
+             data = prep_df$train, 
+             method = "knn",
+             metric = "MAE", 
+             trControl = ctrl)
+```
