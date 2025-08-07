@@ -57,3 +57,35 @@ result_knn <- list(MAE_knn = mae_knn,
 print(result_knn)
                
 ```
+## k-fold cross validation
+```r
+## load library
+library(tidyverse)
+library(caret)
+library(mlbench) ## training dataset for ML
+
+## split data
+split_data <- function(data) {
+  set.seed(42)
+  n <- nrow(data)
+  id <- sample(1:n, size = 0.7*n)
+  train_df <- data[id, ]
+  test_df <- data[-id, ]
+  return(list(train=train_df, test=test_df))
+}
+
+prep_df <- split_data(mtcars)
+
+## k-fold cross validation
+set.seed(42)
+
+ctrl <- trainControl(method = "boot",  ## Default: Bootstrapped
+                     number = 25)
+
+knn <- train(mpg ~ ., 
+             data = prep_df$train, 
+             method = "knn",
+             metric = "MAE", 
+             trControl = ctrl)
+
+```
