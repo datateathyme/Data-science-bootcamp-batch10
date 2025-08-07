@@ -14,7 +14,7 @@ library(mlbench) ## training dataset for ML problem
 ## 4. evaluate model (train error vs. test error)
 
 ## the biggest problem = overfitting
-## optimization (focus now) vs. machine learning (time: focus predic future)
+## optimization (focus now) vs. machine learning (time: focus prediction future)
 
 
 ## split data with own function
