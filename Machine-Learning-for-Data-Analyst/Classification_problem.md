@@ -17,4 +17,10 @@ diabetes_df %>%
   group_by(diabetes) %>%
   summarise(avg_age = mean(age, na.rm=TRUE),
             median_age = median(age))
+
+## check / inspect data
+## check missing value 
+sum(complete.cases(diabetes_df)) ## count complete data
+nrow(diabetes_df)  ## count nrow
+-- ถ้าทั้งสองค่านี้เท่ากันแสดงว่า data ไม่มี missing value
 ```
