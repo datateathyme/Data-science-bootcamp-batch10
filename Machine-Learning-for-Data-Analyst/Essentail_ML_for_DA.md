@@ -57,7 +57,7 @@ result_knn <- list(MAE_knn = mae_knn,
 print(result_knn)
                
 ```
-## k-fold cross validation
+## 🧵 k-fold cross validation
 ```r
 ## load library
 library(tidyverse)
