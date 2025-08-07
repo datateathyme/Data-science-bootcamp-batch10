@@ -46,3 +46,20 @@ logit_model <- train(diabetes ~ . - triceps,
                      method = "glm",
                      trControl = ctrl)
 ```
+```r
+## final model
+## parametric model == regression  
+logit_model$finalModel
+
+## variable importance
+varImp(logit_model)
+
+## confusion matrix
+p1 <- predict(logit_model, newdata = diabetes_df)
+p2 <- predict(logit_model, newdata = diabetes_df, type = "prob")
+
+p2 <- ifelse(p2$pos >= 0.07, "pos", "neg")
+
+t1 <- table(p1, diabetes_df$diabetes, dnn = c("Predict", "Actual"))
+t2 <- table(p2, diabetes_df$diabetes, dnn = c("predict", "Actual"))
+```
