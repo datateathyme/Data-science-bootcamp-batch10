@@ -1,3 +1,7 @@
+## optimization vs. machine learning (time)
+- Optimization (การหาค่าที่เหมาะสมที่สุด) เป็นกระบวนการที่มุ่งหา "คำตอบที่ดีที่สุด" จากตัวเลือกทั้งหมดที่เป็นไปได้ โดยมีเป้าหมายที่ชัดเจน เช่น ต้องการลดต้นทุนให้ต่ำที่สุด หรือเพิ่มกำไรให้สูงที่สุด 
+- Machine Learning (การเรียนรู้ของเครื่อง) เป็นกระบวนการที่มุ่ง "เรียนรู้จากข้อมูล" ในอดีตเพื่อ "คาดการณ์" หรือ "จำแนก" สิ่งที่จะเกิดขึ้นในอนาคต โดยไม่ได้ถูกโปรแกรมมาอย่างชัดเจน แต่เรียนรู้จากแพทเทิร์นในข้อมูล
+```r
 ## racap ML for DA part 1 
 library(tidyverse)
 library(caret)
@@ -11,6 +15,7 @@ library(mlbench) ## training dataset for ML problem
 
 ## the biggest problem = overfitting
 ## optimization vs. machine learning (time)
+
 
 ## split data with own function
 split_data <- function(data) {
@@ -223,3 +228,4 @@ glmnet_model <- train(diabetes ~ . - triceps,
 
 ## train model for the future
 ## future == test data
+```
