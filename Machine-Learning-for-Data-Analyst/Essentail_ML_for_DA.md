@@ -136,6 +136,25 @@ knn <- train(mpg ~ .,
              trControl = ctrl, 
              tuneGrid = grid_k)
 ```
+```r
+## k-fold cross validation
+## set hyperparameter tuning
+set.seed(42)
+
+grid_k <- data.frame(k = c(5, 7)) ## grid tuning
+
+ctrl <- trainControl(method = "cv", 
+                     number = 5, # k
+                     verboseIter = TRUE) # print result 
+
+knn <- train(mpg ~ ., 
+             data = prep_df$train, 
+             method = "knn",
+             metric = "MAE", 
+             trControl = ctrl, 
+             ## ask program to random k
+             tuneLength = 3) ## ให้โปรแกรมสุ่มจำนวนค่า k ขึ้นมาให้ เช่น เลือก3 == 5,7,9 โดยคอมสุ่มให้เอง ถ้าใส่ 2 ก็จะมี 2 ค่าเช่น 3, 5
+```
 ### Leave one out CV
 ```r
 ## another example 
