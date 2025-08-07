@@ -22,6 +22,7 @@ diabetes_df %>%
 ## check / inspect data
 ## check missing value 
 sum(complete.cases(diabetes_df)) ## count complete data
+mean(complete.cases(diabetes_df)) == 1 ## ถ้า TRUE ข้อมูลสมบูรณ์
 nrow(diabetes_df)  ## count nrow
 # -- ถ้าทั้งสองค่านี้เท่ากันแสดงว่า data ไม่มี missing value
 result:
