@@ -62,4 +62,10 @@ p2 <- ifelse(p2$pos >= 0.07, "pos", "neg")
 
 t1 <- table(p1, diabetes_df$diabetes, dnn = c("Predict", "Actual"))
 t2 <- table(p2, diabetes_df$diabetes, dnn = c("predict", "Actual"))
+
+## save model .RDS
+saveRDS(logit_model, "logistic_reg.RDS")
+
+## Let's say this is friend's computer
+model <- readRDS("logistic_reg.RDS")
 ```
