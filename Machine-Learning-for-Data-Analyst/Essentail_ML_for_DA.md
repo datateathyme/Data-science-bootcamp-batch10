@@ -102,6 +102,40 @@ knn <- train(mpg ~ .,
              metric = "MAE", 
              trControl = ctrl)
 ```
+```r
+## k-fold cross validation
+set.seed(42)
+
+ctrl <- trainControl(method = "cv", 
+                     number = 5, # k
+                     verboseIter = TRUE) # print result 
+
+knn <- train(mpg ~ ., 
+             data = prep_df$train, 
+             method = "knn",
+             metric = "MAE", 
+             trControl = ctrl)
+
+```
+### hyperparameter tuning
+```r
+## k-fold cross validation
+## set hyperparameter tuning
+set.seed(42)
+
+grid_k <- data.frame(k = c(3,5)) ## grid tuning
+
+ctrl <- trainControl(method = "cv", 
+                     number = 5, # k
+                     verboseIter = TRUE) # print result 
+
+knn <- train(mpg ~ ., 
+             data = prep_df$train, 
+             method = "knn",
+             metric = "MAE", 
+             trControl = ctrl, 
+             tuneGrid = grid_k)
+```
 ### Leave one out CV
 ```r
 ## another example 
