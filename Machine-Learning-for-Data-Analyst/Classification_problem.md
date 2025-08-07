@@ -31,3 +31,18 @@ result:
 > nrow(diabetes_df) 
 [1] 768
 ```
+```r
+## glimpse
+glimpse(diabetes_df)
+
+## logistic regression method = "glm" model
+set.seed(42)
+
+ctrl <- trainControl(method = "cv",
+                     number = 5)
+
+logit_model <- train(diabetes ~ . - triceps,
+                     data = diabetes_df,
+                     method = "glm",
+                     trControl = ctrl)
+```
