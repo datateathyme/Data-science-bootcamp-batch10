@@ -71,21 +71,51 @@ Predict neg pos
 
 ## Accuracy
 (445+157) / nrow(diabetes_df)
+result: [1] 0.7838542
 
 ## Precision
 prec <- 157 / (55+157)
+result: [1] 0.740566
 
 ## Recall
 recall <- 157 / (111+157)
+result: [1] 0.5858209
 
 ## F1 score
 F1 <- 2 * ((prec*recall)/ (prec+recall))
-
+result: [1] 0.6541667
+## ----------------------------------------------
 ## But in `caret` have function confusion matrix
 confusionMatrix(p1, diabetes_df$diabetes, 
                 positive = "pos",
                 mode = "prec_recall")
 
+## result:
+Confusion Matrix and Statistics
+
+          Reference
+Prediction neg pos
+       neg 445 111
+       pos  55 157
+                                         
+               Accuracy : 0.7839         
+                 95% CI : (0.753, 0.8125)
+    No Information Rate : 0.651          
+    P-Value [Acc > NIR] : 7.051e-16      
+                                         
+                  Kappa : 0.5001         
+                                         
+ Mcnemar's Test P-Value : 1.965e-05      
+                                         
+              Precision : 0.7406         
+                 Recall : 0.5858         
+                     F1 : 0.6542         
+             Prevalence : 0.3490         
+         Detection Rate : 0.2044         
+   Detection Prevalence : 0.2760         
+      Balanced Accuracy : 0.7379         
+                                         
+       'Positive' Class : pos      
 ```
 ```r
 ## save model .RDS
