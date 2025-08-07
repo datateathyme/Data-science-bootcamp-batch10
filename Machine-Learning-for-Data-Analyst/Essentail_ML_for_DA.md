@@ -79,8 +79,8 @@ prep_df <- split_data(mtcars)
 ## k-fold cross validation
 set.seed(42)
 
-ctrl <- trainControl(method = "boot",  ## Default: Bootstrapped
-                     number = 25)
+ctrl <- trainControl(method = "boot",  ## default: Bootstrapped
+                     number = 25)  ## default: 25 reps but can change
 
 knn <- train(mpg ~ ., 
              data = prep_df$train, 
