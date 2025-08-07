@@ -117,6 +117,25 @@ knn <- train(mpg ~ .,
              trControl = ctrl)
 
 ```
+```r
+## k-fold cross validation
+## set hyperparameter tuning
+set.seed(42)
+
+grid_k <- data.frame(k = c(5, 7)) ## grid tuning
+
+ctrl <- trainControl(method = "cv", 
+                     number = 5, # k
+                     verboseIter = TRUE) # print result 
+
+knn <- train(mpg ~ ., 
+             data = prep_df$train, 
+             method = "knn",
+             metric = "MAE", 
+             trControl = ctrl, 
+             ## ask program to random k
+             tuneLength = 3)
+```
 ### hyperparameter tuning
 ```r
 ## k-fold cross validation
