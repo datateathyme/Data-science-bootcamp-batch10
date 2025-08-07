@@ -63,6 +63,31 @@ p2 <- ifelse(p2$pos >= 0.07, "pos", "neg")
 t1 <- table(p1, diabetes_df$diabetes, dnn = c("Predict", "Actual"))
 t2 <- table(p2, diabetes_df$diabetes, dnn = c("predict", "Actual"))
 
+result:
+        Actual
+Predict neg pos
+    neg 445 111
+    pos  55 157
+
+## Accuracy
+(445+157) / nrow(diabetes_df)
+
+## Precision
+prec <- 157 / (55+157)
+
+## Recall
+recall <- 157 / (111+157)
+
+## F1 score
+F1 <- 2 * ((prec*recall)/ (prec+recall))
+
+## But in `caret` have function confusion matrix
+confusionMatrix(p1, diabetes_df$diabetes, 
+                positive = "pos",
+                mode = "prec_recall")
+
+```
+```r
 ## save model .RDS
 saveRDS(logit_model, "logistic_reg.RDS")
 
