@@ -91,7 +91,7 @@ knn <- train(mpg ~ . ,
              trControl = ctrl)
 
 ## break down ------------ ## 
-
+set.seed(42)
 knn <- train(mpg ~ . ,
              data = prep_df$train,
              method = "knn")
