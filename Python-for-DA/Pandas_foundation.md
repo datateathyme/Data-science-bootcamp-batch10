@@ -35,4 +35,25 @@ text = "a duck walksk into a bar"
 
 # check type
 type(text)
+result: str ## string
+
+text.upper()
+result: A DUCK WALKSK INTO A BAR
+
+text.lower()
+result: a duck walksk into a bar
+
+text.count("a")
+result: 4
+
+text.count("duck")
+result: 1
+
+## replace 
+text2 = text.replace("duck", "lion")
+print(text)
+print(text2)
+# result:
+a duck walksk into a bar
+a lion walksk into a bar
 ```
