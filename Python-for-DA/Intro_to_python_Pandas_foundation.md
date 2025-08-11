@@ -210,3 +210,16 @@ result = my_sum(5, 15)
 print(result)
 result: 20
 ```
+## #OOP: object oriented programming
+```py
+class Dog:
+    name = "Binnie"
+    age = 2
+    color = "Brown"
+    breed = "Golden Retriever"
+```
+```py
+my_dog = Dog()
+type(my_dog)
+result: __main__.Dog
+```
