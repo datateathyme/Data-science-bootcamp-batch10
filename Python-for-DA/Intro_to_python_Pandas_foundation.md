@@ -173,3 +173,40 @@ student
  'age': 22,
  'movies': ['Spider Man', 'Thor', 'The Godfather']}
 ```
+## #user-defined function 
+```py
+# user-defined function 
+def say_hello():
+    print("Hello World")
+    print("I am learning Python")
+    print("It is awesome")
+
+say_hello()
+# result:
+Hello World
+I am learning Python
+It is awesome
+```
+```py
+def hello(username):
+    print("Hello! " + username)
+
+hello("sunsun")
+result: Hello! sunsun
+```
+```py
+def my_sum(val1, val2):
+    print(val1 + val2)
+
+my_sum(5, 15)
+result: 20
+```
+```py
+## return
+def my_sum(val1, val2):
+    return val1 + val2
+
+result = my_sum(5, 15)
+print(result)
+result: 20
+```
