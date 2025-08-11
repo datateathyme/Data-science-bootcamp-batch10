@@ -26,3 +26,11 @@ penguins.shape
 # information of dataframe
 penguins.info()
 ```
+## 🏝 Select column
+```py
+# select column
+penguins['species']
+
+# หรือเขียนแบบนี้ก็ได้
+penguins.species
+```
