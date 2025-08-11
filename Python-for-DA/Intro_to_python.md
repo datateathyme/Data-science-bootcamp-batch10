@@ -223,3 +223,36 @@ my_dog = Dog()
 type(my_dog)
 result: __main__.Dog
 ```
+```py
+my_dog.name
+result: Binnie
+
+my_dog.breed
+result: Golden Retriever
+```
+```py
+class Dog:
+    name = "Binnie"
+    age = 2
+    color = "Brown"
+    breed = "Golden Retriever"
+
+    # function (Dog method)
+    def bark(self):
+        print("Woof! Woof!")
+    def sitting(self):
+        print("I am sitting now")
+    def hungry(self, food_name):
+        print(f"I am hungry, I need {food_name}!")
+
+my_dog = Dog()
+
+my_dog.bark()
+result: Woof! Woof!
+
+my_dog.sitting()
+result: I am sitting now
+
+my_dog.hungry("Pizza")
+result: I am hungry, I need Pizza!
+```
