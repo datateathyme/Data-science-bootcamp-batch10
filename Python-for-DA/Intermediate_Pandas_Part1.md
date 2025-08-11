@@ -70,4 +70,97 @@ mini_penguins
 penguins['island'] == 'Torgersen' ## return: true | false
 
 penguins[ penguins['island'] == 'Torgersen' ] ## return: dataframe
+
+penguins[ penguins['bill_length_mm'] < 34 ]
+```
+## 🔎 Filter dataframe more one condition
+```py
+# filter more than one condition
+# `and` opertor
+penguins[ (penguins['island'] == 'Torgersen') & (penguins['bill_length_mm'] < 35) ]
+
+# `or` opertor
+penguins[ (penguins['island'] == 'Torgersen') | (penguins['bill_length_mm'] < 35) ]
+
+# ฝากค่าใน object ใหม่ == filtered_penguins
+filtered_penguins = penguins[ (penguins['island'] == 'Torgersen') | (penguins['bill_length_mm'] < 35) ]
+```
+## 🔎 filter with .query()
+```py
+# filter with .query()
+penguins.query('island == "Torgersen"') # "island == 'Torgersen'"
+
+# and
+penguins.query('island == "Torgersen" & bill_length_mm < 35')
+
+# or
+penguins.query('island == "Torgersen" | bill_length_mm < 35')
+```
+## 🔎 missing value
+```py
+# check missing in each column
+penguins.isna() ## return: true | false
+
+penguins.isna().sum() ## return: summary data is na
+```
+```py
+# filter missing values in column `sex`
+penguins[penguins['sex'].isna()]
+```
+## ⛔ Drop na
+```py
+# drop na
+clean_penguins = penguins.dropna() ## drop all na
+
+clean_penguins.head(10)
+```
+## ✅ fill missing values > mean imputation
+```py
+# fill missing values
+penguins.head()
+
+# fill na with mean
+avg_value = penguins['bill_length_mm'].mean()
+avg_value
+
+penguins['bill_length_mm'] = penguins['bill_length_mm'].fillna(avg_value)
+penguins.head()
+```
+## ✅ Sort Dataframe
+```py
+## sort bill_length_mm low to high, high to low
+penguins.sort_values('bill_length_mm')
+```
+```py
+# descending order
+penguins.sort_values('bill_length_mm', ascending=False)
+```
+✅ Drop na before sort data and then select head 6 rows
+```py
+# drop na before sort data and then select head 6 rows
+penguins.dropna().sort_values('bill_length_mm', ascending=False).head(6)
+```
+### ✅ sort multiple column
+```py
+# sort multiple column
+penguins.dropna().sort_values(['island','bill_length_mm'], ascending=[True,False])
+```
+## ✅ Unique and Count
+```py
+# unique values
+unique_islands = penguins['island'].unique()
+unique_islands_df = pd.DataFrame(unique_islands, columns=['island'])
+unique_islands_df
+```
+```py
+# count values นับ values จับกลุ่มตาม species
+penguins['species'].value_counts()
+```
+```py
+# count more than one column
+result = penguins[['island', 'species']].value_counts().reset_index()
+
+result.columns = ['island', 'species', 'count']
+
+result
 ```
