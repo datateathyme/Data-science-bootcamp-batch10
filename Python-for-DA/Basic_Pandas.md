@@ -18,11 +18,14 @@ df = pd.DataFrame(raw_data)
 
 df
 ```
-# result:
-	name	age	gender	country
-0	Alice	28	F	USA
-1	Bob	32	M	Canada
-2	Charlie	25	M	USA
-3	Diana	30	F	UK
-4	Ethan	27	M	USA
+### 🏝 result: `df = pd.DataFrame(raw_data)`
+
+| index |   name  | age  | gender | country |
+| ----- | ------- | ---- | ------ | ------- |
+| 0     | Alice   | 28   | F      | USA     |
+| 1     | Bob     | 32   | M      | Canada  |
+| 2     | Charlie | 25   | M      | USA     |
+| 3     | Diana   | 30   | F      | UK      |
+| 4     | Ethan   | 27   | M      | USA     |
+
 
