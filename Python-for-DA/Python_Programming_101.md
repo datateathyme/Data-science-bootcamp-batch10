@@ -6,11 +6,11 @@
 - control flow
 - function
 ### R vs . Python
-- **R for small data, prototyping**
-- **Python for larger data, software, data science, ai, app**
-- **R is statistical language vs. Python is a general language**
-- **R is specialist (stats)**
-- **Python is generalist (app, data, software, ai)**
+- R for small data, prototyping
+- Python for larger data, software, data science, ai, app
+- R is statistical language vs. Python is a general language
+- R is specialist (stats)
+- Python is generalist (app, data, software, ai)
 ## 📩 variable
 ```py
 ## 1. variable  
@@ -36,4 +36,21 @@ print(x)
 # ประกาศตัวแปร บรรทัดเดียวกันเลย
 x, y, z = 1,"math", 3
 print(x, y, z)
+```
+```py
+## variable
+my_name = "jane"
+age = 25
+friends = ["ann", "mae", "joe"] # list อัพเดตค่าได้
+fav_food = ("hotdog", "coke", "french fries") # tuple อัพเดตค่าไม่ได้
+```
+### 🍁 list[ ] vs. tuple( )
+- [x] `list ` อัพเดตค่าได้
+- [x] `tuple` อัพเดตค่าไม่ได้
+```py
+# update value in list
+friends[0] = "kittipong"
+
+friends
+result: ['kittipong', 'mae', 'joe']
 ```
