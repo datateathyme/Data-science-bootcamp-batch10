@@ -393,7 +393,7 @@ Hello! Toy
 Hello! Joe
 Hello! John
 ```
-## recap list
+## 🎟 recap list
 ```py
 ## recap list
 complex_list = [
@@ -408,4 +408,288 @@ result: [25, 'The Dark Knight', [1, 2, 3, 4, 5], ('hello', 'ni hao', 'sawasdee')
 ```py
 complex_list[3][1]
 result: 'ni hao'
+```
+## 📒 Dictionary
+### ✅ key-value pair (similar to json)
+```py
+movie = {
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "publishedYear": 1979,
+    "genres": [ "Science fiction","Comedy"],
+    "isInPrint": True
+}
+
+print(movie)
+```
+```py
+customer_01 = {
+    "name": "john wick",
+    "age": 50, 
+    "fav_movies": ["Superman", "Inside out", "Lion King"],
+    "gpa": 3.41
+}
+
+customer_01
+```
+```py
+## dictionary is unordered, mutable
+customer_01["name"]
+result: john wick
+```
+```py
+customer_01["name"].upper()
+result: JOHN WICK
+```
+```py
+customer_01["fav_movies"]
+result: ['Superman', 'Inside out', 'Lion King']
+
+customer_01["fav_movies"][1]
+result: Inside out
+```
+## 🍅 dictionary method
+```py
+ ## dictionary method
+ list(customer_01.keys())
+ result: ['name', 'age', 'fav_movies', 'gpa']
+```
+```py
+list(customer_01.values())
+result: ['john wick', 50, ['Superman', 'Inside out', 'Lion King'], 3.41]
+```
+```py
+list(customer_01.items())
+# result:
+[('name', 'john wick'),
+ ('age', 50),
+ ('fav_movies', ['Superman', 'Inside out', 'Lion King']),
+ ('gpa', 3.41)]
+```
+### 🍁 create new key
+```py
+## create new key
+customer = customer_01
+customer["city"] = "Bangkok"
+customer["nationality"] = "American"
+
+customer
+```
+## ⛔ remove the key (delete key)
+```py
+## remove the key
+del customer["nationality"]
+customer
+```
+```py
+# use method to remove
+customer.pop("city")
+customer
+```
+### 🍅 update value
+```py
+## update value
+customer["age"] = 51
+customer
+```
+## 🎯The last data structure: set
+### ✅ set ie used to find distinct/ unique values
+```py
+## The last data structure: set
+## set ie used to find distinct/ unique values
+set([1, 1, 2, 3, 4])
+result: {1, 2, 3, 4}
+```
+```py
+set(["orange", "orange", "banana"])
+result: {'banana', 'orange'}
+```
+**✅ set operation ✅ union and intersection**
+```py
+## set operation 
+## union and intersection
+mary = {"orange", "apple"}
+jay = {"orange", "durian"}
+
+mary | jay # union ตัดค่าซ้ำออก
+result: {'apple', 'durian', 'orange'}
+
+mary & jay # intersec รีเทิร์นค่าที่ซ้ำกันออกมา
+result: {'orange'}
+```
+```py
+mary - jay # อะไรที่มีใน mary แต่ไม่มีใน jay
+result: {'apple'}
+```
+## 🎯 Recap Data Structures
+1. list
+2. tuple
+3. dictionary
+4. set
+---
+## ✅ Function
+**User defined function**
+- **the most important thing why we write function**
+- **because they are `reusable`**
+```py
+## the most important thing why we write function
+## because they are reusable
+def hello():
+    print("Hello World!")
+
+hello()
+result: Hello World!
+```
+```py
+## default argument
+def hello2(name="may"):
+    print("Hello " + name)
+
+hello2("jay")
+result: Hello jay
+```
+### 🌴 can we get input from a user?
+```py
+## can we get input from a user?
+def greeting():
+    username = input("What's your name: ")
+    result = f"Hi {username}"
+    print(result)
+    action = input("What are you goin to do today? ")
+    print(f"You're going to {action}. Great!")
+```
+```py
+greeting()
+result:
+What's your name: Kevin
+Hi Kevin
+What are you goin to do today? having lunch
+You're going to having lunch. Great!
+```
+```py
+user_age = int(input("How old are you:  "))
+print(user_age, type(user_age))
+# result:
+How old are you:  25
+25 <class 'int'>
+```
+### ✅ function can have more than one paremeters
+```py
+## function can have more than one paremeters
+def my_power(base=2, power=3):
+    return base ** power
+```
+```py
+result = my_power(5, 2)
+print(result)
+result: 25
+```
+## 🌵 lambda
+```py
+## regular function
+# def double(num):
+#     return num*2
+
+## lambda function
+double = lambda num: num*2
+
+double(3)
+result: 6
+```
+```py
+hello = lambda name: f"Hello {name}"
+hello("jay")
+```
+---
+## 🎯 Control Flow
+1. if
+2. for
+3. while
+```py
+def grading(score):
+    if score >= 80:
+        return "Passed"
+    else:
+        return "Failed"
+
+grading(85)
+result: Passed
+```
+```py
+def grading(score):
+    """
+    input: score is a numeric number
+    output: grade passed or failed
+    """
+    if score >= 80:
+        return "Passed"
+    else:
+        return "Failed"
+
+grading(85)
+```
+### 🍅 multiple if else
+```py
+## multiple if else
+def full_grading(score):
+    if score >= 80:
+        return "A"
+    elif score >= 70:
+        return "B"
+    elif score >= 60:
+        return "C"
+    elif score >= 50:
+        return "D"
+    else:
+        return "Retry the exam again."
+
+full_grading(45)
+result: Retry the exam again.
+```
+### 🍅 if multiple condition
+```py
+## if multiple condition
+# morning weekday => cereal
+# morning weekend => hamburger
+# else => fasting
+
+time = "morning"
+day = "weekend"
+
+if time == "morning" and day == "weekday":
+    print("I'm eating cereal")
+elif time == "morning" and day == "weekend":
+    print("I'm eating hamburger")
+else:
+    print("I'm eating nothing, I'm fasting")
+
+result: I'm eating hamburger
+```
+## 🎯 recap `for`
+```py
+## recap for 
+shopping_list = ["egg", "milk", "vitamilk", "bread"]
+
+for item in shopping_list:
+    if len(item) >= 4:
+        print(item)
+
+# result:
+milk
+vitamilk
+bread
+```
+## 🎯 while loop
+```py
+## while loop
+count = 0
+while count < 5:
+    print("hello world")
+    count += 1
+#result
+hello world
+hello world
+hello world
+hello world
+hello world
 ```
