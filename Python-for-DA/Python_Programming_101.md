@@ -54,3 +54,57 @@ friends[0] = "kittipong"
 friends
 result: ['kittipong', 'mae', 'joe']
 ```
+---
+## 📩 data types
+### ✅ int, float, str, bool
+```py
+## data types
+## int, float, str, bool
+age = 25
+type(age)
+result: int
+```
+```py
+gpa = 3.72
+type(gpa)
+result: float
+```
+```py
+name = "sunsun"
+type(name)
+result: str
+```
+```py
+result = age < 40
+print(result, type(result))
+result: True <class 'bool'>
+```
+```py
+my_bool = True, False, True
+print(my_bool, type(my_bool))
+result: (True, False, True) <class 'tuple'>
+```
+```py
+my_bool = [True, False, True]
+print(my_bool, type(my_bool))
+result: [True, False, True] <class 'list'>
+```
+## 📩 convert type
+```py
+## convert type
+str(25)
+result: '25'
+```
+```py
+int("25")
+result: 25
+```
+```py
+float("25")
+result: 25.0
+```
+```py
+## True = 1, False = 0
+bool(0)
+result: False
+```
