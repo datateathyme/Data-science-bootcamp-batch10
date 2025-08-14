@@ -173,3 +173,99 @@ jenny = User("Jenny", 22, "female", "London")
 print(jenny)
 result: Jenny is a female, 22 years old. lives in London
 ```
+```py
+## Homework
+# OOP create ATM
+# create 4-5 method
+class ATM:
+    def __init__(self, name, bank, balance):
+        self.name = name
+        self.bank = bank
+        self.balance = balance
+    
+    def check_balance(self):
+        print(f"Current Balance: {self.balance} $")
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            raise ValueError("Insufficient funds")
+        self.balance -= amount
+        print(f"Withdrawal successful. Please collect your cash ({amount})$.")
+    
+    def transfer(self, recipient_atm, amount):
+        if amount > self.balance:
+            raise ValueError("Insufficient funds")
+        self.balance -= amount
+        recipient_atm.balance += amount
+        print(f"Transfer successful. {amount} $ has been sent to {recipient_atm.name}.")
+```
+## 📩 **Read CSV file**
+import `csv`
+```py
+import csv
+
+file = open("customers_arpu.csv", "r")
+
+reader = csv.reader(file)
+for row in reader:
+    print(row)
+-----------------------------
+# result:
+['\ufeffid', 'name', 'arpu', 'city']
+['1', 'john', '500', 'BKK']
+['2', 'toy', '250', 'BKK']
+['3', 'anne', '300', 'BKK']
+['4', 'jessica', '400', 'Lon']
+['5', 'joy', '800', 'Lon']
+```
+```py
+import csv
+
+data = []
+## แนะนำให้ใช้วิธีนี้ช่วย check
+try:
+    file = open("customers_arpu.csv", "r")
+    reader = csv.reader(file)
+    for row in reader:
+        data.append(row)
+    print(data)
+    file.close()
+except: 
+    print("file not found, please check the filename again.")
+```
+```py
+## another way
+import csv
+
+data = []
+
+try:
+    ## context manager - with ปิดไฟล์ให้อัตโนมัติ
+    with open("customers_arpu.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            data.append(row)
+        print(data)
+except: 
+    print("file not found, please check the filename again.")
+```
+## 📩 **Read CSV file `import pandas as pd`**
+```py
+import pandas as pd
+df = pd.read_csv("customers_arpu.csv")
+df
+```
+```py
+df["arpu"].sum()
+result: np.int64(2250)
+```
+## 📩 !pip install `gazpacho` for web scrapping
+```py
+!pip install gazpacho
+```
+```
+!pip list # check package - version 
+```
