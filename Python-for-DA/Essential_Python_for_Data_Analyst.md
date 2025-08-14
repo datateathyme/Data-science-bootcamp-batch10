@@ -252,6 +252,15 @@ try:
 except: 
     print("file not found, please check the filename again.")
 ```
+```py
+import csv 
+
+with open("customers_arpu.csv", "r") as file:
+    ## a reader
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+```
 ## 📩 **Read CSV file `import pandas as pd`**
 ```py
 import pandas as pd
@@ -262,10 +271,149 @@ df
 df["arpu"].sum()
 result: np.int64(2250)
 ```
-## 📩 !pip install `gazpacho` for web scrapping
+## 📩 How to write a csv file
+```py
+## how to write a csv file 
+## csv.writer()
+
+import csv
+
+## nested list
+data = [
+    ["Name", "Age", "City"],
+    ["Alice", 25, "New York"],
+    ["Bob", 30, "London"],
+    ["Charlie", 22, "Paris"]
+]
+
+with open("example_data.csv", "w") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+```
+```py
+!cat example_data.csv
+
+# result:
+Name,Age,City
+Alice,25,New York
+Bob,30,London
+Charlie,22,Paris
+```
+```py
+## how to write a csv file 
+## csv.writer()
+
+import csv
+
+## nested list
+header = ["Name", "Age", "City"]
+
+data = [
+    ["Alice", 25, "New York"],
+    ["Bob", 30, "London"],
+    ["Charlie", 22, "Paris"]
+]
+
+with open("example_data.csv", "w") as file:
+    writer = csv.writer(file)
+    writer.writerow(header)
+    writer.writerows(data)
+```
+```py
+import pandas as pd
+df = pd.read_csv("example_data.csv")
+df
+```
+```py
+## updata data
+df["Age"] += 1
+df["Country"] = ["USA", "UK", "France"]
+df
+```
+```py
+# used pandas write csv file
+# write csv
+df.to_csv("update_example_data.csv")
+```
+## 📩 !pip install `gazpacho` for web scraping 
 ```py
 !pip install gazpacho
 ```
 ```
 !pip list # check package - version 
+```
+## 🐣 json: javascript object notation => API
+```py
+## json => API
+jay_dict = {
+    "name": "jay",
+    "age": 25,
+    "fav_move": ["Superman", "loki"]
+}
+
+jay_dict
+```
+### ✅ write dict to json file 
+```py
+import json
+
+# write dict to json file 
+with open("jay_data.json", "w") as file:
+    json.dump(jay_dict, file)
+```
+```py
+!cat jay_data.json
+```
+### ✅ read json to dict in python
+**import `json`** == **dict in python**
+
+- json.dump( ) # write file
+- json.load( ) # read file
+```py
+## read json to dict in python
+with open("jay_data.json", "r") as file:
+    data = json.load(file)
+
+print(data, type(data))
+```
+## 📩 API
+```py
+import requests
+```
+```py
+from requests import get
+```
+```py
+response = get("https://swapi.info/api/people/1")
+
+response.status_code
+
+result: 200 # code 200 คือดึงมาสำเร็จ success
+```
+```py
+# see result people 1
+response.json()
+
+# result:
+{'name': 'Luke Skywalker',
+ 'height': '172',
+ 'mass': '77',
+ 'hair_color': 'blond',
+ 'skin_color': 'fair',
+ 'eye_color': 'blue',
+ 'birth_year': '19BBY',
+ 'gender': 'male',
+ 'homeworld': 'https://swapi.info/api/planets/1',
+ 'films': ['https://swapi.info/api/films/1',
+  'https://swapi.info/api/films/2',
+  'https://swapi.info/api/films/3',
+  'https://swapi.info/api/films/6'],
+ 'species': [],
+ 'vehicles': ['https://swapi.info/api/vehicles/14',
+  'https://swapi.info/api/vehicles/30'],
+ 'starships': ['https://swapi.info/api/starships/12',
+  'https://swapi.info/api/starships/22'],
+ 'created': '2014-12-09T13:50:51.644000Z',
+ 'edited': '2014-12-20T21:17:56.891000Z',
+ 'url': 'https://swapi.info/api/people/1'}
 ```
