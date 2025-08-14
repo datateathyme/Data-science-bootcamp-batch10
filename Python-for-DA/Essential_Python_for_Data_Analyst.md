@@ -335,13 +335,7 @@ df
 # write csv
 df.to_csv("update_example_data.csv")
 ```
-## 📩 !pip install `gazpacho` for web scraping 
-```py
-!pip install gazpacho
-```
-```
-!pip list # check package - version 
-```
+
 ## 🐣 json: javascript object notation => API
 ```py
 ## json => API
@@ -486,4 +480,11 @@ with open("starwars.csv", "w") as file:
     writer.writerows(characters)
 
 !cat starwars.csv
+```
+## 📩 !pip install `gazpacho` for web scraping 
+```py
+!pip install gazpacho
+```
+```
+!pip list # check package - version 
 ```
