@@ -417,3 +417,73 @@ response.json()
  'edited': '2014-12-20T21:17:56.891000Z',
  'url': 'https://swapi.info/api/people/1'}
 ```
+```py
+response.json()["name"]
+result: Luke Skywalker
+```
+```py
+## get data from id 1-5
+for i in range(1, 6):
+    response = get(f"https://swapi.info/api/people/{i}")
+    print(response.json()["name"])
+
+# result:
+Luke Skywalker
+C-3PO
+R2-D2
+Darth Vader
+Leia Organa
+```
+```py
+## get data from id 1-5
+base_url = "https://swapi.info/api/people/"
+
+for i in range(1, 6):
+    response = get(base_url + str(i)) ## cast (i) == str because string + string 
+    print(response.json()["name"])
+```
+```py
+** recommend this way
+## get data from id 1-5
+from requests import get
+from time import sleep
+
+base_url = "https://swapi.info/api/people/"
+
+for i in range(1, 6):
+    response = get(base_url + str(i))
+    print(response.json()["name"])
+    # best practice
+    sleep(2) ## break 2 seconds
+```
+```py
+## get data from id 1-5
+from requests import get
+from time import sleep
+
+base_url = "https://swapi.info/api/people/"
+
+characters = []
+
+for i in range(1, 6):
+    response = get(base_url + str(i))
+    response_js = response.json()
+    name = response_js["name"]
+    height = response_js["height"]
+    mass = response_js["mass"]
+    result = [name, height, mass]
+    characters.append(result)
+    sleep(2) ## break 2 seconds
+
+print(characters)
+```
+```py
+## write csv file
+header = ["name", "height", "mass"]
+with open("starwars.csv", "w") as file:
+    writer = csv.writer(file)
+    writer.writerow(header)
+    writer.writerows(characters)
+
+!cat starwars.csv
+```
