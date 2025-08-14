@@ -20,6 +20,8 @@ friend_list[7]
 result: {'banana', 'orange'}
 ```
 ## ⛔ handle the error ดักจับค่า error
+- [x] แปลว่า try: ลองๆดูก่อน ถ้าผิด แล้วยอมรับ except: ให้ print......ตามที่เราสั่ง  แต่ถ้าถูกไม่ error ให้ print ตามที่สั่ง
+- [x] except: จะรันก็ต่อเมื่อ try: ตรงที่เราลองนั้น error 
 ```py
 ## handle the error  
 try:
