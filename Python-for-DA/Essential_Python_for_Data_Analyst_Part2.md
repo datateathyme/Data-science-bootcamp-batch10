@@ -99,4 +99,84 @@ result: np.float64(19.3)
 ```py
 np.mean(student_df["Age"])
 result: np.float64(19.3)
-```   
+```
+```py
+student_df.columns
+result: Index(['StudentID', 'Name', 'Age', 'Gender', 'Grade'], dtype='object')
+```
+```py
+student_df[["StudentID", "Name"]].head()
+```
+### 📩 filter row
+```py
+# filter row
+student_df.query("Age > 20")
+```
+```py
+student_df.query("Gender == 'Female'")
+```
+```py
+student_df.query("Gender == 'Female' & Grade > 90")
+```
+```py
+student_df.query("Gender == 'Female' & Grade > 90")[["Name", "Gender", "Age"]] # filter & select column [[]]
+```
+## 🐣 **sklearn => machine learning model**
+-  Python ML AI > R
+
+```py
+from sklearn.linear_model import LinearRegression 
+from sklearn.model_selection import train_test_split
+```
+```py
+mtcars = pd.read_csv("https://gist.githubusercontent.com/seankross/a412dfbd88b3db70b74b/raw/5f23f993cd87c283ce766e7ac6b329ee7cc2e1d1/mtcars.csv")
+```
+```py
+mtcars.head()
+```
+```py
+## prepare data 
+X = mtcars.drop(["model", "mpg"], axis = 1) # axis1 == column
+y = mtcars["mpg"]
+```
+## 🐣 **ML workflow**
+1. split data
+2. train
+3. score
+4. evaluate
+
+### 🎄 split data
+```py
+# split data
+# sed.seed(42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size = 0.25, random_state = 42
+)
+```
+### 🎄 train model
+```py
+# train model
+model = LinearRegression()
+model.fit(X_train, y_train)
+```
+### 🎄 prediction
+```py
+# prediction
+p = model.predict(X_test)
+
+p
+#result:
+array([19.816545  , 10.98232893, 16.31616932, 27.16613904, 28.59706508,
+       18.29855129, 14.85758111, 27.41057736])
+```
+### 🎄 evaluate R-squared
+```py
+# evaluate R-squared
+model.score(X_test, y_test)
+
+result: 0.7856209608689562
+```
+```py
+model.score(X_train, y_train)
+result: 0.8667068951242609
+```
