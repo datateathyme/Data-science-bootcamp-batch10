@@ -519,3 +519,88 @@ datarockie.find("h2", mode="first").strip()
 
 result: Learn For Free
 ```
+```py
+for h2 in datarockie.find("h2"):
+    print(h2.strip())
+```
+## 🍟 Import sqlite3
+```py
+import sqlite3
+import pandas as pd ## dataframe
+```
+```py
+## create connection
+con = sqlite3.connect("chinook.db")
+```
+```py
+df = pd.read_sql("select * from customers limit 5", con)
+```
+```py
+df.head()
+```
+```py
+df[["FirstName", "LastName", "City"]]
+```
+```py
+## close connection
+con.close()
+```
+## 🏗 concat
+- **append, select * from df1 union all select * from df2**
+```py
+## concat
+
+import pandas as pd
+
+# Create the first DataFrame
+df1 = pd.DataFrame({'A': ['A0', 'A1', 'A2'],
+                    'B': ['B0', 'B1', 'B2']},
+                   index=[0, 1, 2])
+
+# Create the second DataFrame
+df2 = pd.DataFrame({'A': ['A3', 'A4', 'A5'],
+                    'B': ['B3', 'B4', 'B5']},
+                   index=[3, 4, 5])
+```
+```py
+df1
+df2
+
+## append, select * from df1 union all select * from df2
+df3 = pd.concat([df1, df2])
+```
+## 🔢 numpy
+- **numerical python**
+```py
+## numerical python
+import numpy as np
+```
+```py
+gpa = [3.4, 3.5, 4.00, 2.9] #python just have => sum min max
+```
+```py
+gpa = np.array(gpa)
+```
+```py
+type(gpa)
+result: numpy.ndarray
+```
+```py
+np.mean(gpa)
+result: np.float64(3.45)
+```
+```py
+gpa.mean()
+result: np.float64(3.45)
+```
+```py
+np.median(gpa)
+result: np.float64(3.45)
+```
+```py
+print(gpa.sum()) # method
+print(np.sum(gpa)) # function
+result: 
+13.8
+13.8
+```
