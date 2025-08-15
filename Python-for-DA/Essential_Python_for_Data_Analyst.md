@@ -482,9 +482,40 @@ with open("starwars.csv", "w") as file:
 !cat starwars.csv
 ```
 ## 📩 !pip install `gazpacho` for web scraping 
+- **Basic web scraping**
 ```py
 !pip install gazpacho
 ```
 ```
 !pip list # check package - version 
+```
+```py
+# !pip install gazpacho
+from gazpacho import Soup
+from requests import get
+```
+```py
+url = "https://datarockie.com"
+```
+```py
+web = get(url)
+
+datarockie = Soup(web.text)
+
+print(type(datarockie))
+
+result: <class 'gazpacho.soup.Soup'>
+```
+```py
+## find information we from this Soup
+datarockie.find("h2", mode="first")
+
+result: <h2 class="wp-block-heading has-x-large-font-size" style="font-style:normal;font-weight:900">Learn For Free</h2>
+```
+### 🥞 using `.strip()` for clean 
+```py
+## clean 
+datarockie.find("h2", mode="first").strip()
+
+result: Learn For Free
 ```
