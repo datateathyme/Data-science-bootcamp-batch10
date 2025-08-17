@@ -164,9 +164,9 @@ def f3():
     print("ni hao!")
 
 def f4():
-    f1()
-    f2()
-    f3()
+    f1() # load data
+    f2() # clean data
+    f3() # prep data
     print("done!!!")
 
 ```
@@ -177,4 +177,129 @@ hi
 hello
 ni hao!
 done!!!
+```
+## 🏡 **control flow**
+### 🎯 **if-else, for, while**
+```py
+def grade(score):
+    if score >= 90:
+        return "Passed"
+    else: 
+        return "Please retake the exam"
+```
+```py
+grade(92)
+result: Passed
+
+grade(82)
+result: Please retake the exam
+```
+```py
+## if elif else
+def grade_adv(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "c"
+    else:
+        return "Please retake the exam!"
+```
+```py
+grade_adv(65)
+result: Please retake the exam!
+```
+```py
+## multiple condition
+## and, or
+def grade_adv2(score):
+    if score >= 90 and score <= 100:
+        return "A"
+    elif score >= 80 and score < 90:
+        return "B"
+    else: 
+        return "Retake the exam!"
+```
+```py
+def testing():
+    if (1+1 == 2 or 2*2 == 4):
+        print("correct")
+    else:
+        print("incorrect")
+```
+## 🏡 **Python basic Data structure**
+1. list (similar to vector in R)
+2. tuple
+3. dictionary
+4. set
+### 🎯 1. list (similar to vector in R)
+- [x] **## mutable data structure (can be updated data)**
+```py
+## 1. list (similar to vector in R)
+shopping_list = ["egg", "milk", "bread"]
+
+## index starts at zero[0]
+print(shopping_list[0])
+print(shopping_list[1])
+print(shopping_list[2])
+
+## check number of items
+print(len(shopping_list))
+
+# result:
+egg
+milk
+bread
+3
+```
+```py
+## update value in list
+## mutable data structure (can be updated data)
+shopping_list[0] = "orange"
+shopping_list[1] = "milk 2 gallons"
+print(shopping_list)
+
+result: ['orange', 'milk 2 gallons', 'bread']
+```
+### ✅ **list method**
+#### **method is a function designed for a specific data structures/ types**
+```py
+## list method
+## method is a function designed for a specific data structures/ types
+shopping_list.append("butter")
+print(shopping_list)
+
+result: ['orange', 'milk 2 gallons', 'bread', 'butter']
+```
+```py
+shopping_list.append("banana")
+print(shopping_list)
+```
+```py
+len(shopping_list)
+```
+### ⛔ remove the last item `.pop` (ลบตัวสุดท้ายด้านขวา)
+```py
+## remove the last item .pop (ลบตัวสุดท้ายด้านขวา)
+shopping_list.pop()
+print(shopping_list)
+
+result: ['orange', 'milk 2 gallons', 'bread', 'butter']
+```
+### ⛔ remove item `.remove` (เลือกได้ว่าจะลบตัวไหน)
+```py
+# remove item (เลือกได้ว่าจะลบตัวไหน)
+shopping_list.remove("bread")
+print(shopping_list)
+
+result: ['orange', 'milk 2 gallons', 'butter']
+```
+### ✅ insert item
+```py
+## insert item
+shopping_list.insert(1, "chocolate") # (index, "item")
+print(shopping_list)
+
+result: ['orange', 'chocolate', 'milk 2 gallons', 'butter']
 ```
