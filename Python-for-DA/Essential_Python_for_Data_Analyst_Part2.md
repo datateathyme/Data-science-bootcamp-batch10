@@ -122,8 +122,8 @@ student_df.query("Gender == 'Female' & Grade > 90")
 student_df.query("Gender == 'Female' & Grade > 90")[["Name", "Gender", "Age"]] # filter & select column [[]]
 ```
 ## 🐣 **sklearn => machine learning model**
--  Python ML AI > R
-
+-  Python ML, AI > R
+### 🎯 **LinearRegression**
 ```py
 from sklearn.linear_model import LinearRegression 
 from sklearn.model_selection import train_test_split
@@ -179,4 +179,78 @@ result: 0.7856209608689562
 ```py
 model.score(X_train, y_train)
 result: 0.8667068951242609
+```
+### 🎯 **DecisionTreeRegressor**
+```py
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.model_selection import train_test_split
+```
+```py
+mtcars = pd.read_csv("https://gist.githubusercontent.com/seankross/a412dfbd88b3db70b74b/raw/5f23f993cd87c283ce766e7ac6b329ee7cc2e1d1/mtcars.csv")
+mtcars.head()
+```
+```py
+## prepare data
+X = mtcars.drop(["model", "mpg"], axis = 1) # axis1 == column
+y = mtcars["mpg"]
+```
+```py
+# split data
+# sed.seed(42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size = 0.25, random_state = 42
+)
+```
+- [x] ขั้นตอนทุกอย่างเหมือนเดิมหมดเลย เปลี่ยนแค่ `model` ตรงขั้นตอน `train model` กับ import model นั้นๆเข้ามาก่อน
+```py
+# train model
+model = DecisionTreeRegressor()
+model.fit(X_train, y_train)
+```
+```py
+# prediction
+p = model.predict(X_test)
+```
+```py
+p
+result: array([17.8, 10.4, 18.7, 33.9, 24.4, 17.8, 15.8, 33.9])
+```
+```py
+# evaluate R-squared
+model.score(X_test, y_test)
+
+resuly: 0.833302930803843
+```
+```py
+model.score(X_train, y_train)
+
+result: 1.0
+```
+### 🎯 **KNeighborsRegressor**
+```py
+from sklearn.neighbors import KNeighborsRegressor
+```
+```py
+# train model
+model = KNeighborsRegressor()
+model.fit(X_train, y_train)
+```
+```py
+# prediction
+p = model.predict(X_test)
+```
+```py
+p
+result: array([22.32, 14.28, 14.72, 28.7 , 22.18, 20.54, 15.42, 28.7 ])
+```
+```py
+# evaluate R-squared
+model.score(X_test, y_test)
+
+result: 0.8175982001702541
+```
+```py
+model.score(X_train, y_train)
+
+resulg: 0.7906748511415767
 ```
