@@ -303,3 +303,96 @@ print(shopping_list)
 
 result: ['orange', 'chocolate', 'milk 2 gallons', 'butter']
 ```
+```py
+shopping_list.insert(2, "coke") # (index, "item")
+print(shopping_list)
+
+result: ['orange', 'chocolate', 'coke', 'milk 2 gallons', 'butter']
+```
+## ✅ sort data
+```py
+## sort data
+shopping_list.sort()
+print(shopping_list)
+
+result: ['butter', 'chocolate', 'coke', 'milk 2 gallons', 'orange']
+```
+```py
+## sort data descending order
+shopping_list.sort(reverse=True) # from Z to A
+print(shopping_list)
+
+result: ['orange', 'milk 2 gallons', 'coke', 'chocolate', 'butter']
+```
+### ✅ **combine two lists**
+```py
+## combine two lists
+full_list = ["egg", "milk"] + ["butter", "coke"]
+print(full_list)
+
+result: ['egg', 'milk', 'butter', 'coke']
+```
+## 🎯 **for loop**
+```py
+## for loop 
+for item in full_list:
+    print(item)
+
+result:
+egg
+milk
+butter
+coke
+```
+```py
+fruits = ["banana", "orange", "strawberry"]
+
+for fruit in fruits:
+    print(fruit)
+
+result:
+banana
+orange
+strawberry
+```
+```py
+for fruit in fruits:
+    if fruit == "banana":
+        print("The banana is very delicious")
+    else:
+        print(fruit)
+
+result:
+The banana is very delicious
+orange
+strawberry
+```
+```py
+## mutable vs. immutable
+## string is immutable
+text = "a duck walk into a bar"
+text = text.replace("duck", "lion")
+print(text)
+: a lion walk into a bar
+```
+```py
+language = "Python"
+new_language = "C" + language[1: ]
+print(new_language)
+: Cython
+```
+## ✅ mutable 
+```py
+## mutable
+friends = ["jay", "jenny", "joe"]
+friends[0] = "jayler"
+print(friends)
+result: ['jayler', 'jenny', 'joe']
+```
+## ⛔ immutable 
+```py
+## immutable
+my_name = "Jayler"
+"T" + my_name[1: ]
+result: Tayler
+```
