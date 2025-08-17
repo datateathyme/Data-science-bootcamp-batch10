@@ -393,6 +393,88 @@ result: ['jayler', 'jenny', 'joe']
 ```py
 ## immutable
 my_name = "Jayler"
-"T" + my_name[1: ]
+my_name = "T" + my_name[1: ]
+my_name
+
 result: Tayler
+```
+```py
+## if-else
+## for loop
+
+for i in range(5):
+    print(i)
+```
+```py
+list(range(5))
+```
+```py
+for i in range(5):
+    print("Hello")
+```
+```py
+for i in range(5):
+    print(i, "Hello")
+```
+```py
+for i in range(10):
+    print(i+1, "Hello")
+```
+```py
+for i in range(1, 6):
+    print(i)
+```
+## 🎯 **While loop** 
+```py
+## while loop
+
+alive = True
+
+while (alive is True):
+    print("live learn repeat")
+    alive += 1
+
+result: live learn repeat
+```
+```py
+# while loop
+count = 0
+
+while (count < 5):
+    print("Hi!")
+    count += 1
+
+result:
+Hi!
+Hi!
+Hi!
+Hi!
+Hi!
+```
+```py
+while True:
+    user_input = input("What do you want to eat? ")
+    print(user_input)
+    if user_input == "I'm full!":
+        print("Bye!!")
+        break
+```
+```py
+play = True
+
+while play:
+    user_input = input("What do you want to eat? ")
+    print(user_input)
+    if user_input == "full":
+        print("Bye Bye!!")
+        play = False
+```
+```py
+alive = True
+
+while alive:
+    print("Live Learn Repeat!")
+    ui = input("Do you want to stop? ")
+    if ui == "yes":
+        alive = False
 ```
