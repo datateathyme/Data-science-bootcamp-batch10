@@ -478,3 +478,125 @@ while alive:
     if ui == "yes":
         alive = False
 ```
+## 🏡 data structure
+### list, tuple , dict , set
+```py
+## data structure
+## list, tuple , dict , set
+
+laptops = ["dell" ,"lenovo", "macbook"]
+
+result = [] ## empty list
+
+for laptop in laptops:
+    tmp = laptop.upper()
+    result.append(tmp)
+
+print(result)
+
+# result: ['DELL', 'LENOVO', 'MACBOOK']
+```
+### ✅ list comprehention
+```py
+## list comprehention
+laptops = ["dell" ,"lenovo", "macbook"]
+
+laptops_upper = [laptop.upper() for laptop in laptops] 
+
+print(laptops_upper)
+
+result: ['DELL', 'LENOVO', 'MACBOOK']
+```
+```py
+## tuple immutable
+x = (1, 2, 3)
+print(x, type(x))
+
+name , age = ("jay", 25)
+print(name, age)
+
+result:
+(1, 2, 3) <class 'tuple'>
+jay 25
+```
+## 🎯 tuple and list 
+### can be keep multiple data type
+```py
+## tuple and list 
+## can be keep multiple data type
+
+["jay", 25, ["R", "Python", "SQL"], ("Econimic", "Marketing"), True]
+```
+## 🎯 set (no duplicates) unique value
+```py
+## set (no duplicates)
+
+fruits = {"orange", "orange", "lemon", "lemon", "lemon", "grape"}
+
+print(fruits)
+result: {'grape', 'lemon', 'orange'}
+```
+## 🎯 set operation 
+```py
+## set operation 
+a = {"orange", "banana"}
+b = {"orange", "grapde", "pineapple"}
+```
+```py
+## interset (inner join)
+a & b
+result: {'orange'}
+```
+```py
+## union (full join)
+a | b
+result: {'banana', 'grapde', 'orange', 'pineapple'}
+```
+```py
+## difference
+a - b
+result: {'banana'}
+```
+## 🎯 dictionary
+### ✅key-value pair (like a JSON)
+- key must be immutable
+- dictionary is mutable
+
+```py
+## dictionary
+## key-value pair
+my_dict = {
+  "name": "John Doe",
+  "age": 30,
+  "city": "New York",
+  "isEmployed": True,
+  "hobbies": ["reading","hiking","coding"],
+  "address": {
+    "street": "123 Main St",
+    "zipcode": "10001"
+  }
+}
+```
+```py
+## key must be immutable
+## dictionary is mutable
+user = {
+    "name": "jay",
+    "age": 25,
+    "location": "BKK",
+    "streaming": {"netflix": True, 
+                  "amazon": False},
+    "fav_movies": ["Superman", "Dark Knight", "Marvel"]
+}
+```
+```py
+## update value
+user["age"] = 28
+user["name"] = "Jayler"
+print(user["age"], user["name"])
+```
+```py
+## create new key
+user["dog_name"] = "Labubu"
+user
+```
