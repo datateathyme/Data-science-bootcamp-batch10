@@ -600,3 +600,9 @@ print(user["age"], user["name"])
 user["dog_name"] = "Labubu"
 user
 ```
+## ⛔ delete key
+```py
+## delete key
+del user["dog_name"]
+user
+```
