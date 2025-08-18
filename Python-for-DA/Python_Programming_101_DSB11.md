@@ -606,3 +606,12 @@ user
 del user["dog_name"]
 user
 ```
+## 🎯 import modules
+```py
+# import modules
+import math
+```
+```py
+math.pi
+result: 3.141592653589793
+```
