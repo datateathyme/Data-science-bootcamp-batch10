@@ -102,3 +102,109 @@ except:
 
 result 🔐 no variable called 'datarockie'
 ```
+```py
+## try print a variable
+datarockie = 500
+
+try:
+    print(datarockie)
+except:
+    print("no variable called 'datarockie'")
+else:
+    print("the value is printed")
+
+🔐
+500
+the value is printed
+```
+```py
+## try print a variable
+datarockie = 500
+
+try:
+    print(datarockie)
+except NameError:
+    print("no variable called 'datarockie'")
+except ZeroDivisionError:
+    print("cannot divide by zero")
+except ValueError:
+    print("check your value")
+else:
+    print("the value is printed")
+finally:
+    print("the end")
+```
+---
+## 🎯 **How to read csv file in Pyhton**
+```py
+## how to read csv file in Pyhton
+import csv
+```
+```py
+try:
+    with open("customers_arpu.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            print(row)
+except:
+    print("file not found")
+```
+```py
+## read file
+result = []
+
+try:
+    with open("customers_arpu.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            result.append(row)
+except:
+    print("file not found")
+```
+```py
+## convert result to DataFrame
+result_df = pd.DataFrame(result)
+print(result_df)
+```
+```py
+## read csv with pandas
+import pandas as pd 
+
+try:
+    df = pd.read_csv("customers_arpu.csv")
+    print(df)
+
+except FileNotFoundError:
+    print("Error: The file 'customers_arpu.csv' was not found.")
+```
+## 🎯** write csv file**
+```py
+## write csv file
+import csv
+
+header = ["id", "student_name", "age"]
+body = [
+    [1, "jay", 25],
+    [2, "ann", 22],
+    [3, "joe", 28]
+    ]
+
+with open("new_file.csv", "w") as file:
+    writer = csv.writer(file)
+    writer.writerow(header)
+    writer.writerows(body)
+```
+```py
+!cat new_file.csv
+```
+## 🎯 with + try
+```py
+## with + try
+try:
+    with open("new_file.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            print(row)
+except:
+    print("file not found")
+```
