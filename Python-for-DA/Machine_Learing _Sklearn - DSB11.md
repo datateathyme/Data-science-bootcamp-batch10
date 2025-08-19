@@ -23,7 +23,7 @@ mtcars.head()
 ## ✅ prepare data
 ```py
 ## prepare data
-X = mtcars.drop(["model", "mpg"], axis = 1)
+X = mtcars.drop(["model", "mpg"], axis = 1) ## axis = 1 (column)
 y = mtcars["mpg"]
 ```
 ## ✅ split data
