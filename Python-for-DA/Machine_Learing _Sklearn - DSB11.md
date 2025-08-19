@@ -6,7 +6,7 @@
 3. score
 4. evaluate
 ---
-
+## 📑 Template for ML 
 ## ✅ import modules
 ```
 ## sklearn basics
@@ -49,4 +49,50 @@ pred = model.predict(X_test)
 model.score(X_test, y_test)
 
 result 🔐: 0.7856209608689562
+```
+```py
+model.score(X_train, y_train)
+result 🔐: 0.8667068951242609
+```
+---
+## 🎯 RandomForestRegressor
+```py
+from sklearn.ensemble import RandomForestRegressor
+```
+```py
+## train model
+model = RandomForestRegressor()
+model.fit(X_train, y_train)
+```
+```py
+## prediction (score)
+pred = model.predict(X_test)
+```
+```py
+## R squared (evaluate)
+model.score(X_test, y_test)
+```
+```py
+model.score(X_train, y_train)
+```
+---
+## 🎯 DecisionTreeRegressor
+```py
+from sklearn.tree import DecisionTreeRegressor
+```
+```py
+## train model
+model = DecisionTreeRegressor()
+model.fit(X_train, y_train)
+```
+```py
+## prediction (score)
+pred = model.predict(X_test)
+```
+```py
+## R squared (evaluate)
+model.score(X_test, y_test)
+```
+```py
+model.score(X_train, y_train)
 ```
