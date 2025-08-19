@@ -47,4 +47,6 @@ pred = model.predict(X_test)
 ```py
 ## R squared
 model.score(X_test, y_test)
+
+result 🔐: 0.7856209608689562
 ```
