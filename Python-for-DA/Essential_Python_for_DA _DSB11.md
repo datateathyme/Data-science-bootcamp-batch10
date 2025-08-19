@@ -81,10 +81,16 @@ import requests
 ```py
 url = "https://swapi.info/api/people/1"
 ```
-``py
+```py
 res = requests.get(url)
 ```
 ```py
 res.status_code
 result: 200 # complete
+```
+```py
+if res.status_code == 200:
+    print("Success")
+else:
+    print("Please check the path again!")
 ```
