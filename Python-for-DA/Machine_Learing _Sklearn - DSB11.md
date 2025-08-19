@@ -38,3 +38,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random
 model = LinearRegression()
 model.fit(X_train, y_train)
 ```
+## ✅ prediction 
+```py
+## prediction 
+pred = model.predict(X_test)
+```
+## ✅ R squared
+```py
+## R squared
+model.score(X_test, y_test)
+```
