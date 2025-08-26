@@ -7,14 +7,8 @@ Let's see below
 
 - [ ] 🎨 [Click to View Store Report: Looker Studio](https://lookerstudio.google.com/reporting/39bed884-35cb-4f7f-a1db-f32db1f8f73c)
 
-  ![Image](https://github.com/user-attachments/assets/9aa6126c-d922-4fba-8a64-f721927cffe6)
+  ![Sales Report](https://github.com/user-attachments/assets/1886fdec-5093-4f33-a1cb-a298c926462c)
 
-  ![Image](https://github.com/user-attachments/assets/ae2f8ae6-d25c-4306-8a7e-7c7fa4711a27)
+  ![Product Report](https://github.com/user-attachments/assets/e9365dfd-9156-4b93-9b8d-223df7b18cd8)
 
-  ![Image](https://github.com/user-attachments/assets/e4dde01f-519d-45a1-97dc-8f3c13766274)
-
-  ![Image](https://github.com/user-attachments/assets/1886fdec-5093-4f33-a1cb-a298c926462c)
-
-  ![Image](https://github.com/user-attachments/assets/e9365dfd-9156-4b93-9b8d-223df7b18cd8)
-
-  ![Image](https://github.com/user-attachments/assets/c01296a4-c879-43de-8287-e7a07a986f12)
+  ![Customers Report](https://github.com/user-attachments/assets/c01296a4-c879-43de-8287-e7a07a986f12)
