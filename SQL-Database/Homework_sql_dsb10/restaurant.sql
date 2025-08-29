@@ -13,7 +13,8 @@
 */
 -------------------------------------------------------------------------------
 ## Create sample data for the 'staff', 'customers', and 'transactions' tables.
-  
+
+-- สร้างตาราง staff เพื่อเก็บข้อมูลพนักงาน
 CREATE TABLE staff (
   staffId      int PRIMARY KEY,
   name         nvarchar ,
@@ -21,17 +22,20 @@ CREATE TABLE staff (
   salary       real
 );
 
+-- เพิ่มข้อมูลตัวอย่างลงในตาราง staff
 INSERT INTO staff VALUES
   (1, 'James', 'Manager', 50000),
   (2, 'Mary',  'Chef',    35000),
   (3, 'John',  'Waiter',  25000);
 
+-- สร้างตาราง menu เพื่อเก็บข้อมูลเมนูอาหาร
 CREATE TABLE menu (
   menuId       int PRIMARY KEY,
   name         nvarchar,
   price        real
 );
 
+-- เพิ่มข้อมูลตัวอย่างลงในตาราง menu
 INSERT INTO menu VALUES
   (1, 'Pizza',        85.50),
   (2, 'Hamburger',    55.99),
@@ -40,7 +44,7 @@ INSERT INTO menu VALUES
   (5, 'Ice Cream',    34.20),
   (6, 'French Fries', 45.50);
 
-
+-- สร้างตาราง customers เพื่อเก็บข้อมูลลูกค้า
 CREATE TABLE customers (
   customerId   int PRIMARY KEY,
   firstname    nvarchar,
@@ -49,6 +53,7 @@ CREATE TABLE customers (
   phone        varchar
 );
 
+-- เพิ่มข้อมูลตัวอย่างลงในตาราง customers
 INSERT INTO customers VALUES
   (1, 'Jay',   'Smith',    'Jay@datayahoo.com',   '555-1234'),
   (2, 'May',   'Johnson',  'May@datayahoo.com',   '555-5678'),
@@ -57,6 +62,7 @@ INSERT INTO customers VALUES
   (5, 'David', 'Brown',    'David@datayahoo.com', '555-7890'),
   (6, 'Emily', 'Miller',   'Emily@datayahoo.com', '555-2345');
 
+-- สร้างตาราง transactions เพื่อเก็บข้อมูลการทำธุรกรรม
  CREATE TABLE transactions (
   transactionId     int PRIMARY KEY ,
   customerId        int,
@@ -67,6 +73,7 @@ INSERT INTO customers VALUES
   staffId           int
 );
 
+-- เพิ่มข้อมูลตัวอย่างลงในตาราง transactions
 INSERT INTO transactions VALUES
   (1, 2, '2022-08-01',1,2, 171.00, 1),
   (2, 2, '2022-08-01',1,3, 256.5,  2),
@@ -81,7 +88,7 @@ INSERT INTO transactions VALUES
 
 -------------------------------------------------------------------------------
 ## Add a new column to the 'customers' table and update data.
-  
+-- เพิ่มคอลัมน์ 'state' และอัปเดตข้อมูลในตาราง customers  
 ALTER TABLE customers
 ADD state VARCHAR(50); 
 
@@ -131,7 +138,7 @@ ORDER BY state;
 
 -------------------------------------------------------------------------------
 ## This query is designed to provide a comprehensive understanding of transactions by linking related data from multiple tables.
-  
+-- Query นี้ออกแบบมาเพื่อให้เข้าใจภาพรวมของธุรกรรมโดยละเอียด โดยเชื่อมโยงข้อมูลที่เกี่ยวข้องจากหลายตาราง  
 SELECT
     T.transactionId      AS  T_id,
     T.transactionDate    AS  T_date,
@@ -189,7 +196,7 @@ ORDER BY 3 DESC;
 
 -------------------------------------------------------------------------------
 ## By matching managers with their transactions, this query provides a detailed overview of the manager with staff ID 1's performance.
-  
+-- จับคู่ผู้จัดการกับธุรกรรมของพวกเขา Query นี้จะให้ภาพรวมโดยละเอียดของประสิทธิภาพของผู้จัดการที่มี staff ID 1  
   
 WITH  staff_manager AS  (
   SELECT * FROM staff
