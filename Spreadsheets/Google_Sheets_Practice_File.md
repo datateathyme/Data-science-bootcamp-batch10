@@ -1,6 +1,7 @@
 # 👨‍💻 Google Sheets Practice: file 
 ##  📁  Google Sheets : Lessons Learned
 - [Practice Google Sheets Main Live Part1-2](https://docs.google.com/spreadsheets/d/1cJWs1Lrieg6Zj91SihL6OkzT4PFTc2q3gZzP7UYST44/edit?usp=sharing)
+- [Practice of Google Sheets 101](https://docs.google.com/spreadsheets/d/1Z9BpUzejl6i7jewvMqcBT677wx_ITxbStIJ259jXXHc/edit?usp=sharing)
 - [Practice of Google Sheets 102](https://docs.google.com/spreadsheets/d/1xozFVTBCZA_Zcy0Sz2eQpY15u27ggMgkkerCxTUUo1E/edit?usp=sharing)
 
 
