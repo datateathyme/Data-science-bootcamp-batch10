@@ -10,3 +10,4 @@
 
 ##  🎯  Statistics : Lessons Learned
 - [Practice Solution Basic Statistics 101](https://docs.google.com/spreadsheets/d/1q9-VUQq-9KTZpvswzQ07ogAFGEJBxM41Z27B6AAc5DI/edit?usp=sharing)
+- [Practice Linear Regression Model YouTube Datarockie](https://docs.google.com/spreadsheets/d/1sqPcLoG6mTd_TIUmEIEkD1OGW8Roy0I838BA7-MMwdg/edit?usp=sharing)
