@@ -5,6 +5,7 @@
 - [Practice of Google Sheets 102](https://docs.google.com/spreadsheets/d/1xozFVTBCZA_Zcy0Sz2eQpY15u27ggMgkkerCxTUUo1E/edit?usp=sharing)
 - [Practice of Query Google Sheets 103](https://docs.google.com/spreadsheets/d/1iBxmA0dYTSAZBVRyQKcBoIK5r6RWmDyB_zMw58xAlO8/edit?gid=0#gid=0)
 - [Practice Pivot Table Workbook 104](https://docs.google.com/spreadsheets/d/1WVjRNI9hXqK4HjUFqQxVdVY6Yfhe4uUP3aiNuwOLA0s/edit?usp=sharing)
+- [Datateathyme Workbook Google Sheets 104 (Pivot Table)](https://docs.google.com/spreadsheets/d/15bihRgRsvOEbJgWEl_NtI96hHupOl5APq65Y-gWv_9g/edit?usp=sharing)
 
 
 
