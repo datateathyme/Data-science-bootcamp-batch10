@@ -17,4 +17,5 @@
 - [Datateathyme Sprint06 Ep01 Intro to Statistics 101](https://docs.google.com/spreadsheets/d/1-WECms4gKwKdTHmK2YWhv4QqtJ0yvv9b3TOXThWqXLQ/edit?gid=0#gid=0)
 - [Datateathyme_essential_stats_part 2_DSB10](https://docs.google.com/spreadsheets/d/1Cdh4Qxlt_e7PZuIuuEUvH4RalO-6QIjMutm37FBYBms/edit?usp=sharing)
 - [Datateathyme_EP02 - Intro to AB Testing_RCT & AB Test Sample](https://docs.google.com/spreadsheets/d/1WAaJtkcNcSH3MJBwZC_edQdmzEmT2W_2T7SqMt1wqSs/edit?gid=638126081#gid=638126081)
+- [Datateathyme_Practice_EP04_Logistic_Regression](https://docs.google.com/spreadsheets/d/13y0CNScqWYqex5R5Pmt2_TSRCx6SgAtWd83a2rssTxI/edit?usp=sharing)
 - [Practice Linear Regression Model YouTube Datarockie](https://docs.google.com/spreadsheets/d/1sqPcLoG6mTd_TIUmEIEkD1OGW8Roy0I838BA7-MMwdg/edit?usp=sharing)
