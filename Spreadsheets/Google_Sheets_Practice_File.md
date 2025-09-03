@@ -14,4 +14,5 @@
 
 ##  🎯  Statistics : Lessons Learned
 - [Practice Solution Basic Statistics 101](https://docs.google.com/spreadsheets/d/1q9-VUQq-9KTZpvswzQ07ogAFGEJBxM41Z27B6AAc5DI/edit?usp=sharing)
+- [Datateathyme Sprint06 Ep01 Intro to Statistics 101](https://docs.google.com/spreadsheets/d/1-WECms4gKwKdTHmK2YWhv4QqtJ0yvv9b3TOXThWqXLQ/edit?gid=0#gid=0)
 - [Practice Linear Regression Model YouTube Datarockie](https://docs.google.com/spreadsheets/d/1sqPcLoG6mTd_TIUmEIEkD1OGW8Roy0I838BA7-MMwdg/edit?usp=sharing)
