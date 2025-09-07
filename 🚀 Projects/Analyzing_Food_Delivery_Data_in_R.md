@@ -1,5 +1,5 @@
 # 🏍🍔 Analyzing Food Delivery Data in R
-- [Analyzing Food Delivery Data in R (website)]()
+- [Analyzing Food Delivery Data in R (website)](https://datateathyme.wordpress.com/2025/09/07/analyzing-food-delivery-data-in-r/)
 
 ## 🔐 Full code
 ```r
