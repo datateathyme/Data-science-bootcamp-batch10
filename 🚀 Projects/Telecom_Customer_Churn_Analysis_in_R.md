@@ -247,3 +247,111 @@ From our analysis, we observed that
 
 การแก้ไขปัจจัยเหล่านี้จะช่วยให้บริษัทสามารถนำกลยุทธ์การรักษาลูกค้าที่มีประสิทธิภาพมาใช้เพื่อลดอัตราการเลิกใช้บริการได้
 
+---
+# ☎ Full code
+```r
+## install packages
+install.packages("tidyverse")
+
+## load library
+library(tidyverse)
+
+## load data read csv file
+churn_data <- read_csv("Telcom-Customer-Churn.csv")
+
+## preview data
+head(churn_data)
+glimpse(churn_data)
+
+## checking for missing values
+mis_val <- (colSums(is.na(churn_data)))
+print("Missing Values in All columns")
+print(mis_val)
+
+cat("Dimesnions of the dataset: ", dim(churn_data))
+
+
+## clean missing values
+churn_data <- na.omit(churn_data)
+
+colSums(is.na(churn_data))
+dim(churn_data)
+
+## checking the summary of the data
+summary(churn_data)
+
+
+## create pie chart
+churn_counts <- table(churn_data$Churn)
+
+churn_df <- as.data.frame(churn_counts)
+names(churn_df) <- c("Churn", "Count")
+
+
+ggplot(data=churn_df, aes(x="", y = Count, fill = Churn)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar(theta = "y") +
+  geom_text(aes(label = scales::percent(Count / sum(Count))),
+            position = position_stack(vjust = 0.5)) +
+  ggtitle("Churn Distribution") +
+  theme_void()
+
+## create bar chart contract status
+ggplot(churn_data, aes(x = Churn, fill = Contract)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Churn Distribution Contract Status", 
+       x = "Churn") +
+  theme_minimal()
+
+
+## create bar chart tenure
+ggplot(churn_data, aes(x = tenure, fill = Churn)) +
+  geom_bar(position = "dodge",width = 2,colour="black") +
+  labs(title = "Churn Distribution Tenure", 
+       x = "Months", 
+       y = "Count") +
+  theme_minimal()
+
+
+## create bar chart InternetService
+ggplot(churn_data, aes(x = InternetService, fill = Churn)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Churn Distribution Internet Services", 
+       x = "Internet Service") +
+  theme_minimal()
+
+
+## churn based on Senior Citizen Status
+senior_data <- data.frame(
+  SeniorCitizen = c("No", "Yes"),
+  Count = c(6932, 1539)
+)
+
+ggplot(senior_data, aes(x = SeniorCitizen, 
+                        y = Count, 
+                        fill = SeniorCitizen)) +
+  geom_bar(stat = "identity") +
+  theme_minimal() +
+  labs(title = "Senior Citizen Status", 
+       x = "Senior Citizen", 
+       y = "Count") +
+  scale_fill_manual(values = c("No" = "#66B3FF", "Yes" = "#FF9999"))
+
+
+## churn based on Payment Method
+payment_data <- data.frame(
+  PaymentMethod = c("Bank transfer (automatic)", "Credit card (automatic)",
+                    "Electronic check", "Mailed check"),
+  Count = c(1542, 1521, 2365, 1604)
+)
+
+ggplot(payment_data, aes(x = PaymentMethod, 
+                         y = Count, 
+                         fill = PaymentMethod)) +
+  geom_bar(stat = "identity") +
+  theme_minimal() +
+  labs(title = "Payment Method Distribution", 
+       x = "Payment Method", 
+       y = "Count") +
+  scale_fill_brewer(palette = "Set3")
+```
