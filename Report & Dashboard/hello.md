@@ -12,3 +12,5 @@ Let's see below
   ![Product Report](https://github.com/user-attachments/assets/e9365dfd-9156-4b93-9b8d-223df7b18cd8)
 
   ![Customers Report](https://github.com/user-attachments/assets/c01296a4-c879-43de-8287-e7a07a986f12)
+
+- [ ] 🎨 [Click to View Food Delivery Analysis: Looker Studio](https://lookerstudio.google.com/reporting/9f418b5b-597a-4912-98da-f1f83422e5a7)
