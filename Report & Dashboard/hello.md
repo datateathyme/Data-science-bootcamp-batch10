@@ -14,3 +14,5 @@ Let's see below
   ![Customers Report](https://github.com/user-attachments/assets/c01296a4-c879-43de-8287-e7a07a986f12)
 
 - [ ] 🎨 [Click to View Food Delivery Analysis: Looker Studio](https://lookerstudio.google.com/reporting/9f418b5b-597a-4912-98da-f1f83422e5a7)
+
+  ![Image](https://github.com/user-attachments/assets/fe43d861-12b6-49a4-a631-a449c92a707f)
