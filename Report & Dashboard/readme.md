@@ -1,6 +1,6 @@
-# 📈 This is my dashboard portfolio - Looker Studio / Power Bi
+# 📈 This is my dashboard portfolio - Looker Studio / Power BI
 
-Let's see below
+## **Let's see below**
 - [ ] 🎨 Sales Dashboard Power BI
  
   ![Image](https://github.com/user-attachments/assets/1e7faabb-bfa9-491a-bb09-a1ba2e1031bf)
