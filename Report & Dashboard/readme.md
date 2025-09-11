@@ -2,6 +2,8 @@
 
 Let's see below
 - [ ] 🎨 Sales Dashboard Power BI
+ 
+  ![Image](https://github.com/user-attachments/assets/1e7faabb-bfa9-491a-bb09-a1ba2e1031bf)
 
 - [ ] 🎨 [Click to View Orders Report: Looker Studio](https://lookerstudio.google.com/reporting/62be8a31-1bf6-437c-af70-c106327ee5af)
   
