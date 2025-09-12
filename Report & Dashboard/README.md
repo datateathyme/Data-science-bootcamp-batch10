@@ -5,6 +5,7 @@
  
   ![Image](https://github.com/user-attachments/assets/1e7faabb-bfa9-491a-bb09-a1ba2e1031bf)
   ![Image](https://github.com/user-attachments/assets/e677d7eb-0891-489a-a0c0-0f40ad5c41d0)
+  ![Image](https://github.com/user-attachments/assets/afc96623-f83a-4786-b9cf-175542cd4d61)
 
 - [ ] 🎨 [Click to View Orders Report: Looker Studio](https://lookerstudio.google.com/reporting/62be8a31-1bf6-437c-af70-c106327ee5af)
   
