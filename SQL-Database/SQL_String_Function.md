@@ -27,3 +27,17 @@ SELECT
 FROM employees
 ORDER BY 2;
 ```
+### 💌 LEFT(), SUBSTR()
+```sql
+-- LEFT() MySQL
+SELECT 
+	firstname, 
+    LEFT(firstname, 2)
+FROM employees;
+
+-- SUBSTR() SQLite
+SELECT 
+    firstname, 
+    SUBSTR(firstname, 1, 2)
+FROM employees;
+```
