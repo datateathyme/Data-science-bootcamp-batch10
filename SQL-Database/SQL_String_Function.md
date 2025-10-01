@@ -55,12 +55,20 @@ SELECT LOCATE('x', 'Alexander');
 -- SQLite
 SELECT INSTR('Alexander', 'x');
 ```
-### 💌 Combine Data Using `||`
+### 💌 Combine Data Using `||` in SQLite
 ```sql
 -- combine firstname & lastname 
 SELECT
     firstname,
     lastname,
     firstname || ' ' || lastname AS full_name
+FROM employees;
+```
+```sql
+--- MySQL
+SELECT
+    firstname,
+    lastname,
+    CONCAT(firstname, ' ' ,lastname) AS full_name
 FROM employees;
 ```
