@@ -55,3 +55,12 @@ SELECT LOCATE('x', 'Alexander');
 -- SQLite
 SELECT INSTR('Alexander', 'x');
 ```
+### 💌 Combine
+```sql
+-- combine firstname & lastname 
+SELECT
+    firstname,
+    lastname,
+    firstname || ' ' || lastname AS full_name
+FROM employees;
+```
