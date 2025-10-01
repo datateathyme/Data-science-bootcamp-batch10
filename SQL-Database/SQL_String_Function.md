@@ -72,3 +72,19 @@ SELECT
     CONCAT(firstname, ' ' ,lastname) AS full_name
 FROM employees;
 ```
+## 🎯 ตัวอย่างโค้ดเปรียบเทียบ
+```sql
+-- MySQL
+SELECT CONCAT(first_name, ' ', last_name)  AS full_name,
+       SUBSTRING(address, 1, 10)           AS short_addr,
+       UPPER(city)                         AS city_upper,
+       REPLACE(comment, 'foo', 'bar')      AS comment2
+FROM users;
+
+-- SQLite (เทียบกับ MySQL)
+SELECT first_name || ' ' || last_name      AS full_name,
+       substr(address, 1, 10)              AS short_addr,
+       UPPER(city)                         AS city_upper,
+       REPLACE(comment, 'foo', 'bar')      AS comment2
+FROM users;
+```
