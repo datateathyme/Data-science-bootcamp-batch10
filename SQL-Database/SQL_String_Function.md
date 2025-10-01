@@ -73,6 +73,7 @@ SELECT
 FROM employees;
 ```
 ## 🎯 ตัวอย่างโค้ดเปรียบเทียบ
+- ใน SQLite เราใช้ || แทน CONCAT() และ substr() แทน SUBSTRING()
 ```sql
 -- MySQL
 SELECT CONCAT(first_name, ' ', last_name)  AS full_name,
