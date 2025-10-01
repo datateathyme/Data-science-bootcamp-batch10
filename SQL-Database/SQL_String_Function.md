@@ -42,3 +42,16 @@ SELECT
     SUBSTR(firstname, 1, 2) --ตัดตั้งแต่ตัวที่1 ตัดมา2ตัวอักษร
 FROM employees;
 ```
+## ♻ Order of the arguments
+- MySQL LOCATE Syntax: `LOCATE(substring, string)`
+- SQLite INSTR Syntax: `INSTR(string, substring)`
+
+### 💌 LOCATE(), INSTR()
+```sql
+-- MySQL
+SELECT LOCATE('x', 'Alexander');
+```
+```sql
+-- SQLite
+SELECT INSTR('Alexander', 'x');
+```
