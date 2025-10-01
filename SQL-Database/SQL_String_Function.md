@@ -28,6 +28,7 @@ FROM employees
 ORDER BY 2;
 ```
 ### 💌 LEFT(), SUBSTR()
+**first_two_chars**
 ```sql
 -- LEFT() MySQL
 SELECT 
@@ -38,6 +39,6 @@ FROM employees;
 -- SUBSTR() SQLite
 SELECT 
     firstname, 
-    SUBSTR(firstname, 1, 2)
+    SUBSTR(firstname, 1, 2) --ตัดตั้งแต่ตัวที่1 ตัดมา2ตัวอักษร
 FROM employees;
 ```
