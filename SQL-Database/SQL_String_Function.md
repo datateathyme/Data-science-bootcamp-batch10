@@ -55,7 +55,7 @@ SELECT LOCATE('x', 'Alexander');
 -- SQLite
 SELECT INSTR('Alexander', 'x');
 ```
-### 💌 Combine
+### 💌 Combine Data Using `||`
 ```sql
 -- combine firstname & lastname 
 SELECT
