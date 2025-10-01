@@ -27,7 +27,7 @@ SELECT
 FROM employees
 ORDER BY 2;
 ```
-### 💌 LEFT(), SUBSTR()
+### 💌 LEFT(), RIGHT(), SUBSTR()
 **first_two_chars**
 ```sql
 -- LEFT() MySQL
