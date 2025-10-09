@@ -40,4 +40,12 @@ set.seed(42)
 km_result <- kmeans(iris_data, centers = 3)
 print(km_result)
 ```
-## 5. Evaluate and Visualize the Clusters
+## 5. Evaluate and Visualize the Clusters (cross check)
+Assess the quality of the clustering and visualize the results
+```r
+## Evaluate and Visualize the Clusters
+cluster_membership <- km_result$cluster
+
+## Compare clusters with original species (for evaluation)
+table(Species, cluster_membership)
+```
