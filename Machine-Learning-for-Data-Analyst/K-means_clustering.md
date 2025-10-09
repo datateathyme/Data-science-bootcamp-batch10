@@ -31,3 +31,13 @@ library(cluster)
 fviz_nbclust(iris_data, kmeans, method = "wss")
 ```
 ![Image](https://github.com/user-attachments/assets/b72c08b1-02d3-4c19-b1ad-2769cb056b39)
+
+## 4. Perform K-means Clustering
+Apply the kmeans() function to the prepared data, specifying the number of clusters (K)
+```r
+## K-means Clustering
+set.seed(42)
+km_result <- kmeans(iris_data, centers = 3)
+print(km_result)
+```
+## 5. Evaluate and Visualize the Clusters
