@@ -30,4 +30,4 @@ library(cluster)
 ```r
 fviz_nbclust(iris_data, kmeans, method = "wss")
 ```
-
+![Image](https://github.com/user-attachments/assets/b72c08b1-02d3-4c19-b1ad-2769cb056b39)
