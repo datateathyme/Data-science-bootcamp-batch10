@@ -16,3 +16,13 @@ Species <- iris$Species
 iris_data <- iris %>% select(-Species)
 ```
 ## 3. Determine the Optimal Number of Clusters (K)
+- The Iris dataset inherently has three species, suggesting K=3. However, in real-world scenarios, the optimal K is often unknown and can be estimated using methods like the Elbow method or Silhouette method
+- ก่อนทำการจัดกลุ่มจริง ต้องหาค่า K ที่เหมาะสม (จำนวนกลุ่ม) โดยทั่วไปจะใช้วิธี Elbow Method หรือ Silhouette Method โดยทั่วไปสำหรับชุดข้อมูล Iris เราทราบอยู่แล้วว่ามี 3 ชนิด แต่ในกรณีที่ไม่มีข้อมูลป้ายกำกับ เราจะต้องใช้วิธีการเหล่านี้เพื่อค้นหา K
+
+ติดตั้งและโหลดแพ็กเกจที่จำเป็น: มักใช้แพ็กเกจ `factoextra` และ `cluster`
+```r
+# install.packages("factoextra")
+# install.packages("cluster")
+library(factoextra)
+library(cluster)
+```
