@@ -69,3 +69,4 @@ ggplot(iris_clustered, aes(x=Petal.Length, y = Petal.Width, color = cluster, sha
   labs(title = "K-means Clusters vs. Actual Species") +
   theme_minimal()
 ```
+![Image](https://github.com/user-attachments/assets/2682b1d6-96fe-4dbc-a3dd-63349408905e)
