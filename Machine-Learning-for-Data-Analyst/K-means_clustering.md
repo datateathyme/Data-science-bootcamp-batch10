@@ -49,6 +49,8 @@ cluster_membership <- km_result$cluster
 
 ## Compare clusters with original species (for evaluation)
 table(Species, cluster_membership)
+
+iris_clustered <- data.frame(iris, cluster = as.factor(km_result$cluster))
 ```
 ```r
 ## Visualize the clusters (e.g., using 'ggplot2' and 'factoextra')
@@ -58,4 +60,12 @@ fviz_cluster(km_result, data = iris_data,
              palette = "jco",
              ggtheme = theme_minimal(),
              main = "K-means Clustering of Iris Dataset")
+```
+![Image](https://github.com/user-attachments/assets/4039711e-00eb-412a-8c39-7b223bcf4c4a)
+
+```r
+ggplot(iris_clustered, aes(x=Petal.Length, y = Petal.Width, color = cluster, shape = Species)) +
+  geom_point(size = 3) +
+  labs(title = "K-means Clusters vs. Actual Species") +
+  theme_minimal()
 ```
