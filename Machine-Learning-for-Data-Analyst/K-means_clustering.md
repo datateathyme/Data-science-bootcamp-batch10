@@ -42,10 +42,20 @@ print(km_result)
 ```
 ## 5. Evaluate and Visualize the Clusters (cross check)
 Assess the quality of the clustering and visualize the results
+- เปรียบเทียบกับชนิดจริง (Species): ตรวจสอบว่ากลุ่มที่สร้างขึ้นสอดคล้องกับชนิดของดอกไม้จริงได้ดีเพียงใดโดยใช้ตารางไขว้ (Contingency Table)
 ```r
 ## Evaluate and Visualize the Clusters
 cluster_membership <- km_result$cluster
 
 ## Compare clusters with original species (for evaluation)
 table(Species, cluster_membership)
+```
+```r
+## Visualize the clusters (e.g., using 'ggplot2' and 'factoextra')
+fviz_cluster(km_result, data = iris_data, 
+             geom = "point",
+             ellipse.type = "convex",
+             palette = "jco",
+             ggtheme = theme_minimal(),
+             main = "K-means Clustering of Iris Dataset")
 ```
