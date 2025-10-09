@@ -26,3 +26,8 @@ iris_data <- iris %>% select(-Species)
 library(factoextra)
 library(cluster)
 ```
+ใช้ Elbow Method: พล็อตผลรวมกำลังสองภายในกลุ่ม (Within-Cluster Sum of Squares, WCSS) เทียบกับจำนวนกลุ่ม (K) แล้วหาจุดที่กราฟมีความชันลดลงอย่างเห็นได้ชัด
+```r
+fviz_nbclust(iris_data, kmeans, method = "wss")
+```
+
