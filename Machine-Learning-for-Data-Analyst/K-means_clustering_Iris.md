@@ -63,6 +63,14 @@ fviz_cluster(km_result, data = iris_data,
 ```
 ![Image](https://github.com/user-attachments/assets/4039711e-00eb-412a-8c39-7b223bcf4c4a)
 
+**ใจความสำคัญของ K-means Clustering (Iris Dataset)**
+
+    การแยกกลุ่ม (Cluster Separation):
+
+        กลุ่ม 1 (สีฟ้า) แยกตัวออกมาอย่างชัดเจน จากอีกสองกลุ่ม แสดงถึงชนิดของดอกไม้ที่มีลักษณะทางกายภาพแตกต่างจากพวกมากที่สุด (มักจะเป็น Iris setosa).
+
+        กลุ่ม 2 (สีเหลือง) และ กลุ่ม 3 (สีเทา) อยู่ใกล้กันและทับซ้อนกันเล็กน้อย แสดงว่าสองชนิดนี้มีความคล้ายคลึงกันสูง ทำให้ยากต่อการจัดกลุ่มให้แยกขาดจากกันได้โดยสมบูรณ์
+---
 ```r
 ggplot(iris_clustered, aes(x=Petal.Length, y = Petal.Width, color = cluster, shape = Species)) +
   geom_point(size = 3) +
