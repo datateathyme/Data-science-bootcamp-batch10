@@ -56,6 +56,7 @@ summary = df.groupby('ProductCategory').agg(
 
 summary
 ```
+---
 ### ♻ 4. Sorting: Sort the DataFrame
 ```py
 df_sorted = df.sort_values(by='Quantity', ascending=False)
@@ -69,6 +70,7 @@ top3 = df.groupby('ProductCategory').agg(
 
 top3
 ```
+---
 ### ♻ 5. unique() values
 ```py
 df['ProductCategory'].unique()
@@ -77,8 +79,13 @@ df['ProductCategory'].unique()
 ## value_counts()
 df['ProductCategory'].value_counts()
 ```
-
-
+---
+### ♻ 6. convert data type from object to datetime 
+```py
+## convert data type from object to datetime 
+df['OrderDate'] = pd.to_datetime(df['OrderDate'])
+df.dtypes
+```
 
 
 
