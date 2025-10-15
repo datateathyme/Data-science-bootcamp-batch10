@@ -69,8 +69,10 @@ top3 = df.groupby('ProductCategory').agg(
 
 top3
 ```
-
-
+```py
+## value_counts()
+df['ProductCategory'].value_counts()
+```
 
 
 
