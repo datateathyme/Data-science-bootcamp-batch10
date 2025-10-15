@@ -134,3 +134,8 @@ df
 # write csv
 df.to_csv("update_example_data.csv")
 ```
+```py
+## Boolean: Crucially, set to False to exclude the DataFrame's row index
+
+df.to_csv('output.csv', index=False)
+```
