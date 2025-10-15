@@ -30,3 +30,19 @@ df.to_csv("mock_data.csv", index=False)
 df = pd.read_csv("mock_data.csv")
 df
 ```
+### ♻ 1. Create a New Column: Calculate `Total_Spent` by multiplying `Quantity` and `Price_USD`
+```py
+df['Total_Spent'] = df['Quantity'] * df['Price_USD']
+df
+```
+---
+### ♻ 2. Filtering/Subsetting: Find all orders that are not yet shipped or all orders for the `'Electronics'` category
+```py
+unshipped = df[df['Shipped'] == False]
+electronics_orders = df[df['ProductCategory'] == 'Electronics']
+```
+```py
+## filter data unshipped or category == 'Electronics'
+unshipped_electronics = df[(df['Shipped'] == False) | (df['ProductCategory'] == 'Electronics')]
+unshipped_electronics
+```
