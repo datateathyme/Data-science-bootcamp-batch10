@@ -70,6 +70,10 @@ top3 = df.groupby('ProductCategory').agg(
 
 top3
 ```
+```py
+## filter and sort data
+df[(df.ProductCategory == 'Home') | (df.ProductCategory == 'Electronics')].sort_values(by='Quantity', ascending=False)
+```
 ---
 ### ♻ 5. unique() values
 ```py
