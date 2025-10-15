@@ -20,3 +20,13 @@ mock_data = {
 df = pd.DataFrame(mock_data)
 df
 ```
+## 📩 write to csv file
+```py
+## write to csv file
+df.to_csv("mock_data.csv", index=False)
+```
+## 📩 read csv file
+```py
+df = pd.read_csv("mock_data.csv")
+df
+```
