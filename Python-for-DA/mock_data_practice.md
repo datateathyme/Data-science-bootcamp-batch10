@@ -126,6 +126,6 @@ df.drop(columns=['Total_Spent'], inplace=True)
 ### ♻ 9. Drop row
 ```py
 ## drop row with index
-rows = [10, 11]
+rows = [10, 11] #ลบแถวที่10,11
 df.drop(rows, axis=0, inplace=True)
 ```
