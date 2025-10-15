@@ -46,3 +46,35 @@ electronics_orders = df[df['ProductCategory'] == 'Electronics']
 unshipped_electronics = df[(df['Shipped'] == False) | (df['ProductCategory'] == 'Electronics')]
 unshipped_electronics
 ```
+---
+### ♻ 3. Group By and Aggregate: Find the average price and total quantity sold for each `ProductCategory`
+```py
+summary = df.groupby('ProductCategory').agg(
+    Avg_Price=('Price_USD', 'mean'),
+    Total_Units=('Quantity', 'sum')
+).sort_values(by='Avg_Price', ascending=False)
+
+summary
+```
+### ♻ 4. Sorting: Sort the DataFrame
+```py
+df_sorted = df.sort_values(by='Quantity', ascending=False)
+df_sorted
+```
+```py
+## see the top three best-selling product categories
+top3 = df.groupby('ProductCategory').agg(
+    Total_Units=('Quantity', 'sum')
+).sort_values(by='Total_Units', ascending=False).head(3)
+
+top3
+```
+
+
+
+
+
+
+
+
+
