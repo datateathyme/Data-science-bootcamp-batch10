@@ -97,8 +97,34 @@ df['ProductCategory'].value_counts()
 df['OrderDate'] = pd.to_datetime(df['OrderDate'])
 df.dtypes
 ```
+---
+### ♻ 7. append new data
+```py
+new_mock_data = {
+    'OrderID': np.arange(1012, 1014),
+    'CustomerName': ['Anna', 'Bobby'],
+    'ProductCategory': ['Electronics', 'Apparel'],
+    'Quantity': [2, 5],
+    'Price_USD': [150.99, 45.50],
+    'OrderDate': pd.to_datetime(['2024-09-01', '2024-09-01']),
+    'Shipped': [True, False]
+}
 
-
-
-
-
+new_df = pd.DataFrame(new_mock_data)
+new_df
+```
+```py
+df = pd.concat([df, new_df], ignore_index=True)
+df
+```
+---
+### ♻ 8. Drop column
+```py
+df.drop(columns=['Total_Spent'], inplace=True)
+```
+---
+### ♻ 9. Drop row
+```py
+rows = [10, 11]
+df.drop(rows, axis=0, inplace=True)
+```
