@@ -77,6 +77,10 @@ df[(df.ProductCategory == 'Home') | (df.ProductCategory == 'Electronics')].sort_
 ```py
 df[(df.ProductCategory == 'Books') & (df.Quantity >= 2)]
 ```
+#### Sort 2 column
+```py
+df[df.ProductCategory.isin(['Home', 'Electronics','Apparel'])].sort_values(by=['ProductCategory','Quantity'], ascending=[True, False])
+```
 ---
 ### ♻ 5. unique() values
 ```py
