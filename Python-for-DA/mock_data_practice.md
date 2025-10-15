@@ -74,6 +74,9 @@ top3
 ## filter and sort data
 df[(df.ProductCategory == 'Home') | (df.ProductCategory == 'Electronics')].sort_values(by='Quantity', ascending=False)
 ```
+```py
+df[(df.ProductCategory == 'Books') & (df.Quantity >= 2)]
+```
 ---
 ### ♻ 5. unique() values
 ```py
