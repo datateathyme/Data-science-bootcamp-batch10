@@ -139,3 +139,8 @@ df.to_csv("update_example_data.csv")
 
 df.to_csv('output.csv', index=False)
 ```
+```py
+## Set to False to exclude the column names row
+
+df.to_csv('output.csv', header=False)
+```
