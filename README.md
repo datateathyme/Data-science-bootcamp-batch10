@@ -43,7 +43,7 @@ My Data Science & Analytics Projects and Key Learnings from **`:Datarockie 🐣 
 3. R programming
 4. Looker GA4 Dashboard
 5. Linear Regregression Model using caret
-
+6. [Final Project Pandas in Python](https://colab.research.google.com/drive/1W7e8bC3hnOGiUCI1ExISdOwjkKMFFkkb?usp=sharing)
 ## 🛠 Skills
 Spreadsheets, SQLite , R Programming, Python for DA, Report & Dashboard (Looker Studio, Power BI), Machine Learning for DA, Statistics, Economic, Business & Marketing
 
