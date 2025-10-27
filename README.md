@@ -44,7 +44,7 @@ My Data Science & Analytics Projects and Key Learnings from **`:Datarockie 🐣 
 4. Looker GA4 Dashboard
 5. Linear Regregression Model using caret
 6. [Final Project Pandas in Python](https://colab.research.google.com/drive/1W7e8bC3hnOGiUCI1ExISdOwjkKMFFkkb?usp=sharing)
-7. [Us_Series_Total_Views_API_Python](https://github.com/datateathyme/Data-science-bootcamp-batch10/blob/main/Python-for-DA/Us_Series_Total_Views_API_Python.md)
+7. [Test_Us_Series_Total_Views_API_Python](https://github.com/datateathyme/Data-science-bootcamp-batch10/blob/main/Python-for-DA/Us_Series_Total_Views_API_Python.md)
 ## 🛠 Skills
 Spreadsheets, SQLite , R Programming, Python for DA, Report & Dashboard (Looker Studio, Power BI), Machine Learning for DA, Statistics, Economic, Business & Marketing
 
