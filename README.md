@@ -20,21 +20,33 @@ My Data Science & Analytics Projects and Key Learnings from **`:Datarockie 🐣 
 15. Essential Python For Data Analyst
 
 ## 🥪 Optional course:  What I Learned
-- Prompt Engineering
+### 📊 Data & Business Intelligence
+This category includes topics focused on extracting insights from data, preparing data, and creating reports using business intelligence tools.
 - Data Analytics Sharing Session
-- Pomodoro 101 / BUJO 
-- Intro to Power Query(Excel)
 - Google Analytics
-- Intro to API with JavaScript
+- Intro to Power Query (Excel)
 - Intro to Data Modeling in Microsoft Excel
 - Intro to Data Modeling in Power BI
-- UX UI 101
-- The Laws of Ux
-- Intro to Web Development
 - Power BI Crash Course
+
+### 🎨 Design & User Experience (UX)
+These topics cover the principles and practices of designing user-friendly and effective products, particularly in the digital space.
+- UX UI 101
+- The Laws of UX
+
+### 💻 Programming & Web Development
+This section is for subjects related to coding, software development, and specialized engineering roles in tech.
+- Intro to Web Development
+- Intro to API with JavaScript
 - Data Engineering 101
 - Intro to ML Engineering 101
+- Prompt Engineering (This is a specialized topic that fits well here as it involves coding/interacting with AI models.)
 
+### 💡 Productivity & General Skills
+This category contains general techniques and methods for improving personal organization and work efficiency.
+- Pomodoro 101 / BUJO (BuJo stands for Bullet Journaling, both are productivity and time management methods.)
+
+---
 
 ## 📂 My personal projects
 
