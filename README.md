@@ -5,7 +5,7 @@
 
 1. Intro to Data Science
 2. Building A Second Brain
-3. Google sheets : [Google Sheets Practice: file]
+3. Google sheets : [Google Sheets Practice: file](https://github.com/datateathyme/Data-science-bootcamp-batch10/blob/main/Spreadsheets/Google_Sheets_Practice_File.md)
 4. SQL Database
 5. R Programming Foundation
 6. Data Transformation
