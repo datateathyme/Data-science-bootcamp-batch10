@@ -57,6 +57,7 @@ This category contains general techniques and methods for improving personal org
 5. Linear Regregression Model using caret
 6. [Final Project Pandas in Python](https://colab.research.google.com/drive/1W7e8bC3hnOGiUCI1ExISdOwjkKMFFkkb?usp=sharing)
 7. [Test_Us_Series_Total_Views_API_Python_with_Ai](https://github.com/datateathyme/Data-science-bootcamp-batch10/blob/main/Python-for-DA/Us_Series_Total_Views_API_Python.md)
+8. [ออกแบบและสร้างฐานข้อมูลสต๊อกเสื้อกีฬา](https://docs.google.com/spreadsheets/d/1PAK_-h9wDjHuD3JqWYNGmMx7ka_FIb8dW_e9Tbw4yvU/edit?usp=sharing)
 ## 🛠 Skills
 Spreadsheets:Excel, Google sheets (pivot, vlookup, SUMIF, IF, Hypothesis Testing(p-value), A/B Testing, Linear regression), SQLite , R Programming, Python for DA, Report & Dashboard (Looker Studio, Power BI), Machine Learning for DA, Statistics, Economic, Business & Marketing, GitHub , Prompt AI (Gemini, ChatGPT, NotebookLM) , Create Basic Website, Notion
 
